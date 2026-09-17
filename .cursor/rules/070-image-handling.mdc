@@ -1,0 +1,70 @@
+---
+description: Guidelines for handling images in the Techno Sapiens theme
+alwaysApply: false
+---
+
+# Image Handling
+
+Use `TechnoSapiens\Core\Image::render()` to output `<img>` or `<picture>` with BEM classes and responsive markup. Follow `sections/section-content`.
+
+## Get the image from ACF
+
+`section-content` stores the image as an **array** and reads `ID`:
+
+```php
+use TechnoSapiens\Core\Image;
+
+$contentImage = get_field('content_image') ?? [];
+$contentImageId = !empty($contentImage['ID']) ? (int) $contentImage['ID'] : 0;
+```
+
+## Render
+
+```php
+<?php if ($contentImageId) : ?>
+    <figure class="section-content__figure">
+        <?php echo Image::render([
+            'blockClass' => 'section-content',
+            'sources' => [
+                [
+                    'id' => $contentImageId,
+                    'size' => 'full',
+                ],
+            ],
+        ]); ?>
+    </figure>
+<?php endif; ?>
+```
+
+`blockClass` becomes the BEM prefix (`section-content__image`).
+
+`Image::render()` fills `alt` from `Image::altFromId()` when omitted (attachment alt, then title). Informative images: omit `alt` or pass real text. Decorative images: `'alt' => ''` so screen readers skip them — do not keep the filename fallback.
+
+## Responsive sources
+
+```php
+echo Image::render([
+    'blockClass' => 'section-hero',
+    'lazy' => true,
+    'sources' => [
+        [
+            'id' => $imageDesktopId,
+            'size' => 'full',
+            'media' => '(min-width: 481px)',
+        ],
+        [
+            'id' => $imageMobileId,
+            'size' => 'full',
+            'media' => '(min-width: 0px)',
+        ],
+    ],
+]);
+```
+
+Register extra sizes with `add_image_size()` in theme `initImageSizes()` or the section class constructor only when the design needs cropped sizes. `section-content` uses `'full'`.
+
+## `Image::render()` parameters
+
+**Global:** `blockClass`, `class`, `lazy` (default true), `draggable`, `decoding`, `alt`, `style`
+
+**Per source:** `id`, `url`, `size`, `size2x`, `media`, `width`, `height`, `alt`

@@ -1,0 +1,549 @@
+---
+description: JavaScript best practices including KISS principle, progressive enhancement, accessibility, and framework policies
+alwaysApply: false
+---
+# JavaScript Best Practices
+
+This document covers best practices for JavaScript development in the Techno Sapiens theme, including the KISS principle, progressive enhancement, accessibility patterns, and framework policies.
+
+## Native HTML/CSS > JavaScript Solutions
+
+**Always prefer HTML and CSS solutions over JavaScript where possible.** JavaScript should only be used when necessary for interactivity that cannot be achieved with HTML and CSS alone.
+
+### Feature Detection
+
+Check if features are supported before using them:
+
+```javascript
+class Frontend {
+    // Check if device supports hover
+    supportsHover = window.matchMedia('(hover: hover)').matches && !('ontouchstart' in window)
+
+    initHoverIntent() {
+        // Only load hover JavaScript on hover-capable devices
+        if (this.supportsHover) {
+            const $hoverIntentElements = Array.from(document.querySelectorAll('.hover-intent'))
+            if ($hoverIntentElements.length > 0) {
+                import(/* webpackChunkName: "hover-intent" */ "./functions/hover-intent")
+                    .then(({default: initHoverIntent}) => initHoverIntent($hoverIntentElements))
+            }
+        }
+    }
+}
+```
+
+### Progressive Enhancement
+
+Build functionality that works without JavaScript first, then enhance with JavaScript.
+
+#### CSS-First Hover States
+
+```css
+/* Native CSS hover works without JavaScript */
+.hover-intent:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+```
+
+```javascript
+// Load hover JavaScript only on hover-capable devices for enhanced behavior
+if (this.supportsHover) {
+    const $hoverIntentElements = Array.from(document.querySelectorAll('.hover-intent'))
+    if ($hoverIntentElements.length > 0) {
+        // Enhance with hover-intent library for delayed hover
+        import(/* webpackChunkName: "hover-intent" */ "./functions/hover-intent")
+            .then(({default: initHoverIntent}) => initHoverIntent($hoverIntentElements))
+    }
+}
+```
+
+#### Responsive Navigation
+
+```javascript
+constructor() {
+    // Get window width once
+    this.windowWidth = window.innerWidth ||
+                      document.documentElement.clientWidth ||
+                      document.body.clientWidth
+
+    // Load different navigation based on screen size
+    if (this.windowWidth > this.mobileBreakPoint) {
+        // Desktop navigation with dropdown menus
+        this.initMainNavigation()
+    } else {
+        // Mobile navigation with side panel
+        this.initSideNavigation()
+    }
+}
+```
+
+This prevents loading unnecessary JavaScript on devices where it's not needed.
+
+### ARIA Attributes for Accessibility
+
+Use native ARIA attributes instead of JavaScript classes for state management:
+
+```javascript
+toggleAriaExpanded($toggleButton) {
+    const isExpanded = $toggleButton.getAttribute('aria-expanded') === 'true'
+    $toggleButton.setAttribute('aria-expanded', isExpanded ? 'false' : 'true')
+}
+```
+
+```css
+/* CSS can respond to ARIA attributes */
+.main-navigation__sub-toggle[aria-expanded="true"] + .main-navigation__list {
+    display: block;
+}
+
+.main-navigation__sub-toggle[aria-expanded="true"] .icon {
+    transform: rotate(180deg);
+}
+```
+
+### Best Practices for Native-First Development
+
+1. **Feature Detection** - Check if features are supported before using them
+2. **Progressive Enhancement** - Base functionality works without JavaScript
+3. **CSS Transitions** - Use CSS for animations, not JavaScript
+4. **Media Queries** - Use `matchMedia` API instead of resize events
+5. **ARIA Attributes** - Use semantic HTML and ARIA for accessibility
+
+```javascript
+// ✅ Good - Use matchMedia API
+const supportsHover = window.matchMedia('(hover: hover)').matches
+
+// ❌ Avoid - Listening to resize events for media queries
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+        // Don't do this
+    }
+})
+```
+
+## Front-end Frameworks Policy
+
+### No Front-end Frameworks
+
+The Techno Sapiens starter theme **does NOT use** front-end frameworks:
+
+❌ React
+❌ Vue.js
+❌ Angular
+❌ Svelte
+❌ Other component frameworks
+
+### Why Vanilla JavaScript?
+
+1. **Performance** - No framework overhead, smaller bundle sizes
+2. **Simplicity** - No build complexity, direct browser support
+3. **WordPress Integration** - Better integration with WordPress and plugins
+4. **Long-term Maintenance** - No framework version updates needed
+5. **Accessibility** - Direct control over HTML output
+6. **No Lock-in** - Not dependent on framework lifecycle
+
+### When to Use JavaScript
+
+JavaScript is encouraged for:
+
+✅ Interactive components (navigation, modals, accordions)
+✅ Form handling and validation
+✅ Dynamic content loading
+✅ Animation control
+✅ Third-party API integrations
+✅ User interaction enhancements
+
+### jQuery Usage
+
+jQuery is **NOT used in custom code**, but is available for:
+
+- Gravity Forms compatibility
+- WordPress admin area
+- Legacy plugin support
+
+```javascript
+// Only use jQuery for Gravity Forms events
+static initGravityForms() {
+    window.addEventListener('DOMContentLoaded', () => {
+        if (typeof jQuery !== 'undefined') {
+            // jQuery only for Gravity Forms events
+            jQuery(document).on('gform_post_render', () => {
+                Frontend.initMaterialInputs()
+            })
+        }
+    })
+}
+```
+
+## Accessibility Patterns
+
+Implement proper keyboard support and focus management for all interactive components.
+
+### Keyboard Support
+
+```javascript
+handleToggleButtonKeyDown($toggleButton, event) {
+    // Support both Enter and Space keys
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault()
+        this.toggleAriaExpanded($toggleButton)
+    }
+
+    // Support Arrow keys for navigation
+    if (event.key === 'ArrowDown') {
+        event.preventDefault()
+        this.focusNextItem($toggleButton)
+    }
+
+    if (event.key === 'ArrowUp') {
+        event.preventDefault()
+        this.focusPreviousItem($toggleButton)
+    }
+}
+```
+
+### Escape Key Support
+
+```javascript
+handleEscapeKeyDown(event) {
+    if (event.key.toLowerCase() === 'escape') {
+        // Close menu
+        const $toggleButton = this.state.$activeToggleButton
+        $toggleButton.setAttribute('aria-expanded', 'false')
+
+        // Return focus to toggle button
+        $toggleButton.focus()
+
+        // Clear active state
+        this.state.$activeToggleButton = null
+    }
+}
+```
+
+### Focus Management
+
+```javascript
+handleToggleButtonFocusOut($toggleButton, event) {
+    if (!(event instanceof FocusEvent)) return
+
+    const $subMenu = document.getElementById($toggleButton.getAttribute('aria-controls'))
+
+    // Don't close if focus moved to sub-menu
+    if (!event.relatedTarget || $subMenu.contains(event.relatedTarget)) return
+
+    // Close when focus leaves the component
+    $toggleButton.setAttribute('aria-expanded', 'false')
+}
+```
+
+### Focus Trapping
+
+For modals and overlays, trap focus within the component:
+
+```javascript
+class Modal {
+    trapFocus($container) {
+        const focusableElements = $container.querySelectorAll(
+            'a[href], button:not([disabled]), textarea, input, select'
+        )
+
+        const firstElement = focusableElements[0]
+        const lastElement = focusableElements[focusableElements.length - 1]
+
+        $container.addEventListener('keydown', (event) => {
+            if (event.key !== 'Tab') return
+
+            // Shift + Tab on first element
+            if (event.shiftKey && document.activeElement === firstElement) {
+                event.preventDefault()
+                lastElement.focus()
+            }
+            // Tab on last element
+            else if (!event.shiftKey && document.activeElement === lastElement) {
+                event.preventDefault()
+                firstElement.focus()
+            }
+        })
+
+        // Focus first element
+        firstElement.focus()
+    }
+}
+```
+
+## The KISS Principle
+
+Keep It Simple, Stupid. Simple code is:
+- Easier to understand
+- Easier to debug
+- Easier to maintain
+- Usually faster
+
+### Write Minimal, Focused Functions
+
+Functions should do one thing and do it well.
+
+```javascript
+// ✅ Good - Focused function with single responsibility
+const toggleVisibility = (element) => {
+    if (!element) return
+
+    element.classList.toggle('is-hidden')
+}
+
+// ❌ Bad - Function doing too many things
+const handleElement = (element) => {
+    if (!element) return
+    element.classList.toggle('is-hidden')
+    element.setAttribute('data-state', element.classList.contains('is-hidden') ? 'hidden' : 'visible')
+    const event = new CustomEvent('stateChanged', { detail: { element } })
+    document.dispatchEvent(event)
+    // ... more logic
+}
+```
+
+### Minimize Dependencies
+
+Use vanilla JavaScript where possible. Only add dependencies when they provide significant value.
+
+```javascript
+// ✅ Good - Using vanilla JS for simple functionality
+const carousel = document.querySelector('.carousel')
+const slides = carousel.querySelectorAll('.carousel__slide')
+let currentIndex = 0
+
+const showSlide = (index) => {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none'
+    })
+}
+
+// ❌ Bad - Using a large library for simple functionality
+jQuery(document).ready(function($) {
+    $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1
+    })
+})
+```
+
+### Simplify Event Handling
+
+Use event delegation where possible.
+
+```javascript
+// ✅ Good - Event delegation
+document.querySelector('.tabs').addEventListener('click', (e) => {
+    if (!e.target.matches('.tab')) return
+
+    const tabId = e.target.dataset.tabId
+    showTab(tabId)
+})
+
+// ❌ Bad - Individual listeners
+document.querySelectorAll('.tab').forEach($tab => {
+    $tab.addEventListener('click', (e) => {
+        const tabId = e.target.dataset.tabId
+        showTab(tabId)
+    })
+})
+```
+
+### Keep Your Code DRY
+
+Don't Repeat Yourself - Extract repeated code into reusable functions.
+
+```javascript
+// ✅ Good - DRY code
+const formatCurrency = (amount, currencyCode = 'USD') => {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currencyCode
+    }).format(amount)
+}
+
+document.querySelector('.price').textContent = formatCurrency(19.99)
+document.querySelector('.discount').textContent = formatCurrency(5.50)
+
+// ❌ Bad - WET (Write Everything Twice) code
+document.querySelector('.price').textContent = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+}).format(19.99)
+
+document.querySelector('.discount').textContent = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+}).format(5.50)
+```
+
+### Strive for Low Connascence
+
+Reduce dependencies between components to improve maintainability.
+
+```javascript
+// ✅ Good - Low coupling, clear interface
+class Accordion {
+    constructor(element, options = {}) {
+        this.element = element
+        this.options = {
+            multipleOpen: false,
+            initialOpen: 0,
+            ...options
+        }
+        this.init()
+    }
+
+    // Clear public API
+    open(index) { /* ... */ }
+    close(index) { /* ... */ }
+    toggle(index) { /* ... */ }
+}
+
+// Usage - simple, clear interface
+const accordion = new Accordion(document.querySelector('.accordion'), {
+    multipleOpen: true
+})
+
+// ❌ Bad - High coupling with global state
+const initAccordions = () => {
+    window.accordionState = []  // Global state
+    const items = document.querySelectorAll('.accordion .item')
+
+    items.forEach((item, index) => {
+        // Tightly coupled to DOM structure and global state
+        window.accordionState[index] = false
+        // ...
+    })
+}
+```
+
+### Proper Error Handling
+
+```javascript
+// ✅ Good - Proper error handling
+const submitForm = async (formData) => {
+    try {
+        const response = await fetch('/api/submit', {
+            method: 'POST',
+            body: formData
+        })
+
+        if (!response.ok) {
+            if (response.status === 400) {
+                const errorData = await response.json()
+                showValidationErrors(errorData.errors)
+                return
+            }
+            throw new Error(`Server error: ${response.status}`)
+        }
+
+        const result = await response.json()
+        showSuccess(result.message)
+    } catch (error) {
+        console.error('Form submission error:', error)
+        showErrorMessage('Unable to submit form. Please try again later.')
+    }
+}
+```
+
+### When to Add Complexity
+
+Only add complexity when:
+- User experience would be significantly improved
+- Performance optimization requires it
+- The problem domain genuinely requires more sophisticated solutions
+
+Remember: It's always easier to add complexity later than to simplify overly complex code that's already in production.
+
+## Advanced Patterns
+
+### Array Handling
+
+Always use `Array.from()` to convert NodeLists to arrays:
+
+```javascript
+// ✅ Good - Convert NodeList to Array
+const $toggleButtons = Array.from($mainNavigationElement.querySelectorAll('.toggle'))
+
+// ✅ Also good - Using spread operator
+const selectors = [...Array.from(document.querySelectorAll('.material-input'))]
+
+// Use array methods
+$toggleButtons.forEach($button => {
+    $button.addEventListener('click', handleClick)
+})
+
+$toggleButtons.map($button => $button.dataset.id)
+```
+
+### Debouncing and Throttling
+
+For performance-sensitive events:
+
+```javascript
+// Debounce - Wait until user stops typing
+const debounce = (func, wait) => {
+    let timeout
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout)
+            func(...args)
+        }
+        clearTimeout(timeout)
+        timeout = setTimeout(later, wait)
+    }
+}
+
+// Usage
+const handleSearch = debounce((query) => {
+    // Perform search
+}, 300)
+
+$searchInput.addEventListener('input', (e) => handleSearch(e.target.value))
+
+// Throttle - Limit execution rate
+const throttle = (func, limit) => {
+    let inThrottle
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args)
+            inThrottle = true
+            setTimeout(() => inThrottle = false, limit)
+        }
+    }
+}
+
+// Usage
+const handleScroll = throttle(() => {
+    // Handle scroll
+}, 100)
+
+window.addEventListener('scroll', handleScroll)
+```
+
+## Summary
+
+The Techno Sapiens starter theme JavaScript approach ensures:
+
+✅ **Vanilla JavaScript** with ES2016+ syntax
+✅ **Progressive enhancement** (HTML/CSS first)
+✅ **Accessibility** as a core principle
+✅ **KISS principle** for maintainability
+✅ **Proper error handling**
+✅ **Feature detection** over assumptions
+
+❌ **No React, Vue, Angular** or other frameworks
+❌ **No jQuery** in custom code
+❌ **No unnecessary dependencies**
+❌ **No over-engineering**
+
+This approach delivers fast, maintainable, and accessible websites.
+
+For more information, see:
+- [JavaScript Organization](mdc:.cursor/rules/040-javascript-organization.mdc) - File structure and organization
+- [JavaScript OOP Patterns](mdc:.cursor/rules/041-javascript-oop-patterns.mdc) - Class structure and patterns
+- [Code Splitting](mdc:.cursor/rules/042-javascript-code-splitting.mdc) - Dynamic imports and lazy loading

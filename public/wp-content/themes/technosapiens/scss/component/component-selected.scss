@@ -1,0 +1,34 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+::-moz-selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+p, i, u, strong, em, span, a, li, h1, h2, h3, h4, h5, h6, input, textarea, label, legend, time, code {
+    &::-moz-selection {
+        background-color: var(--ts-color-primary, blue);
+        color: var(--ts-color-on-primary, white);
+
+        .ts-has-dark-background & {
+            background-color: var(--ts-color-secondary, blue);
+            color: var(--ts-color-primary, white);
+        }
+    }
+
+    &::selection {
+        background-color: var(--ts-color-primary, blue);
+        color: var(--ts-color-on-primary, white);
+
+        .ts-has-dark-background & {
+            background-color: var(--ts-color-secondary, blue);
+            color: var(--ts-color-primary, white);
+        }
+    }
+}

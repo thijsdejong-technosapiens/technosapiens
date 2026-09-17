@@ -1,0 +1,371 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.main-navigation {
+    $self: &;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: flex-end;
+
+    //mobile main navigation height - change these variables value in the StylingComponent.php :)
+    //height: var(--ts-nav-height-mobile, 3.75rem);
+
+    //desktop main navigation height - change these variables in the StylingComponent.php :)
+    @include mixins.lg {
+        //height: var(--ts-nav-height, 3.75rem);
+    }
+
+    &__items {
+        height: 100%;
+        display: flex;
+        gap: calc(var(--ts-gutter-width) / 4);
+    }
+
+    &__item {
+        position: relative;
+        border-radius: var(--ts-button-border-radius, 3.125rem);
+        display: none;
+
+        @include mixins.lg {
+            display: flex;
+            position: relative;
+        }
+
+        &:last-of-type {
+            #{$self}__sub-menu {
+                right: 0;
+                left: initial;
+
+                @include mixins.lg {
+                    right: auto;
+                    left: 0;
+                }
+
+                #{$self}__sub-menu-item-link {
+                    @include mixins.lg {
+                        flex-direction: row;
+                        justify-content: flex-start;
+                    }
+
+                    #{$self}__item-icon {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                #{$self}__second-sub-menu {
+                    right: 97.5%;
+                    left: initial;
+                }
+            }
+        }
+
+        &--current {
+            >#{$self}__item-link {
+                >#{$self}__item-text {
+                    position: relative;
+                    color: var(--ts-color-primary, red);
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: currentColor;
+                    }
+                }
+            }
+        }
+
+        &--current-parent {
+            #{$self}__item-text {
+                color: var(--ts-color-primary, red);
+            }
+        }
+
+        &--has-sub {
+            display: none;
+            align-items: center;
+
+            @include mixins.lg {
+                align-items: center;
+                display: flex;
+            }
+
+            #{$self}__sub-toggle {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                background-color: transparent;
+                padding: 0 0.75em 0 0;
+                margin-left: -.75em;
+
+                &[aria-expanded="true"]+#{$self}__sub-menu {
+                    opacity: 1;
+                    transform: translate(var(--ts-main-navigation-submenu-shift-x), 0);
+                    pointer-events: all;
+                    visibility: visible;
+                    transition: opacity .2s ease-in-out, transform .2s ease-in-out, visibility 0s linear 0s;
+                }
+
+                //force close sub menu dropdown when parent gets closed
+                &[aria-expanded="false"]+#{$self}__sub-menu [aria-expanded="true"]+#{$self}__second-sub-menu {
+                    transform: translateX(2.5%);
+                    pointer-events: none;
+                    visibility: hidden;
+                }
+            }
+        }
+
+        &--header-button {
+            align-items: center;
+            display: flex;
+            margin-left: 1rem;
+
+        }
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: var(--ts-font-size-large, 1.25rem);
+        padding: 0 .75em;
+        height: 100%;
+        opacity: 1;
+        transition: .1s ease-in-out background-color;
+
+        @include mixins.lg {
+            height: auto;
+        }
+    }
+
+    &__item-text {
+        text-wrap: nowrap;
+        color: var(--ts-font-color-primary, red);
+    }
+
+    &__item-icon {
+        height: 1rem;
+        width: 1rem;
+        flex-shrink: 0;
+
+        &--rotated {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__sub-menu {
+        --ts-main-navigation-submenu-shift-x: 0px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 5;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        left: 0.5rem;
+        top: var(--ts-nav-height, 3.75rem);
+        transform: translate(var(--ts-main-navigation-submenu-shift-x), 2.5%);
+        min-width: 12.5rem;
+        pointer-events: none;
+        //background-color: var(--ts-color-white, white);
+        box-shadow: var(--ts-shadow-sm, none);
+
+        @include mixins.lg {
+            position: absolute;
+            right: auto;
+            width: auto;
+            min-width: unset;
+            top: calc(100% + 0.75rem);
+            left: 0;
+            transform: translate(var(--ts-main-navigation-submenu-shift-x), 0.5rem);
+            box-shadow: none;
+            transition: opacity .2s ease-in-out, transform .2s ease-in-out, visibility 0s linear .2s;
+        }
+    }
+
+    //add menu item hover
+    &__item {
+        transition: .1s ease-in-out background-color;
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--ts-color-light, lightgray);
+        }
+    }
+
+    //WCAG 2.1 AA - overrule default focus outline
+    &__item-link,
+    &__sub-menu-item-link,
+    &__second-sub-menu-item-link,
+    &__sub-toggle {
+        outline-offset: -2px;
+
+        &:focus-visible {
+            outline: 2px solid var(--ts-color-primary, blue);
+        }
+    }
+
+    &__sub-menu-item {
+
+        &--current {
+            >#{$self}__sub-menu-item-link {
+                >#{$self}__sub-menu-item-text {
+                    position: relative;
+                    color: var(--ts-color-primary, red);
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: currentColor;
+                    }
+                }
+            }
+        }
+
+        &--current-parent {
+            >#{$self}__sub-menu-item-link {
+                //TODO maybe style parent of current item
+            }
+        }
+
+        &--has-sub {
+            display: flex;
+            align-items: stretch;
+            position: relative;
+
+            #{$self}__sub-toggle {
+                position: static;
+                padding: calc(var(--ts-gutter-width, 2rem) / 2);
+                height: unset;
+
+                &[aria-expanded="true"]+#{$self}__second-sub-menu {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: all;
+                    visibility: visible;
+                    transition: opacity .2s ease-in-out, transform .2s ease-in-out, visibility 0s linear 0s;
+                }
+            }
+        }
+    }
+
+    &__sub-menu-item-link {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--ts-gutter-width, 2rem) / 4);
+        padding: calc(var(--ts-gutter-width, 2rem) / 4);
+        flex-grow: 1;
+        text-decoration: none;
+        color: var(--ts-color-black, black);
+        background-color: transparent;
+        transition: var(--ts-transition-default, 0.1s ease-in-out);
+        font-size: var(--ts-font-size-sm, 0.9rem);
+
+
+        &:hover {
+            transform: translateX(0.2rem);
+        }
+    }
+
+    &__sub-menu-item-text {
+        font-size: .875rem;
+        line-height: 1.25em;
+        white-space: nowrap;
+        color: var(--ts-font-color-primary, red);
+    }
+
+    &__second-sub-menu {
+        z-index: 10;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        top: 0;
+        left: 97.5%;
+        transform: translateX(2.5%);
+        min-width: 12.5rem;
+        pointer-events: none;
+        background-color: var(--ts-color-white, white);
+        box-shadow: var(--ts-shadow-sm, none);
+        transition: opacity .2s ease-in-out, transform .2s ease-in-out, visibility 0s linear .2s;
+    }
+
+    &__second-sub-menu-item {
+        line-height: 2;
+        color: var(--ts-color-primary, blue);
+        background-color: var(--ts-color-white, white);
+
+        &--current {
+            >#{$self}__second-sub-menu-item-link {
+                >#{$self}__second-sub-menu-item-text {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: currentColor;
+                    }
+                }
+            }
+        }
+
+        &--current-parent {
+            >#{$self}__second-sub-menu-item-link {
+                //TODO maybe style parent of current item
+            }
+        }
+    }
+
+    &__second-sub-menu-item-link {
+        display: flex;
+        text-decoration: none;
+        color: var(--ts-color-primary, blue);
+        padding: calc(var(--ts-gutter-width, 2rem) / 2);
+        background-color: transparent;
+        transition: .1s ease-in-out background-color;
+    }
+
+    &__second-sub-menu-item-text {
+        font-size: .875rem;
+        line-height: 1.25em;
+        white-space: nowrap;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    //hitbox + alignment of search icon
+    .search-trigger {
+
+        @include mixins.lg-down {
+            aspect-ratio: 1/1;
+        }
+
+        &:not(.search-trigger--has-micro-copy) {
+            aspect-ratio: 1/1;
+
+            @include mixins.lg {
+                margin-left: -.375rem;
+                margin-right: -1rem;
+            }
+        }
+    }
+}

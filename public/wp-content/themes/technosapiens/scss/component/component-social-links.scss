@@ -1,0 +1,46 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+$self: '.social-links';
+$size: 2.5rem;
+
+.social-links {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    @include mixins.mq-down(md) {
+        justify-content: center;
+    }
+
+    &__item-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--ts-border-radius-xs, 0.5rem);
+        width: $size;
+        height: $size;
+        transition: background-color .2s ease-in-out;
+        background-color: var(--ts-color-on-primary, white);
+        color: var(--ts-color-tertiary, white);
+
+        &:hover {
+            #{$self} {
+                &__item-icon {
+                    color: var(--ts-color-primary, red);
+                }
+            }
+        }
+    }
+
+    &__item-icon {
+        max-width: 65%;
+        max-height: 65%;
+        width: 100%;
+        height: auto;
+        color: currentColor;
+        transition: .2s ease-in-out color;
+    }
+}

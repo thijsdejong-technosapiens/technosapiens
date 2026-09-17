@@ -1,0 +1,6 @@
+@use "sass:meta";
+
+//scoped gutenberg editor styles
+.wp-block-post-content, .block-editor-iframe__html {
+    @include meta.load-css("admin/section-reference-preview");
+}

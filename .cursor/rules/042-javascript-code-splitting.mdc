@@ -1,0 +1,421 @@
+---
+description: JavaScript code splitting strategies, dynamic imports, and lazy loading patterns
+alwaysApply: false
+---
+# JavaScript Code Splitting Strategies
+
+This document covers code splitting patterns using webpack's dynamic imports to efficiently load JavaScript code, ensuring smaller initial bundles and faster load times.
+
+## Overview
+
+Code splitting allows you to:
+- Load JavaScript only when needed
+- Reduce initial bundle size
+- Improve page load performance
+- Load different code for different devices
+
+## Conditional Loading
+
+Load code only when needed based on DOM elements:
+
+### Basic Pattern
+
+```javascript
+initHoverIntent() {
+    // Check if feature is supported
+    if (this.supportsHover) {
+        // Check if elements exist
+        const $hoverIntentElements = Array.from(document.querySelectorAll('.hover-intent'))
+
+        if ($hoverIntentElements && $hoverIntentElements.length > 0) {
+            // Dynamically import only when needed
+            import(/* webpackChunkName: "hover-intent" */ "./functions/hover-intent")
+                .then(({default: initHoverIntent}) => {
+                    initHoverIntent($hoverIntentElements)
+                })
+                .catch((error) => console.log("Error importing hover-intent:", error))
+        }
+    }
+}
+```
+
+### Key Points
+
+1. **Check feature support first** - `if (this.supportsHover)`
+2. **Check if elements exist** - `if ($hoverIntentElements.length > 0)`
+3. **Use webpack magic comment** - `/* webpackChunkName: "hover-intent" */`
+4. **Handle errors** - `.catch()` for import failures
+
+## Device-Specific Loading
+
+Load different code for mobile vs desktop devices:
+
+```javascript
+class Frontend {
+    constructor() {
+        // Get window width once at initialization
+        this.windowWidth = window.innerWidth ||
+                          document.documentElement.clientWidth ||
+                          document.body.clientWidth
+
+        this.mobileBreakPoint = 1023
+
+        // Load appropriate navigation based on device
+        this.initNavigation()
+    }
+
+    initNavigation() {
+        // Desktop navigation
+        if (this.windowWidth > this.mobileBreakPoint) {
+            this.initMainNavigation()
+        }
+        // Mobile navigation
+        else {
+            this.initSideNavigation()
+        }
+    }
+
+    initMainNavigation() {
+        const $mainNavigationElement = document.querySelector('.main-navigation')
+
+        if ($mainNavigationElement) {
+            import(/* webpackChunkName: "main-navigation" */ "./classes/MainNavigation")
+                .then(({default: MainNavigation}) => {
+                    new MainNavigation($mainNavigationElement)
+                })
+                .catch((error) => console.log("Error importing MainNavigation:", error))
+        }
+    }
+
+    initSideNavigation() {
+        const $sideNavigationElement = document.querySelector('.side-navigation')
+
+        if ($sideNavigationElement) {
+            import(/* webpackChunkName: "side-navigation" */ "./classes/SideNavigation")
+                .then(({default: SideNavigation}) => {
+                    new SideNavigation($sideNavigationElement)
+                })
+                .catch((error) => console.log("Error importing SideNavigation:", error))
+        }
+    }
+}
+```
+
+### Benefits
+
+- Mobile users don't download desktop navigation code
+- Desktop users don't download mobile navigation code
+- Reduces JavaScript payload by ~50% for navigation code
+
+## Per-Section Loading
+
+Sections load their own JavaScript only when they are present on the page. `SectionReferenceTrait` handles this — pass `$hasScript = true` to `registerReferenceSection()` when `sections/[section-slug]/js/[section-slug].js` exists.
+
+### PHP section class
+
+```php
+<?php
+
+namespace TechnoSapiens;
+
+use TechnoSapiens\Core\Singleton;
+
+class SectionExample extends Singleton {
+    use SectionReferenceTrait;
+
+    public const SECTION_ID = 'section_section_example';
+    public const SECTION_SLUG = 'section-example';
+
+    protected function __construct() {
+        $this->registerReferenceSection(
+            __('Example section.', Theme::TEXT_DOMAIN),
+            'admin-generic',
+            true,
+            [],
+            []
+        );
+    }
+
+    public static function getSectionLabel(): string {
+        return __('Example', Theme::TEXT_DOMAIN);
+    }
+}
+```
+
+The trait enqueues `section-example-script.js` and `section-example-style.css` from the webpack manifest when `has_block('acf/section-section-example')` is true.
+
+### Key features
+
+1. **Global post check** — checks `$post` and `$otherPosts`
+2. **Conditional loading** — only when the section is on the page
+3. **Dependency management** — JS depends on `Theme::TEXT_DOMAIN . '_scripts'`
+4. **Prefer no JS** — use native HTML/CSS first (see `section-accordion` with `<details>`)
+
+## Webpack Magic Comments
+
+Use webpack magic comments to name chunks for better debugging:
+
+```javascript
+// Named chunk for better debugging
+import(/* webpackChunkName: "material-input" */ "./classes/MaterialInput")
+
+// Multiple magic comments
+import(
+    /* webpackChunkName: "accordion" */
+    /* webpackMode: "lazy" */
+    "./classes/Accordion"
+)
+```
+
+### Generated Chunk Names
+
+This generates recognizable chunk names in your build:
+
+```
+technosapiens-chunk-material-input.min.js
+technosapiens-chunk-main-navigation.min.js
+technosapiens-chunk-hover-intent.min.js
+technosapiens-chunk-side-navigation.min.js
+technosapiens-chunk-section-example.min.js
+```
+
+### Benefits
+
+1. **Easier Debugging** - Clear names in network tab
+2. **Better Cache Control** - Named chunks are cached better
+3. **Code Organization** - Easy to see what chunks are loading
+
+## Static Methods for Shared Functionality
+
+Use static methods for functionality not tied to a specific instance:
+
+```javascript
+class Frontend {
+    constructor() {
+        // Get device information
+        this.windowWidth = window.innerWidth ||
+                          document.documentElement.clientWidth ||
+                          document.body.clientWidth
+
+        this.supportsHover = window.matchMedia('(hover: hover)').matches &&
+                            !('ontouchstart' in window)
+
+        // Instance methods - device-specific
+        this.initHoverIntent()
+        this.initMainNavigation()
+
+        // Static methods - always available
+        Frontend.initGravityForms()
+        Frontend.initMaterialInputs()
+    }
+
+    // Instance method - checks device capabilities
+    initHoverIntent() {
+        if (this.supportsHover) {
+            const $hoverIntentElements = Array.from(document.querySelectorAll('.hover-intent'))
+            if ($hoverIntentElements.length > 0) {
+                import(/* webpackChunkName: "hover-intent" */ "./functions/hover-intent")
+                    .then(({default: initHoverIntent}) => {
+                        initHoverIntent($hoverIntentElements)
+                    })
+            }
+        }
+    }
+
+    // Static method - not tied to instance
+    static initMaterialInputs() {
+        const selectors = [...Array.from(document.querySelectorAll('.material-input'))]
+
+        if (selectors.length > 0) {
+            import(/* webpackChunkName: "material-input" */ "./classes/MaterialInput")
+                .then(({default: MaterialInput}) => {
+                    selectors.forEach(($containerElement) => {
+                        const $labelElement = $containerElement.querySelector('label')
+                        const $inputElement = $containerElement.querySelector('input, textarea')
+                        new MaterialInput($containerElement, $labelElement, $inputElement)
+                    })
+                })
+                .catch((error) => console.log("Error importing MaterialInput:", error))
+        }
+    }
+
+    // Static method - jQuery compatibility
+    static initGravityForms() {
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof jQuery !== 'undefined') {
+                // Re-init material inputs when Gravity Forms renders
+                jQuery(document).on('gform_post_render', () => {
+                    Frontend.initMaterialInputs()
+                })
+            }
+        })
+    }
+}
+
+// Initialize
+new Frontend()
+```
+
+### When to Use Static Methods
+
+✅ **Use static methods when:**
+- Functionality doesn't depend on instance state
+- Method needs to be called from external code
+- Re-initializing components (like after AJAX)
+- Utility functions
+
+❌ **Don't use static methods when:**
+- Need access to `this.state`
+- Require device-specific checks (windowWidth, supportsHover)
+- Managing component lifecycle
+
+## Code Splitting Checklist
+
+Consider code splitting when:
+
+- [ ] The code is larger than 10KB minified
+- [ ] The code is not used on every page
+- [ ] The code is only needed for specific user interactions
+- [ ] The code is device-specific (mobile/desktop)
+- [ ] The code is block-specific
+- [ ] The code depends on user preferences or permissions
+
+### Example: When to Split
+
+✅ **Good candidates for splitting:**
+```javascript
+// Gallery - only needed on pages with galleries
+initGallery()
+
+// Video player - only needed on pages with videos
+initVideoPlayer()
+
+// Map - only needed on pages with maps
+initMapbox()
+
+// Mobile menu - only needed on mobile devices
+initSideNavigation()
+
+// Hover effects - only needed on hover-capable devices
+initHoverIntent()
+```
+
+❌ **Not good for splitting:**
+```javascript
+// Small utilities (< 2KB)
+formatCurrency()
+
+// Used on every page
+initCookieNotice()
+
+// Critical for first render
+initHeaderScroll()
+```
+
+## Performance Best Practices
+
+### 1. Minimize Bundle Size
+
+```javascript
+// ✅ Good - Only import what you need
+import(/* webpackChunkName: "accordion" */ "./classes/Accordion")
+    .then(({default: Accordion}) => new Accordion($element))
+
+// ❌ Bad - Importing entire library
+import(/* webpackChunkName: "lodash" */ "lodash")
+    .then((_) => _.debounce(fn, 300))
+```
+
+### 2. Avoid Import Waterfalls
+
+```javascript
+// ❌ Bad - Sequential loading (slow)
+async function init() {
+    const {default: ModuleA} = await import('./ModuleA')
+    const {default: ModuleB} = await import('./ModuleB')  // Waits for ModuleA
+    const {default: ModuleC} = await import('./ModuleC')  // Waits for ModuleB
+}
+
+// ✅ Good - Parallel loading (fast)
+async function init() {
+    const [
+        {default: ModuleA},
+        {default: ModuleB},
+        {default: ModuleC}
+    ] = await Promise.all([
+        import('./ModuleA'),
+        import('./ModuleB'),
+        import('./ModuleC')
+    ])
+}
+```
+
+### 3. Cache Chunks Appropriately
+
+Webpack automatically handles chunk caching through content hashing. Just ensure:
+
+1. Use magic comments for consistent naming
+2. Don't change chunk names unnecessarily
+3. Let webpack handle cache busting
+
+### 4. Monitor Bundle Sizes
+
+```bash
+# Analyze webpack bundle
+npm run build -- --analyze
+
+# Check chunk sizes
+ls -lh dist/js/
+```
+
+## Common Patterns
+
+### Pattern: Feature Detection + Conditional Load
+
+```javascript
+initFeature() {
+    // 1. Check feature support
+    if (!this.supportsFeature) return
+
+    // 2. Check if elements exist
+    const $elements = Array.from(document.querySelectorAll('.feature'))
+    if (!$elements.length) return
+
+    // 3. Load code
+    import(/* webpackChunkName: "feature" */ "./functions/feature")
+        .then(({default: initFeature}) => initFeature($elements))
+        .catch((error) => console.log("Error loading feature:", error))
+}
+```
+
+### Pattern: Device-Specific Component
+
+```javascript
+initComponent() {
+    const $element = document.querySelector('.component')
+    if (!$element) return
+
+    // Load different component based on device
+    const chunkName = this.windowWidth > 1023 ? 'component-desktop' : 'component-mobile'
+
+    import(/* webpackChunkName: "[request]" */ `./components/${chunkName}`)
+        .then(({default: Component}) => new Component($element))
+        .catch((error) => console.log(`Error loading ${chunkName}:`, error))
+}
+```
+
+### Pattern: User Interaction Triggered Load
+
+```javascript
+// Only load when user clicks
+$button.addEventListener('click', async () => {
+    const {default: Modal} = await import(/* webpackChunkName: "modal" */ "./classes/Modal")
+    const modal = new Modal({ title: 'Example' })
+    modal.open()
+}, { once: true }) // Only load once
+```
+
+For more information, see:
+- [JavaScript Organization](mdc:.cursor/rules/040-javascript-organization.mdc) - File structure and organization
+- [JavaScript OOP Patterns](mdc:.cursor/rules/041-javascript-oop-patterns.mdc) - Class structure and patterns
+- [JavaScript Best Practices](mdc:.cursor/rules/043-javascript-best-practices.mdc) - KISS principle and frameworks policy

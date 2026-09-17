@@ -1,0 +1,5592 @@
+# Copyright (C) 2026 WPMU DEV
+# This file is distributed under the GNU General Public License (Version 2 - GPLv2).
+msgid ""
+msgstr ""
+"Project-Id-Version: Defender Pro 5.11.0\n"
+"Report-Msgid-Bugs-To: https://wpmudev.com\n"
+"POT-Creation-Date: 2026-03-31 09:30:54+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 1.0.4\n"
+
+#: framework/component/class-behavior.php:34
+#. translators: %s: Scan issue name.
+msgid ""
+"%s is already marked as Ignored. It can’t be added to the Ignored list "
+"again."
+msgstr ""
+
+#: framework/component/class-behavior.php:49
+#. translators: %s: Scan issue name.
+msgid "%s is already marked as Issue. It can’t be added to the Issue list again."
+msgstr ""
+
+#: free/component/class-notification.php:59
+#: free/model/notification/class-malware-report.php:76
+#: src/component/class-notification.php:92
+#: src/component/class-notification.php:107
+#: src/component/ip/class-global-ip.php:268
+#: src/component/ip/class-global-ip.php:272
+#: src/component/ip/class-global-ip.php:275
+#: src/controller/class-firewall.php:818 src/model/class-notification.php:377
+#: src/model/class-notification.php:392
+#: src/model/notification/class-malware-report.php:155
+#: src/traits/formats.php:329
+msgid "Never"
+msgstr ""
+
+#: free/controller/class-audit-logging.php:162
+#: free/controller/class-blocklist-monitor.php:114
+#: src/component/class-backup-settings.php:1125
+#: src/component/class-backup-settings.php:1474
+#: src/component/class-backup-settings.php:1516
+#: src/controller/class-audit-logging.php:571
+#: src/controller/class-audit-logging.php:605
+#: src/controller/class-blocklist-monitor.php:224
+#: src/controller/class-blocklist-monitor.php:250
+#. translators: %s: Html for Pro-tag.
+msgid "Inactive %s"
+msgstr ""
+
+#: free/controller/class-blocklist-monitor.php:83
+#: src/controller/class-blocklist-monitor.php:156
+msgid "A WPMU DEV subscription is required for blocklist monitoring."
+msgstr ""
+
+#: free/controller/class-blocklist-monitor.php:138
+#: src/component/class-backup-settings.php:1377
+#: src/controller/class-blocklist-monitor.php:272
+msgid "Blocklist Monitor"
+msgstr ""
+
+#: free/controller/class-blocklist-monitor.php:139
+#: src/controller/class-blocklist-monitor.php:273
+msgid "Status"
+msgstr ""
+
+#: free/controller/class-session-protection.php:110
+#: src/component/class-backup-settings.php:1279
+#: src/component/class-backup-settings.php:1281
+#: src/component/class-backup-settings.php:1287
+#: src/component/class-backup-settings.php:1289
+#: src/component/class-backup-settings.php:1291
+#: src/component/class-backup-settings.php:1522
+#: src/controller/class-audit-logging.php:588
+#: src/controller/class-audit-logging.php:620
+#: src/controller/class-blocklist-monitor.php:233
+#: src/controller/class-blocklist-monitor.php:257
+#: src/controller/class-captcha.php:519 src/controller/class-mask-login.php:864
+#: src/controller/class-mask-login.php:877
+#: src/controller/class-password-protection.php:389
+#: src/controller/class-password-protection.php:408
+#: src/controller/class-password-protection.php:414
+#: src/controller/class-scan.php:913 src/controller/class-scan.php:955
+#: src/controller/class-security-headers.php:237
+#: src/controller/class-session-protection.php:193
+#: src/controller/class-strong-password.php:261
+#: src/controller/class-two-factor.php:1187
+#: src/controller/class-two-factor.php:1200
+msgid "Inactive"
+msgstr ""
+
+#: free/controller/class-waf.php:44 src/controller/class-waf.php:44
+msgid "WAF"
+msgstr ""
+
+#: free/model/notification/class-audit-report.php:38
+#: free/model/notification/class-audit-report.php:55
+#: src/model/notification/class-audit-report.php:41
+#: src/model/notification/class-audit-report.php:193
+msgid "Audit Logging - Reporting"
+msgstr ""
+
+#: free/model/notification/class-audit-report.php:39
+#: src/model/notification/class-audit-report.php:44
+msgid ""
+"Schedule Defender to automatically email you a summary of all your website "
+"events."
+msgstr ""
+
+#: free/model/notification/class-audit-report.php:56
+#: free/model/notification/class-firewall-report.php:60
+#: free/model/notification/class-malware-report.php:62
+#: src/model/notification/class-audit-report.php:194
+#: src/model/notification/class-firewall-notification.php:294
+#: src/model/notification/class-firewall-report.php:187
+#: src/model/notification/class-malware-notification.php:283
+#: src/model/notification/class-malware-report.php:139
+#: src/model/notification/class-tweak-reminder.php:225
+msgid "Recipients"
+msgstr ""
+
+#: free/model/notification/class-audit-report.php:57
+#: free/model/notification/class-audit-report.php:58
+#: free/model/notification/class-firewall-report.php:56
+#: free/model/notification/class-firewall-report.php:57
+#: free/model/notification/class-malware-report.php:63
+#: free/model/notification/class-malware-report.php:64
+#: src/model/notification/class-audit-report.php:195
+#: src/model/notification/class-audit-report.php:196
+#: src/model/notification/class-firewall-report.php:183
+#: src/model/notification/class-firewall-report.php:184
+#: src/model/notification/class-malware-report.php:140
+#: src/model/notification/class-malware-report.php:141
+msgid "Day of"
+msgstr ""
+
+#: free/model/notification/class-audit-report.php:59
+#: free/model/notification/class-firewall-report.php:58
+#: free/model/notification/class-malware-report.php:65
+#: free/model/setting/class-scan.php:154
+#: src/model/notification/class-audit-report.php:197
+#: src/model/notification/class-firewall-report.php:185
+#: src/model/notification/class-malware-report.php:142
+#: src/model/setting/class-scan.php:154
+msgid "Time of day"
+msgstr ""
+
+#: free/model/notification/class-audit-report.php:60
+#: free/model/notification/class-firewall-report.php:59
+#: free/model/notification/class-malware-report.php:66
+#: free/model/setting/class-scan.php:151
+#: src/model/notification/class-audit-report.php:198
+#: src/model/notification/class-firewall-report.php:186
+#: src/model/notification/class-malware-report.php:143
+#: src/model/notification/class-tweak-reminder.php:224
+#: src/model/setting/class-scan.php:151
+#: src/view/email/audit-report-table.php:48
+msgid "Frequency"
+msgstr ""
+
+#: free/model/notification/class-firewall-report.php:38
+#: free/model/notification/class-firewall-report.php:55
+#: src/model/notification/class-firewall-report.php:36
+#: src/model/notification/class-firewall-report.php:182
+msgid "Firewall - Reporting"
+msgstr ""
+
+#: free/model/notification/class-firewall-report.php:39
+#: src/model/notification/class-firewall-report.php:38
+msgid ""
+"Configure Defender to automatically email you a lockout report for this "
+"website."
+msgstr ""
+
+#: free/model/notification/class-malware-report.php:38
+#: free/model/notification/class-malware-report.php:60
+#: src/model/notification/class-malware-report.php:44
+#: src/model/notification/class-malware-report.php:137
+msgid "Malware Scanning - Reporting"
+msgstr ""
+
+#: free/model/notification/class-malware-report.php:39
+#: src/model/notification/class-malware-report.php:46
+msgid "Automatically run regular scans of your website and email you reports."
+msgstr ""
+
+#: free/model/notification/class-malware-report.php:61
+#: src/model/notification/class-malware-notification.php:272
+#: src/model/notification/class-malware-report.php:138
+msgid "Send notifications when no issues are detected"
+msgstr ""
+
+#: free/model/setting/class-audit-logging.php:46
+#: src/model/setting/class-audit-logging.php:46
+msgid "Storage for"
+msgstr ""
+
+#: free/model/setting/class-audit-logging.php:66
+#: src/component/class-mail.php:65
+#: src/model/notification/class-audit-report.php:168
+#: src/model/setting/class-audit-logging.php:68
+msgid "Audit Logging"
+msgstr ""
+
+#: free/model/setting/class-scan.php:143 free/model/setting/class-scan.php:186
+#: src/model/setting/class-scan.php:143 src/model/setting/class-scan.php:186
+#: src/traits/defender-hub-client.php:648
+msgid "File change detection"
+msgstr ""
+
+#: free/model/setting/class-scan.php:144 src/model/setting/class-scan.php:144
+#: src/traits/defender-hub-client.php:649
+msgid "Scan core files"
+msgstr ""
+
+#: free/model/setting/class-scan.php:145 src/model/setting/class-scan.php:145
+#: src/traits/defender-hub-client.php:650
+msgid "Scan plugin files"
+msgstr ""
+
+#: free/model/setting/class-scan.php:146 src/model/setting/class-scan.php:146
+msgid "Outdated & removed plugins"
+msgstr ""
+
+#: free/model/setting/class-scan.php:147 src/model/setting/class-scan.php:147
+#: src/traits/defender-hub-client.php:652
+msgid "Known vulnerabilities"
+msgstr ""
+
+#: free/model/setting/class-scan.php:148 src/model/setting/class-scan.php:148
+#: src/traits/defender-hub-client.php:654
+msgid "Suspicious code"
+msgstr ""
+
+#: free/model/setting/class-scan.php:149 src/model/setting/class-scan.php:149
+msgid "Max included file size"
+msgstr ""
+
+#: free/model/setting/class-scan.php:150 src/model/setting/class-scan.php:150
+msgid "Scheduled Scanning"
+msgstr ""
+
+#: free/model/setting/class-scan.php:152 src/model/setting/class-scan.php:152
+msgid "Day of the week"
+msgstr ""
+
+#: free/model/setting/class-scan.php:153 src/model/setting/class-scan.php:153
+msgid "Day of the month"
+msgstr ""
+
+#: free/model/setting/class-scan.php:185 src/model/setting/class-scan.php:185
+#. translators: %s: File change detection.
+msgid ""
+"You have not selected a scan type for the %s. Please choose at least one "
+"and save the settings again."
+msgstr ""
+
+#: free/model/setting/class-scan.php:190 src/model/setting/class-scan.php:190
+msgid ""
+"You have not selected a scan type. Please enable at least one scan type and "
+"save the settings again."
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:75
+#: src/behavior/scan-item/class-core-integrity.php:150
+#: src/behavior/scan-item/class-malware-result.php:89
+#: src/behavior/scan-item/class-plugin-integrity.php:153
+#: src/behavior/scan-item/class-vuln-result.php:111
+#. translators: %s: Scan issue name.
+msgid "You’ve successfully ignored the security issue related to %s."
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:100
+#: src/behavior/scan-item/class-vuln-result.php:136
+#. translators: %s: Scan issue name.
+msgid "You’ve successfully restored the security issue related to %s."
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:135
+#: src/behavior/scan-item/class-vuln-result.php:273
+msgid "This plugin cannot be removed because it is active."
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:143
+#: src/behavior/scan-item/class-vuln-result.php:281
+msgid "Defender does not have enough permission to remove this plugin."
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:152
+#: src/behavior/scan-item/class-vuln-result.php:290
+#. translators: %s: Plugin name.
+msgid "%s plugin"
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:163
+#: src/traits/file-operations.php:61
+msgid "This item has been permanently removed"
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:188
+#. translators: %s: Time period.
+msgid "No updates released by the author in the past %s"
+msgstr ""
+
+#: src/behavior/scan-item/class-abandoned-result.php:191
+msgid "Removed from the wordpress.org repository"
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:118
+#: src/behavior/scan-item/class-plugin-integrity.php:121
+#: src/behavior/scan-item/class-vuln-result.php:183
+#: src/behavior/scan-item/class-vuln-result.php:227
+msgid "This item has been resolved."
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:122
+#: src/behavior/scan-item/class-plugin-integrity.php:125
+msgid ""
+"Permissions Denied. Defender does not have the needed permissions to edit "
+"the file. Please change file permissions to 640 or contact your hosting "
+"provider so they could change them for you."
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:165
+#: src/behavior/scan-item/class-malware-result.php:104
+#: src/behavior/scan-item/class-plugin-integrity.php:168
+msgid "The suspicious file has been successfully restored."
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:186
+#: src/behavior/scan-item/class-malware-result.php:123
+#: src/behavior/scan-item/class-plugin-integrity.php:187
+msgid "This item has been deleted."
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:243
+msgid "Unknown file in WordPress core"
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:245
+msgid "This directory does not belong to WordPress core"
+msgstr ""
+
+#: src/behavior/scan-item/class-core-integrity.php:247
+msgid "This WordPress core file appears modified"
+msgstr ""
+
+#: src/behavior/scan-item/class-malware-result.php:63
+msgid "Suspicious function found"
+msgstr ""
+
+#: src/behavior/scan-item/class-malware-result.php:132
+msgid "wp-config.php can't be removed. Please remove the suspicious code manually."
+msgstr ""
+
+#: src/behavior/scan-item/class-plugin-integrity.php:240
+msgid "Unknown file in the WordPress plugin"
+msgstr ""
+
+#: src/behavior/scan-item/class-plugin-integrity.php:242
+msgid "This directory does not belong to the WordPress plugin"
+msgstr ""
+
+#: src/behavior/scan-item/class-plugin-integrity.php:244
+msgid "This plugin file appears modified"
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:76
+#. translators: %s: Version of WP core, plugin or theme.
+msgid "Vulnerability found in %s."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:161
+msgid "Please try again! We could not find the issue type."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:194
+msgid "We couldn't update your theme. Please try updating with another method."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:231
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:240
+msgid "There is no update available for this plugin."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:317
+msgid "This theme cannot be removed because it is active."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:325
+msgid "Defender does not have enough permission to remove this theme."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:334
+#. translators: %s: Plugin theme.
+msgid "%s theme"
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:358
+msgid "Vulnerability type:"
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:360
+msgid "No Update Available"
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:362
+msgid "This bug has been fixed in version:"
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:418
+msgid "WordPress core cannot be removed."
+msgstr ""
+
+#: src/behavior/scan-item/class-vuln-result.php:429
+msgid "We couldn't remove this item."
+msgstr ""
+
+#: src/class-admin.php:83 src/class-admin.php:84 src/class-admin.php:283
+msgid "Get Defender Pro"
+msgstr ""
+
+#: src/class-admin.php:129 src/component/class-mail.php:41
+#: src/traits/defender-dashboard-client.php:70
+#: src/view/ip-lockout/locked.php:320 src/view/modal/deactivation-survey.php:23
+msgid "Defender"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Defender Pro"
+msgstr ""
+
+#: src/class-admin.php:257
+msgid "Go to Defender Dashboard"
+msgstr ""
+
+#: src/class-admin.php:261 src/controller/class-dashboard.php:82
+msgid "Dashboard"
+msgstr ""
+
+#: src/class-admin.php:267 src/class-admin.php:271
+msgid "Docs"
+msgstr ""
+
+#: src/class-admin.php:279
+msgid "Upgrade to Defender Pro"
+msgstr ""
+
+#: src/class-admin.php:290
+msgid "Renew Your Membership"
+msgstr ""
+
+#: src/class-admin.php:294
+msgid "Renew Membership"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WPMU DEV"
+msgstr ""
+
+#: src/class-admin.php:326
+#. translators: %s: Author URI.
+msgid "By %s"
+msgstr ""
+
+#: src/class-admin.php:343
+#. translators: %s: Plugin name.
+msgid "More information about %s"
+msgstr ""
+
+#: src/class-admin.php:345 src/class-admin.php:365
+msgid "View details"
+msgstr ""
+
+#: src/class-admin.php:351 src/component/class-rate.php:131
+msgid "Rate Defender"
+msgstr ""
+
+#: src/class-admin.php:355 src/class-admin.php:358
+msgid "Support"
+msgstr ""
+
+#: src/class-admin.php:368 src/class-admin.php:371
+msgid "Premium Support"
+msgstr ""
+
+#: src/class-admin.php:373 src/class-admin.php:376
+msgid "Roadmap"
+msgstr ""
+
+#: src/class-admin.php:396
+msgid ""
+"Cloudflare Usage Detected: Switched to CF-Connecting-IP for Better "
+"Compatibility"
+msgstr ""
+
+#: src/class-admin.php:403
+msgid ""
+"Improve IP Detection: We suggest Switching to X-Forward-For IP Detection "
+"Method"
+msgstr ""
+
+#: src/class-admin.php:422
+#. translators: %s: Link.
+msgid ""
+"We have switched to using the CF-Connecting-IP HTTP header for IP "
+"detection, offering enhanced compatibility for users behind Cloudflare "
+"Proxy. If you wish to change this setting, you can do so from %s."
+msgstr ""
+
+#: src/class-admin.php:426 src/class-admin.php:450
+#: src/controller/class-data-tracking.php:57
+#: src/traits/defender-hub-client.php:201
+msgid "here"
+msgstr ""
+
+#: src/class-admin.php:434
+msgid "Ok, I understand"
+msgstr ""
+
+#: src/class-admin.php:446
+#. translators: %s: Link.
+msgid ""
+"Based on your server configuration, we recommend switching to the "
+"X-Forwarded-For method for accurate IP detection and to prevent firewall "
+"blocks. Easily modify your settings %s."
+msgstr ""
+
+#: src/class-admin.php:458
+msgid "Switch to X-Forwarded-For"
+msgstr ""
+
+#: src/class-admin.php:462 src/view/two-fa/providers/biometric.php:30
+msgid "Dismiss"
+msgstr ""
+
+#: src/class-admin.php:515 src/class-admin.php:545 src/class-admin.php:600
+msgid "Invalid request, you are not allowed to do that action."
+msgstr ""
+
+#: src/class-admin.php:529 src/class-admin.php:606
+msgid "Invalid request, allowed data not provided."
+msgstr ""
+
+#: src/class-admin.php:620 src/controller/class-webauthn.php:164
+#: src/controller/class-webauthn.php:248 src/controller/class-webauthn.php:330
+#: src/controller/class-webauthn.php:379 src/controller/class-webauthn.php:417
+#: src/controller/class-webauthn.php:510
+msgid "Missing field(s)."
+msgstr ""
+
+#: src/class-central.php:63
+msgid "Your session expired. Please login to continue."
+msgstr ""
+
+#: src/class-central.php:78
+msgid "Invalid API request."
+msgstr ""
+
+#: src/class-central.php:92 src/controller/class-notification.php:197
+#: src/controller/class-notification.php:201
+#: src/controller/class-notification.php:584
+#: src/controller/class-notification.php:588
+msgid "You shall not pass."
+msgstr ""
+
+#: src/class-central.php:207
+#. translators: %s: Name settings.
+msgid "%s is disabled. Please contact your hosting provider to enable it."
+msgstr ""
+
+#: src/class-central.php:244
+#. translators: 1. Option settings. 2. Name settings.
+msgid ""
+"We have detected that your %1$s is disabled on your hosting. For Defender "
+"to function properly, please contact your hosting provider and ask them to "
+"enable %2$s."
+msgstr ""
+
+#: src/class-upgrader.php:801
+msgid "Basic config"
+msgstr ""
+
+#: src/class-upgrader.php:802 src/component/class-backup-settings.php:659
+msgid "Basic Config"
+msgstr ""
+
+#: src/class-upgrader.php:1430
+msgid "Scan of {SITE_URL} complete."
+msgstr ""
+
+#: src/class-upgrader.php:1431
+msgid "Malware Scan of {SITE_URL} is complete."
+msgstr ""
+
+#: src/class-upgrader.php:1436
+msgid "{ISSUES_COUNT} issues found."
+msgstr ""
+
+#: src/class-upgrader.php:1437
+msgid "{ISSUES_COUNT} issue(s) found."
+msgstr ""
+
+#: src/class-upgrader.php:1471
+msgid ""
+"{ISSUES_COUNT} vulnerabilities were identified for {SITE_URL} during a "
+"Malware Scan."
+msgstr ""
+
+#: src/class-upgrader.php:1472
+msgid "Malware Scan identified {ISSUES_COUNT} issue(s) on {SITE_URL}."
+msgstr ""
+
+#: src/class-upgrader.php:1477
+msgid "See details for each issue below."
+msgstr ""
+
+#: src/class-upgrader.php:1478
+msgid "The identified issue(s) is/are listed below."
+msgstr ""
+
+#: src/component/audit/class-application-password-audit.php:88
+#. translators: 1: Blog name, 2: Current user's display name, 3: Affected
+#. username, 4: Application password name.
+msgid "%1$s %2$s created an application password %4$s for %3$s"
+msgstr ""
+
+#: src/component/audit/class-application-password-audit.php:102
+#. translators: 1: Blog name, 2: Username, 3: Application password name.
+msgid "%1$s %2$s created an application password %3$s"
+msgstr ""
+
+#: src/component/audit/class-application-password-audit.php:161
+#. translators: 1: Blog name, 2: Current user's display name, 3: Affected
+#. username.
+msgid "%1$s %2$s revoked all application passwords for %3$s"
+msgstr ""
+
+#: src/component/audit/class-application-password-audit.php:174
+#. translators: 1: Blog name, 2: Username.
+msgid "%1$s %2$s revoked all application passwords"
+msgstr ""
+
+#: src/component/audit/class-application-password-audit.php:195
+#. translators: 1: Blog name, 2: Current user's display name, 3: Affected
+#. username, 4: Application password name.
+msgid "%1$s %2$s revoked an application password %4$s for %3$s"
+msgstr ""
+
+#: src/component/audit/class-application-password-audit.php:209
+#. translators: 1: Blog name, 2: Username, 3: Application password name.
+msgid "%1$s %2$s revoked an application password %3$s"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:47
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user
+msgid "%1$s User %2$s flooded comment"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:117
+msgid "Duplicated"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:118
+msgid "Spammed"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:119
+msgid "Unspammed"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:120
+msgid "Comment"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:141
+#. translators: 1: Blog name, 2: Comment author, 3: Post type, 4: Post title
+msgid "%1$s User %2$s submitted a duplicate comment on %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:171
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid "%1$s %2$s approved comment ID %3$s from %4$s, on %5$s \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:182
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid "%1$s %2$s unapproved comment ID %3$s from %4$s, on %5$s \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:234
+msgid "approved"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:236
+msgid "pending approval"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:241
+#. translators: 1: Blog name, 2: Comment author, 3: Post type, 4: Post title,
+#. 5: Comment status
+msgid "%1$s %2$s commented on %3$s \"%4$s\" - comment status: %5$s"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:252
+#. translators: 1: Blog name, 2: Comment author, 3: Parent comment author, 4:
+#. Post type, 5: Post title, 6: Comment status
+msgid "%1$s %2$s replied to %3$s's comment on %4$s \"%5$s\" - comment status: %6$s"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:268
+#. translators: 1: Blog name, 2: Comment author, 3: Parent comment author, 4:
+#. Post type, 5: Post title, 6: Comment status
+msgid "%1$s %2$s deleted comment ID %3$s, comment author: %4$s on %5$s \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:280
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid "%1$s %2$s trashed comment ID %3$s, comment author: %4$s on %5$s \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:292
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid "%1$s %2$s untrashed comment ID %3$s, comment author: %4$s on %5$s \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:304
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid ""
+"%1$s %2$s marked comment ID %3$s, comment author: %4$s on %5$s \"%6$s\" as "
+"spam"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:319
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid ""
+"%1$s %2$s unmarked comment ID %3$s, comment author: %4$s on %5$s \"%6$s\" "
+"as spam"
+msgstr ""
+
+#: src/component/audit/class-comment-audit.php:334
+#. translators: 1: Blog name, 2: User's display name, 3: Comment ID, 4: Comment
+#. author, 5: Post type, 6: Post title
+msgid "%1$s %2$s edited comment ID %3$s, comment author: %4$s on %5$s \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:42
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Plugin name, 4: Plugin version.
+msgid "%1$s %2$s activated plugin: %3$s, version %4$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:84
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Plugin name, 4: Plugin version.
+msgid "%1$s %2$s deactivated plugin: %3$s, version %4$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:131
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Stylesheet of the theme.
+msgid "%1$s %2$s deleted theme: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:156
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Wordpress version.
+msgid "%1$s %2$s updated WordPress to %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:226
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Translated status for themes.
+msgid "%1$s %2$s was unable to update themes: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:228
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Translated status for themes.
+msgid "%1$s %2$s updated themes: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:256
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Translated status for plugins.
+msgid "%1$s %2$s was unable to update plugins: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:258
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Translated status for plugins.
+msgid "%1$s %2$s updated plugins: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:291
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Theme name, 4: Theme version.
+msgid "%1$s %2$s updated theme: %3$s, version %4$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:312
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Plugin name, 4: Plugin version.
+msgid "%1$s %2$s updated plugin: %3$s, version %4$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:375
+#. translators: %s - blog name, %s - username, %s - theme name
+msgid "%1$s %2$s installed theme: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:387
+#. translators: %s - blog name, %s - username, %s - plugin name
+msgid "%1$s %2$s installed plugin: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:450
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Theme name, 4: Theme version.
+msgid "%1$s %2$s activated theme: %3$s, version %4$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:483
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Plugin file.
+msgid "%1$s %2$s was unable to delete plugin: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:485
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Plugin file.
+msgid "%1$s %2$s deleted plugin: %3$s"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:501
+msgid "deactivated"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:502
+msgid "upgraded"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:503
+msgid "activated"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:504
+msgid "installed"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:505
+msgid "theme"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:506
+msgid "plugin"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:507
+msgid "WordPress"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:508
+msgid "File Added"
+msgstr ""
+
+#: src/component/audit/class-core-audit.php:509
+msgid "File Modified"
+msgstr ""
+
+#: src/component/audit/class-feature-audit.php:78
+#. translators: 1: Site name, 2: Username
+msgid "%1$s Audit Logging feature deactivated by %2$s"
+msgstr ""
+
+#: src/component/audit/class-media-audit.php:41
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: File path
+msgid "%1$s %2$s uploaded a file: \"%3$s\" to Media Library"
+msgstr ""
+
+#: src/component/audit/class-media-audit.php:70
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: File path
+msgid "%1$s %2$s updated a file: \"%3$s\" from Media Library"
+msgstr ""
+
+#: src/component/audit/class-media-audit.php:99
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: File path
+msgid "%1$s %2$s deleted a file: \"%3$s\" from Media Library"
+msgstr ""
+
+#: src/component/audit/class-media-audit.php:133
+msgid "Uploaded"
+msgstr ""
+
+#: src/component/audit/class-menu-audit.php:181
+#. translators: 1: Blog name, 2: User's display name, 3: Menu item, 4: Menu
+#. name
+msgid "%1$s %2$s updated item \"%3$s\" from menu \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-menu-audit.php:201
+#. translators: 1: Blog name, 2: User's display name, 3: Menu item, 4: Menu
+#. name
+msgid "%1$s %2$s added item \"%3$s\" to menu \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-menu-audit.php:241
+#. translators: 1: Blog name, 2: User's display name, 3: Menu item, 4: Menu
+#. name
+msgid "%1$s %2$s removed item \"%3$s\" from menu \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-menu-audit.php:268
+#. translators: 1: Blog name, 2: User's display name, 3: Menu name
+msgid "%1$s %2$s created a new menu \"%3$s\""
+msgstr ""
+
+#: src/component/audit/class-menu-audit.php:313
+#. translators: 1: Blog name, 2: User's display name, 3: Menu name
+msgid "%1$s %2$s updated menu \"%3$s\""
+msgstr ""
+
+#: src/component/audit/class-menu-audit.php:340
+#. translators: 1: Blog name, 2: User's display name, 3: Menu name
+msgid "%1$s %2$s deleted menu \"%3$s\""
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:67
+#. translators: 1: Blog name, 2: User's display name
+msgid "%1$s %2$s disabled site registration"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:74
+#. translators: 1: Blog name, 2: User's display name
+msgid "%1$s %2$s opened site registration"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:86
+#: src/component/audit/class-options-audit.php:118
+#. translators: 1: Blog name, 2: User's display name, 3: Option: Week Starts
+#. On, 4: Old day, 5: New day
+#. translators: 1: Blog name, 2: User's display name, 3: Option label, 4: Old
+#. option value, 5: New option value
+msgid "%1$s %2$s update option %3$s from %4$s to %5$s"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:98
+#. translators: 1: Blog name, 2: User's display name, 3: Option: Site Language,
+#. 4: New option value
+msgid "%1$s %2$s update option %3$s to %4$s"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:107
+#. translators: 1: Blog name, 2: User's display name, 3: Option: Site Language,
+#. 4: Old option value
+msgid "%1$s %2$s update option %3$s from %4$s"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:146
+msgid "Site Title"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:147
+msgid "Tagline"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:148
+#: src/component/audit/class-options-audit.php:152
+msgid "Timezone"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:149
+msgid "Date Format"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:150
+msgid "Time Format"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:151
+msgid "Week Starts On"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:153
+msgid "Site Language"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:154
+msgid "WordPress Address (URL)"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:155
+msgid "Site Address (URL)"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:156
+msgid "Email Address"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:157
+msgid "Membership"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:158
+msgid "New User Default Role"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:159
+#: src/component/audit/class-options-audit.php:160
+#: src/component/audit/class-options-audit.php:161
+msgid "Default article settings"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:162
+#: src/component/audit/class-options-audit.php:163
+msgid "Email me whenever"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:164
+#: src/component/audit/class-options-audit.php:166
+msgid "Before a comment appears"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:165
+#: src/component/audit/class-options-audit.php:173
+#: src/component/audit/class-options-audit.php:174
+#: src/component/audit/class-options-audit.php:175
+#: src/component/audit/class-options-audit.php:176
+#: src/component/audit/class-options-audit.php:177
+#: src/component/audit/class-options-audit.php:178
+#: src/component/audit/class-options-audit.php:179
+#: src/component/audit/class-options-audit.php:180
+#: src/component/audit/class-options-audit.php:181
+msgid "Other comment settings"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:167
+#: src/component/audit/class-options-audit.php:168
+msgid "Comment Moderation"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:169
+msgid "Comment Blocklist"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:170
+msgid "Avatar Display"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:171
+msgid "Maximum Rating"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:172
+msgid "Default Avatar"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:182
+#: src/component/audit/class-options-audit.php:183
+#: src/component/audit/class-options-audit.php:184
+msgid "Thumbnail size"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:185
+#: src/component/audit/class-options-audit.php:186
+#: src/component/audit/class-options-audit.php:187
+#: src/component/audit/class-options-audit.php:188
+msgid "Medium size"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:189
+#: src/component/audit/class-options-audit.php:190
+msgid "Large size"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:191
+msgid "Default image size"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:192
+msgid "Default image align"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:193
+msgid "Default image link type"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:194
+msgid "Uploading Files"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:195
+msgid "Blog pages show at most"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:196
+msgid "Syndication feeds show the most recent"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:197
+msgid "For each article in a feed, show"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:198
+msgid "Front page displays"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:199
+msgid "Front page"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:200
+msgid "Posts page"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:201
+msgid "Search Engine Visibility"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:202
+msgid "Default Post Category"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:203
+msgid "Default Mail Category"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:204
+msgid "Default Link Category"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:205
+msgid "Default Post Format"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:206
+msgid "Mail Server"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:207
+msgid "Port"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:208
+msgid "Login Name"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:209
+msgid "Password"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:210
+msgid "Update Services"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:211
+msgid "Permalink Setting"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:212
+msgid "Category base"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:213
+msgid "Tag base"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:214
+msgid "Registration notification"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:215
+msgid "Allow new registrations"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:216
+msgid "Add New Users"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:217
+msgid "Enable administration menus"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:218
+#: src/component/audit/class-options-audit.php:219
+msgid "Site upload space"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:220
+msgid "Upload file types"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:221
+msgid "Network Title"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:222
+msgid "First Post"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:223
+msgid "First Page"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:224
+msgid "First Comment"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:225
+msgid "First Comment URL"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:226
+msgid "First Comment Author"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:227
+msgid "Welcome Email"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:228
+msgid "Welcome User Email"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:229
+msgid "Max upload file size"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:230
+msgid "Banned Names"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:231
+msgid "Limited Email Registrations"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:232
+msgid "Banned Email Domains"
+msgstr ""
+
+#: src/component/audit/class-options-audit.php:254
+#: src/component/class-backup-settings.php:1369
+#: src/controller/class-main-setting.php:70
+msgid "Settings"
+msgstr ""
+
+#: src/component/audit/class-password-audit.php:74
+#. translators: 1: Blog name, 2: Username
+msgid "%1$s %2$s changed their password"
+msgstr ""
+
+#: src/component/audit/class-password-audit.php:87
+#. translators: 1: Blog name, 2: Admin username, 3: Affected username
+msgid "%1$s %2$s changed the password for user: %3$s"
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:125
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title
+msgid "%1$s %2$s published %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:138
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title
+msgid "%1$s %2$s pending %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:151
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title
+msgid "%1$s %2$s drafted %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:164
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title, 5: Old status, 6: New status
+msgid "%1$s %2$s changed %3$s \"%4$s\" status from %5$s to %6$s"
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:195
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title
+msgid "%1$s %2$s deleted %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:238
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title
+msgid "%1$s %2$s untrashed %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:268
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Post type, 4: Post title
+msgid "%1$s %2$s trashed %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:356
+#. translators: 1: Blog name, 2: User's display name, 3: Post type, 4: Post ID,
+#. 5: Old post title, 6: New post title
+msgid "%1$s %2$s updated %3$s ID %4$d, title from \"%5$s\" to \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:367
+#. translators: 1: Blog name, 2: User's display name, 3: Post type, 4: Post ID,
+#. 5: Old post slug, 6: New post slug
+msgid "%1$s %2$s updated %3$s ID %4$d, slug from \"%5$s\" to \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:378
+#. translators: 1: Blog name, 2: User's display name, 3: Post type, 4: Post ID,
+#. 5: Old author name, 6: New author name
+msgid "%1$s %2$s updated %3$s ID %4$d, author from \"%5$s\" to \"%6$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:389
+#. translators: 1: Blog name, 2: User's display name, 3: Post type, 4: Post
+#. title
+msgid "%1$s %2$s updated %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-post-audit.php:406
+#. translators: 1: Blog name, 2: User's display name, 3: Post type, 4: Post
+#. title
+msgid "%1$s %2$s added new %3$s \"%4$s\""
+msgstr ""
+
+#: src/component/audit/class-theme-audit.php:73
+#. translators: 1: Blog theme, 2: Source of action (username or Hub) 3: Theme
+#. name.
+msgid "%1$s %2$s activated theme %3$s on network"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:57
+#. translators: 1: Blog name, 2: Username
+msgid "%1$s User login fail. Username: %2$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:69
+#. translators: 1: Blog name, 2: Username
+msgid "%1$s User login success: %2$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:81
+#. translators: 1: Blog name, 2: 2fa method slug, 3: Username.
+msgid "%1$s 2fa with %2$s method login success for user: %3$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:104
+#. translators: 1: Blog name, 2: Username
+msgid "%1$s User logout success: %2$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:133
+#: src/component/audit/class-user-audit.php:164
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: User ID, 4: Username
+msgid "%1$s %2$s deleted a user: ID: %3$s, username: %4$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:195
+#. translators: 1: Blog name, 2: Username
+msgid "%1$s Password requested to reset for user: %2$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:216
+#. translators: 1: Blog name, 2: Username.
+msgid "%1$s Password reset for user: %2$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:231
+#. translators: 1: Blog name, 2: Source of action. For e.g. Hub or a logged-in
+#. user, 3: Username, 4: Old user role, 5: New user role
+msgid "%1$s %2$s changed user %3$s's role from %4$s to %5$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:266
+#. translators: 1: Blog name, 2: Username, 3: Session lock type.
+msgid "%1$s User session ended for %2$s due to a change in %3$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:289
+#. translators: 1: Blog name, 2: Username.
+msgid "%1$s User session ended for %2$s due to an idle session"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:312
+#. translators: 1: Blog name, 2: Username.
+msgid "%1$s Hub SSO login success: %2$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:337
+#. translators: 1: Blog name. 2: Actor username. 3: Affected username.
+msgid "%1$s %2$s granted Super Admin privileges to %3$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:357
+#. translators: 1: Blog name. 2: Actor username. 3: Affected username.
+msgid "%1$s %2$s revoked Super Admin privileges from %3$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:384
+#. translators: 1: Blog name, 2: Username, 3: User role.
+msgid "User added to %1$s, Username: %2$s, Role: %3$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:432
+#. translators: 1: Blog name, 2: Username, 3: User role.
+msgid "User %1$s %2$s, Username: %3$s, Role: %4$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:444
+#. translators: 1: Blog name, 2: Username, 3: User role
+msgid "%1$s A new user registered: Username: %2$s, Role: %3$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:475
+#. translators: 1: Blog name, 2: User's display name, 3: User ID, 4: Username,
+#. 5: Blog ID
+msgid "%1$s %2$s removed a user: ID: %3$s, username: %4$s from blog %5$s"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:518
+#. translators: 1: Blog name, 2: User's nicename
+msgid "%1$s User %2$s updated his/her profile"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:529
+#. translators: 1: Blog name, 2: User's display name, 3: User's nicename
+msgid "%1$s %2$s updated user %3$s's profile information"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:548
+msgid "lost password"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:549
+msgid "registered"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:550
+msgid "login"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:551
+msgid "logout"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:552
+msgid "password reset"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:553
+msgid "created"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:554
+msgid "added"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:555
+msgid "granted"
+msgstr ""
+
+#: src/component/audit/class-user-audit.php:556
+msgid "revoked"
+msgstr ""
+
+#: src/component/captcha/class-provider.php:142
+#. translators: 1: Opening strong tag, 2: Closing strong tag, 3: Error message
+msgid "%1$sError:%2$s %3$s"
+msgstr ""
+
+#: src/component/captcha/class-provider.php:157
+#. translators: 1: Opening strong tag, 2: Closing strong tag, 3: Captcha type
+#. name
+msgid ""
+"%1$sWarning:%2$s&nbsp; More than one %3$s has been found in the current "
+"form. Please remove all unnecessary %3$s fields to make it work properly."
+msgstr ""
+
+#: src/component/captcha/class-provider.php:218
+#. translators: 1: Captcha Provider name, 2: Captcha Type
+msgid ""
+"%1$s is currently inactive for all forms. You can deploy %2$s for specific "
+"forms in the CAPTCHA Locations below."
+msgstr ""
+
+#: src/component/captcha/class-provider.php:226
+#. translators: 1: Captcha Provider name, 2: Opening bold tag, 3: Closing bold
+#. tag
+msgid ""
+"%1$s is currently inactive for all forms. You can deploy %1$s for specific "
+"forms in the %2$sCAPTCHA Locations%3$s, %2$sWooCommerce%3$s or "
+"%2$sBuddyPress%3$s settings below."
+msgstr ""
+
+#: src/component/captcha/class-provider.php:235
+msgid ""
+"Configure a CAPTCHA provider to verify users and prevent automated bots. "
+"Both reCAPTCHA and Cloudflare Turnstile are supported."
+msgstr ""
+
+#: src/component/captcha/class-recaptcha.php:78
+#: src/controller/class-captcha.php:425 src/model/setting/class-captcha.php:370
+msgid "reCAPTCHA"
+msgstr ""
+
+#: src/component/captcha/class-recaptcha.php:183
+#: src/component/captcha/class-turnstile.php:172
+msgid ""
+"Use wd_captcha_excluded_requests to filter excluded requests for all "
+"captcha providers."
+msgstr ""
+
+#: src/component/captcha/class-recaptcha.php:215
+#: src/component/captcha/class-turnstile.php:204
+msgid ""
+"Use wd_captcha_excluded_handles to filter excluded script handles for all "
+"captcha providers."
+msgstr ""
+
+#: src/component/captcha/class-recaptcha.php:263
+msgid "Use wd_captcha_remote_ip to filter remote IP for all captcha providers."
+msgstr ""
+
+#: src/component/captcha/class-recaptcha.php:294
+msgid ""
+"Use wd_captcha_check_result to filter captcha verification for all "
+"providers."
+msgstr ""
+
+#: src/component/captcha/class-turnstile.php:95
+#: src/model/setting/class-captcha.php:370
+msgid "Turnstile"
+msgstr ""
+
+#: src/component/captcha/class-turnstile.php:114
+msgid "Please enable JavaScript to complete the security verification."
+msgstr ""
+
+#: src/component/class-audit.php:145
+msgid "Something wrong happen, please try again!"
+msgstr ""
+
+#: src/component/class-backup-settings.php:660
+msgid "Recommended default protection for every site"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1239
+#: src/controller/class-firewall.php:971 src/controller/class-firewall.php:1027
+#: src/controller/class-scan.php:921 src/controller/class-scan.php:958
+#: src/controller/class-security-tweaks.php:977
+#: src/controller/class-security-tweaks.php:1009
+msgid "Email notifications active"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1283
+#: src/component/class-backup-settings.php:1509
+#: src/controller/class-audit-logging.php:578
+#: src/controller/class-audit-logging.php:611
+#: src/controller/class-blocklist-monitor.php:231
+#: src/controller/class-blocklist-monitor.php:256
+#: src/controller/class-captcha.php:519 src/controller/class-mask-login.php:864
+#: src/controller/class-mask-login.php:877
+#: src/controller/class-password-protection.php:389
+#: src/controller/class-password-protection.php:413
+#: src/controller/class-scan.php:910 src/controller/class-scan.php:954
+#: src/controller/class-security-headers.php:237
+#: src/controller/class-session-protection.php:193
+#: src/controller/class-strong-password.php:261
+#: src/controller/class-two-factor.php:1187
+#: src/controller/class-two-factor.php:1200
+msgid "Active"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1361
+msgid "Security Recommendations"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1363 src/component/class-mail.php:60
+#: src/controller/class-scan.php:144
+#: src/model/notification/class-malware-notification.php:246
+msgid "Malware Scanning"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1367 src/component/class-mail.php:63
+#: src/controller/class-firewall.php:101 src/controller/class-firewall.php:549
+#: src/model/notification/class-firewall-notification.php:265
+#: src/model/notification/class-firewall-report.php:157
+msgid "Firewall"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1371
+#: src/controller/class-two-factor.php:104
+#: src/controller/class-two-factor.php:1395
+msgid "2FA"
+msgstr ""
+
+#: src/component/class-backup-settings.php:1504
+#. translators: %s: Html for Pro-tag.
+msgid "Active %s"
+msgstr ""
+
+#: src/component/class-captcha.php:93 src/integrations/class-woocommerce.php:90
+msgid "Login"
+msgstr ""
+
+#: src/component/class-captcha.php:94 src/view/mask-login/reset.php:93
+msgid "Register"
+msgstr ""
+
+#: src/component/class-captcha.php:95 src/integrations/class-woocommerce.php:92
+msgid "Lost Password"
+msgstr ""
+
+#: src/component/class-captcha.php:96
+msgid "Comments"
+msgstr ""
+
+#: src/component/class-captcha.php:335
+msgid "Please verify that you are not a robot."
+msgstr ""
+
+#: src/component/class-captcha.php:471 src/component/class-captcha.php:491
+#: src/component/class-captcha.php:523
+#: src/component/class-login-lockout.php:117
+#: src/component/class-login-lockout.php:172
+msgid "Error"
+msgstr ""
+
+#: src/component/class-crypt.php:137
+msgid "The issue with Sodium library."
+msgstr ""
+
+#: src/component/class-crypt.php:159 src/component/class-crypt.php:172
+msgid "Please re-setup 2FA TOTP method again."
+msgstr ""
+
+#: src/component/class-crypt.php:233
+msgid "The Defender file with the random key does not exist."
+msgstr ""
+
+#: src/component/class-crypt.php:246
+msgid "The Defender file with the random key is incorrect."
+msgstr ""
+
+#: src/component/class-fake-bot-detection.php:323
+#. translators: %s: The name of the bot being impersonated.
+msgid "Lockout occurred: Fake bot impersonated %s."
+msgstr ""
+
+#: src/component/class-firewall.php:548 src/controller/class-captcha.php:425
+msgid "Cloudflare"
+msgstr ""
+
+#: src/component/class-hub-connector.php:97
+msgid "Activate WPMU DEV Dashboard"
+msgstr ""
+
+#: src/component/class-hub-connector.php:100
+msgid "Log in to WPMU DEV"
+msgstr ""
+
+#: src/component/class-hub-connector.php:102
+msgid "Connect site for Full protection"
+msgstr ""
+
+#: src/component/class-hub-connector.php:118
+#. translators: 1. Feature name. 2. Opened tag. 3. Closed tag.
+msgid ""
+"Create a free account to connect your site to WPMU DEV and activate %1$s. "
+"%2$sIt`s fast, seamless, and free%3$s."
+msgstr ""
+
+#: src/component/class-hub-connector.php:119
+msgid "Defender - "
+msgstr ""
+
+#: src/component/class-hub-connector.php:125
+#. translators: %s: Feature name.
+msgid "Log in with your WPMU DEV account credentials to activate %s."
+msgstr ""
+
+#: src/component/class-hub-connector.php:147
+msgid "Custom IP Allow/Block list"
+msgstr ""
+
+#: src/component/class-hub-connector.php:149
+#: src/model/setting/class-antibot-global-firewall-setting.php:93
+msgid "AntiBot Global Firewall"
+msgstr ""
+
+#: src/component/class-login-lockout.php:61
+msgid ""
+"You have been locked out by the administrator for attempting to login with "
+"a banned username."
+msgstr ""
+
+#: src/component/class-login-lockout.php:147
+#. translators: %d: Count of attempts.
+msgid "%d login attempts remaining"
+msgstr ""
+
+#: src/component/class-login-lockout.php:177
+msgid "Dummy data."
+msgstr ""
+
+#: src/component/class-login-lockout.php:369
+#. translators: %s: Username.
+msgid "Failed login attempt with username %s"
+msgstr ""
+
+#: src/component/class-login-lockout.php:377
+#. translators: %s: Username.
+msgid "Failed login attempt with a ban username %s"
+msgstr ""
+
+#: src/component/class-login-lockout.php:386
+msgid "Lockout occurred: Too many failed login attempts"
+msgstr ""
+
+#: src/component/class-mail.php:57 src/controller/class-main-setting.php:834
+#: src/controller/class-security-tweaks.php:80
+#: src/model/setting/class-security-tweaks.php:143
+msgid "Recommendations"
+msgstr ""
+
+#: src/component/class-mail.php:67
+msgid "Subscription"
+msgstr ""
+
+#: src/component/class-mail.php:69
+#: src/component/class-notification-base.php:244
+msgid "Subscription Confirmed"
+msgstr ""
+
+#: src/component/class-mail.php:71
+msgid "Unsubscription"
+msgstr ""
+
+#: src/component/class-mail.php:73 src/component/class-two-fa.php:510
+#: src/model/setting/class-two-fa.php:321 src/view/two-fa/user-options.php:16
+msgid "Two-Factor Authentication"
+msgstr ""
+
+#: src/component/class-malicious-bot.php:254
+msgid "Lockout occurred: Bot ignored robots.txt rules."
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:465
+#: src/component/class-notfound-lockout.php:473
+#. translators: %s: URI.
+msgid "Request for file %s which doesn`t exist"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:482
+#. translators: %s: URI.
+msgid "Possible XSS attempt detected in request: %s"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:488
+msgid "Lockout occurred: Multiple XSS attempt requests detected"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:494
+#. translators: %s: URI.
+msgid "Attempt to access non-installed plugin: %s"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:501
+msgid "Lockout occurred: Multiple requests for non-installed plugin"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:507
+#. translators: %s: URI.
+msgid "Attempt to access non-installed theme: %s"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:514
+msgid "Lockout occurred: Multiple requests for non-installed theme"
+msgstr ""
+
+#: src/component/class-notfound-lockout.php:521
+#. translators: %s: URI.
+msgid "Lockout occurred:  Too many 404 requests for %s"
+msgstr ""
+
+#: src/component/class-notification-base.php:240
+#. translators: %s: Model title.
+msgid "Confirmed"
+msgstr ""
+
+#: src/component/class-notification-base.php:272
+#: src/component/class-notification-base.php:278
+msgid "Unsubscribed"
+msgstr ""
+
+#: src/component/class-quarantine.php:294
+#. translators: 1: Filename with extension
+msgid "Failed to quarantine the file %1$s."
+msgstr ""
+
+#: src/component/class-quarantine.php:311
+#. translators: 1: Filename with extension
+msgid "Failed to add quarantine record in DB for the file %1$s."
+msgstr ""
+
+#: src/component/class-quarantine.php:324
+#. translators: 1: Filename with extension
+msgid "Quarantined the file %1$s and deleted the source file successfully."
+msgstr ""
+
+#: src/component/class-quarantine.php:341
+#. translators: 1: Filename with extension
+msgid "Quarantined the file %1$s and repaired the source file successfully."
+msgstr ""
+
+#: src/component/class-quarantine.php:396
+msgid "Record not exists in DB."
+msgstr ""
+
+#: src/component/class-quarantine.php:409
+msgid "Quarantined file doesn't exist in the quarantine directory."
+msgstr ""
+
+#: src/component/class-quarantine.php:427
+#. translators: 1: Filename with extension
+msgid "Plugin main file missing for %1$s file."
+msgstr ""
+
+#: src/component/class-quarantine.php:446
+msgid "Failed to restore quarantined file."
+msgstr ""
+
+#: src/component/class-quarantine.php:459
+msgid "Failed to remove quarantine record from DB."
+msgstr ""
+
+#: src/component/class-quarantine.php:471
+#. translators: 1: Filename with extension
+msgid "Restored %1$s"
+msgstr ""
+
+#: src/component/class-quarantine.php:568
+msgid "Make sure plugin exists in WordPress plugin repository."
+msgstr ""
+
+#: src/component/class-quarantine.php:580
+#. translators: 1: Filename with extension
+msgid "Failed to write the file %1$s."
+msgstr ""
+
+#: src/component/class-quarantine.php:604
+#. translators: 1: Filename with extension
+msgid "Writes the file %1$s successfully."
+msgstr ""
+
+#: src/component/class-quarantine.php:621
+#. translators: 1: WordPress API error message
+msgid "WordPress remote error: %1$s"
+msgstr ""
+
+#: src/component/class-rate.php:140
+msgid "Remind me later"
+msgstr ""
+
+#: src/component/class-rate.php:149
+msgid "I already did"
+msgstr ""
+
+#: src/component/class-rate.php:205
+#. translators: %d - Number of completed scans.
+msgid "🎉 Nice work — %d scans completed!"
+msgstr ""
+
+#: src/component/class-rate.php:209
+msgid ""
+"Your site’s files have been thoroughly scanned for file modifications and "
+"outdated plugins. Defender’s here to keep your site safe — could you share "
+"your experience with others on WordPress.org?"
+msgstr ""
+
+#: src/component/class-rate.php:219
+#. translators: %d - Number of fixed scans.
+msgid ""
+"You`ve successfully resolved %d malware scan issues! We are happy to be a "
+"part of helping you secure your site, and we would appreciate it if you "
+"dropped us a rating on wp.org to help us spread the word and boost our "
+"motivation."
+msgstr ""
+
+#: src/component/class-rate.php:233
+#. translators: %d - Total number.
+msgid ""
+"You`ve resolved all %d security recommendations - that`s impressive! We are "
+"happy to be a part of helping you secure your site, and we would appreciate "
+"it if you dropped us a rating on wp.org to help us spread the word and "
+"boost our motivation."
+msgstr ""
+
+#: src/component/class-rate.php:245
+#. translators: %d - Number of UA lockouts.
+msgid "🤖 Defender has blocked %d malicious bots!"
+msgstr ""
+
+#: src/component/class-rate.php:251
+#. translators: %d - Number of UA lockouts.
+msgid ""
+"That’s %1$d fake crawlers and bad bots stopped from accessing your site. "
+"Defender’s User Agent lockouts keep unwanted traffic away so your site "
+"stays safe. If Defender’s helped protect your site, please share your "
+"experience with a review on WordPress.org."
+msgstr ""
+
+#: src/component/class-rate.php:263
+#. translators: %d - Number of IP lockouts.
+msgid "🚫 Defender has blocked %d suspicious IPs!"
+msgstr ""
+
+#: src/component/class-rate.php:269
+#. translators: %d - Number of IP lockouts.
+msgid ""
+"That’s %1$d potential threats stopped before they could harm your site. "
+"Defender’s Firewall is keeping the bad guys and bots out so you can stay "
+"focused on running your site. If you’ve found Defender helpful, please "
+"share your experience with a review on WordPress.org."
+msgstr ""
+
+#: src/component/class-rate.php:279
+msgid "Enjoying Defender? We’d love to hear your feedback!"
+msgstr ""
+
+#: src/component/class-rate.php:284
+msgid ""
+"You’ve been using Defender for over a week now, and we’d love to hear about "
+"your experience! We’ve spent countless hours developing it for you, and "
+"your feedback is important to us. We’d really appreciate your rating."
+msgstr ""
+
+#: src/component/class-scan.php:649
+#. translators: %s - Plugin name.
+msgid ""
+"%s has detected a vulnerability in this plugin that may cause harm to your "
+"site."
+msgstr ""
+
+#: src/component/class-scan.php:666 src/component/class-scan.php:687
+#. translators: %s - Version number.
+#. translators: 1: Version number.
+msgid ""
+"The vulnerability has been fixed in version %s. We recommend that you "
+"update this plugin accordingly."
+msgstr ""
+
+#: src/component/class-scan.php:673
+msgid ""
+"Important! We recommend that you deactivate this plugin until the "
+"vulnerability has been fixed."
+msgstr ""
+
+#: src/component/class-scan.php:681
+msgid ""
+"We recommend that you deactivate this plugin until the vulnerability has "
+"been fixed."
+msgstr ""
+
+#: src/component/class-scan.php:762
+msgid "Action scheduler is not setup"
+msgstr ""
+
+#: src/component/class-scan.php:809
+msgid "Malware scan logs are cleared"
+msgstr ""
+
+#: src/component/class-security-tweak.php:191
+#. translators: %s: Option name.
+msgid ""
+"Some hostings do not allow you to make changes to the wp-config.php file. "
+"Please contact your hosting support team to switch %s ON or OFF on your "
+"site."
+msgstr ""
+
+#: src/component/class-security-tweak.php:211
+#. translators: %s - option
+msgid ""
+"Couldn't change the %s in your wp-config.php file. Please change it "
+"manually:"
+msgstr ""
+
+#: src/component/class-session-protection.php:76
+msgid "Browser"
+msgstr ""
+
+#: src/component/class-session-protection.php:77
+msgid "Hostname"
+msgstr ""
+
+#: src/component/class-session-protection.php:78
+#: src/component/class-table-lockout.php:120
+msgid "IP Address"
+msgstr ""
+
+#: src/component/class-session-protection.php:231
+msgid "You've been logged out due to inactivity. Please sign in to continue."
+msgstr ""
+
+#: src/component/class-smart-ip-detection.php:129
+#. translators: 1. IP header. 2. IP.
+msgid "IP header detected: %1$s with IP: %2$s."
+msgstr ""
+
+#: src/component/class-smart-ip-detection.php:146
+#. translators: 1. IP(s)
+msgid "Not able to find any IP header via IP(s): %s."
+msgstr ""
+
+#: src/component/class-strong-password.php:93
+#: src/controller/class-password-protection.php:108
+#: src/controller/class-password-reset.php:121
+msgid "Invalid user data."
+msgstr ""
+
+#: src/component/class-strong-password.php:218
+msgid "Hint: Your password must follow the guidelines below."
+msgstr ""
+
+#: src/component/class-strong-password.php:220
+msgid "At least 12 characters"
+msgstr ""
+
+#: src/component/class-strong-password.php:221
+msgid "Uppercase and lowercase letters"
+msgstr ""
+
+#: src/component/class-strong-password.php:222
+msgid "At least one symbol"
+msgstr ""
+
+#: src/component/class-strong-password.php:223
+msgid "At least one number"
+msgstr ""
+
+#: src/component/class-strong-password.php:224
+msgid "Avoid common words or sequences of letters/numbers"
+msgstr ""
+
+#: src/component/class-table-lockout.php:36
+msgid "Is allowlisted"
+msgstr ""
+
+#: src/component/class-table-lockout.php:39
+msgid "Is blocklisted"
+msgstr ""
+
+#: src/component/class-table-lockout.php:44
+#: src/component/class-table-lockout.php:50
+msgid "Not banned"
+msgstr ""
+
+#: src/component/class-table-lockout.php:48
+#: src/component/class-table-lockout.php:93 src/model/class-lockout-ip.php:260
+msgid "Banned"
+msgstr ""
+
+#: src/component/class-table-lockout.php:63
+#: src/component/class-table-lockout.php:91
+#: src/component/class-table-lockout.php:135
+msgid "All"
+msgstr ""
+
+#: src/component/class-table-lockout.php:64
+msgid "Failed login attempts"
+msgstr ""
+
+#: src/component/class-table-lockout.php:65
+msgid "Login lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:66
+#: src/component/class-table-lockout.php:107
+msgid "404 error"
+msgstr ""
+
+#: src/component/class-table-lockout.php:67
+msgid "404 lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:68
+#: src/model/notification/class-firewall-notification.php:293
+#: src/view/email/firewall-report.php:110
+msgid "User Agent Lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:69
+msgid "Malicious Bot Lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:70
+msgid "Fake Bot Lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:72
+msgid "Custom IP Lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:73
+msgid "IP Unlock"
+msgstr ""
+
+#: src/component/class-table-lockout.php:75
+msgid "XSS attempt"
+msgstr ""
+
+#: src/component/class-table-lockout.php:76
+msgid "XSS lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:77
+msgid "Attempt to access non-installed theme"
+msgstr ""
+
+#: src/component/class-table-lockout.php:78
+msgid "Non-installed theme lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:79
+msgid "Attempt to access non-installed plugin"
+msgstr ""
+
+#: src/component/class-table-lockout.php:80
+msgid "Non-installed plugin lockout"
+msgstr ""
+
+#: src/component/class-table-lockout.php:92
+msgid "Not Banned"
+msgstr ""
+
+#: src/component/class-table-lockout.php:94
+msgid "Allowlisted"
+msgstr ""
+
+#: src/component/class-table-lockout.php:118
+msgid "Latest"
+msgstr ""
+
+#: src/component/class-table-lockout.php:119
+msgid "Oldest"
+msgstr ""
+
+#: src/component/class-table-lockout.php:121
+msgid "User agent"
+msgstr ""
+
+#: src/component/class-two-fa.php:468
+msgid "The user is invalid."
+msgstr ""
+
+#: src/component/class-two-fa.php:473
+msgid "Your token is invalid."
+msgstr ""
+
+#: src/component/class-two-fa.php:539
+msgid "ERROR: Cheatin&#8217; uh?"
+msgstr ""
+
+#: src/component/class-two-fa.php:628
+#. translators: %s: 2FA method slug.
+msgid "Lockout occurred: Too many failed 2fa attempts for %s method."
+msgstr ""
+
+#: src/component/class-two-fa.php:641
+msgid "INVALID CODE: "
+msgstr ""
+
+#: src/component/class-two-fa.php:642
+msgid ""
+"The two-factor authentication code you entered is incorrect or has expired. "
+"Please try again."
+msgstr ""
+
+#: src/component/class-two-fa.php:649
+#. translators: %d: Count.
+msgid "You have %d login attempt remaining."
+msgid_plural "You have %d login attempts remaining."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/component/class-two-fa.php:779
+msgid "Two Factor"
+msgstr ""
+
+#: src/component/class-two-fa.php:823
+#. translators: %s: User name.
+msgid "Two factor authentication has been reset for %s."
+msgstr ""
+
+#: src/component/class-two-fa.php:852
+msgid "Reset two factor"
+msgstr ""
+
+#: src/component/class-unlock-me.php:172
+#. translators: %s: IP address
+msgid "%s was unlocked via \"Unlock Me (Email)\""
+msgstr ""
+
+#: src/component/class-unlock-me.php:244
+msgid "Unlock Me"
+msgstr ""
+
+#: src/component/class-user-agent.php:87
+msgid "Locked out due to empty User-Agent and Referer headers"
+msgstr ""
+
+#: src/component/class-user-agent.php:92
+msgid "Locked out due to attempted login with banned user agent"
+msgstr ""
+
+#: src/component/class-user-agent.php:153
+#: src/model/setting/class-user-agent-lockout.php:265
+msgid "You have been blocked from accessing this website."
+msgstr ""
+
+#: src/component/class-user-agent.php:351
+msgid "( This will block all requests from python-requests/* agent )"
+msgstr ""
+
+#: src/component/class-user-agent.php:355
+msgid "( This will block all requests from Go-http-client/* agent )"
+msgstr ""
+
+#: src/component/http/class-remote-address.php:117
+#. translators: %s - HTTP IP header
+msgid "%s header missing in $_SERVER global variable."
+msgstr ""
+
+#: src/component/ip/class-antibot-global-firewall.php:229
+msgid "AntiBot Unlock Me"
+msgstr ""
+
+#: src/component/ip/class-antibot-global-firewall.php:454
+msgid "Defender Plugin"
+msgstr ""
+
+#: src/component/ip/class-antibot-global-firewall.php:455
+msgid "WPMU DEV Hosting"
+msgstr ""
+
+#: src/component/ip/class-antibot-global-firewall.php:931
+msgid "Activate"
+msgstr ""
+
+#: src/component/ip/class-antibot-global-firewall.php:946
+msgid "DISABLED"
+msgstr ""
+
+#: src/component/ip/class-antibot-global-firewall.php:951
+msgid "MANAGE"
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:193 src/controller/class-hub.php:765
+#: src/controller/class-hub.php:856 src/controller/class-two-factor.php:295
+msgid "Missing parameter(s)"
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:244
+msgid "Invalid IP(s)"
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:339
+msgid "API returned invalid data format."
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:378
+msgid "Invalid Global IP parameter(s) provided."
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:489
+msgid "No IP(s) provided."
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:503
+msgid "Missing blocklist data."
+msgstr ""
+
+#: src/component/ip/class-global-ip.php:588
+#. translators: %s is the IP address
+msgid "%s locked out - found in Custom IP Blocklist"
+msgstr ""
+
+#: src/component/security-headers/class-sh-content-type-options.php:64
+msgid ""
+"The X-Content-Type-Options header is used to protect against MIME sniffing "
+"attacks. The most common example of this is when a website allows users to "
+"upload content to a website, however the user disguises a particular file "
+"type as something else."
+msgstr ""
+
+#: src/component/security-headers/class-sh-content-type-options.php:103
+msgid "X-Content-Type-Options"
+msgstr ""
+
+#: src/component/security-headers/class-sh-feature-policy.php:60
+msgid ""
+"The Permissions-Policy response header provides control over what browser "
+"features can be used when web pages are embedded in iframes."
+msgstr ""
+
+#: src/component/security-headers/class-sh-feature-policy.php:184
+msgid "Permissions-Policy"
+msgstr ""
+
+#: src/component/security-headers/class-sh-referrer-policy.php:57
+msgid ""
+"The Referrer-Policy HTTP header tells browsers how referrer information "
+"should be handled when a user clicks a link that leads to another page or "
+"link. A referrer header tells website owners where inbound visitors come "
+"from (similar to Google Analytics Acquisition reports), though in some "
+"cases you may want to control or restrict the referrer information present "
+"in the header."
+msgstr ""
+
+#: src/component/security-headers/class-sh-referrer-policy.php:113
+msgid "Referrer Policy"
+msgstr ""
+
+#: src/component/security-headers/class-sh-strict-transport.php:227
+msgid ""
+"The HTTP Strict-Transport-Security response header (HSTS) lets a web site "
+"tell browsers that it should only be accessed using HTTPS, instead of using "
+"HTTP. This is extremely important for websites that store and process "
+"sensitive information like ECommerce stores and helps prevent Protocol "
+"Downgrade and Clickjacking attacks."
+msgstr ""
+
+#: src/component/security-headers/class-sh-strict-transport.php:290
+msgid "Strict Transport"
+msgstr ""
+
+#: src/component/security-headers/class-sh-x-frame.php:74
+#. translators: %s: HTML tags.
+msgid ""
+"The X-Frame-Options HTTP response header controls whether or not a browser "
+"can render a webpage inside a %1$s or %2$s tag. Websites can avoid "
+"clickjacking attacks by ensuring that their content isn`t embedded into "
+"other websites."
+msgstr ""
+
+#: src/component/security-headers/class-sh-x-frame.php:122
+msgid "X-Frame-Options"
+msgstr ""
+
+#: src/component/security-headers/class-sh-xss-protection.php:74
+msgid ""
+"The HTTP X-XSS-Protection response header that stops pages from loading "
+"when they detect reflected cross-site scripting (XSS) attacks on Chrome, IE "
+"and Safari."
+msgstr ""
+
+#: src/component/security-headers/class-sh-xss-protection.php:133
+msgid "X-XSS-Protection"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:97
+msgid "The username can't be empty!"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:103
+msgid "You can't use admin as a username again!"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:108
+msgid "The username is invalid!"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:112
+msgid "The username already exists!"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:168
+#. translators: 1. Redirect link. 2. Line break. 3. Interval.
+msgid ""
+"Your admin name has changed. You will need to %1$s.%2$s This will auto "
+"reload after %3$s seconds."
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:172
+#: src/component/security-tweaks/class-security-key.php:150
+#: src/controller/class-main-setting.php:629
+msgid "re-login"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:197
+msgid "Change default admin user account"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:206
+msgid "You have a user account with the admin username."
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:219
+msgid "You don't have a user account with the default admin username, great!"
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:224
+msgid ""
+"Using the default admin username is widely considered bad practice and "
+"opens you up to the easitest form of entry to your website. We will create "
+"new admin username for you."
+msgstr ""
+
+#: src/component/security-tweaks/class-change-admin.php:228
+msgid "Admin User"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:63
+#: src/component/security-tweaks/class-hide-error.php:79
+msgid "The file wp-config.php is not writable"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:120
+#: src/component/security-tweaks/class-hide-error.php:136
+msgid "Error writing to file."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:176
+msgid "Disable the file editor"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:185
+msgid "The file editor is currently enabled."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:198
+msgid "You've disabled the file editor, winning."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:200
+msgid ""
+"The file editor is currently active, this means anyone with access to your "
+"login information can further edit your plugin and theme files and inject "
+"malicious code. We will disable file editor for you."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-file-editor.php:204
+msgid "File Editor"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-trackback.php:144
+msgid "Disable trackbacks and pingbacks"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-trackback.php:153
+msgid "Trackbacks and pingbacks are currently enabled."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-trackback.php:166
+msgid "Trackbacks and pingbacks are disabled, nice work!"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-trackback.php:168
+msgid ""
+"Trackbacks and pingbacks can lead to DDos attacks and tons of spam "
+"comments. If you don’t require this feature, we recommend turning it off."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-trackback.php:172
+msgid "Trackbacks and pingbacks"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:193
+#: src/component/security-tweaks/class-prevent-enum-users.php:116
+#: src/controller/class-mask-login.php:539
+msgid "Forbidden"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:202
+msgid "Disable XML-RPC"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:211
+msgid "XML-RPC is currently enabled."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:221
+msgid "XML-RPC is disabled, great job!"
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:235
+msgid "You can manage the XML-RPC settings in the Hosting Settings."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:239
+#. translators: %1$s: link to admin page, %2$s: closing link tag.
+msgid ""
+"You can manage XML-RPC settings from Hosting Settings by going to %1$sthis "
+"link%2$s."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:245
+msgid "XML-RPC is currently disabled on plugin side."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:250
+#. translators: %1$s: link to admin page, %2$s: closing link tag.
+msgid ""
+"XML-RPC is currently disabled on plugin side, we suggest disabling it from "
+"server side by clicking on %1$sthis link%2$s."
+msgstr ""
+
+#: src/component/security-tweaks/class-disable-xml-rpc.php:265
+#: src/component/security-tweaks/class-disable-xml-rpc.php:278
+msgid ""
+"In the past, there were security concerns with XML-RPC so we recommend "
+"making sure this feature is fully disabled if you don’t need it active. We "
+"will disable XML-RPC for you."
+msgstr ""
+
+#: src/component/security-tweaks/class-hide-error.php:147
+msgid "Hide error reporting"
+msgstr ""
+
+#: src/component/security-tweaks/class-hide-error.php:156
+msgid "Error debugging is currently allowed."
+msgstr ""
+
+#: src/component/security-tweaks/class-hide-error.php:169
+msgid "You've disabled all error reporting, Houston will never report a problem."
+msgstr ""
+
+#: src/component/security-tweaks/class-hide-error.php:174
+msgid ""
+"Error debugging feature is useful for active development, but on live sites "
+"provides hackers yet another way to find loopholes in your site's security. "
+"We will disable error reporting for you."
+msgstr ""
+
+#: src/component/security-tweaks/class-hide-error.php:178
+msgid "Error Reporting"
+msgstr ""
+
+#: src/component/security-tweaks/class-login-duration.php:69
+msgid "Duration can only be a number and greater than 0."
+msgstr ""
+
+#: src/component/security-tweaks/class-login-duration.php:179
+msgid "Manage Login Duration"
+msgstr ""
+
+#: src/component/security-tweaks/class-login-duration.php:190
+#. translators: %d: Number of days.
+msgid "Your current login duration is the default %d days."
+msgstr ""
+
+#: src/component/security-tweaks/class-login-duration.php:209
+#. translators: %d: Number of days.
+msgid "You've adjusted the default login duration to %d days."
+msgstr ""
+
+#: src/component/security-tweaks/class-login-duration.php:213
+msgid ""
+"Users who select the 'remember me' option will stay logged in for 14 "
+"days.It’s good practice to reduce this default time to reduce the risk of "
+"someone gaining access to your automatically logged in account. We’ll set "
+"the login duration to 7 days."
+msgstr ""
+
+#: src/component/security-tweaks/class-login-duration.php:217
+msgid "Login Duration"
+msgstr ""
+
+#: src/component/security-tweaks/class-php-version.php:146
+msgid "Update PHP to latest version"
+msgstr ""
+
+#: src/component/security-tweaks/class-php-version.php:159
+#. translators: %s: Min PHP version. %s: Min PHP version.
+msgid ""
+"PHP versions older than %1$s are no longer supported. For security and "
+"stability we strongly recommend you upgrade your PHP version to version "
+"%2$s or newer as soon as possible."
+msgstr ""
+
+#: src/component/security-tweaks/class-php-version.php:180
+msgid "You have the latest version of PHP installed, good stuff!"
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-enum-users.php:115
+msgid "Sorry, you are not allowed to access this page"
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-enum-users.php:131
+msgid "Prevent user enumeration"
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-enum-users.php:140
+msgid "User enumeration is currently allowed."
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-enum-users.php:153
+msgid "User enumeration is currently blocked, nice work!"
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-enum-users.php:155
+msgid ""
+"To brute force your login,  hackers and bots can simply type the query "
+"string ?author=1, ?author=2 and so on, which will redirect the page to "
+"/author/username/ - bam, the bot now has your usernames to begin brute "
+"force attacks with. We can add a .htaccess file to your site to prevent the "
+"redirection."
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-enum-users.php:287
+msgid "Only logged-in users can access the User endpoint REST API."
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-php.php:75
+msgid "Prevent PHP Execution"
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-php.php:84
+msgid "PHP execution is currently allowed in all directories."
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-php.php:97
+msgid "You've disabled PHP execution, good stuff."
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-php.php:104
+msgid ""
+"By default, a plugin/theme vulnerability could allow a PHP file to get "
+"uploaded into your site's directories and in turn execute harmful scripts "
+"that can wreak havoc on your website. We will disable PHP execution for you."
+msgstr ""
+
+#: src/component/security-tweaks/class-prevent-php.php:108
+msgid "PHP Execution"
+msgstr ""
+
+#: src/component/security-tweaks/class-protect-information.php:81
+msgid "Prevent Information Disclosure"
+msgstr ""
+
+#: src/component/security-tweaks/class-protect-information.php:90
+msgid "You don't have information disclosure protection active."
+msgstr ""
+
+#: src/component/security-tweaks/class-protect-information.php:103
+msgid "You've automatically enabled information disclosure protection."
+msgstr ""
+
+#: src/component/security-tweaks/class-protect-information.php:112
+msgid ""
+"Often servers are incorrectly configured, and can allow an attacker to get "
+"access to sensitive files like your config, .htaccess and backup files. We "
+"will automatically add an .htaccess file to your root folder to action this "
+"fix."
+msgstr ""
+
+#: src/component/security-tweaks/class-protect-information.php:116
+msgid "Information Disclosure"
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:146
+#. translators: 1: login link, 2: line break, 3: timer.
+msgid ""
+"All key salts have been regenerated. You will now need to %1$s. %2$s This "
+"will auto reload after %3$s seconds."
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:192
+msgid "Unable to generate salts. Please try again."
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:245
+msgid "Update old security keys"
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:257
+msgid ""
+"We can't tell how old your security keys are, perhaps it's time to update "
+"them?"
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:263
+msgid ""
+"One or more security salts aren't defined in wp-config.php. Time to "
+"regenerate them!"
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:270
+#. translators: %s: number of days
+msgid "Your current security keys are %s days old. Time to update them!"
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:290
+#. translators: %s: number of days
+msgid "Your security keys are less than %s days old, nice work."
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:296
+msgid ""
+"Your current security keys are unknown days old. Time to update them! We "
+"will update the frequency to 60 days."
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:300
+msgid "Security Keys"
+msgstr ""
+
+#: src/component/security-tweaks/class-security-key.php:483
+#: src/component/security-tweaks/servers/class-apache.php:89
+#. translators: %s: file path
+#. translators: %s - file path
+msgid "The file %s is not writable"
+msgstr ""
+
+#: src/component/security-tweaks/class-wp-version.php:100
+msgid "Update WordPress to latest version"
+msgstr ""
+
+#: src/component/security-tweaks/class-wp-version.php:111
+#. translators: %s: WP Version
+msgid ""
+"Your current WordPress version is out of date, which means you could be "
+"missing out on the latest security patches in v%s"
+msgstr ""
+
+#: src/component/security-tweaks/class-wp-version.php:129
+msgid "You are using the latest version of WordPress, great job!"
+msgstr ""
+
+#: src/component/security-tweaks/class-wp-version.php:134
+msgid ""
+"Your current WordPress version is out of date, which means you could be "
+"missing out on the latest update. We will upgrade WordPress version to the "
+"latest."
+msgstr ""
+
+#: src/component/security-tweaks/class-wp-version.php:138
+msgid "WordPress Version"
+msgstr ""
+
+#: src/component/security-tweaks/servers/class-apache.php:151
+msgid ""
+"The rules can't be applied. This can be either because your host doesn't "
+"allow editing the file, or you've selected the wrong server type."
+msgstr ""
+
+#: src/component/security-tweaks/servers/class-iis-7.php:95
+#. translators: %s: File name.
+msgid "The file %s could not be loaded."
+msgstr ""
+
+#: src/component/security-tweaks/servers/class-server-factory.php:59
+#: src/component/security-tweaks/servers/class-server-factory.php:107
+#. translators: %s: Server name.
+msgid "The %s server is not supported yet."
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:94
+msgid "Generate non-expirable backup codes that can be used to log in once."
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:95
+#: src/controller/class-two-factor.php:1326
+msgid "Each backup code can only be used to log in once."
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:104
+msgid "Backup Codes"
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:122
+msgid "Backup codes"
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:157
+msgid "Enter one of your recovery codes to log in to your account."
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:161
+#: src/component/two-factor/providers/class-fallback-email.php:135
+#: src/component/two-factor/providers/class-totp.php:174
+msgid "Authenticate"
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:225
+#. translators: %s: URL to regenerate code
+msgid "You've used all generated backup codes. Please %s new codes accordingly."
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:229
+msgid "generate"
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:251
+msgid "Generate Backup Codes"
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:256
+#: src/controller/class-two-factor.php:1325
+msgid "Get New Codes"
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:357
+#. translators: %s: count
+msgid "%s unused code remaining"
+msgid_plural "%s unused codes remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:387
+msgid "ERROR: Invalid verification code."
+msgstr ""
+
+#: src/component/two-factor/providers/class-backup-codes.php:404
+msgid "ERROR: Invalid backup code."
+msgstr ""
+
+#: src/component/two-factor/providers/class-fallback-email.php:57
+msgid "Fallback Email"
+msgstr ""
+
+#: src/component/two-factor/providers/class-fallback-email.php:75
+msgid "Fallback email"
+msgstr ""
+
+#: src/component/two-factor/providers/class-fallback-email.php:84
+msgid ""
+"If you ever lose your device, you can send a fallback passcode to this "
+"email address."
+msgstr ""
+
+#: src/component/two-factor/providers/class-fallback-email.php:126
+msgid ""
+"We've sent a one-time passcode to your fallback email address. Enter it "
+"below to log in to your account."
+msgstr ""
+
+#: src/component/two-factor/providers/class-fallback-email.php:144
+msgid "Resend Code"
+msgstr ""
+
+#: src/component/two-factor/providers/class-fallback-email.php:196
+msgid "ERROR: Invalid passcode."
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:134
+msgid "TOTP Authenticator App"
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:143
+msgid "TOTP Authentication"
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:152
+msgid "TOTP"
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:208
+msgid "Reset Keys"
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:212
+msgid "TOTP Authentication method is active for this site"
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:213
+msgid "Use an authenticator app to sign in with a separate passcode."
+msgstr ""
+
+#: src/component/two-factor/providers/class-totp.php:323
+#: src/component/two-factor/providers/class-totp.php:331
+#: src/controller/class-two-factor.php:377
+msgid "Whoops, the passcode you entered was incorrect or expired."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:66
+msgid "Web Authentication"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:75
+msgid ""
+"Authenticate login using your device's built-in fingerprint, facial "
+"recognition, or an external hardware security key."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:92
+msgid ""
+"Access from unregistered devices will be denied. To avoid this, consider "
+"setting up an additional authentication method."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:105
+msgid ""
+"Your site doesn't meet the web authentication requirement. Please contact "
+"your site's administrator to fix this issue."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:166
+msgid "Select an authentication method to continue."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:170
+#: src/component/two-factor/providers/class-webauthn.php:184
+msgid "Biometric Authentication"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:171
+msgid "Use fingerprint or facial recognition"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:177
+#: src/component/two-factor/providers/class-webauthn.php:195
+msgid "Hardware Key Authentication"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:178
+msgid "Use USB security keys to login"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:187
+msgid "Please verify your identity using fingerprint or facial recognition."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:197
+msgid "Insert and tap on your USB security key to login."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:203
+msgid "Verification in process..."
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:207
+msgid "Back"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:210
+msgid "Retry"
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:263
+msgid "SSL certificate or HTTPS is not forced. "
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:277
+#. translators: %s: Browser version
+msgid ""
+"The current browser version %s is not compatible with this feature, please "
+"update your browser version, or try a different one. "
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:285
+msgid "Your site doesn't meet the web authentication requirement. "
+msgid_plural "Your site doesn't meet the web authentication requirements. "
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/component/two-factor/providers/class-webauthn.php:341
+msgid " and "
+msgstr ""
+
+#: src/component/two-factor/providers/class-webauthn.php:364
+#. translators: %s: Missing PHP extension(s)
+msgid "The <strong>%s extension</strong> is not active on your server. "
+msgid_plural "The <strong>%s extensions</strong> are not active on your server. "
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/controller/class-advanced-tools.php:253
+msgid "Tools"
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:163
+msgid "Something wrong happened, please try again!"
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:184
+#. translators: 1: Bold open tag, 2: Bold close tag
+msgid "%s is now enabled."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:270
+msgid "Twice Daily"
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:279
+msgid ""
+"List of exploit attempts detected and blocked across all connected sites by "
+"AntiBot Firewall."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:282
+#. translators: %s: Module name.
+msgid "%s is Inactive."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:285
+#: src/controller/class-audit-logging.php:163
+msgid "User"
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:414
+#. translators: 1. Open tag. 2. Close tag. 3. Managed by label.
+msgid "%1$sAntiBot%2$s blocklist is now being managed by %3$s."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:430
+#: src/controller/class-antibot-global-firewall.php:658
+msgid "Failed to switch. Please try again."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:502
+#: src/controller/class-antibot-global-firewall.php:545
+msgid "Invalid IP address."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:515
+msgid "The IP address is searched successfully."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:578
+#. translators: 1: IP address. 2: Opening anchor tag. 3: Closing anchor tag.
+msgid ""
+"IP %1$s has been added to your Site's allowlist. You can manage it in "
+"%2$sIP Lockouts%3$s."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:643
+#. translators: 1. Open tag. 2. Close tag. 3. Mode.
+msgid "%1$sAntiBot Firewall%2$s mode updated – You're now using %3$s Mode."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:706
+#. translators: 1: Open tag, 2: Close tag
+msgid "%1$sThanks for your feedback!%2$s It helps us make Defender even better."
+msgstr ""
+
+#: src/controller/class-antibot-global-firewall.php:732
+msgid "The global notice has been dismissed."
+msgstr ""
+
+#: src/controller/class-audit-logging.php:158
+msgid "Summary"
+msgstr ""
+
+#: src/controller/class-audit-logging.php:159
+#: src/controller/class-firewall-logs.php:259
+msgid "Date / Time"
+msgstr ""
+
+#: src/controller/class-audit-logging.php:160
+msgid "Context"
+msgstr ""
+
+#: src/controller/class-audit-logging.php:161
+#: src/controller/class-firewall-logs.php:260
+#: src/model/class-lockout-log.php:659 src/model/class-lockout-log.php:679
+#: src/view/two-fa/user-options.php:101 src/view/two-fa/user-options.php:115
+msgid "Type"
+msgstr ""
+
+#: src/controller/class-audit-logging.php:162
+#: src/controller/class-firewall-logs.php:261
+msgid "IP address"
+msgstr ""
+
+#: src/controller/class-audit-logging.php:242
+#: src/controller/class-notification.php:261
+#: src/controller/class-notification.php:267
+#: src/controller/class-notification.php:554
+msgid "Invalid data."
+msgstr ""
+
+#: src/controller/class-audit-logging.php:438
+#: src/controller/class-blacklist.php:242 src/controller/class-firewall.php:305
+#: src/controller/class-main-setting.php:166
+#: src/controller/class-mask-login.php:350
+#: src/controller/class-mask-login.php:1190
+#: src/controller/class-password-reset.php:232
+#: src/controller/class-scan.php:594
+#: src/controller/class-security-headers.php:118
+#: src/controller/class-two-factor.php:913 src/traits/setting.php:24
+#: src/traits/setting.php:29
+msgid "Your settings have been updated."
+msgstr ""
+
+#: src/controller/class-audit-logging.php:583
+#: src/controller/class-audit-logging.php:615
+#: src/controller/class-firewall.php:978 src/controller/class-firewall.php:1035
+#: src/controller/class-scan.php:927 src/controller/class-scan.php:965
+#. translators: %s: Frequency value.
+msgid "Email reports sending %s"
+msgstr ""
+
+#: src/controller/class-blacklist.php:131
+msgid "Block all"
+msgstr ""
+
+#: src/controller/class-blacklist.php:135
+msgid "Allow all"
+msgstr ""
+
+#: src/controller/class-blacklist.php:320
+msgid ""
+"You have successfully downloaded Geo IP Database. You can now use this "
+"feature to ban any countries to access any area of your website."
+msgstr ""
+
+#: src/controller/class-blacklist.php:331
+#. translators: 1. License key with link.
+msgid ""
+"You have entered an invalid %1$s. If you just created the key, please wait "
+"5 minutes before trying to activate it."
+msgstr ""
+
+#: src/controller/class-blacklist.php:335
+msgid "license key"
+msgstr ""
+
+#: src/controller/class-blacklist.php:361
+msgid "Maxmind GeoLite2 database license successfully disconnected."
+msgstr ""
+
+#: src/controller/class-blacklist.php:651
+#: src/controller/class-blacklist.php:661
+#: src/controller/class-ua-lockout.php:399
+#: src/controller/class-ua-lockout.php:407
+msgid "Your file is invalid!"
+msgstr ""
+
+#: src/controller/class-blacklist.php:671
+msgid "Your file content is invalid!"
+msgstr ""
+
+#: src/controller/class-blacklist.php:684
+msgid "Your allowlist/blocklist has been successfully imported."
+msgstr ""
+
+#: src/controller/class-captcha.php:101
+msgid "This hook is deprecated and will be removed in future versions."
+msgstr ""
+
+#: src/controller/class-captcha.php:268
+msgid "This hook is deprecated and will be removed in a future version."
+msgstr ""
+
+#: src/controller/class-captcha.php:347
+msgid ""
+"If you see any errors in the preview, make sure the keys you’ve entered are "
+"valid, and you've listed your domain name while generating the keys."
+msgstr ""
+
+#: src/controller/class-captcha.php:424
+#. translators: Provider label.
+msgid ""
+"Please make sure your %s API keys are correct and that Preview Widget "
+"verification is successful."
+msgstr ""
+
+#: src/controller/class-captcha.php:442 src/controller/class-captcha.php:542
+msgid "Settings saved successfully!"
+msgstr ""
+
+#: src/controller/class-captcha.php:545
+msgid "CAPTCHA module is enabled successfully!"
+msgstr ""
+
+#: src/controller/class-captcha.php:547
+msgid "CAPTCHA module is disabled successfully!"
+msgstr ""
+
+#: src/controller/class-data-tracking.php:38
+msgid "Help Us Enhance Your Site's Security"
+msgstr ""
+
+#: src/controller/class-data-tracking.php:44
+#. translators: %s: user display name
+msgid ""
+"Hey there! %s, Defender is dedicated to protecting your WordPress website "
+"from hackers and malware. However, our mission is more effective with your "
+"collaboration. By opting in to share anonymous usage data, you help us "
+"refine and enhance our plugin for everyone's benefit."
+msgstr ""
+
+#: src/controller/class-data-tracking.php:53
+#. translators: %s: Link.
+msgid ""
+"Your privacy is important to us. We guarantee that your data stays "
+"anonymous and your identity stays secure. Learn more about our usage "
+"tracking %s."
+msgstr ""
+
+#: src/controller/class-data-tracking.php:66
+msgid "Help us improve Defender"
+msgstr ""
+
+#: src/controller/class-data-tracking.php:67
+msgid "OPT IN"
+msgstr ""
+
+#: src/controller/class-data-tracking.php:68
+msgid "Skip for now"
+msgstr ""
+
+#: src/controller/class-expert-services.php:32
+msgid "Expert Services"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:157
+#. translators: 1: IP Address(es). 2: URL for Defender > Firewall > IP Banning.
+msgid ""
+"IP %1$s has been added to your allowlist. You can control your allowlist in "
+"%2$s."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:162
+#: src/controller/class-firewall-logs.php:173
+#: src/controller/class-firewall-logs.php:395
+msgid "IP Lockouts"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:168
+#. translators: 1: IP Address(es). 2: URL for Defender > Firewall > IP Banning.
+msgid ""
+"IP %1$s has been added to your blocklist. You can control your blocklist in "
+"%2$s."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:179
+#. translators: %s: IP Address(es)
+msgid "IP %s has been deleted"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:258
+msgid "Log"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:262
+msgid "IP Status"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:263
+msgid "User Agent Name"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:264
+msgid "User Agent Status"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:324
+#. translators: 1: IP address, 2: IP address list, 3: IP address list, 4: URL
+#. for Defender > Firewall > IP Banning.
+msgid "IP %1$s has been removed from your %2$s. You can control your %3$s in %4$s."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:340
+#. translators: 1: IP address. 2: IP address list. 3: IP address list. 4: URL
+#. for Defender > Firewall > IP Banning.
+msgid "IP %1$s has been added to your %2$s. You can control your %3$s in %4$s."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:437
+#. translators: 1: User agent. 2: User agent list. 3: User agent list. 4: URL
+#. for Defender > Firewall > User Agent Banning.
+msgid ""
+"User agent %1$s has been removed from your %2$s. You can control your %3$s "
+"in %4$s."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:454
+#. translators: 1: User agent. 2: User agent list. 3: User agent list. 4: URL
+#. for Defender > Firewall > User Agent Banning.
+msgid ""
+"User agent %1$s has been added to your %2$s. You can control your %3$s in "
+"%4$s."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:461
+msgid "Wrong result."
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:515
+#: src/model/setting/class-user-agent-lockout.php:562
+msgid "User Agent Banning"
+msgstr ""
+
+#: src/controller/class-firewall-logs.php:572
+msgid "Wrong start and end date."
+msgstr ""
+
+#: src/controller/class-firewall.php:404
+msgid "Demo"
+msgstr ""
+
+#: src/controller/class-firewall.php:534
+msgid "Request to Unblock IP Address"
+msgstr ""
+
+#: src/controller/class-firewall.php:793
+msgid "Your logs have been successfully deleted."
+msgstr ""
+
+#: src/controller/class-firewall.php:802 src/controller/class-firewall.php:1165
+msgid "Failed remove!"
+msgstr ""
+
+#: src/controller/class-firewall.php:986 src/controller/class-firewall.php:1042
+#: src/controller/class-scan.php:934 src/controller/class-scan.php:973
+#. translators: %s: Html for Pro-tag.
+msgid "Email report inactive %s"
+msgstr ""
+
+#: src/controller/class-firewall.php:1156
+msgid "Deleted lockout records successfully."
+msgstr ""
+
+#: src/controller/class-firewall.php:1274
+msgid "Invalid nonce."
+msgstr ""
+
+#: src/controller/class-firewall.php:1286
+msgid "IP detection process completed."
+msgstr ""
+
+#: src/controller/class-firewall.php:1312
+msgid ""
+"You have reached the maximum limit of verification attempts. Please try "
+"again later or contact your web administrator for assistance."
+msgstr ""
+
+#: src/controller/class-firewall.php:1357
+msgid "Captcha verification failed. Please try again."
+msgstr ""
+
+#: src/controller/class-global-ip.php:128
+msgid "Temporary self unlock CAPTCHA challenge is enabled successfully."
+msgstr ""
+
+#: src/controller/class-global-ip.php:130
+msgid "Temporary self unlock CAPTCHA challenge is disabled successfully."
+msgstr ""
+
+#: src/controller/class-global-ip.php:177
+#. translators: %s: Module name.
+msgid "Connect to a WPMU DEV account to activate %s."
+msgstr ""
+
+#: src/controller/class-global-ip.php:218
+msgid "The Custom IP List has been updated successfully."
+msgstr ""
+
+#: src/controller/class-global-ip.php:229
+msgid "An error occurred while synchronizing the Custom IP List."
+msgstr ""
+
+#: src/controller/class-hub-connector.php:81
+msgid ""
+"Dashboard plugin has been activated. You should be redirected to sign-in "
+"page shortly."
+msgstr ""
+
+#: src/controller/class-hub.php:238
+msgid "Missing parameter: id."
+msgstr ""
+
+#: src/controller/class-hub.php:412 src/controller/class-main-setting.php:535
+#: src/controller/class-main-setting.php:545
+#: src/controller/class-main-setting.php:578
+#: src/controller/class-main-setting.php:588
+#: src/controller/class-main-setting.php:671
+#: src/controller/class-main-setting.php:681
+#: src/controller/class-main-setting.php:743
+#: src/controller/class-main-setting.php:780
+msgid "Invalid config"
+msgstr ""
+
+#: src/controller/class-hub.php:419
+msgid "Empty data"
+msgstr ""
+
+#: src/controller/class-hub.php:862
+msgid "Missing class"
+msgstr ""
+
+#: src/controller/class-hub.php:872
+msgid "Invalid mode"
+msgstr ""
+
+#: src/controller/class-main-setting.php:211
+msgid "Your settings have been reset."
+msgstr ""
+
+#: src/controller/class-main-setting.php:259
+msgid "Site disconnected successfully!"
+msgstr ""
+
+#: src/controller/class-main-setting.php:393
+msgid "The file is corrupted."
+msgstr ""
+
+#: src/controller/class-main-setting.php:413
+msgid ""
+"An error occurred while importing the file. Please check your file or "
+"upload another file."
+msgstr ""
+
+#: src/controller/class-main-setting.php:443
+#. translators: %s: Config name.
+msgid ""
+"%s config has been uploaded successfully – you can now apply it to this "
+"site."
+msgstr ""
+
+#: src/controller/class-main-setting.php:469
+msgid "Invalid config name"
+msgstr ""
+
+#: src/controller/class-main-setting.php:504
+#: src/controller/class-main-setting.php:708
+#. translators: %s: Config name.
+msgid "%s config saved successfully."
+msgstr ""
+
+#: src/controller/class-main-setting.php:514
+#: src/controller/class-main-setting.php:719
+msgid "An error occurred while saving your config. Please try it again."
+msgstr ""
+
+#: src/controller/class-main-setting.php:610
+#. translators: %s: Config name.
+msgid "%s config has been applied successfully."
+msgstr ""
+
+#: src/controller/class-main-setting.php:625
+#. translators: %s: Login link.
+msgid "Due to currently applied security recommendations, you will now need to %s."
+msgstr ""
+
+#: src/controller/class-main-setting.php:632
+msgid "This will auto reload now."
+msgstr ""
+
+#: src/controller/class-main-setting.php:753
+msgid "Config can't be removed"
+msgstr ""
+
+#: src/controller/class-main-setting.php:770
+msgid "Config removed successfully."
+msgstr ""
+
+#: src/controller/class-main-setting.php:830
+#. translators: 1: Recommendations tab, 2: wp-config.php file, 3:
+#. Documentation.
+msgid ""
+"There was an issue with applying some of the tweaks from the %1$s tab "
+"because we cannot make changes to your %2$s file. Please see our %3$s to "
+"apply the changes manually."
+msgstr ""
+
+#: src/controller/class-main-setting.php:835
+msgid "wp-config.php"
+msgstr ""
+
+#: src/controller/class-main-setting.php:836
+msgid "documentation"
+msgstr ""
+
+#: src/controller/class-mask-login.php:74
+#: src/controller/class-two-factor.php:133
+msgid ""
+"We`ve detected a conflict with Jetpack`s Wordpress.com Log In feature. "
+"Please disable it and return to this page to continue setup."
+msgstr ""
+
+#: src/controller/class-mask-login.php:80
+#: src/controller/class-two-factor.php:139
+msgid ""
+"We`ve detected a conflict with Theme my login. Please disable it and return "
+"to this page to continue setup."
+msgstr ""
+
+#: src/controller/class-mask-login.php:538
+msgid ""
+"This feature is temporarily forbidden for security reasons. Try logging in "
+"again."
+msgstr ""
+
+#: src/controller/class-mask-login.php:1201
+#: src/model/setting/class-mask-login.php:200
+msgid ""
+"A page already exists at this URL. Please enter a unique URL for your login "
+"area."
+msgstr ""
+
+#: src/controller/class-notification.php:62
+msgid "Notifications"
+msgstr ""
+
+#: src/controller/class-notification.php:114
+#. translators: 1. Module title. 2. Unsubscribed link.
+msgid "You are now subscribed to receive %1$s. Made a mistake? %2$s"
+msgstr ""
+
+#: src/controller/class-notification.php:119 src/view/email/index.php:435
+msgid "Unsubscribe"
+msgstr ""
+
+#: src/controller/class-notification.php:124
+#. translators: %s: Module title.
+msgid "You are now unsubscribed from %s."
+msgstr ""
+
+#: src/controller/class-notification.php:135
+msgid "Dismiss this notice."
+msgstr ""
+
+#: src/controller/class-notification.php:185
+msgid "Invalid email address."
+msgstr ""
+
+#: src/controller/class-notification.php:210
+#: src/controller/class-two-factor.php:307
+msgid "Invalid request."
+msgstr ""
+
+#: src/controller/class-notification.php:299
+msgid ""
+"You have activated the notification successfully. Note, recipients will "
+"need to confirm their subscriptions to begin receiving notifications."
+msgstr ""
+
+#: src/controller/class-notification.php:342
+msgid ""
+"Your settings have been updated successfully. Any new recipients will "
+"receive an email to confirm their subscription."
+msgstr ""
+
+#: src/controller/class-notification.php:527
+msgid "You have deactivated the notifications successfully."
+msgstr ""
+
+#: src/controller/class-notification.php:565
+msgid "You have deactivated the notification successfully."
+msgstr ""
+
+#: src/controller/class-notification.php:803 src/controller/class-scan.php:814
+#. translators: 1. Timezone. 2. Time.
+msgid "Your timezone is set to %1$s, so your current time is %2$s."
+msgstr ""
+
+#: src/controller/class-notification.php:835
+#. translators: %s - module title, %s - module status
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: src/controller/class-notification.php:840
+msgid "Enabled"
+msgstr ""
+
+#: src/controller/class-notification.php:843
+#: src/controller/class-notification.php:849
+msgid "Disabled"
+msgstr ""
+
+#: src/controller/class-notification.php:893
+msgid "Module not found."
+msgstr ""
+
+#: src/controller/class-notification.php:908
+msgid "Invitation sent successfully."
+msgstr ""
+
+#: src/controller/class-notification.php:914
+msgid "Sorry! We could not send the invitation, Please try again later."
+msgstr ""
+
+#: src/controller/class-onboard.php:93 src/controller/class-onboard.php:98
+#: src/controller/class-onboard.php:301 src/controller/class-onboard.php:410
+msgid "Invalid"
+msgstr ""
+
+#: src/controller/class-password-protection.php:257
+#. translators: 1. Open tag. 2. Close tag.
+msgid ""
+"You need to check at least one of the %1$sPwned checks preferences "
+"below%2$s and save your settings to enable Password Protection."
+msgstr ""
+
+#: src/controller/class-password-reset.php:167
+msgid "This password has been used already. Please choose a different one."
+msgstr ""
+
+#: src/controller/class-password-reset.php:261
+msgid "Selected user roles are required to reset their password upon next login."
+msgstr ""
+
+#: src/controller/class-password-reset.php:267
+msgid "Force Reset Password has been disabled."
+msgstr ""
+
+#: src/controller/class-quarantine.php:182
+#. translators: 1: Filename with extension
+msgid "Deleted %1$s permanently."
+msgstr ""
+
+#: src/controller/class-quarantine.php:198
+#. translators: %s: Filename with extension
+msgid "Deleting %s failed."
+msgstr ""
+
+#: src/controller/class-scan.php:182
+msgid "A scan is already in progress"
+msgstr ""
+
+#: src/controller/class-scan.php:250
+msgid "Malware scan completed successfully!"
+msgstr ""
+
+#: src/controller/class-scan.php:257
+msgid "Error during scanning"
+msgstr ""
+
+#: src/controller/class-scan.php:531
+#. translators: %s: Vulnerability item(es)
+msgid "Defender doesn't have enough permission to remove this file: %s"
+msgid_plural "Defender doesn't have enough permission to remove these files: %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/controller/class-scan.php:542
+#. translators: %s: Vulnerability item(es)
+msgid "%s has (have) been deleted"
+msgstr ""
+
+#: src/controller/class-scan.php:581
+#. translators: 1. Open tag. 2. Close tag. 3. Open tag. 4. Close tag.
+msgid ""
+"To reduce false-positive results, we recommend enabling %1$sFile change "
+"detection%2$s options for all scan types while the %3$sSuspicious code%4$s "
+"option is enabled."
+msgstr ""
+
+#: src/controller/class-scan.php:693
+msgid "Wrong scan issue data."
+msgstr ""
+
+#: src/controller/class-scan.php:795
+msgid "Automatic scans are disabled"
+msgstr ""
+
+#: src/controller/class-scan.php:800
+#. translators: 1. Line break tag. 2. Frequency value.
+msgid "Automatic scans are %1$srunning %2$s"
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:148
+#: src/controller/class-security-tweaks.php:157
+#: src/controller/class-security-tweaks.php:180
+#: src/controller/class-security-tweaks.php:207
+#: src/controller/class-security-tweaks.php:267
+#: src/controller/class-security-tweaks.php:302
+msgid "Invalid request"
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:172
+#: src/controller/class-security-tweaks.php:351
+msgid "Security recommendation successfully resolved."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:236
+msgid "Security recommendation successfully reverted."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:277
+msgid "Security recommendation successfully ignored."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:313
+msgid "Security recommendation successfully restored."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:340
+msgid "The status cannot be verified as the request contains an invalid slug."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:363
+#. translators: %s: Tweak title.
+msgid "%s is not actioned. Please ensure that all the instructions are followed."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:392
+msgid "Invalid Reminder frequency"
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:412
+msgid "Security recommendation successfully updated."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:417
+msgid "Error while updating."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:574
+#. translators: 1: Either ignored or resolved, 2: Count security
+#. recommendations
+msgid "You have bulk %1$s %2$s security recommendations."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:583
+#. translators: %d: Count security tweaks
+msgid ""
+"You have bulk actioned %d security recommendations. You still have a few "
+"unresolved security recommendations, which cannot be bulk actioned "
+"automatically, so please address them below."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:635
+#: src/controller/class-security-tweaks.php:868
+#: src/controller/class-security-tweaks.php:900
+#. translators: 1: Security tweak title, 2: Error message
+msgid "There is an error while processing recommendation %1$s, error message: %2$s"
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:965
+#: src/controller/class-security-tweaks.php:997
+msgid "All available recommendations activated"
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:969
+#: src/controller/class-security-tweaks.php:1001
+#. translators: 1: Total security tweaks activated, 2: Total security tweaks
+msgid "%1$d/%2$d recommendations activated"
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:1030
+#: src/controller/class-security-tweaks.php:1072
+msgid "An error occurred, try again."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:1037
+msgid "Security key/salt autogenerate enabled."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:1040
+msgid "Security key/salt autogenerate disabled."
+msgstr ""
+
+#: src/controller/class-security-tweaks.php:1076
+msgid "User enumeration option(s) updated successfully."
+msgstr ""
+
+#: src/controller/class-session-protection.php:125
+msgid "Settings updated successfully!"
+msgstr ""
+
+#: src/controller/class-session-protection.php:128
+#. translators: 1. tag open, 2. tag close
+msgid "%1$s Session Protection %2$s deactivated successfully!"
+msgstr ""
+
+#: src/controller/class-session-protection.php:131
+#. translators: 1. tag open, 2. tag close
+msgid "%1$s Session Protection %2$s activated successfully!"
+msgstr ""
+
+#: src/controller/class-strong-password.php:180
+#. translators: 1. Open tag. 2. Close tag.
+msgid ""
+"You need to check at least one of the %1$sStrong Passwords checks "
+"preferences below%2$s and save your settings to enable Strong Password "
+"Protection."
+msgstr ""
+
+#: src/controller/class-two-factor.php:258
+msgid "Please try again."
+msgstr ""
+
+#: src/controller/class-two-factor.php:271
+msgid "Your code has been sent to your email."
+msgstr ""
+
+#: src/controller/class-two-factor.php:287
+msgid "Nonce verification failed."
+msgstr ""
+
+#: src/controller/class-two-factor.php:301
+msgid "Invalid user."
+msgstr ""
+
+#: src/controller/class-two-factor.php:356
+msgid "You have logged in successfully."
+msgstr ""
+
+#: src/controller/class-two-factor.php:515
+msgid "No providers."
+msgstr ""
+
+#: src/controller/class-two-factor.php:653
+msgid "Please input a valid OTP code."
+msgstr ""
+
+#: src/controller/class-two-factor.php:661
+msgid "The setup key is incorrect."
+msgstr ""
+
+#: src/controller/class-two-factor.php:707
+msgid "Your OTP code is incorrect. Please try again."
+msgstr ""
+
+#: src/controller/class-two-factor.php:998
+msgid "Sender value cannot be empty."
+msgstr ""
+
+#: src/controller/class-two-factor.php:1017
+msgid "Test email has been sent to your email."
+msgstr ""
+
+#: src/controller/class-two-factor.php:1022
+msgid "Test email failed."
+msgstr ""
+
+#: src/controller/class-two-factor.php:1322
+#. translators: %s: count
+msgid "2FA Backup Codes for %s:"
+msgstr ""
+
+#: src/controller/class-two-factor.php:1348
+#: src/controller/class-two-factor.php:1352
+msgid "Save changes"
+msgstr ""
+
+#: src/controller/class-two-factor.php:1428
+msgid "Two-Factor settings updated successfully."
+msgstr ""
+
+#: src/controller/class-ua-lockout.php:416
+msgid "Your file content is invalid! Please use a CSV file format and try again."
+msgstr ""
+
+#: src/controller/class-ua-lockout.php:429
+msgid "Your blocklist and allowlist have been successfully imported."
+msgstr ""
+
+#: src/controller/class-webauthn.php:159 src/controller/class-webauthn.php:243
+#: src/controller/class-webauthn.php:325 src/controller/class-webauthn.php:374
+#: src/controller/class-webauthn.php:412 src/controller/class-webauthn.php:500
+msgid "Bad nonce."
+msgstr ""
+
+#: src/controller/class-webauthn.php:170 src/controller/class-webauthn.php:439
+#: src/controller/class-webauthn.php:525
+msgid "User does not exist."
+msgstr ""
+
+#: src/controller/class-webauthn.php:354
+msgid "Authenticator removed."
+msgstr ""
+
+#: src/controller/class-webauthn.php:357 src/controller/class-webauthn.php:395
+msgid "Key did not match any registered authenticator."
+msgstr ""
+
+#: src/controller/class-webauthn.php:392
+msgid "Authenticator identifier renamed."
+msgstr ""
+
+#: src/controller/class-webauthn.php:450
+msgid "Please register a device first to authenticate it."
+msgstr ""
+
+#: src/controller/class-webauthn.php:558
+msgid "Authenticator verified successfully."
+msgstr ""
+
+#: src/controller/class-webauthn.php:591
+msgid "Registering a new authenticator is in process."
+msgstr ""
+
+#: src/controller/class-webauthn.php:595
+msgid "Registered new authenticator."
+msgstr ""
+
+#: src/controller/class-webauthn.php:599
+msgid "ERROR: Something went wrong."
+msgstr ""
+
+#: src/controller/class-webauthn.php:603
+msgid ""
+"Registration failed! The authenticator you are trying to register is "
+"already registered with your account."
+msgstr ""
+
+#: src/controller/class-webauthn.php:607
+msgid "Authenticating"
+msgstr ""
+
+#: src/controller/class-webauthn.php:608
+msgid "Authenticated device successfully."
+msgstr ""
+
+#: src/controller/class-webauthn.php:612
+msgid ""
+"Authentication verification failed! Please make sure that biometric "
+"functionality is configured on your phone."
+msgstr ""
+
+#: src/controller/class-webauthn.php:618
+#. translators: %s is the name of the authenticator.
+msgid ""
+"Due to some Biometric Authentication security improvements, the %s device "
+"will not work. Please delete this device and re-register it."
+msgstr ""
+
+#: src/controller/class-webauthn.php:621
+msgid "Are you sure you want to remove authenticator?"
+msgstr ""
+
+#: src/controller/class-webauthn.php:625
+msgid "ERROR: Verification failed."
+msgstr ""
+
+#: src/controller/class-webauthn.php:629
+msgid ""
+"ERROR: Due to some Biometric Authentication security improvements, some of "
+"your registered devices might not work. Please ask your website "
+"administrator to reset 2FA for your account. Then navigate to your profile "
+"page to check which devices need re-registration."
+msgstr ""
+
+#: src/controller/class-webauthn.php:633
+msgid ""
+"WebAuth is not supported by your web browser. Please install an updated "
+"version, or try another browser."
+msgstr ""
+
+#: src/controller/class-webauthn.php:637
+msgid "This device might not work. Please delete the device and re-register it."
+msgstr ""
+
+#: src/controller/class-webauthn.php:641
+msgid ""
+"Due to some biometric authentication security improvements, some of your "
+"registered devices might not work. Please click the Authenticate Device "
+"button to check which devices you need to delete and re-registered."
+msgstr ""
+
+#: src/controller/class-webauthn.php:662
+msgid "Notice disabled!"
+msgstr ""
+
+#: src/functions.php:296
+#. translators: %s: heart icon
+msgid "Made with %s by WPMU DEV"
+msgstr ""
+
+#: src/functions.php:412
+msgid "Every Half Hour"
+msgstr ""
+
+#: src/functions.php:418
+msgid "Weekly"
+msgstr ""
+
+#: src/functions.php:424
+msgid "Once Monthly"
+msgstr ""
+
+#: src/functions.php:432
+msgid "30 days"
+msgstr ""
+
+#: src/functions.php:438
+msgid "60 days"
+msgstr ""
+
+#: src/functions.php:444
+msgid "90 days"
+msgstr ""
+
+#: src/functions.php:450
+msgid "6 months"
+msgstr ""
+
+#: src/functions.php:456
+msgid "1 year"
+msgstr ""
+
+#: src/functions.php:557
+#. translators: 1. Support link.
+msgid "Still, having trouble? %1$s."
+msgstr ""
+
+#: src/functions.php:558
+msgid "Open a support ticket"
+msgstr ""
+
+#: src/functions.php:568
+msgid "Safe Repair feature is only for Pro"
+msgstr ""
+
+#: src/integrations/class-buddypress.php:39
+#: src/integrations/class-woocommerce.php:91
+msgid "Registration"
+msgstr ""
+
+#: src/integrations/class-buddypress.php:40
+msgid "Add new group"
+msgstr ""
+
+#: src/integrations/class-dashboard-whitelabel.php:82
+msgid "The WPMU DEV Team."
+msgstr ""
+
+#: src/integrations/class-woocommerce.php:93
+msgid "Checkout"
+msgstr ""
+
+#: src/model/class-lockout-ip.php:262
+msgid "In Allowlist"
+msgstr ""
+
+#: src/model/class-lockout-ip.php:264
+msgid "Not banned or in allowlist"
+msgstr ""
+
+#: src/model/class-lockout-log.php:655
+msgid ""
+"Lockout occurred due to attempted access with empty User-Agent and Referer "
+"headers. By default, IP addresses that send POST requests with empty "
+"User-Agent and Referer headers will be automatically banned. You can "
+"disable this option in the User Agent Banning settings, or you can unban "
+"the locked out IP address below."
+msgstr ""
+
+#: src/model/class-lockout-log.php:660
+#: src/model/setting/class-user-agent-lockout.php:361
+msgid "Empty Headers"
+msgstr ""
+
+#: src/model/class-lockout-log.php:665
+#. translators: 1. Log. 2. User agent.
+msgid "%1$s: %2$s. This user agent is considered bad bots and may harm your site."
+msgstr ""
+
+#: src/model/class-lockout-log.php:672
+msgid "User Agent name"
+msgstr ""
+
+#: src/model/class-notification.php:341
+#. translators: 1: Notification sending frequency, 2: Time of a day.
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: src/model/class-notification.php:348
+#. translators: 1: Notification sending frequency, 2: Day of the week, 3: Time
+#. of a day.
+msgid "%1$s on %2$s at %3$s"
+msgstr ""
+
+#: src/model/class-notification.php:357
+#. translators: 1: Notification sending frequency, 2: Day of the month, 3: Time
+#. of a day.
+msgid "%1$s/%2$d, %3$s"
+msgstr ""
+
+#: src/model/class-notification.php:407
+#. translators: %s: Email address of a recipient.
+msgid "Email %s is invalid format"
+msgstr ""
+
+#: src/model/class-scan.php:613
+msgid "A scan is already in progress."
+msgstr ""
+
+#: src/model/class-scan.php:743
+msgid "Initializing..."
+msgstr ""
+
+#: src/model/class-scan.php:745
+msgid "Gathering information..."
+msgstr ""
+
+#: src/model/class-scan.php:747
+msgid "Analyzing WordPress Core..."
+msgstr ""
+
+#: src/model/class-scan.php:749
+msgid "Analyzing WordPress Plugins..."
+msgstr ""
+
+#: src/model/class-scan.php:752
+msgid "Checking for any published vulnerabilities in your plugins and themes..."
+msgstr ""
+
+#: src/model/class-scan.php:754
+msgid "Analyzing WordPress Content..."
+msgstr ""
+
+#: src/model/class-scan.php:757
+msgid "Checking for any outdated & removed plugins..."
+msgstr ""
+
+#: src/model/class-scan.php:759
+msgid "The scan is running"
+msgstr ""
+
+#: src/model/notification/class-audit-report.php:127
+#. translators: %s: Site URL.
+msgid "Here`s what`s been happening at %s"
+msgstr ""
+
+#: src/model/notification/class-audit-report.php:139
+#. translators: 1. Plugin label. 2. Site URL.
+msgid "Audit Update From %1$s! %2$s"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:47
+#: src/model/notification/class-firewall-notification.php:290
+msgid "Firewall - Notification"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:50
+msgid ""
+"Get email when a user or IP is locked out for trying to access your login "
+"area."
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:170
+#. translators: %s: Site URL.
+msgid "Login lockout alert for %s"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:176
+msgid " seconds"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:185
+#. translators: 1: IP address, 2: Site URL, 3: Total attempt from an IP, 4.
+#. Lockout type, 5: Translation string.
+msgid ""
+"The host %1$s has been locked out of %2$s due to more than %3$s failed %4$s "
+"attempts. %5$s"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:190
+#: src/model/notification/class-firewall-notification.php:228
+msgid "Accordingly, the host has been permanently banned."
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:194
+#: src/model/notification/class-firewall-notification.php:232
+#. translators: %s: Duration.
+msgid "They have been locked out for %s."
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:209
+#. translators: %s: Site URL.
+msgid "User Agent lockout alert for %s"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:214
+#. translators: 1: User agent, 2: Site URL
+msgid "The %1$s has been locked out of %2$s."
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:220
+#. translators: %s: Site URL.
+msgid "404 lockout alert for %s"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:223
+#. translators: 1: IP address, 2: Site URL, 3: Total attempt from an IP, 4:
+#. Tried, 5. Translation string.
+msgid ""
+"The host %1$s has been locked out of %2$s due to more than %3$s 404 "
+"requests for the file %4$s. %5$s"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:291
+msgid "Login Protection Lockout"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:292
+msgid "404 Detection Lockout"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:295
+msgid "Limit email notifications for repeat lockouts"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:296
+msgid "Repeat Lockouts Threshold"
+msgstr ""
+
+#: src/model/notification/class-firewall-notification.php:297
+msgid "Repeat Lockouts Period"
+msgstr ""
+
+#: src/model/notification/class-firewall-report.php:97
+#. translators: 1. Plugin label. 2. Site URL.
+msgid "%1$s Lockouts Report for %2$s"
+msgstr ""
+
+#: src/model/notification/class-firewall-report.php:103
+msgid "in the past 24 hours"
+msgstr ""
+
+#: src/model/notification/class-firewall-report.php:106
+msgid "in the past week"
+msgstr ""
+
+#: src/model/notification/class-firewall-report.php:109
+msgid "in the month"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:69
+#: src/model/notification/class-malware-notification.php:271
+msgid "Malware Scanning - Notification"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:71
+msgid "Get email notifications when Defender has finished manual malware scans."
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:273
+msgid "Send notifications when Defender couldn't scan the files"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:277
+msgid "Email subject when an issue is found"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:278
+msgid "Email subject when no issues are found"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:279
+msgid "Email subject when failed to scan"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:280
+msgid "Email body when an issue is found"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:281
+msgid "Email body when no issues are found"
+msgstr ""
+
+#: src/model/notification/class-malware-notification.php:282
+msgid "When failed to scan"
+msgstr ""
+
+#: src/model/notification/class-tweak-reminder.php:45
+#: src/model/notification/class-tweak-reminder.php:223
+msgid "Security Recommendations - Notification"
+msgstr ""
+
+#: src/model/notification/class-tweak-reminder.php:47
+msgid "Get email notifications if/when a security recommendation needs fixing."
+msgstr ""
+
+#: src/model/notification/class-tweak-reminder.php:185
+msgid "Security Report"
+msgstr ""
+
+#: src/model/notification/class-tweak-reminder.php:193
+#. translators: 1: Site URL, 2: Count for unresolved security recommendations
+msgid "Security Recommendation Report for %1$s. %2$s recommendation to action."
+msgid_plural "Security Recommendation Report for %1$s. %2$s recommendations to action."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/model/setting/class-antibot-global-firewall-setting.php:104
+#: src/model/setting/class-global-ip-lockout.php:86
+#: src/model/setting/class-login-lockout.php:189
+#: src/model/setting/class-notfound-lockout.php:223
+#: src/model/setting/class-user-agent-lockout.php:573
+msgid "active"
+msgstr ""
+
+#: src/model/setting/class-antibot-global-firewall-setting.php:104
+#: src/model/setting/class-global-ip-lockout.php:86
+#: src/model/setting/class-login-lockout.php:189
+#: src/model/setting/class-notfound-lockout.php:223
+#: src/model/setting/class-user-agent-lockout.php:573
+msgid "inactive"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:94
+msgid "The administrator has blocked your IP from accessing this website."
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:198
+msgid "Invalid IP addresses detected. Please fix the following errors:"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:253
+msgid "IP Banning - IP Addresses Blocklist"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:254
+msgid "IP Banning - IP Addresses Allowlist"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:255
+msgid "IP Banning - Country Allowlist"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:256
+msgid "IP Banning - Country Blocklist"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:257
+msgid "IP Banning - Lockout Message"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:258
+msgid "MaxMind license key"
+msgstr ""
+
+#: src/model/setting/class-blacklist-lockout.php:286
+msgid "Local Blocklist"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:173
+msgid "reCAPTCHA verification failed. Please try again."
+msgstr ""
+
+#: src/model/setting/class-captcha.php:174
+msgid "Turnstile verification failed. Please try again."
+msgstr ""
+
+#: src/model/setting/class-captcha.php:351
+msgid "Configure CAPTCHA"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:352
+msgid "V2 Checkbox"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:353
+msgid "V2 Invisible"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:354
+msgid "reCAPTCHA V3"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:355
+msgid "Language"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:356
+msgid "Error Message"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:357
+msgid "CAPTCHA Locations"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:358
+#: src/model/setting/class-two-fa.php:299
+msgid "WooCommerce"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:359
+msgid "BuddyPress"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:360
+msgid "Disable for logged in users"
+msgstr ""
+
+#: src/model/setting/class-captcha.php:375
+#. translators: Provider label.
+msgid ""
+"You have enabled %s for more than one plugin. Please select at least one "
+"form location for each plugin and click Save Changes again."
+msgstr ""
+
+#: src/model/setting/class-captcha.php:386
+#. translators: Provider label.
+msgid ""
+"%s for WooCommerce is enabled, but no WooCommerce forms are selected. "
+"Please select at least one WooCommerce form location and then click Save "
+"Changes again."
+msgstr ""
+
+#: src/model/setting/class-captcha.php:395
+#. translators: Provider label.
+msgid ""
+"%s for BuddyPress is enabled, but no BuddyPress forms are selected. Please "
+"select at least one BuddyPress form location and then click Save Changes "
+"again."
+msgstr ""
+
+#: src/model/setting/class-captcha.php:423
+msgid "CAPTCHA"
+msgstr ""
+
+#: src/model/setting/class-firewall.php:82
+msgid "Days to keep logs"
+msgstr ""
+
+#: src/model/setting/class-firewall.php:83
+msgid "Clear Temporary IP Block List"
+msgstr ""
+
+#: src/model/setting/class-firewall.php:84
+msgid "Detect IP Addresses"
+msgstr ""
+
+#: src/model/setting/class-firewall.php:85
+msgid "Edit Trusted Proxies"
+msgstr ""
+
+#: src/model/setting/class-firewall.php:142
+msgid "IP Detection option should not be empty."
+msgstr ""
+
+#: src/model/setting/class-firewall.php:173
+#. translators: %s: IP value.
+msgid "%s is not a valid IP address"
+msgstr ""
+
+#: src/model/setting/class-global-ip-lockout.php:65
+msgid "Permanently Blocked IPs"
+msgstr ""
+
+#: src/model/setting/class-global-ip-lockout.php:75
+msgid "Custom IP List"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:111
+msgid "You have been locked out due to too many invalid login attempts."
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:157
+msgid "Login Protection - Threshold"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:159
+msgid "Login Protection - Timeframe"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:161
+msgid "Login Protection - Duration Type"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:163
+msgid "Login Protection - Duration"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:165
+msgid "Login Protection - Duration units"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:167
+msgid "Login Protection - Lockout Message"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:168
+msgid "Login Protection - Banned Usernames"
+msgstr ""
+
+#: src/model/setting/class-login-lockout.php:178
+msgid "Login Protection"
+msgstr ""
+
+#: src/model/setting/class-main-setting.php:103
+msgid "Error detecting language"
+msgstr ""
+
+#: src/model/setting/class-main-setting.php:116
+msgid "Translations"
+msgstr ""
+
+#: src/model/setting/class-main-setting.php:117
+msgid "Usage Tracking"
+msgstr ""
+
+#: src/model/setting/class-main-setting.php:118
+msgid "Uninstall Data"
+msgstr ""
+
+#: src/model/setting/class-main-setting.php:119
+msgid "Uninstall Settings"
+msgstr ""
+
+#: src/model/setting/class-main-setting.php:120
+msgid "High Contrast Mode"
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:90
+msgid "Masking URL"
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:91
+msgid "Redirect traffic"
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:92
+msgid "Redirection URL"
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:93
+msgid "Select the page or post your default login URLs will redirect to"
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:195
+msgid ""
+"The slug you have provided cannot be used for masking your login area. "
+"Please try a new one."
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:205
+msgid "Redirect URL must different from Login URL"
+msgstr ""
+
+#: src/model/setting/class-mask-login.php:271
+msgid "Mask Login Area"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:133
+msgid ""
+"You have been locked out due to too many attempts to access a file that "
+"doesn`t exist."
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:186
+msgid "404 Detection - Threshold"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:188
+msgid "404 Protection - Timeframe"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:190
+msgid "404 Protection - Duration Type"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:192
+msgid "404 Detection - Duration"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:194
+msgid "404 Protection - Duration units"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:196
+msgid "404 Detection - Lockout Message"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:198
+msgid "404 Detection - Files and Folders Blocklist"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:200
+msgid "404 Detection - Files and Folders Allowlist"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:202
+msgid "404 Detection - Monitor logged in users"
+msgstr ""
+
+#: src/model/setting/class-notfound-lockout.php:212
+msgid "404 Detection"
+msgstr ""
+
+#: src/model/setting/class-password-protection.php:55
+msgid ""
+"You are required to change your password because the password you are using "
+"exists on database breach records."
+msgstr ""
+
+#: src/model/setting/class-password-protection.php:90
+msgid "Force password change"
+msgstr ""
+
+#: src/model/setting/class-password-protection.php:91
+#: src/model/setting/class-password-reset.php:96
+msgid "User Roles"
+msgstr ""
+
+#: src/model/setting/class-password-protection.php:115
+msgid "Pwned Passwords"
+msgstr ""
+
+#: src/model/setting/class-password-reset.php:64
+msgid "You are required to change your password to a new one to use this site."
+msgstr ""
+
+#: src/model/setting/class-password-reset.php:97
+#: src/model/setting/class-user-agent-lockout.php:358
+msgid "Message"
+msgstr ""
+
+#: src/model/setting/class-password-reset.php:121
+#: src/view/mask-login/reset.php:17
+msgid "Password Reset"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:150
+msgid "Enable X-Frame-Options"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:151
+msgid "X-Frame-Options mode"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:152
+msgid "Enable X-XSS-Protection"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:153
+msgid "X-XSS-Protection mode"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:154
+msgid "Enable X-Content-Type-Options"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:155
+msgid "X-Content-Type-Options mode"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:156
+msgid "Enable Strict Transport"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:157
+msgid "HSTS Preload"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:158
+msgid "Include Subdomains"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:159
+msgid "Browser caching"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:160
+msgid "Enable Referrer Policy"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:161
+msgid "Referrer Information"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:162
+msgid "Enable Permissions-Policy"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:163
+msgid "Permissions-Policy mode"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:164
+msgid "Specific Origins"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:248
+msgid "X-Frame-Options mode is invalid"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:250
+msgid "X-XSS-Protection mode is invalid"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:267
+msgid "Referrer Policy mode is invalid"
+msgstr ""
+
+#: src/model/setting/class-security-headers.php:361
+msgid "Security Headers"
+msgstr ""
+
+#: src/model/setting/class-security-tweaks.php:142
+msgid "Actioned"
+msgstr ""
+
+#: src/model/setting/class-security-tweaks.php:144
+msgid "Ignored"
+msgstr ""
+
+#: src/model/setting/class-strong-password.php:122
+msgid ""
+"You are required to change your password because your password doesn't meet "
+"the strong password guidelines set by the administrator."
+msgstr ""
+
+#: src/model/setting/class-strong-password.php:162
+msgid ""
+"You have enabled Strong password rule for WooCommerce but you've not "
+"selected any form yet. Please select at least one form to proceed."
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:175
+msgid "Your OTP code"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:182
+msgid "You are required to setup two-factor authentication to use this site."
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:212
+msgid ""
+"Open your authentication app and type the 6 digit passcode to log in to "
+"your account."
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:286
+msgid "Enabled user roles"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:287
+msgid "Allow lost phone recovery option"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:288
+msgid "Subject"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:289
+msgid "Body"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:290
+msgid "Sender"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:291
+msgid "Force 2FA on user roles"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:292
+msgid "Force users to log in with two-factor authentication"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:293
+msgid "Force 2FA login warning message"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:294
+msgid "Custom Graphic"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:295
+msgid "Enable custom graphics above login fields"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:296
+msgid "Upload Graphic"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:297
+msgid "Link Graphic"
+msgstr ""
+
+#: src/model/setting/class-two-fa.php:298
+msgid "App Title"
+msgstr ""
+
+#: src/model/setting/class-user-agent-lockout.php:359
+msgid "Blocklist"
+msgstr ""
+
+#: src/model/setting/class-user-agent-lockout.php:360
+msgid "Allowlist"
+msgstr ""
+
+#: src/traits/continent.php:31
+msgid "Africa"
+msgstr ""
+
+#: src/traits/continent.php:34
+msgid "Northern Africa"
+msgstr ""
+
+#: src/traits/continent.php:46
+msgid "Eastern Africa"
+msgstr ""
+
+#: src/traits/continent.php:73
+msgid "Western Africa"
+msgstr ""
+
+#: src/traits/continent.php:95
+msgid "Central Africa"
+msgstr ""
+
+#: src/traits/continent.php:109
+msgid "Southern Africa"
+msgstr ""
+
+#: src/traits/continent.php:121
+msgid "Asia"
+msgstr ""
+
+#: src/traits/continent.php:124
+msgid "Central Asia"
+msgstr ""
+
+#: src/traits/continent.php:134
+msgid "Eastern Asia"
+msgstr ""
+
+#: src/traits/continent.php:147
+msgid "South Asia"
+msgstr ""
+
+#: src/traits/continent.php:160
+msgid "South-Eastern Asia"
+msgstr ""
+
+#: src/traits/continent.php:176
+msgid "Western Asia"
+msgstr ""
+
+#: src/traits/continent.php:202
+msgid "Europe"
+msgstr ""
+
+#: src/traits/continent.php:205
+msgid "Eastern Europe"
+msgstr ""
+
+#: src/traits/continent.php:220
+msgid "Northern Europe"
+msgstr ""
+
+#: src/traits/continent.php:241
+msgid "Southern Europe"
+msgstr ""
+
+#: src/traits/continent.php:262
+msgid "Western Europe"
+msgstr ""
+
+#: src/traits/continent.php:278
+msgid "America"
+msgstr ""
+
+#: src/traits/continent.php:281
+msgid "Central America"
+msgstr ""
+
+#: src/traits/continent.php:294
+msgid "Caribbean"
+msgstr ""
+
+#: src/traits/continent.php:327
+msgid "North America"
+msgstr ""
+
+#: src/traits/continent.php:338
+msgid "South America"
+msgstr ""
+
+#: src/traits/continent.php:361
+msgid "Oceania"
+msgstr ""
+
+#: src/traits/continent.php:364
+msgid "Australia and New Zealand"
+msgstr ""
+
+#: src/traits/continent.php:374
+msgid "Melanesia"
+msgstr ""
+
+#: src/traits/continent.php:384
+msgid "Micronesia"
+msgstr ""
+
+#: src/traits/continent.php:396
+msgid "Polynesia"
+msgstr ""
+
+#: src/traits/defender-bootstrap.php:501
+msgid "UPGRADE TO PRO"
+msgstr ""
+
+#: src/traits/defender-hub-client.php:208
+#. translators: %s - wpmudev link
+msgid ""
+"WPMU DEV Dashboard will be required for this action. Please visit %s and "
+"install the WPMU DEV Dashboard."
+msgstr ""
+
+#: src/traits/defender-hub-client.php:239
+msgid "API key missing."
+msgstr ""
+
+#: src/traits/defender-hub-client.php:242
+msgid "Permission denied API call."
+msgstr ""
+
+#: src/traits/formats.php:88
+msgid "year"
+msgstr ""
+
+#: src/traits/formats.php:89
+msgid "month"
+msgstr ""
+
+#: src/traits/formats.php:90
+msgid "week"
+msgstr ""
+
+#: src/traits/formats.php:91
+msgid "day"
+msgstr ""
+
+#: src/traits/formats.php:92
+msgid "hour"
+msgstr ""
+
+#: src/traits/formats.php:93
+msgid "minute"
+msgstr ""
+
+#: src/traits/formats.php:94
+msgid "second"
+msgstr ""
+
+#: src/traits/formats.php:125 src/traits/formats.php:338
+msgid "ago"
+msgstr ""
+
+#: src/traits/ip.php:288 src/traits/ip.php:298 src/traits/ip.php:327
+#. translators: %s: IP value.
+msgid "%s – invalid format"
+msgstr ""
+
+#: src/traits/ip.php:306
+#. translators: 1. IP value. 2. IP value.
+msgid "Can't compare %1$s with %2$s."
+msgstr ""
+
+#: src/traits/ip.php:319
+#. translators: %s: IP value.
+msgid "%s – address out of range"
+msgstr ""
+
+#: src/traits/plugin.php:137
+msgid "Plugin unknown error."
+msgstr ""
+
+#: src/traits/plugin.php:149
+msgid "Plugin response is not in expected format."
+msgstr ""
+
+#: src/traits/plugin.php:184 src/traits/plugin.php:200
+msgid "Plugin exists in WordPress repository."
+msgstr ""
+
+#: src/traits/scan-email-template.php:21
+msgid "Malware Scan of {SITE_URL} is complete. {ISSUES_COUNT} issue(s) found."
+msgstr ""
+
+#: src/traits/scan-email-template.php:25
+msgid ""
+"Hi {USER_NAME},\n"
+"\n"
+"Malware Scan identified {ISSUES_COUNT} issue(s) on {SITE_URL}. The "
+"identified issue(s) is/are listed below.\n"
+"\n"
+"{ISSUES_LIST}"
+msgstr ""
+
+#: src/traits/scan-email-template.php:35
+msgid "Scan of {SITE_URL} complete. {ISSUES_COUNT} issues found."
+msgstr ""
+
+#: src/traits/scan-email-template.php:36
+msgid ""
+"Hi {USER_NAME},\n"
+"\n"
+"No vulnerabilities have been found for {SITE_URL}."
+msgstr ""
+
+#: src/traits/scan-email-template.php:44
+msgid "Couldn’t scan {SITE_URL} for vulnerabilities. "
+msgstr ""
+
+#: src/traits/scan-email-template.php:45
+msgid ""
+"Hi {USER_NAME},\n"
+"\n"
+"We couldn’t scan {SITE_URL} for vulnerabilities. Please visit your site and "
+"run a manual scan."
+msgstr ""
+
+#: src/traits/scan-upsell.php:21
+#. translators: 1: Opening anchor tag, 2: Closing anchor tag
+msgid ""
+"Let our experts meticulously clean your sites, remove malware and set up "
+"optimal security configurations for ongoing protection. %1$sGet expert "
+"services%2$s."
+msgstr ""
+
+#: src/traits/setting.php:34
+#. translators: %s: Module name.
+msgid "%s has been activated."
+msgstr ""
+
+#: src/traits/setting.php:39
+#. translators: %s: Module name.
+msgid "%s has been deactivated."
+msgstr ""
+
+#: src/traits/user.php:32 src/traits/user.php:37 src/traits/user.php:145
+msgid "Guest"
+msgstr ""
+
+#: src/traits/user.php:64
+msgid "Hub"
+msgstr ""
+
+#: src/view/email/audit-report-no-events.php:13
+#: src/view/email/audit-report-table.php:21
+#: src/view/email/firewall-report.php:19 src/view/email/firewall-report.php:43
+#: src/view/email/tweaks-reminder.php:30
+#. translators: %s: Name.
+msgid "Hi %s,"
+msgstr ""
+
+#: src/view/email/audit-report-no-events.php:19
+#. translators: %s: Site URL.
+msgid "No events were logged for %s during the report period."
+msgstr ""
+
+#: src/view/email/audit-report-table.php:26
+msgid ""
+"Here's your latest Audit Update during the report period. See details for "
+"each event below."
+msgstr ""
+
+#: src/view/email/audit-report-table.php:42
+msgid "Event type"
+msgstr ""
+
+#: src/view/email/audit-report-table.php:45
+msgid "Event summary"
+msgstr ""
+
+#: src/view/email/audit-report-table.php:96
+#: src/view/email/scan-issue-list.php:140
+msgid "View Full Report"
+msgstr ""
+
+#: src/view/email/confirm.php:15 src/view/email/login-lockout.php:12
+#: src/view/email/subscribed.php:15 src/view/email/unlockout.php:12
+#: src/view/email/unsubscribe.php:15
+#. translators: %s: Name.
+msgid "Hi %s"
+msgstr ""
+
+#: src/view/email/confirm.php:23
+#. translators: 1. Site url. 2. Email. 3. Notification name.
+msgid ""
+"An administrator from %1$s has subscribed %2$s to %3$s. To confirm your "
+"subscription, click Confirm Subscription below."
+msgstr ""
+
+#: src/view/email/confirm.php:36
+msgid "Confirm Subscription"
+msgstr ""
+
+#: src/view/email/firewall-report.php:27
+#. translators: 1: Site URL, 2: Time unit.
+msgid "There were no lockouts for %1$s %2$s."
+msgstr ""
+
+#: src/view/email/firewall-report.php:37
+#. translators: %s: Site URL.
+msgid "Firewall report for %s"
+msgstr ""
+
+#: src/view/email/firewall-report.php:50
+#. translators: %d: Count.
+msgid "%d host has recently been locked out for suspicious behavior."
+msgid_plural "%d hosts have recently been locked out for suspicious behavior."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/view/email/firewall-report.php:59
+#. translators: %s: Total text.
+msgid "%s See details below."
+msgstr ""
+
+#: src/view/email/firewall-report.php:74
+msgid "Lockout type"
+msgstr ""
+
+#: src/view/email/firewall-report.php:77
+msgid "Total Lockouts"
+msgstr ""
+
+#: src/view/email/firewall-report.php:86
+msgid "404 Lockout"
+msgstr ""
+
+#: src/view/email/firewall-report.php:98
+msgid "Login Lockout"
+msgstr ""
+
+#: src/view/email/firewall-report.php:141 src/view/email/login-lockout.php:25
+msgid "View Full Logs"
+msgstr ""
+
+#: src/view/email/index.php:207
+msgid "Cheers,"
+msgstr ""
+
+#: src/view/email/index.php:316
+msgid "Follow us"
+msgstr ""
+
+#: src/view/email/scan-issue-list.php:59
+msgid "File"
+msgstr ""
+
+#: src/view/email/scan-issue-list.php:62 src/view/email/scan-issue-list.php:98
+msgid "Issue"
+msgstr ""
+
+#: src/view/email/scan-issue-list.php:95
+msgid "Plugin"
+msgstr ""
+
+#: src/view/email/subscribed.php:22
+msgid "unsubscribe"
+msgstr ""
+
+#: src/view/email/subscribed.php:26
+#. translators: 1. Notification name. 2. Unsubscribe-action.
+msgid ""
+"You are now subscribed to %1$s. If you no longer wish to receive these "
+"emails, you can %2$s."
+msgstr ""
+
+#: src/view/email/tweak-issue.php:12
+msgid "Hero Image"
+msgstr ""
+
+#: src/view/email/tweaks-reminder.php:22
+#. translators: %s: Site URL.
+msgid "Security recommendation report for %s"
+msgstr ""
+
+#: src/view/email/tweaks-reminder.php:37
+#. translators: %d: Count. %s: Site URL.
+msgid "You have %1$d unresolved security recommendation for %2$s."
+msgid_plural "You have %1$d unresolved security recommendations for %2$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/view/email/tweaks-reminder.php:48
+#. translators: %s: Count text.
+msgid ""
+"%s We suggest addressing as many recommendations as possible to improve "
+"site security, and ignoring anything you don't want to address."
+msgstr ""
+
+#: src/view/email/tweaks-reminder.php:103
+msgid "View All"
+msgstr ""
+
+#: src/view/email/unlockout.php:18
+msgid ""
+"We have received a request to unblock an IP address that appears to be "
+"locked out of your site."
+msgstr ""
+
+#: src/view/email/unlockout.php:27
+#. translators: %s: Generated time.
+msgid "This request was generated on %s."
+msgstr ""
+
+#: src/view/email/unlockout.php:34
+#. translators: %s: Unlocked link.
+msgid ""
+"If this request was made by you and you would like to unblock your IP "
+"address, please click on the following link: %s."
+msgstr ""
+
+#: src/view/email/unlockout.php:41
+msgid ""
+"Please note that this link is only valid for 30 minutes from the time of "
+"generation."
+msgstr ""
+
+#: src/view/email/unlockout.php:52
+msgid "Unlock me"
+msgstr ""
+
+#: src/view/email/unsubscribe.php:23
+#. translators: 1. Notification name. 2. Resubscribe-action.
+msgid ""
+"You are now unsubscribed from %1$s. If you made a mistake and wish to "
+"continue receiving these emails, you can %2$s."
+msgstr ""
+
+#: src/view/email/unsubscribe.php:28
+msgid "resubscribe"
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:161
+msgid "Access Denied"
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:170
+#. translators: 1. Module name. 2. Button title.
+msgid ""
+"Your IP appeared in the %s service. Click on the %s button below to unlock "
+"yourself."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:180
+#. translators: %s: Module name.
+msgid ""
+"Your IP address has been blocked from accessing this website because it is "
+"listed in the %s."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:190
+#. translators: %s: Button title.
+msgid "If you are a site admin, click on the %s button below to unlock yourself."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:220
+msgid "Your IP is removed from the AntiBot Global FIrewall blocklist."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:232
+#. translators: 1. Open tag. 2. Close tag.
+msgid "Verification failed. Please %1$sretry%2$s."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:243
+#. translators: 1. Open tag. 2. Close tag.
+msgid "Unexpected error occurred. Please %1$sretry%2$s."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:265
+msgid "Enter your registered username or email"
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:270
+msgid "Enter your username or email."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:290
+msgid ""
+"If the username/email exists, an email will be sent to your registered "
+"email address."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:300
+#. translators: %s: Resend link.
+msgid "Didn't get the email? %s."
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:301
+msgid "Try again"
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:310
+msgid "You will be able to attempt to access again in:"
+msgstr ""
+
+#: src/view/ip-lockout/locked.php:319
+msgid "Powered by"
+msgstr ""
+
+#: src/view/mask-login/reset.php:12
+msgid "The passwords do not match."
+msgstr ""
+
+#: src/view/mask-login/reset.php:20
+msgid "Your password has been reset."
+msgstr ""
+
+#: src/view/mask-login/reset.php:22 src/view/mask-login/reset.php:86
+msgid "Log in"
+msgstr ""
+
+#: src/view/mask-login/reset.php:37
+msgid "Reset Password"
+msgstr ""
+
+#: src/view/mask-login/reset.php:38
+msgid "Enter your new password below or generate one."
+msgstr ""
+
+#: src/view/mask-login/reset.php:47
+msgid "New Password"
+msgstr ""
+
+#: src/view/mask-login/reset.php:56
+msgid "Hide password"
+msgstr ""
+
+#: src/view/mask-login/reset.php:60
+msgid "Strength indicator"
+msgstr ""
+
+#: src/view/mask-login/reset.php:64
+msgid "Confirm use of weak password"
+msgstr ""
+
+#: src/view/mask-login/reset.php:68
+msgid "Confirm new password"
+msgstr ""
+
+#: src/view/mask-login/reset.php:80
+msgid "Generate Password"
+msgstr ""
+
+#: src/view/mask-login/reset.php:82
+msgid "Save Password"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:24
+msgid "Deactivate Defender?"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:29
+msgid "Close this dialog window"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:38
+#. translators: %s: Support link
+msgid "Please tell us why. Your feedback helps us improve. %s"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:39
+msgid "Need Help?"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:44
+msgid "What issue are you debugging? (optional)"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:53
+msgid "Temporary deactivation for debugging"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:58
+#: src/view/modal/deactivation-survey.php:72
+msgid "What issue did you face? (optional)"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:67
+msgid "Can't make it work"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:81
+msgid "Breaks the site or other plugins/services"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:86
+msgid "What could we do better? (optional)"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:95
+msgid "Doesn't meet expectations"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:100
+msgid "Which plugin and how is it better? (optional)"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:109
+msgid "Found a better plugin"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:114
+#: src/view/modal/deactivation-survey.php:128
+#: src/view/modal/deactivation-survey.php:141
+msgid "Please tell us why. (optional)"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:123
+msgid "No longer required"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:137
+msgid "Other"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:149
+msgid "Skip & Deactivate"
+msgstr ""
+
+#: src/view/modal/deactivation-survey.php:151
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: src/view/two-fa/otp.php:118
+msgid "Powered by WordPress"
+msgstr ""
+
+#: src/view/two-fa/otp.php:309
+msgid "Having problems? Try another way to log in"
+msgstr ""
+
+#: src/view/two-fa/providers/backup-codes.php:23
+msgid "Generate new backup codes by clicking the button above."
+msgstr ""
+
+#: src/view/two-fa/providers/backup-codes.php:29
+msgid ""
+"Ensure your backup codes are saved in a safe and accessible place. You "
+"won’t be able to view these codes again."
+msgstr ""
+
+#: src/view/two-fa/providers/backup-codes.php:38
+msgid "Download Codes"
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:12
+msgid "1. Install the Verification app"
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:16
+msgid ""
+"Download and install the authenticator app on your device using the links "
+"below."
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:35
+msgid "2. Scan the QR code or enter the key"
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:40
+msgid ""
+"Open the authenticator app, and scan the QR code below or manually enter "
+"the setup key to add your new site."
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:51
+msgid "Copy"
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:59
+msgid "3. Enter passcode"
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:63
+msgid ""
+"Enter the 6 digit passcode that is shown on your device into the input "
+"field below and hit \"Verify\"."
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:72
+msgid "Enter passcode"
+msgstr ""
+
+#: src/view/two-fa/providers/totp-disabled.php:75
+msgid "Verify"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:12
+msgid "Security"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:28
+msgid "Default"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:30
+msgid "2FA Method"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:96
+msgid "Registered Device"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:100 src/view/two-fa/user-options.php:114
+msgid "Identifier"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:102 src/view/two-fa/user-options.php:116
+msgid "Date registered"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:103 src/view/two-fa/user-options.php:117
+msgid "Action"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:109
+msgid "No registered authenticator"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:123
+msgid "Register Device"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:126
+msgid "Authenticate Device"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:131
+msgid "Register New Authenticator"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:134
+msgid ""
+"Register a new authenticator for the current user account. You can register "
+"multiple authenticators for an account."
+msgstr ""
+
+#: src/view/two-fa/user-options.php:143
+msgid "Select an Authenticator Type"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:149
+msgid "Platform (Fingerprint and facial recognition)"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:153
+msgid "Roaming (e.g. USB security keys)"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:156
+msgid "Choose an authenticator type."
+msgstr ""
+
+#: src/view/two-fa/user-options.php:162
+msgid "Authenticator Identifier"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:168
+msgid "Add an authenticator identifier."
+msgstr ""
+
+#: src/view/two-fa/user-options.php:171
+msgid "Provide name to identify authenticator easily."
+msgstr ""
+
+#: src/view/two-fa/user-options.php:177
+msgid "Start Registration"
+msgstr ""
+
+#: src/view/two-fa/user-options.php:179
+msgid "Cancel"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpmudev.com/project/wp-defender/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Get regular security scans, vulnerability reports, safety recommendations "
+"and customized hardening for your site in just a few clicks. Defender is "
+"the analyst and enforcer who never sleeps."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpmudev.com/"
+msgstr ""
+
+#: src/view/two-fa/otp.php:457
+#. translators: %s: site title
+msgctxt "site"
+msgid "&larr; Back to %s"
+msgstr ""

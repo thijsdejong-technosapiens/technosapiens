@@ -1,0 +1,14 @@
+:root {
+    --ts-outline: var(--ts-focus-ring, 2px solid var(--ts-font-color-primary, currentColor));
+    --ts-outline-light: var(--ts-focus-ring-inverse, 2px solid var(--ts-color-white, currentColor));
+}
+
+//add some outline styling so you can see which element is focused
+*:not(.ts-no-outline):focus-visible {
+    outline: var(--ts-outline, 2px solid currentColor);
+    outline-offset: var(--ts-focus-ring-offset, 0.125rem);
+
+    .ts-has-dark-background & {
+        outline: var(--ts-outline-light, 2px solid currentColor);
+    }
+}

@@ -1,0 +1,49 @@
+@use "sass:list";
+@use "sass:math";
+
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+$margins: 'smaller', 'small', 'regular', 'medium', 'large', 'larger';
+$largeMargins: 'medium', 'large', 'larger';
+
+// Add margin/padding top and bottom styling
+@each $margin in $margins {
+    [data-mt="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        margin-top: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+
+    [data-mb="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        margin-bottom: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+
+    [data-pt="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        padding-top: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+
+    [data-pb="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        padding-bottom: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+}
+
+// Make large margins/paddings smaller on tablet landscape
+@include mixins.mq-down('md') {
+    @each $largeMargin in $largeMargins {
+        [data-mt="#{$largeMargin}"] {
+            margin-top: calc(#{vars.$gutter-width} * 1.5);
+        }
+        [data-mb="#{$largeMargin}"] {
+            margin-bottom: calc(#{vars.$gutter-width} * 1.5);
+        }
+        [data-pt="#{$largeMargin}"] {
+            padding-top: calc(#{vars.$gutter-width} * 1.5);
+        }
+        [data-pb="#{$largeMargin}"] {
+            padding-bottom: calc(#{vars.$gutter-width} * 1.5);
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.breadcrumbs {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--ts-color-light, lightgray);
+    top: 0;
+    z-index: 0;
+
+    //add some margin to the bottom of the breadcrumbs when used as direct children of the the main tag
+    main > & {
+        margin-bottom: var(--ts-gutter-width, 2rem);
+    }
+
+    span, a {
+        font-size: .875rem;
+        line-height: 1em;
+        color: var(--ts-font-color-primary, blue);
+    }
+
+    a {
+        text-decoration: none;
+
+        //make hitbox better
+        padding: calc(var(--ts-gutter-width, 2rem) / 4);
+        margin: calc((var(--ts-gutter-width, 2rem) / 4) * -1);
+    }
+
+    &__icon {
+        width: .5rem;
+        height: .5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .25rem .5rem;
+    }
+
+    .breadcrumb_last a {
+        cursor: text;
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        gap: .25rem .5rem;
+
+        a {
+            opacity: 1;
+            transition: .2s ease-in-out opacity;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        > span {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .25rem .5rem;
+        }
+
+        > span > span, > span > span > span {
+            display: flex;
+            align-items: center;
+            gap: .25rem .5rem;
+        }
+
+        svg {
+            width: .5rem;
+            height: .5rem;
+            color: var(--ts-font-color-primary, blue);
+        }
+    }
+
+    .hm-image-simple__slot & {
+        background-color: transparent;
+        margin-bottom: 0;
+    }
+
+    @include mixins.mq-down(md) {
+        //display: none;
+    }
+}

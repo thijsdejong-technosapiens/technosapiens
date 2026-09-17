@@ -1,0 +1,107 @@
+---
+description: Media Query conventions (mq-up mixin) and usage guidelines for responsive design.
+alwaysApply: false
+---
+# Media Query Conventions
+
+## Standard Implementation
+
+Always use the `mq-up` mixin for media queries targeting sizes larger than mobile. This ensures consistent breakpoint handling across the project.
+
+**Important:** Ensure you import the mixins correctly in your SCSS file, typically with `@use "../../../scss/util/util-mixins" as mixins;` or a similar path.
+
+### Correct Usage
+
+```scss
+.my-component {
+    // Mobile-first styles here
+    padding: 1rem;
+
+    @include mixins.mq-up(lg) {
+        // Styles for large screens and up
+        padding: 2rem;
+        font-size: 1.125rem;
+    }
+}
+```
+
+### Available Breakpoints
+- xs: 0px (default, no media query needed)
+- sm: 576px
+- md: 768px
+- lg: 992px
+- xl: 1200px
+- xxl: 1400px
+
+### Common Patterns
+#### Sticky Elements:
+
+```scss
+.sticky-sidebar {
+    @include mixins.mq-up(lg) {
+        position: sticky;
+        top: 2rem;
+        align-self: flex-start;
+    }
+}
+```
+
+#### Grid Layouts:
+
+```scss
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @include mixins.mq-up(md) {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    @include mixins.mq-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+```
+
+### ❌ Don't Use
+Avoid using standard CSS media queries directly, as this bypasses the theme's managed breakpoints.
+
+```scss
+// ❌ Don't use standard media queries
+@media (min-width: 992px) {
+    // ...
+}
+
+// ❌ Don't use max-width queries unless absolutely necessary (breaks mobile-first)
+@media (max-width: 768px) {
+    // ...
+}
+```
+
+### ✅ Do Use
+Always structure your SCSS mobile-first and use `mq-up` to add styles for larger screens.
+
+```scss
+.component {
+    // Mobile-first styles here
+    color: var(--ts-color-primary, red);
+
+    @include mixins.mq-up(md) {
+        // Tablet and up styles
+        color: var(--ts-color-secondary, blue);
+    }
+
+    @include mixins.mq-up(lg) {
+        // Desktop and up styles
+        color: var(--ts-color-primary-dark, black);
+    }
+}
+```
+
+## Best Practices
+1. Always start with mobile styles (mobile-first approach).
+2. Use the `mq-up` mixin for consistent breakpoint management.
+3. Keep media queries organized within their component/block SCSS files.
+4. Consider performance implications of complex styles added at larger breakpoints.

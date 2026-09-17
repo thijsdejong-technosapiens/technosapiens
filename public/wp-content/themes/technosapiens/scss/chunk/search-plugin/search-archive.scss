@@ -1,0 +1,317 @@
+@use "../../util/util-mixins" as mixins;
+
+.archive-header {
+    padding: var(--ts-gutter-width, 2rem) 0 !important;
+    color: var(--ts-color-primary, blue);
+
+    &__heading {
+        font-size: 2rem;
+        text-transform: none;
+
+        @include mixins.lg-down {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__description {
+        margin: 0;
+        font-size: 1.125rem;
+    }
+}
+
+.archive-search-bar {
+    margin-bottom: var(--ts-gutter-width, 2rem);
+    padding: var(--ts-gutter-width, 2rem) 0;
+    background-color: var(--ts-color-light, lightblue);
+
+    @include mixins.lg-down {
+        margin-bottom: 0;
+    }
+
+    &__field-container {
+        display: flex;
+        flex-flow: column-reverse;
+        position: relative;
+        width: auto;
+        padding: 0;
+        border: none;
+    }
+
+    &__field-input {
+        height: var(--ts-form-field-height, 3rem);
+        padding: 0 3.5rem 0 1rem !important;
+        background-color: var(--ts-color-white, white) !important;
+        border: none !important;
+        border-radius: var(--ts-form-field-border-radius, 0);
+        color: var(--ts-font-color-primary, black);
+        font-size: 1rem;
+
+        &::-webkit-input-placeholder {
+            opacity: 1 !important;
+        }
+    }
+
+    &__field-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--ts-font-color-primary, black);
+        transform-origin: center center;
+        transition: transform .25s ease-in-out;
+    }
+
+    &__field-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
+        height: 100%;
+        background: transparent;
+
+        &:hover {
+            .archive-search-bar__field-icon {
+                color: var(--ts-font-color-nav-hover, blue);
+                transform: rotate(-15deg);
+            }
+        }
+    }
+
+    input[type="search"] {
+        &::-ms-clear,
+        &::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+    }
+}
+
+.archive-filters {
+    &__mobile {
+        display: none;
+        margin: var(--ts-gutter-width, 2rem) auto;
+
+        select {
+            width: 100%;
+        }
+
+        @include mixins.md-down {
+            display: flex;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        flex-wrap: wrap;
+        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        margin: var(--ts-gutter-width, 2rem) auto;
+
+        @include mixins.mq-up(md) {
+            display: flex;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: .625em;
+        padding: calc(var(--ts-gutter-width, 2rem) / 3) calc(var(--ts-gutter-width, 2rem) / 2) calc(var(--ts-gutter-width, 2rem) / 3) calc(var(--ts-gutter-width, 2rem) / 1.5);
+        background-color: var(--ts-color-light, lightgrey);
+        border-radius: var(--ts-button-border-radius, 0);
+        cursor: pointer;
+        font-family: var(--ts-font-button, sans-serif);
+        font-weight: var(--ts-font-weight-medium, 500);
+        text-decoration: none;
+        transition: background-color .25s ease-in-out;
+
+        &--active {
+            background-color: var(--ts-font-color-primary, blue);
+            cursor: not-allowed;
+
+            .archive-filters__button-label {
+                color: var(--ts-color-white, white);
+            }
+
+            .archive-filters__button-count {
+                background-color: var(--ts-color-white, white);
+                color: var(--ts-font-color-primary, blue);
+            }
+        }
+
+        &:not(.archive-filters--active):hover {
+            background-color: var(--ts-font-color-primary, blue);
+
+            .archive-filters__button-label {
+                color: var(--ts-color-white, white);
+            }
+
+            .archive-filters__button-count {
+                background-color: var(--ts-color-light, lightgrey);
+                color: var(--ts-font-color-primary, blue);
+            }
+        }
+    }
+
+    &__button-label {
+        display: inline-flex;
+        color: var(--ts-font-color-primary, blue);
+        font-size: 1rem;
+        line-height: 1.5em;
+        transition: color .2s ease-in-out;
+    }
+
+    &__button-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        aspect-ratio: 1/1;
+        background-color: var(--ts-font-color-primary, blue);
+        border-radius: 50%;
+        color: var(--ts-color-white, white);
+        font-size: .75rem;
+        line-height: 1;
+        transition: color .2s ease-in-out, background-color .2s ease-in-out;
+    }
+}
+
+.search-archive {
+    &__content {
+        margin-top: 0;
+        background-color: var(--ts-color-white, white);
+    }
+}
+
+.archive-results {
+    padding: var(--ts-gutter-width, 2rem) 0;
+
+    @include mixins.mq-up(lg) {
+        margin-top: calc(var(--ts-gutter-width, 2rem) * -1);
+
+        .col.snippet-col {
+            &:not(:first-child):not(:nth-child(2)) {
+                border-top: 1px solid var(--ts-color-light, lightblue);
+            }
+
+            &:nth-child(odd) {
+                border-right: 1px solid var(--ts-color-light, lightblue);
+            }
+        }
+    }
+
+    @include mixins.lg-down {
+        overflow-x: hidden;
+        padding-top: 0;
+
+        .col.snippet-col {
+            border-top: 1px solid var(--ts-color-light, lightblue);
+
+            &:last-child {
+                margin-bottom: calc(var(--ts-gutter-width, 2rem) * -1);
+                border-bottom: 1px solid var(--ts-color-light, lightblue);
+            }
+        }
+    }
+
+    &__no-results-container {
+        margin-top: 2rem !important;
+    }
+}
+
+.snippet-search {
+    display: block;
+    position: relative;
+    height: 100%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(var(--ts-gutter-width, 2rem) / 2 * -1);
+        width: calc(100% + var(--ts-gutter-width, 2rem));
+        height: 100%;
+        background-color: var(--ts-color-white, white);
+        pointer-events: none;
+        transition: background-color .25s ease-in-out;
+        z-index: 1;
+    }
+
+    &:hover:before {
+        background-color: var(--ts-color-light, lightblue);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        position: relative;
+        width: calc(100% + var(--ts-gutter-width, 2rem) * 2);
+        height: 100%;
+        margin-left: calc(var(--ts-gutter-width, 2rem) * -1);
+        padding: var(--ts-gutter-width, 2rem);
+        z-index: 2;
+    }
+
+    &__link {
+        font-family: inherit;
+        text-decoration: none;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 4);
+    }
+
+    &__labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(var(--ts-gutter-width, 2rem) / 4);
+        margin-top: 0;
+        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 2);
+        z-index: 2;
+    }
+
+    &__label {
+        display: inline-block;
+        margin: 0;
+        color: var(--ts-font-color-primary, black);
+        font-size: .875rem;
+        font-weight: lighter;
+        line-height: 1.25em;
+    }
+
+    &__label-separator {
+        display: inline-block;
+        margin: 0 .05rem;
+        color: var(--ts-font-color-primary, black);
+        font-size: .875rem;
+        font-weight: lighter;
+        line-height: 1.25em;
+        opacity: .5;
+    }
+
+    &__excerpt {
+        color: var(--ts-font-color-primary, black);
+        font-size: 1rem;
+        line-height: 1.6em;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,96 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-usps {
+    $self: &;
+    background-color: var(--ts-color-light, lightgrey);
+
+    &__row {
+        display: grid;
+        width: 100%;
+        gap: var(--ts-gutter-width, 2rem);
+        grid-template-columns: minmax(0, 1fr);
+
+        @include mixins.mq-up(lg) {
+            grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        }
+
+        @include mixins.mq-up(xl) {
+            gap: var(--ts-row-gap-large, 4rem);
+        }
+    }
+
+    &__col {
+        width: 100%;
+        min-width: 0;
+    }
+
+    &__figure {
+        margin: 0;
+        overflow: hidden;
+        border-radius: var(--ts-border-radius-sm, 1.9rem);
+    }
+
+    &__image,
+    &__picture {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        margin: 0 0 1.5rem;
+        text-align: center;
+        font-family: var(--ts-font-button, sans-serif);
+        font-size: 1.75rem;
+        font-weight: var(--ts-font-weight-medium, 500);
+        line-height: normal;
+        color: var(--ts-font-color-primary, black);
+
+        @include mixins.mq-up(md) {
+            text-align: left;
+            font-size: 2rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        padding: 0 var(--ts-gutter-width, 2rem);
+
+        @include mixins.mq-up(lg) {
+            padding: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        color: var(--ts-color-secondary, blue);
+    }
+
+    &__text {
+        flex: 1;
+        min-width: 0;
+        font-size: var(--ts-font-size-base, 1rem);
+        font-weight: var(--ts-font-weight-regular, 400);
+        line-height: var(--ts-line-height-medium, 1.5rem);
+        color: var(--ts-font-color-primary, black);
+
+        @include mixins.mq-up(md) {
+            font-size: var(--ts-font-size-medium, 1.125rem);
+            line-height: 1.75rem;
+        }
+    }
+}

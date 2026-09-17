@@ -1,0 +1,10 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.acf-field {
+    &.spacer__range-field, &[data-name="posts_per_page"], &[data-name="search_posts_per_page"] {
+        input[type=number] {
+            width: 4em !important;
+        }
+    }
+}

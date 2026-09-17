@@ -1,0 +1,90 @@
+---
+description: Techno Sapiens conventions: naming, styling, debugging, and section structure.
+alwaysApply: true
+---
+
+# Techno Sapiens Conventions
+
+STOP. Before writing code or suggesting changes, apply these conventions.
+
+## Naming
+
+### Files
+
+* PHP (non-class): `kebab-case.php`
+* PHP classes: `PascalCaseFileName.php` (e.g. `SectionContent.php`)
+* Section JS: `kebab-case.js` (e.g. `section-content.js`)
+* Shared JS classes/features: `camelCase.js` or PascalCase class files in `js/lib/`
+* SCSS: `kebab-case.scss` (e.g. `section-content.scss`)
+* Images: `kebab-case.jpg` or `icon-close.svg`
+
+### Sections (page builder)
+
+Page layouts are **section-based ACF blocks**, not column-based blocks. Canonical example: `sections/section-content`.
+
+* **Directory:** `sections/section-content/` (`section-` prefix + kebab-case)
+* **PHP class:** `SectionContent.php`
+* **`SECTION_ID`:** `section_section_content` (`section_` + slug with underscores)
+* **`SECTION_SLUG`:** `section-content` — used for `has_block('acf/section-' . self::SECTION_SLUG)`, ACF location, webpack keys, partials
+* **ACF `name`:** `self::SECTION_ID` (no `acf/` prefix)
+* **ACF JSON:** `acf-json/section-content.json` (filename = `SECTION_SLUG`)
+* **Partial:** `partials/section-content.php`
+* **SCSS:** `scss/section-content.scss`
+* **JS (only if needed):** `js/section-content.js`
+
+Do not create new blocks under `blocks/`. Use `sections/`.
+
+### Functions, variables, PHP
+
+* Functions start with a verb. Avoid obscure abbreviations.
+* Variables: camelCase. Constants: `UPPER_SNAKE_CASE`.
+* **Namespace:** `TechnoSapiens`
+* Classes: `PascalCaseClassName`
+* Methods: `public static function camelCaseMethod($args): void`
+
+## Comments
+
+* Explain *why*, not what the code already shows.
+* Comments go on the line(s) **before** the code. No inline comments.
+* Do not narrate edits in comments. Use git commits.
+
+## Debugging
+
+Use `TechnoSapiens\Core\Log::log`. Maximum two arguments. Prefer an associative array:
+
+```php
+Log::log([
+    'message' => 'Checking combination',
+    'type' => $combinationType,
+    'price' => $shippingPrice
+]);
+```
+
+## Styling
+
+* BEM, one element level: `section-content__text`, not `section-content__text__link`.
+* Modifiers: `section-content__text--bg-white` or `section-content--bg-white`.
+* CSS variables: `var(--ts-...)` from `StylingComponent.php`.
+* Never use hex fallbacks. Use named color fallbacks: `var(--ts-color-primary, red)`.
+
+## Images
+
+Follow [070-image-handling.mdc](mdc:.cursor/rules/070-image-handling.mdc). Use `TechnoSapiens\Core\Image::render()`. Match `section-content` (image field as array, then `ID`).
+
+## Responsive
+
+Breakpoints: xs, sm, md, lg, xl, xxl. Prefer `mq-up` (see [050-responsive-media-queries.mdc](mdc:.cursor/rules/050-responsive-media-queries.mdc)). `mq-down` only when the design needs it (as in `section-content`).
+
+## Performance
+
+Load section CSS/JS only when the section is on the page. Webpack keys come from `SECTION_SLUG`. Guard empty manifest URLs.
+
+## Security
+
+Validate input. Escape output ([030-php-html-templating.mdc](mdc:.cursor/rules/030-php-html-templating.mdc)).
+
+## Section workflow
+
+1. [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc)
+2. [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc)
+3. [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc)

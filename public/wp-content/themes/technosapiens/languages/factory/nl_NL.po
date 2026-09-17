@@ -1,0 +1,206 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Factory Plugin\n"
+"POT-Creation-Date: 2025-07-15 11:17+0200\n"
+"PO-Revision-Date: 2025-07-15 11:17+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wordpress-factory-plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/factory/PostTypeFactory.php:126
+msgid "Post-type factory slugs"
+msgstr "Post-type factory-slugs"
+
+#: classes/factory/PostTypeFactory.php:214
+#, php-format
+msgid "%s category"
+msgstr "%s categorie"
+
+#: classes/factory/PostTypeFactory.php:215
+#, php-format
+msgid "%s categories"
+msgstr "%s categorieën"
+
+#: classes/factory/PostTypeFactory.php:638
+msgid "Featured image"
+msgstr "Uitgelichte afbeelding"
+
+#: classes/factory/PostTypeFactory.php:905
+#, php-format
+msgid "Back to %1s archive"
+msgstr "Terug naar %1s overzicht"
+
+#: classes/factory/PostTypeSettingsFactory.php:95
+#: classes/factory/PostTypeSettingsFactory.php:96
+#: classes/factory/PostTypeSettingsFactory.php:263
+#, php-format
+msgid "%s settings"
+msgstr "%s instellingen"
+
+#: classes/factory/PostTypeSettingsFactory.php:166
+msgid "Snippet settings"
+msgstr "Snippet instellingen"
+
+#: classes/factory/PostTypeSettingsFactory.php:172
+msgid "Excerpt length"
+msgstr "Excerpt lengte"
+
+#: classes/factory/PostTypeSettingsFactory.php:176
+#, php-format
+msgid "Number of words shown in the %s snippet."
+msgstr "Aantal woorden getoond in de %s snippet."
+
+#: classes/factory/PostTypeSettingsFactory.php:183
+msgid "words"
+msgstr "woorden"
+
+#: classes/factory/PostTypeSettingsFactory.php:194
+#, php-format
+msgid "%s archive page"
+msgstr "%s archiefpagina"
+
+#: classes/factory/PostTypeSettingsFactory.php:200
+msgid "Archive slug"
+msgstr "Archief slug"
+
+#: classes/factory/PostTypeSettingsFactory.php:204
+#, php-format
+msgid "Slug for the archive/single URLs of this %s. Example: %s"
+msgstr "Slug voor de archief/enkele URL's van deze %s. Voorbeeld: %s"
+
+#: classes/factory/PostTypeSettingsFactory.php:214
+msgid "Items per page"
+msgstr "Items per pagina"
+
+#: classes/factory/PostTypeSettingsFactory.php:218
+#, php-format
+msgid "Number of %s to display per archive page. Use %s to disable pagination."
+msgstr ""
+"Aantal %s om per archiefpagina weer te geven. Gebruik %s om paginering uit "
+"te schakelen."
+
+#: classes/factory/PostTypeSettingsFactory.php:230
+msgid "Static block top"
+msgstr "Statisch blok bovenaan"
+
+#: classes/factory/PostTypeSettingsFactory.php:234
+#, php-format
+msgid ""
+"Optional Gutenberg content displayed <strong>above</strong> the %s archive."
+msgstr ""
+"Optionele Gutenberg content weergegeven <strong>boven</strong> het %s "
+"archief."
+
+#: classes/factory/PostTypeSettingsFactory.php:245
+msgid "Static block bottom"
+msgstr "Statisch blok onderaan"
+
+#: classes/factory/PostTypeSettingsFactory.php:249
+#, php-format
+msgid ""
+"Optional Gutenberg content displayed <strong>below</strong> the %s archive."
+msgstr ""
+"Optionele Gutenberg content weergegeven <strong>onder</strong> het %s "
+"archief."
+
+#. translators: %s = URL
+#: classes/factory/PostTypeSettingsFactory.php:316
+#, php-format
+msgid "Current archive URL: %s"
+msgstr "Huidige archief URL: %s"
+
+#: partials/archive/archive-filters-mobile.php:23
+#: partials/archive/archive-filters-top.php:28
+#: partials/single/single-back-button.php:9
+#: partials/single/single-related-posts.php:30
+#: partials/templates/archive.php:17
+msgid "items"
+msgstr "items"
+
+#: partials/archive/archive-filters-mobile.php:50
+#: partials/archive/archive-filters-top.php:49
+#, php-format
+msgid "Filter by %s"
+msgstr "Filteren op %s"
+
+#: partials/archive/archive-filters-mobile.php:53
+#: partials/archive/archive-filters-top.php:58
+#: partials/single/single-back-button.php:23
+#: partials/single/single-related-posts.php:49
+#, php-format
+msgid "All %1s"
+msgstr "Alle %1s"
+
+#: partials/archive/archive-filters-top.php:55
+#, php-format
+msgid "Show all %1s"
+msgstr "Toon alle %1s"
+
+#: partials/single/single-next-prev-posts.php:10
+#: partials/snippets/snippet.php:19
+msgid "item"
+msgstr "item"
+
+#: partials/single/single-next-prev-posts.php:65
+#, php-format
+msgid "Previous %1s"
+msgstr "Vorige %1s"
+
+#: partials/single/single-next-prev-posts.php:67
+#, php-format
+msgid "Next %1s"
+msgstr "Volgende %1s"
+
+#: partials/single/single-related-posts.php:41
+#, php-format
+msgid "Related %s"
+msgstr "Gerelateerde %s"
+
+#: partials/snippets/snippet.php:118
+#, php-format
+msgid "View %1s"
+msgstr "Bekijk %1s"
+
+#: partials/templates/archive.php:122
+#, php-format
+msgid "No %1s found"
+msgstr "Geen %1s gevonden"
+
+#: partials/templates/archive.php:128
+#, php-format
+msgid ""
+"There were no %1s found based on your request. Please refine your query and "
+"try again."
+msgstr ""
+"Er zijn geen %1s gevonden op basis van uw zoekopdracht. Verfijn uw "
+"zoekopdracht en probeer het opnieuw."
+
+#. Plugin Name of the plugin/theme
+msgid "WordPress factory plugin"
+msgstr "WordPress factory plugin"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://technosapiens.com/nl/"
+msgstr "https://technosapiens.com/nl/"
+
+#. Description of the plugin/theme
+msgid "Helps creating features faster within Techno Sapiens add-ons and themes 🚀"
+msgstr "Helpt developers om sneller Techno Sapiens add-ons en thema’s te ontwikkelen 🚀"
+
+#. Author of the plugin/theme
+msgid "Techno Sapiens"
+msgstr "Techno Sapiens"

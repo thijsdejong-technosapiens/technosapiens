@@ -1,0 +1,191 @@
+{
+    "key": "group_660eb7f3d235f",
+    "title": "Search settings",
+    "fields": [
+        {
+            "key": "field_61557d5d3ea4d",
+            "label": "Enable search",
+            "name": "search_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable this option to allow visitors to search the website using the search overlay.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "filter_by_post_type",
+            "label": "Enable filter by post type",
+            "name": "filter_by_post_type",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable this option to allow visitors to filter search results by post type.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61557d5d3ea4d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6391d81e77d64",
+            "label": "Enable search microcopy",
+            "name": "search_microcopy_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable this option to show an extra \"search\" text to the right side of the search trigger icon.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61557d5d3ea4d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6183fb4fb8602",
+            "label": "Excerpt limit",
+            "name": "search_excerpt_limit",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Configure how many words of excerpt text you want to show in the search snippet.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61557d5d3ea4d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 25,
+            "min": 10,
+            "max": 100,
+            "step": 5,
+            "prepend": "",
+            "append": "words"
+        },
+        {
+            "key": "field_619cb17fd3ff7",
+            "label": "Posts per page",
+            "name": "search_posts_per_page",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Configure how many posts you want to show at once on the search results page before the pagination shows up. Use <code>-1<\/code> to always show all posts.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61557d5d3ea4d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 10,
+            "min": -1,
+            "max": 20,
+            "step": "",
+            "prepend": "",
+            "append": "results"
+        },
+        {
+            "key": "no_results_content",
+            "label": "No results content",
+            "name": "no_results_content",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Optionally replace the default 'No results found' section on the search results page with a static block.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61557d5d3ea4d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "static-block"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "search-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1712240940
+}

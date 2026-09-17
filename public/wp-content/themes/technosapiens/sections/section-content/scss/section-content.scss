@@ -1,0 +1,93 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-content {
+    $self: &;
+
+    &__container {
+
+        &--has-image {
+            @include mixins.mq-down(md) {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    &__text {
+        gap: calc(var(--ts-gutter-width, 1rem) / 2);
+        display: flex;
+        flex-direction: column;
+
+        ul,
+        ol {
+            padding-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+
+            li {
+                &::marker {
+                    font-size: initial;
+                }
+            }
+        }
+
+        ul {
+            list-style-type: disc;
+
+            li {
+                a {
+                    color: var(--ts-color-primary, red) !important;
+                    text-decoration: none !important;
+                    font-family: var(--ts-font-bold, sans-serif);
+                    font-weight: var(--ts-font-weight-bold, 600);
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        &--bg-white {
+            background-color: var(--ts-color-white, white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: var(--ts-color-primary, red);
+            }
+
+            @include mixins.mq-up(lg) {
+                padding: 3rem;
+            }
+        }
+
+        &--rounded-top {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        &--rounded-bottom {
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+
+    &__figure {
+        margin: 0;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

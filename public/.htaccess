@@ -1,0 +1,31 @@
+# BEGIN SMUSH-WEBP
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}/wp-content/smush-webp/disable_smush_webp !-f
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{DOCUMENT_ROOT}/wp-content/smush-webp/$1.webp -f
+RewriteRule wp-content/uploads/(.*.(?:png|jpe?g))$ wp-content/smush-webp/$1.webp [NC,T=image/webp]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header append Vary Accept env=WEBP_image
+</IfModule>
+
+<IfModule mod_mime.c>
+AddType image/webp .webp
+</IfModule>
+# END SMUSH-WEBP
+
+# BEGIN WordPress
+
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# END WordPress
+
+php_flag opcache.enable Off

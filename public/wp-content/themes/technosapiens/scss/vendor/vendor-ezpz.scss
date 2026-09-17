@@ -1,0 +1,695 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+// ========================================================================== //
+// EZPZ FLEXBOX GRID - (VI Company) http://vicompany.nl
+// ========================================================================== //
+// Setup - Values may be edited - !!!DO NOT REMOVE THESE VARIABLES!!!
+// ========================================================================== //
+
+$ezpz-auto-generate: true !default;
+
+$ezpz-namespace: '.row' !default;
+$ezpz-col-namespace: '.col' !default;
+$ezpz-row-default-wrap: 'wrap' !default; // 'nowrap', 'wrap' or 'reverse'
+$ezpz-row-default-align: 'stretch' !default; // 'stretch', 'start', 'center', 'end' or 'baseline'
+$ezpz-row-default-justify: 'start' !default; // 'start', 'end', 'center', 'space-between', 'space-evenly' or 'space-around'
+$ezpz-row-default-content-stretch: 'unstretch' !default; // 'stretch' or 'unstretch'
+$ezpz-gutter: vars.$ezpz-gutter;
+$ezpz-gap-sizes: vars.$ezpz-gap-sizes;
+
+$ezpz-fractions: (
+        (1:2),
+        (1:3),
+        (2:3),
+        (1:4),
+        (2:4),
+        (3:4),
+        (1:5),
+        (2:5),
+        (3:5),
+        (4:5),
+        (1:6),
+        (2:6),
+        (3:6),
+        (4:6),
+        (5:6),
+        (1:12),
+        (2:12),
+        (3:12),
+        (4:12),
+        (5:12),
+        (6:12),
+        (7:12),
+        (8:12),
+        (9:12),
+        (10:12),
+        (11:12)
+) !default;
+
+// Optional grid features - Set to true to enable
+$ezpz-row-align: false !default;
+$ezpz-row-justify: true !default;
+$ezpz-row-wrap: false !default;
+$ezpz-col-order: false !default;
+$ezpz-col-offset: false !default;
+$ezpz-col-align: false !default;
+$ezpz-gutter-collapse: false !default;
+
+// Grid generator - !!!DO NOT EDIT OR REMOVE ANYTHING BELOW THIS LINE!!!
+// ==========================================================================
+$total-cells: list.length($ezpz-fractions);
+
+// Utils
+// ==========================================================================
+@function format-breakpoint($breakpoint) {
+    @if $breakpoint {
+        @return '--' + $breakpoint + '-';
+    }
+
+    @return '--';
+}
+
+@function format-modifier($key, $val) {
+    @return $key + '\\/' + $val;
+}
+
+// Cells
+// ==========================================================================
+@mixin generate-all-cells() {
+    @include create-cells();
+}
+
+@mixin create-cells($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    & > #{$ezpz-col-namespace}#{$breakpoint}1 {
+        @include create-cell(1);
+    }
+
+    @each $fraction in $ezpz-fractions {
+        @each $key, $val in $fraction {
+            $modifier: format-modifier($key, $val);
+
+            & > #{$ezpz-col-namespace}#{$breakpoint}#{$modifier} {
+                @include create-cell(math.div($key, $val));
+            }
+        }
+    }
+}
+
+// Accepts number input
+//  - @include create-cell(3)
+//  - @include create-cell(1/4)
+@mixin create-cell($cell: 1) {
+    flex: 0 0 auto;
+
+    @if ($cell) {
+        width: math.percentage($cell);
+    } @else {
+        @error 'create-cell: Make sure you entered a valid fraction value. E.g. "1/2" or "3/4"';
+    }
+}
+
+// Content stretch behavior of all cells within a grid section
+// ==========================================================================
+@mixin row-content-stretch($value: 'stretch') {
+    $values: (
+            stretch: 'flex',
+            unstretch: 'inline-block'
+    );
+
+    @if map.has-key($values, $value) {
+        .cell {
+            @include col-content-stretch($value);
+        }
+    } @else {
+        @error 'row-content-stretch: Please enter a valid property; "stretch", or "unstretch"';
+    }
+}
+
+@mixin generate-row-content-stretch($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}content-stretch {
+        @include row-content-stretch('stretch');
+    }
+
+    &#{$breakpoint}content-unstretch {
+        @include row-content-stretch('unstretch');
+    }
+}
+
+// Alignment of all cells within a grid section
+// ==========================================================================
+@mixin row-align($value: 'stretch') {
+    $values: (
+            stretch: 'stretch',
+            start: 'flex-start',
+            center: 'center',
+            end: 'flex-end',
+            baseline: 'baseline'
+    );
+
+    @if map.has-key($values, $value) {
+        align-items: #{map.get($values, $value)};
+    } @else {
+        @error 'row-align: Please enter a valid property; "flex-start", "flex-end", "center", "stretch", or "baseline"';
+    }
+}
+
+@mixin generate-row-align($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}align-stretch {
+        @include row-align();
+    }
+
+    &#{$breakpoint}align-start {
+        @include row-align('start');
+    }
+
+    &#{$breakpoint}align-end {
+        @include row-align('end');
+    }
+
+    &#{$breakpoint}align-center {
+        @include row-align('center');
+    }
+
+    &#{$breakpoint}align-baseline {
+        @include row-align('baseline');
+    }
+}
+
+@mixin row-justify($value: 'start') {
+    $values: (
+            start: 'flex-start',
+            end: 'flex-end',
+            center: 'center',
+            space-between: 'space-between',
+            space-evenly: 'space-evenly',
+            space-around: 'space-around'
+    );
+
+    @if map.has-key($values, $value) {
+        justify-content: #{map.get($values, $value)};
+    } @else {
+        @error 'col-justify: Please enter a valid property; "start", "end", "center", "space-between", "space-evenly" or "space-around"';
+    }
+}
+
+@mixin generate-row-justify($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}justify-start {
+        @include row-justify();
+    }
+
+    &#{$breakpoint}justify-end {
+        @include row-justify('end');
+    }
+
+    &#{$breakpoint}justify-center {
+        @include row-justify('center');
+    }
+
+    &#{$breakpoint}justify-space-between {
+        @include row-justify('space-between');
+    }
+
+    &#{$breakpoint}justify-space-around {
+        @include row-justify('space-around');
+    }
+
+    &#{$breakpoint}justify-space-evenly {
+        @include row-justify('space-evenly');
+    }
+}
+
+// Grid section with automatically wrapping cells
+// ==========================================================================
+@mixin row-wrap($value: $ezpz-row-default-wrap) {
+    $values: (
+            wrap: 'wrap',
+            reverse: 'wrap-reverse',
+            nowrap: 'nowrap'
+    );
+
+    @if map.has-key($values, $value) {
+        flex-wrap: #{map.get($values, $value)};
+    } @else {
+        @error "row-wrap: Please enter a valid property; 'nowrap', 'wrap' or 'reverse'";
+    }
+}
+
+@mixin generate-row-wrap($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}wrap {
+        @include row-wrap('wrap');
+
+        > #{$ezpz-col-namespace} {
+            flex-basis: auto;
+        }
+    }
+
+    &#{$breakpoint}wrap-reverse {
+        @include row-wrap('reverse');
+
+        > #{$ezpz-col-namespace} {
+            flex-basis: auto;
+        }
+    }
+
+    &#{$breakpoint}nowrap {
+        @include row-wrap('nowrap');
+    }
+}
+
+// Cell order (order is 0 by default)
+// ==========================================================================
+@mixin col-order($value: 'start') {
+    @if ($value == 'start') {
+        order: -1;
+    } @else if ($value == 'end') {
+        order: $total-cells;
+    } @else {
+        @if (meta.type-of($value) != number) {
+            @error 'col-order: Please enter a valid property; "start", "end" or a number';
+        }
+
+        order: $value;
+    }
+}
+
+@mixin generate-col-order($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}order {
+        // Useful for pulling a single cell to the front of the row
+        &-start {
+            @include col-order(start);
+        }
+
+        // Useful for pushing a single cell to the end of the row
+        &-end {
+            @include col-order(end);
+        }
+
+        // Create offset classes used to control cell order
+        @for $i from 1 through $total-cells {
+            &-#{$i} {
+                @include col-order($i - 1);
+            }
+        }
+    }
+}
+
+// Cell positioning through offset
+// ==========================================================================
+@mixin generate-col-offset($breakpoint: null) {
+    // Generate the offset classes for a fraction-based grid
+    @include col-fraction-offset($breakpoint);
+}
+
+@mixin col-fraction-offset($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}offset-0 {
+        margin-left: 0;
+    }
+
+    &#{$breakpoint}offset-1 {
+        margin-left: 100%;
+    }
+
+    @each $fraction in $ezpz-fractions {
+        @each $key, $val in $fraction {
+            $modifier: format-modifier($key, $val);
+
+            &#{$breakpoint}offset-#{$modifier} {
+                @include col-offset(math.div($key, $val));
+            }
+        }
+    }
+}
+
+@mixin col-offset($value: 1) {
+    @if (meta.type-of($value) != number) {
+        @error 'Please define a number variable.';
+    }
+
+    @if ($value) {
+        margin-left: math.percentage($value);
+    } @else {
+        @error 'create-offset: Make sure you entered a valid fraction value. E.g. "1/2" or "3/4"';
+    }
+}
+
+// Content stretch behavior of individual cells
+// ==========================================================================
+@mixin col-content-stretch($value: 'stretch') {
+    $values: (
+            stretch: 'flex',
+            unstretch: 'inline-block'
+    );
+
+    @if map.has-key($values, $value) {
+        display: #{map.get($values, $value)};
+
+        > * {
+            flex-grow: 1;
+        }
+    } @else {
+        @error 'col-content-stretch: Please enter a valid property; "stretch", or "unstretch"';
+    }
+}
+
+@mixin generate-col-content-stretch($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}content-stretch {
+        @include col-content-stretch('stretch');
+    }
+
+    &#{$breakpoint}content-unstretch {
+        @include col-content-stretch('unstretch');
+    }
+}
+
+// Alignment of individual cells
+// ==========================================================================
+@mixin col-align($value: 'stretch') {
+    $values: (
+            start: 'flex-start',
+            end: 'flex-end',
+            center: 'center',
+            stretch: 'stretch',
+            baseline: 'baseline'
+    );
+
+    @if map.has-key($values, $value) {
+        align-self: #{map.get($values, $value)};
+    } @else {
+        @error 'col-align: Please enter a valid property; "flex-start", "flex-end", "center", "stretch" or "baseline"';
+    }
+}
+
+@mixin generate-col-align($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}align {
+        &-start {
+            @include col-align(start);
+        }
+
+        &-end {
+            @include col-align(end);
+        }
+
+        &-center {
+            @include col-align(center);
+        }
+
+        &-stretch {
+            @include col-align(stretch);
+        }
+
+        &-baseline {
+            @include col-align(baseline);
+        }
+    }
+}
+
+// Grid or cell without gutters
+// ==========================================================================
+@mixin row-gutter-collapsed($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}collapsed {
+        & > #{$ezpz-col-namespace} {
+            @include gutter-collapsed();
+        }
+    }
+}
+
+@mixin row-gutter-expanded($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}expanded {
+        & > #{$ezpz-col-namespace} {
+            @include gutter-expanded();
+        }
+    }
+}
+
+@mixin col-gutter-collapsed($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}collapsed {
+        @include gutter-collapsed();
+    }
+}
+
+@mixin col-gutter-expanded($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint}expanded {
+        @include gutter-expanded();
+    }
+}
+
+@mixin gutter-collapsed() {
+    padding: 0;
+}
+
+@mixin gutter-expanded() {
+    padding: 0 calc(#{$ezpz-gutter} / 2);
+}
+
+// --------------------------------------------------------------------------
+// Gap modifiers for row gap
+// --------------------------------------------------------------------------
+@mixin generate-row-gap($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+    @each $gap-name, $gap-size in $ezpz-gap-sizes {
+
+        // This will output a modifier like .row--gap-large
+        @include mixins.mq-up(lg) {
+            &#{$breakpoint}gap-#{$gap-name} {
+                margin-right: calc((#{$gap-size} / 2) * -1);
+                margin-left: calc((#{$gap-size} / 2) * -1);
+
+                > #{$ezpz-col-namespace} {
+                    padding: 0 calc((#{$gap-size} / 2));
+                }
+            }
+        }
+    }
+}
+
+// Create responsive classes for all additional options
+// ==========================================================================
+@mixin create-responsive-classes() {
+    @each $breakpoint, $size in vars.$breakpoints {
+        @media (min-width: $size + 1) {
+            // Base
+            @include create-cells($breakpoint);
+            @include generate-row-layout($breakpoint);
+            @include generate-row-content-stretch($breakpoint);
+
+            & > #{$ezpz-col-namespace} {
+                @include generate-col-content-stretch($breakpoint);
+            }
+
+            // Optional
+            @if $ezpz-row-align {
+                @include generate-row-align($breakpoint);
+            }
+
+            @if $ezpz-row-justify {
+                @include generate-row-justify($breakpoint);
+            }
+
+            @if $ezpz-row-wrap {
+                @include generate-row-wrap($breakpoint);
+            }
+
+            @if $ezpz-col-order {
+                & > #{$ezpz-col-namespace} {
+                    @include generate-col-order($breakpoint);
+                }
+            }
+
+            @if $ezpz-col-offset {
+                & > #{$ezpz-col-namespace} {
+                    @include generate-col-offset($breakpoint);
+                }
+            }
+
+            @if $ezpz-gutter-collapse {
+                @include row-gutter-collapsed($breakpoint);
+                @include row-gutter-expanded($breakpoint);
+
+                & > #{$ezpz-col-namespace} {
+                    @include col-gutter-collapsed($breakpoint);
+                    @include col-gutter-expanded($breakpoint);
+                }
+            }
+
+            @if $ezpz-col-align {
+                & > #{$ezpz-col-namespace} {
+                    @include generate-col-align($breakpoint);
+                }
+            }
+
+            // generate responsive gap modifiers
+            @include generate-row-gap($breakpoint);
+        }
+    }
+}
+
+// Base
+// ==========================================================================
+@mixin create-grid() {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    @include row-wrap($ezpz-row-default-wrap);
+    @include row-align($ezpz-row-default-align);
+    @include row-justify($ezpz-row-default-justify);
+
+    margin-right: calc((#{$ezpz-gutter} / 2) * -1);
+    margin-left: calc((#{$ezpz-gutter} / 2) * -1);
+
+    @include row-content-stretch($ezpz-row-default-content-stretch);
+}
+
+@mixin create-row-cell() {
+    // Not using flex shorthand because IE 10/11 ignore shorthand declarations with a unitless flex-basis value
+    // https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
+    display: flex;
+    flex-basis: 0%;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0 calc(#{$ezpz-gutter} / 2);
+}
+
+@mixin generate-full-grid() {
+    @include create-grid();
+
+    > #{$ezpz-col-namespace} {
+        @include create-row-cell();
+    }
+}
+
+@mixin generate-row-layout($breakpoint: null) {
+    $breakpoint: format-breakpoint($breakpoint);
+
+    &#{$breakpoint} {
+        &horizontal {
+            @include row-layout(horizontal);
+        }
+
+        &vertical {
+            @include row-layout(vertical);
+
+            // Maintain cells as full-width rows even if the default grid alignment is set to 'start', 'center', or 'end'
+            align-items: stretch;
+
+            // IE Fix to prevent cells from not having a height in a vertical grid layout
+            > #{$ezpz-col-namespace} {
+                flex-basis: auto;
+            }
+        }
+    }
+}
+
+@mixin row-layout($value: 'horizontal') {
+    $values: (
+            horizontal: 'row',
+            vertical: 'column'
+    );
+
+    @if map.has-key($values, $value) {
+        flex-direction: #{map.get($values, $value)};
+    } @else {
+        @error 'row-layout allowed properties: "horizontal" and "vertical"';
+    }
+}
+
+// Generate all the things
+// ==========================================================================
+@mixin base() {
+    #{$ezpz-namespace} {
+        @include generate-full-grid();
+        @include generate-row-layout();
+        @include generate-all-cells();
+        @include generate-row-content-stretch();
+
+        // Optional
+        @if $ezpz-row-align {
+            @include generate-row-align();
+        }
+
+        @if $ezpz-row-justify {
+            @include generate-row-justify();
+        }
+
+        @if $ezpz-row-wrap {
+            @include generate-row-wrap();
+        }
+
+        @if $ezpz-col-order {
+            & > #{$ezpz-col-namespace} {
+                @include generate-col-order();
+            }
+        }
+
+        @if $ezpz-col-offset {
+            & > #{$ezpz-col-namespace} {
+                @include generate-col-offset();
+            }
+        }
+
+        @if $ezpz-gutter-collapse {
+            @include row-gutter-collapsed();
+            @include row-gutter-expanded();
+
+            & > #{$ezpz-col-namespace} {
+                @include col-gutter-collapsed();
+                @include col-gutter-expanded();
+            }
+        }
+
+        @if $ezpz-col-align {
+            & > #{$ezpz-col-namespace} {
+                @include generate-col-align();
+            }
+        }
+
+        & > #{$ezpz-col-namespace} {
+            @include generate-col-content-stretch();
+        }
+
+        // generate the base-level gap modifiers (e.g. .row--gap-large)
+        @include generate-row-gap();
+
+        // Responsive classes
+        @include create-responsive-classes();
+    }
+}
+
+@if ($ezpz-auto-generate) {
+    @include base();
+}

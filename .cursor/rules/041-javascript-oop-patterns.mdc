@@ -1,0 +1,411 @@
+---
+description: JavaScript OOP patterns, ES6 classes, state management, and JSDoc documentation
+alwaysApply: false
+---
+# JavaScript OOP Patterns
+
+This document covers Object-Oriented Programming patterns used in the Techno Sapiens theme, including ES6 classes, constructor patterns, state management, and documentation standards.
+
+## ES6 Class Structure
+
+Use ES6 classes to organize JavaScript code. Each class should have a clear responsibility and follow object-oriented principles.
+
+### Basic Class Template
+
+```javascript
+/**
+ * class MaterialInput
+ * Handles material design input styling and behavior
+ */
+class MaterialInput {
+    /**
+     * CSS class constants
+     * @type {string}
+     */
+    CSS_CLASS_ACTIVE = 'material-input--active'
+    CSS_CLASS_FOCUSED = 'material-input--focused'
+
+    /**
+     * MaterialInput constructor
+     * @param {Element} $containerElement - The container element
+     * @param {HTMLLabelElement} $labelElement - The label element
+     * @param {HTMLInputElement|HTMLTextAreaElement} $inputElement - The input element
+     */
+    constructor($containerElement = null, $labelElement = null, $inputElement = null) {
+        // Parameter validation
+        if ($containerElement === null || !($containerElement instanceof Element)) {
+            throw new Error('Missing required parameter `$containerElement`')
+        }
+
+        // Initialize state
+        this.state = {
+            $containerElement: $containerElement,
+            $inputElement: $inputElement,
+            $labelElement: $labelElement,
+            value: $inputElement.value,
+            active: $inputElement.value.length > 0
+        }
+
+        // Initialize component
+        this.init()
+    }
+
+    /**
+     * Initialize the component
+     */
+    init() {
+        this.addEventListeners()
+        this.updateActiveState()
+    }
+
+    /**
+     * Add event listeners
+     */
+    addEventListeners() {
+        this.state.$inputElement.addEventListener('change', this.handleChange.bind(this))
+        this.state.$inputElement.addEventListener('focus', this.handleFocus.bind(this))
+        this.state.$inputElement.addEventListener('blur', this.handleBlur.bind(this))
+    }
+
+    /**
+     * Handle input change event
+     * @param {Event} event - The change event
+     */
+    handleChange(event) {
+        this.state.value = event.target.value
+        this.updateActiveState()
+    }
+
+    /**
+     * Handle input focus event
+     */
+    handleFocus() {
+        this.state.$containerElement.classList.add(this.CSS_CLASS_FOCUSED)
+    }
+
+    /**
+     * Handle input blur event
+     */
+    handleBlur() {
+        this.state.$containerElement.classList.remove(this.CSS_CLASS_FOCUSED)
+    }
+
+    /**
+     * Update active state based on value
+     */
+    updateActiveState() {
+        const hasValue = this.state.value.length > 0
+        this.state.$containerElement.classList.toggle(this.CSS_CLASS_ACTIVE, hasValue)
+        this.state.active = hasValue
+    }
+}
+
+export default MaterialInput
+```
+
+## Constructor Patterns
+
+### Parameter Validation
+
+Always validate constructor parameters:
+
+```javascript
+constructor($containerElement = null, $labelElement = null, $inputElement = null) {
+    // Check if required parameter is provided and is correct type
+    if ($containerElement === null || !($containerElement instanceof Element)) {
+        throw new Error('Missing required parameter `$containerElement` in class MaterialInput or given parameter was not an Element.')
+    }
+
+    if ($inputElement === null || !($inputElement instanceof HTMLInputElement || $inputElement instanceof HTMLTextAreaElement)) {
+        throw new Error('Missing required parameter `$inputElement` in class MaterialInput or given parameter was not an HTMLInputElement or HTMLTextAreaElement.')
+    }
+
+    // Continue with initialization...
+}
+```
+
+### Default Parameters
+
+Use default parameters for optional values:
+
+```javascript
+constructor($element, options = {}) {
+    this.options = {
+        multipleOpen: false,
+        initialOpen: 0,
+        animationDuration: 300,
+        ...options  // Override defaults with provided options
+    }
+}
+```
+
+## State Management
+
+Use a state object to centralize component state:
+
+```javascript
+class MainNavigation {
+    constructor($mainNavigationElement) {
+        this.state = {
+            $navigationElement: $mainNavigationElement,
+            $toggleButtons: Array.from($mainNavigationElement.querySelectorAll(`.${this.TOGGLE_BUTTON_CLASS}`)),
+            $subMenus: Array.from($mainNavigationElement.querySelectorAll(`.${this.LIST_CLASS}`)),
+            $activeToggleButton: null,
+            isOpen: false
+        }
+
+        this.init()
+    }
+
+    init() {
+        this.state.$toggleButtons.forEach($toggleButton => {
+            this.addToggleButtonListeners($toggleButton)
+        })
+    }
+}
+```
+
+### Why Use a State Object?
+
+1. **Centralized Data** - All component state in one place
+2. **Easy Debugging** - Can inspect `this.state` to see current state
+3. **Clear Updates** - State changes are explicit
+4. **Consistency** - Follows a predictable pattern across all classes
+
+## Event Handling
+
+### Using .bind(this)
+
+Always use `.bind(this)` to preserve context in event handlers:
+
+```javascript
+addToggleButtonListeners($toggleButton) {
+    $toggleButton.addEventListener('click', this.handleToggleButtonClick.bind(this, $toggleButton))
+    $toggleButton.addEventListener('keydown', this.handleToggleButtonKeyDown.bind(this, $toggleButton))
+    $toggleButton.addEventListener('focusout', this.handleToggleButtonFocusOut.bind(this, $toggleButton))
+}
+
+handleToggleButtonClick($toggleButton, event) {
+    // `this` refers to the class instance
+    // $toggleButton is the specific button that was clicked
+    event.preventDefault()
+    this.toggleAriaExpanded($toggleButton)
+}
+```
+
+### Event Handler Naming
+
+Use descriptive names that follow the pattern `handle[Element][Action]`:
+
+```javascript
+handleToggleButtonClick()
+handleToggleButtonKeyDown()
+handleToggleButtonFocusOut()
+handleInputChange()
+handleFormSubmit()
+handleEscapeKeyDown()
+```
+
+## JSDoc Documentation
+
+Use JSDoc comments to document classes, methods, and parameters:
+
+### Class Documentation
+
+```javascript
+/**
+ * class MainNavigation
+ * Handles the main navigation dropdown functionality with click/touch accessibility.
+ * Manages sub-menu toggle actions, keyboard interaction, and focus management.
+ */
+class MainNavigation {
+    /**
+     * CSS class constants
+     * These constants are used to query DOM elements for sub-menu toggle buttons and lists.
+     */
+    NAVIGATION_CLASS = 'main-navigation'
+    TOGGLE_BUTTON_CLASS = 'main-navigation__sub-toggle'
+    LIST_CLASS = 'main-navigation__list'
+}
+```
+
+### Method Documentation
+
+```javascript
+/**
+ * Toggle the aria-expanded attribute on a toggle button
+ * @param {Element} $toggleButton - The toggle button element
+ */
+toggleAriaExpanded($toggleButton) {
+    const isExpanded = $toggleButton.getAttribute('aria-expanded') === 'true'
+    $toggleButton.setAttribute('aria-expanded', isExpanded ? 'false' : 'true')
+}
+
+/**
+ * Fetches product data from the API and updates the UI
+ * @param {number} productId - The ID of the product to fetch
+ * @returns {Promise<void>}
+ */
+async loadProductData(productId) {
+    // Implementation
+}
+```
+
+### Property Documentation
+
+```javascript
+class Accordion {
+    /**
+     * The container element
+     * @type {Element}
+     */
+    $element
+
+    /**
+     * Configuration options
+     * @type {Object}
+     * @property {boolean} multipleOpen - Allow multiple panels open
+     * @property {number} initialOpen - Index of initially open panel
+     */
+    options
+}
+```
+
+## Section JavaScript Template
+
+Only add JS when native HTML/CSS is not enough. Register with `$hasScript = true` in `registerReferenceSection()`.
+
+### PHP section class
+
+```php
+<?php
+
+namespace TechnoSapiens;
+
+use TechnoSapiens\Core\Singleton;
+
+class SectionExample extends Singleton {
+    use SectionReferenceTrait;
+
+    public const SECTION_ID = 'section_section_example';
+    public const SECTION_SLUG = 'section-example';
+
+    protected function __construct() {
+        $this->registerReferenceSection(
+            __('Example section.', Theme::TEXT_DOMAIN),
+            'admin-generic',
+            true,
+            [],
+            []
+        );
+    }
+
+    public static function getSectionLabel(): string {
+        return __('Example', Theme::TEXT_DOMAIN);
+    }
+}
+```
+
+### Section JavaScript file (`sections/section-example/js/section-example.js`)
+
+```javascript
+/**
+ * SectionExample
+ * Progressive enhancement for section-example
+ */
+class SectionExample {
+    SECTION_CLASS = 'section-example'
+    ACTIVE_CLASS = 'section-example--active'
+
+    constructor($element) {
+        if (!($element instanceof Element)) {
+            throw new Error('Missing required parameter `$element` in SectionExample')
+        }
+
+        this.state = {
+            $element: $element,
+            $children: Array.from($element.querySelectorAll(`.${this.SECTION_CLASS}__item`)),
+            activeIndex: 0
+        }
+
+        this.init()
+    }
+
+    init() {
+        this.addEventListeners()
+        this.setActiveElement(this.state.activeIndex)
+    }
+
+    addEventListeners() {
+        this.state.$children.forEach(($child, index) => {
+            $child.addEventListener('click', this.handleClick.bind(this, index))
+        })
+    }
+
+    handleClick(index, event) {
+        event.preventDefault()
+        this.setActiveElement(index)
+    }
+
+    setActiveElement(index) {
+        this.state.$children.forEach($el => $el.classList.remove(this.ACTIVE_CLASS))
+        this.state.$children[index].classList.add(this.ACTIVE_CLASS)
+        this.state.activeIndex = index
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.querySelectorAll('.section-example')).forEach($section => {
+        new SectionExample($section)
+    })
+})
+
+export default SectionExample
+```
+
+## Class Organization Best Practices
+
+1. **Class Fields First** - Define constants and properties at the top
+2. **Constructor** - Initialize state and call init method
+3. **Init Method** - Set up event listeners and initial state
+4. **Public Methods** - Methods that can be called externally
+5. **Private Methods** - Internal helper methods (prefix with _ if needed)
+6. **Event Handlers** - Group related handlers together
+
+### Example Organization
+
+```javascript
+class MyComponent {
+    // 1. Class fields (constants)
+    CSS_CLASS_ACTIVE = 'is-active'
+
+    // 2. Constructor
+    constructor($element) {
+        this.state = { $element }
+        this.init()
+    }
+
+    // 3. Init method
+    init() {
+        this.addEventListeners()
+    }
+
+    // 4. Public methods
+    open() { }
+    close() { }
+    toggle() { }
+
+    // 5. Private/helper methods
+    addEventListeners() { }
+    updateUI() { }
+
+    // 6. Event handlers
+    handleClick(event) { }
+    handleKeyDown(event) { }
+}
+```
+
+For more information, see:
+- [JavaScript Organization](mdc:.cursor/rules/040-javascript-organization.mdc) - File structure and organization
+- [Code Splitting](mdc:.cursor/rules/042-javascript-code-splitting.mdc) - Dynamic imports and lazy loading
+- [JavaScript Best Practices](mdc:.cursor/rules/043-javascript-best-practices.mdc) - KISS principle and frameworks policy

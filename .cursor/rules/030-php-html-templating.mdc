@@ -1,0 +1,179 @@
+---
+description: Techno Sapiens PHP/HTML templating standards, including data collection, escaping, and camelCase variables.
+globs: **/*.php
+alwaysApply: false
+---
+
+# PHP/HTML Templating Standards
+
+## Data Collection and Organization
+
+Always collect all data at the top of PHP/HTML files for clarity and maintainability. Whenever possible, retrieve data from the component class rather than calculating values in the template.
+
+### ✅ Correct Approach
+
+```php
+<?php
+// At the top of the file - collect all data
+$title = $this->getTitle();
+$description = $this->getDescription();
+$items = $this->getItems();
+$imageId = $this->getFeaturedImageId();
+$imageUrl = $imageId ? wp_get_attachment_image_url($imageId, 'large') : '';
+$imageAlt = $imageId ? \TechnoSapiens\Core\Image::altFromId($imageId) : esc_attr($title);
+?>
+
+<div class="component">
+    <h2 class="component__title"><?php echo esc_html($title); ?></h2>
+    <p class="component__description"><?php echo esc_html($description); ?></p>
+
+    <?php if ($imageUrl) : ?>
+        <img src="<?php echo esc_url($imageUrl); ?>" alt="<?php echo esc_attr($imageAlt); ?>">
+    <?php endif; ?>
+
+    <?php if (!empty($items)) : ?>
+        <ul class="component__list">
+            <?php foreach ($items as $item) : ?>
+                <li><?php echo esc_html($item); ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</div>
+```
+
+### ❌ Incorrect Approach
+
+```php
+<div class="component">
+    <h2 class="component__title"><?php echo esc_html($this->getTitle()); ?></h2>
+    <p class="component__description"><?php echo esc_html($this->getDescription()); ?></p>
+
+    <?php
+    $imageId = $this->getFeaturedImageId();
+    $imageUrl = $imageId ? wp_get_attachment_image_url($imageId, 'large') : '';
+    if ($imageUrl) : ?>
+        <img src="<?php echo esc_url($imageUrl); ?>" alt="<?php echo esc_attr($this->getTitle()); ?>">
+    <?php endif; ?>
+
+    <?php
+    $items = $this->getItems();
+    if (!empty($items)) : ?>
+        <ul class="component__list">
+            <?php foreach ($items as $item) : ?>
+                <li><?php echo esc_html($item); ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</div>
+```
+
+## Use English for Function Names and Placeholders
+
+Always use English for function names, variable names, and any placeholder text in the code. This ensures consistency and readability across the codebase.
+
+### ✅ Correct
+
+```php
+function getProductCategories() {
+    // Implementation
+}
+
+$placeholderText = 'Enter your search term';
+```
+
+### ❌ Incorrect
+
+```php
+function haal_product_categorien() {
+    // Implementation
+}
+
+$placeholderTextDutch = 'Voer je zoekterm in';
+```
+
+## Proper Template Syntax
+
+Always use the proper PHP/HTML templating approach when writing theme files. Never echo large blocks of HTML from PHP.
+
+### ✅ Correct Approach
+
+```php
+<?php if ($condition) : ?>
+    <div class="element">
+        <h2><?php echo esc_html($title); ?></h2>
+        <p><?php echo esc_html($content); ?></p>
+    </div>
+<?php endif; ?>
+```
+
+### ❌ Incorrect Approach
+
+```php
+<?php
+if ($condition) {
+    echo '<div class="element">';
+    echo '<h2>' . esc_html($title) . '</h2>';
+    echo '<p>' . esc_html($content) . '</p>';
+    echo '</div>';
+}
+?>
+```
+
+## PHP Control Structures in Templates
+
+Use the alternative syntax (:, endforeach, endif) for control structures.
+
+### ✅ Correct
+
+```php
+<?php foreach ($items as $item) : ?>
+    <li><?php echo esc_html($item); ?></li>
+<?php endforeach; ?>
+
+<?php if ($condition) : ?>
+    <?php elseif ($otherCondition) : ?>
+    <?php else : ?>
+    <?php endif; ?>
+```
+
+### ❌ Incorrect
+
+```php
+<?php foreach ($items as $item) { ?>
+    <li><?php echo esc_html($item); ?></li>
+<?php } ?>
+
+<?php if ($condition) { ?>
+    <?php } elseif ($otherCondition) { ?>
+    <?php } else { ?>
+    <?php } ?>
+```
+
+## Output Escaping (VERY IMPORTANT!)
+
+**⚠️ IMPORTANT: These escaping rules apply primarily to NEW code. When editing existing, working code, do not add escaping functions unless there is a genuine security vulnerability or the user explicitly requests it.**
+
+Protecting against XSS is vital. The type of escaping depends on the source and context. When in doubt, always escape!
+
+**Key Principles for NEW Code:**
+
+1.  **HTML Attributes:** ALWAYS use `esc_attr()` when outputting any variable into an HTML attribute (e.g., `class`, `id`, `alt`, `title`, `data-*`).
+2.  **URLs:** ALWAYS use `esc_url()` when outputting any variable into a URL context (e.g., `href`, `src`, `action`).
+3.  **HTML Content (between tags like `<p>`, `<h1>`):**
+    *   **User Input / Untrusted Data:** ALWAYS use `esc_html()`. This includes `$_GET`, `$_POST`, search terms, etc.
+    *   **ACF WYSIWYG:** ALWAYS use `wp_kses_post()` (or a trusted wrapper like `Formatting::toHtml` if it correctly implements `wp_kses_post` or similar filtering) to allow safe HTML.
+    *   **ACF Simple Text/Textarea / WP Core Data (like `get_the_title`):** While often pre-sanitized, the safest default practice is to use `esc_html()`. Only omit `esc_html()` if you are absolutely certain the data is safe and you intentionally need raw (but non-HTML) output. It's generally better to be safe.
+4.  **Inline JavaScript:** AVOID outputting PHP into JS. Use `wp_localize_script` or data attributes. If absolutely necessary (and rare), use `esc_js()`.
+
+**When Modifying Existing Code:**
+- Only add escaping if there is a genuine security vulnerability
+- Do not modify existing escaping patterns unless they are causing errors
+- Respect the existing code style and patterns
+
+**WordPress Escaping Functions Guide:**
+
+-   `
+- Keep PHP blocks small and focused.
+- Use template parts for organization.
+
+Remember that templates should be easy to read and maintain by both developers and designers.

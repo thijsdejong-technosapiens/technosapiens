@@ -1,0 +1,36 @@
+---
+description: Asset-enqueue naming and webpack manifest rules
+alwaysApply: false
+---
+
+# Asset-Enqueue Conventions
+
+## Manifest-key ⇄ filename parity
+
+Every key in `dist/manifest.json` must match the filename used in `Enqueue::getWebpackAssetUrlByKey()`.
+
+Webpack scans `sections/*/scss/*.scss` and `sections/*/js/*.js`. Example for `section-content`:
+
+| Asset | Key |
+|---|---|
+| Section CSS | `section-content-style.css` |
+| Section JS (optional) | `section-content-script.js` |
+
+Derive keys from `SECTION_SLUG`: `self::SECTION_SLUG . '-style.css'`.
+
+`SectionReferenceTrait` already enqueues these. Do not invent extra editor CSS keys unless a `scss/[section-slug]-editor.scss` file exists.
+
+## Guard against missing assets
+
+```php
+$sectionCss = Enqueue::getWebpackAssetUrlByKey(MANIFEST_PATH, self::SECTION_SLUG . '-style.css');
+if ($sectionCss) {
+    wp_enqueue_style(self::SECTION_ID . '_styles', $sectionCss);
+}
+```
+
+Never enqueue an empty URL.
+
+## Chunk naming
+
+Webpack `/* webpackChunkName: "my-chunk" */` comments must reuse a stable slug. Built files look like `technosapiens-chunk-main-navigation.min.js`.

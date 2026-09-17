@@ -1,0 +1,98 @@
+---
+description: Code formatting standards for consistent style across WordPress projects. Focuses on avoiding purely stylistic changes in existing code.
+globs: **/*.php, **/*.js, **/*.scss, **/*.css
+alwaysApply: false
+---
+
+# Code Modification Principles
+
+This rule establishes principles for modifying code within the Techno Sapiens theme, focusing on maintaining clarity in version control and adhering to structural best practices. **For specific naming, styling, and structural conventions, always refer to `@010-technosapiens-conventions.mdc`.**
+
+## Modifying Existing Code
+
+### ⚠️ IMPORTANT: Avoid Purely Stylistic Changes to Existing Code ⚠️
+
+When working with existing, functional code, it is **critical** to avoid changes that only alter the style or formatting without affecting functionality. This keeps version control history (git diffs) clean, focused on meaningful changes, and makes code reviews more efficient.
+
+Specifically, when editing existing files:
+
+* **DO NOT** change quote styles (e.g., from single `\'` to double `\"` or vice versa) unless necessary for the functional change you are making.
+* **DO NOT** reformat existing code *solely* to add or remove semicolons. While new JavaScript code should follow the 'no unnecessary semicolons' rule (see `@040-javascript-organization.mdc`), avoid changing semicolons in existing, functional code unless you are already refactoring that specific section. This keeps git diffs clean.
+* **DO NOT** modify indentation, spacing, line breaks, or other formatting in surrounding code *unless* you are actively refactoring that specific section as part of your task.
+* **DO NOT** add escaping functions to existing working code unless there is a specific security vulnerability or the user explicitly requests it. If the code is already working and not causing security issues, leave the escaping as-is.
+
+Only modify formatting when:
+
+* It's directly related to the functional code you are adding or changing.
+* The existing formatting causes actual bugs or significant readability issues that hinder understanding the code's logic.
+* You are performing a major refactor of a file or component, and reformatting is part of that specific task's scope.
+* There is a genuine security vulnerability that needs to be addressed.
+
+### ⚠️ CRITICAL: Do Not Change Existing Escaping Unless Necessary ⚠️
+
+**When editing existing files, DO NOT modify escaping functions unless:**
+1. There is a genuine security vulnerability
+2. The user explicitly requests escaping changes
+3. You are adding new code that requires escaping
+4. The existing code is causing actual errors or warnings
+
+**If existing code is working without security issues, leave it alone!** Adding escaping to working code is considered a stylistic change and should be avoided.
+
+## Prohibited Practices
+
+### ❌ Never Narrate Changes via Inline Comments
+
+Inline comments that explain what was just added/changed are prohibited. Use commit messages for change narration. Comments should convey intent or rationale only.
+
+Correct:
+
+```scss
+// animated icons
+@use "chunk/animated-icons/animated-icon";
+@use "chunk/animated-icons/animated-icon-bell";
+@use "chunk/animated-icons/animated-icon-search";
+```
+
+Incorrect:
+
+```scss
+// animated icons
+@use "chunk/animated-icons/animated-icon"; // added animated icon
+@use "chunk/animated-icons/animated-icon-bell"; // added animated icon for bell
+@use "chunk/animated-icons/animated-icon-search"; // added animated icon for search
+```
+
+### ❌ Never Use Inline Styles
+
+Do not use the `style` attribute directly within HTML elements in PHP or template files. All styling must be handled via SCSS files using BEM conventions and CSS variables as defined in `@010-technosapiens-conventions.mdc`.
+
+```php
+// AVOID THIS:
+<div style="color: red; margin-top: 10px;">Content</div>
+
+// CORRECT APPROACH:
+// Define styles in the corresponding SCSS file for the section/component
+<div class="section-content__element section-content__element--modifier">Content</div>
+```
+
+### ❌ Never Use Inline Scripts
+
+Do not embed JavaScript code directly within PHP or HTML files using `<script>` tags. All JavaScript must reside in dedicated `.js` files and be loaded conditionally as per the guidelines in `@040-javascript-organization.mdc`.
+
+```php
+// AVOID THIS:
+<button onclick="alert('Do not do this!');">Click Me</button>
+<script>
+    // Do not place JavaScript logic directly in PHP/HTML files.
+    console.log('Inline script detected - this is forbidden.');
+</script>
+
+// CORRECT APPROACH:
+// Place JS in a dedicated file (e.g., sections/section-content/js/section-content.js)
+// and add event listeners appropriately.
+// <button class="section-content__button">Click Me</button>
+```
+
+## Guiding Principle
+
+The primary goal when modifying code is to implement the required functionality cleanly and effectively, while respecting the existing codebase and keeping version history clear and meaningful. Always prioritize functional changes over purely stylistic adjustments in existing code. For all new code and structural decisions, adhere strictly to `@010-technosapiens-conventions.mdc`.

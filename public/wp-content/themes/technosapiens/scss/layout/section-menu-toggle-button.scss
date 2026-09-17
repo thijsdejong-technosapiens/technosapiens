@@ -1,0 +1,65 @@
+@use "../util/util-mixins" as mixins;
+
+.menu-toggle-button {
+    $self: &;
+    position: fixed;
+    left: 0;
+    bottom: 9rem;
+    z-index: 11;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ts-color-secondary, blue);
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    outline-offset: -2px;
+
+    @include mixins.lg {
+        display: none;
+    }
+
+    &--open {
+        .ts-header:has(.side-navigation[open]) & {
+            visibility: hidden;
+        }
+    }
+
+    &__bars {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.3125rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &__bar {
+        display: block;
+        width: 100%;
+        height: 0.125rem;
+        background-color: var(--ts-color-white, white);
+        border-radius: 0.0625rem;
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+
+    &[aria-expanded="true"] {
+        #{$self}__bar {
+            &:nth-child(1) {
+                transform: translateY(0.4375rem) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-0.4375rem) rotate(-45deg);
+            }
+        }
+    }
+}

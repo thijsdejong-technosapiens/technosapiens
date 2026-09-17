@@ -1,0 +1,81 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    font-size: calc(var(--ts-pagination-size, 2.5rem) / 2.5);
+    margin: var(--ts-gutter-width, 2rem) auto;
+    z-index: 1;
+
+    @include mixins.mq-down(sm) {
+        gap: .375em;
+    }
+
+    > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        &:not(.dots) {
+            width: var(--ts-pagination-size, 2.5rem);
+            height: var(--ts-pagination-size, 2.5rem);
+            border-radius: var(--ts-button-border-radius, 0);
+
+            @include mixins.mq-down(sm) {
+                width: calc(var(--ts-pagination-size, 2.5rem) * .8);
+                height: calc(var(--ts-pagination-size, 2.5rem) * .8);
+            }
+        }
+    }
+
+    > a {
+        text-decoration: none;
+
+        &.prev, &.next {
+            width: calc(var(--ts-pagination-size, 2.5rem) * 1.25);
+            height: calc(var(--ts-pagination-size, 2.5rem) * 1.25);
+
+            @include mixins.mq-down(sm) {
+                width: var(--ts-pagination-size, 2.5rem);
+                height: var(--ts-pagination-size, 2.5rem);
+            }
+        }
+
+        &.prev {
+            margin-right: .5em;
+        }
+
+        &.next {
+            margin-left: .5em;
+        }
+
+        &.page-numbers {
+            overflow: hidden;
+            position: relative;
+            transition: .25s ease-in-out color, .25s ease-in-out background-color;
+            background-color: var(--ts-color-light, lightgray);
+
+            &:hover {
+                color: var(--ts-color-on-primary, white);
+                background-color: var(--ts-color-primary, blue);
+            }
+
+            .icon {
+                width: 25%;
+                height: 25%;
+                z-index: 2;
+            }
+        }
+
+        &.active {
+            color: var(--ts-color-on-primary, white);
+            background-color: var(--ts-color-primary, blue);
+            cursor: not-allowed;
+        }
+    }
+}

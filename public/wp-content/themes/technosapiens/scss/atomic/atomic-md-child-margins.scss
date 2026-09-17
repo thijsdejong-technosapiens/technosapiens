@@ -1,0 +1,18 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.ts-md-child-margins {
+    > * {
+        margin-bottom: calc(var(--ts-gutter-width, 2rem) * 2) !important;
+
+        &.ts-md-child-margin-small {
+            @include mixins.mq-down(md) {
+                margin-bottom: var(--ts-gutter-width, 2rem) !important;
+            }
+        }
+
+        &.ts-no-child-margins {
+            margin-bottom: 0 !important;
+        }
+    }
+}

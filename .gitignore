@@ -1,0 +1,39 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Core
+/public/wp-admin/
+/public/wp-content/index.php
+/public/wp-content/languages
+/public/wp-content/plugins/index.php
+/public/wp-content/themes/index.php
+/public/wp-includes/
+/public/index.php
+/public/license.txt
+/public/readme.html
+/public/wp-*.php
+/public/xmlrpc.php
+
+# Example themes
+/public/wp-content/themes/twenty*/
+
+# Techno Sapiens theme
+/public/wp-content/themes/technosapiens/dist/*
+
+# Uploads
+/public/wp-content/uploads/
+
+# Log files
+*.log
+
+# htaccess
+/public/.htaccess
+
+# npm
+/node_modules/
+npm-debug.log*
+
+# Composer
+/vendor/

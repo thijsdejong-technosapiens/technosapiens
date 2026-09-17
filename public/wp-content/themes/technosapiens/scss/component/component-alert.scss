@@ -1,0 +1,72 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+$self: '.ts-alert';
+
+.ts-alert {
+    --alert-color: var(--ts-notification-default, gray);
+
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    gap: .75rem;
+    border-radius: var(--ts-form-field-border-radius, 0);
+    padding: 1rem;
+    z-index: 0;
+
+    .gform_wrapper & {
+        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 3 * 2);
+    }
+
+    // Types
+    &--type-error {
+        --alert-color: var(--ts-notification-error, red);
+    }
+
+    &--type-success {
+        --alert-color: var(--ts-notification-success, limegreen);
+    }
+
+    &--type-warning {
+        --alert-color: var(--ts-notification-warning, gold);
+    }
+
+    &--type-informational {
+        --alert-color: var(--ts-notification-informational, blue);
+    }
+
+    // Styles
+    &--style-light {
+        background-color: hsl(from var(--alert-color) h s 92);
+
+        #{$self}__icon,
+        #{$self}__text {
+            color: hsl(from var(--alert-color) h s 40);
+        }
+    }
+
+    &--style-solid {
+        background-color: var(--alert-color);
+
+        #{$self}__icon,
+        #{$self}__text {
+            color: var(--ts-font-color-white, white);
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        flex: none;
+        width: 1.25rem;
+        height: 1.25rem;
+
+        /* Tell the SVG that its own baseline is in the centre of the view-box */
+        alignment-baseline: central; // (works in all modern browsers)
+    }
+
+    &__text {
+        font-size: inherit;
+        line-height: 1.25em;
+    }
+}

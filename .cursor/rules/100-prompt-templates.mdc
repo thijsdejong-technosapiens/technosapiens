@@ -1,0 +1,82 @@
+---
+description: Prompt templates for Techno Sapiens theme development
+alwaysApply: false
+---
+
+# Techno Sapiens Prompt Templates
+
+Copy a template, replace `[placeholders]`, and send it to the assistant.
+
+## Principles
+
+- Reference rules with `@rule-name.mdc`. Include `@010-technosapiens-conventions.mdc` when needed.
+- State the goal (new section, CPT, refactor).
+- Include names, slugs, fields, design references, paths.
+- Do not ask the AI to auto-write `.md` docs unless you name the file.
+
+---
+
+### 1. Creating a new section
+
+```
+@060-create-section.mdc @010-technosapiens-conventions.mdc @065-section-development.mdc
+
+Create a new section called '[section-slug]'.
+
+**Design Reference:** [Figma / screenshot / description]
+
+**ACF Fields Needed:**
+- [field_name_1] (type: [text|wysiwyg|image|repeater|select|true_false|...], required: [true|false])
+- [field_name_2] (type: image)
+- [field_name_3] (type: repeater)
+  - [sub_field_1] (type: text)
+```
+
+Notes:
+
+- `[section-slug]` is kebab-case with `section-` prefix, e.g. `section-hero`.
+- Design reference is mandatory. The AI must ask if it is missing.
+- Image fields should match `section-content` (return format array).
+- Do not add margin fields; `section-settings.json` handles them.
+
+---
+
+### 2. Creating a custom post type & taxonomy
+
+```
+@080-post-types-conventions.mdc @010-technosapiens-conventions.mdc
+
+Register a new custom post type named '[Post Type Name Singular]'.
+- Post type slug: `[post-type-slug]`
+- Labels: '[Singular]', '[Plural]'
+- Supports: [title|editor|thumbnail|excerpt|...]
+- Has archive: [true|false]
+- Rewrite slug: `[rewrite-slug]`
+- Menu icon: '[dashicon-slug]'
+
+(Optional) Also register taxonomy '[Taxonomy Name Singular]'.
+- Taxonomy slug: `[taxonomy-slug]`
+- Hierarchical: [true|false]
+- Associate with `[post-type-slug]`.
+```
+
+Slugs use kebab-case.
+
+---
+
+### 3. Refactoring to Techno Sapiens conventions
+
+```
+@010-technosapiens-conventions.mdc @015-code-formatting-consistency.mdc @[optional: 030/040/065]
+
+Please refactor the following code in `[file-path.php]`.
+
+**Goal:** Follow Techno Sapiens conventions for [naming|templating|styling|sections].
+
+**Constraint:** Only change what is needed. Do not restyle existing working code. No inline styles or scripts.
+
+**Existing Code:**
+```php
+// paste code
+```
+```

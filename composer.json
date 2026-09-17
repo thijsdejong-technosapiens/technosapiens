@@ -1,0 +1,8 @@
+{
+  "name": "technosapiens/starter",
+  "require": {
+    "vlucas/phpdotenv": "v5.6.2",
+    "ozdemirburak/iris": "^3.1.1",
+    "kint-php/kint": "^6.0.1"
+  }
+}

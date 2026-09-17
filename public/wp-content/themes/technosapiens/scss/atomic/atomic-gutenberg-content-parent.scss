@@ -1,0 +1,30 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.gutenberg-content-parent {
+    $self: &;
+
+    &--no-ts-block-padding {
+        > .ts-block {
+            padding: 0 !important;
+        }
+    }
+
+    > .ts-block {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--ts-gutter-width, 2rem);
+        padding-right: var(--ts-gutter-width, 2rem);
+
+        &:not(.ts-narrow):not(.block-row--stretch-narrow) {
+            max-width: calc(var(--ts-base-width, 1410px) + var(--ts-gutter-width, 2rem));
+        }
+
+        @include mixins.mq-down(lg) {
+            padding: 0 calc(var(--ts-gutter-width, 2rem) / 2);
+        }
+    }
+}

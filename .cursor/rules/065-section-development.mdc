@@ -1,0 +1,199 @@
+---
+description: Authoritative guide for Techno Sapiens section development using section-content as the template.
+alwaysApply: false
+---
+
+# Techno Sapiens Section Development
+
+Authoritative boilerplate for section PHP, partials, SCSS, ACF, and assets. Use with [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc). Copy `sections/section-content`. Do not generate column-based `blocks/` classes.
+
+Placeholders: `[section-slug]` = kebab-case with `section-` prefix (`section-content`). `[SectionName]` = PascalCase (`SectionContent`). `[section_slug]` = slug with underscores (`section_content`).
+
+## File location
+
+✅ `/public/wp-content/themes/technosapiens/sections/[section-slug]/`  
+❌ `/blocks/[section-slug]/`
+
+## PHP class (`[SectionName].php`)
+
+Keep the class thin. Registration, enqueue, ACF save, and render live in `SectionReferenceTrait`.
+
+```php
+<?php
+
+namespace TechnoSapiens;
+
+use TechnoSapiens\Core\Singleton;
+
+class SectionContent extends Singleton {
+    use SectionReferenceTrait;
+
+    public const SECTION_ID = 'section_section_content';
+    public const SECTION_SLUG = 'section-content';
+
+    protected function __construct() {
+        $supports = [];
+        $postTypes = [];
+
+        $this->registerReferenceSection(
+            __('Content section.', Theme::TEXT_DOMAIN),
+            'text',
+            false,
+            $supports,
+            $postTypes
+        );
+    }
+
+    public static function getSectionLabel(): string {
+        return __('Content', Theme::TEXT_DOMAIN);
+    }
+}
+```
+
+### Constants
+
+| Constant | Example | Role |
+|---|---|---|
+| `SECTION_ID` | `section_section_content` | ACF `name` (`section_` + `[section_slug]`) |
+| `SECTION_SLUG` | `section-content` | Folder, `has_block('acf/section-' . slug)`, assets, ACF location suffix |
+
+### `registerReferenceSection($description, $icon, $hasScript, $supports, $postTypes, $blockMode)`
+
+The trait registers an ACF **block v3** section (`api_version` / `acf_block_version` 3). Do not set `mode` to `edit`. Default mode is `preview`. Pass `$hasScript = true` only when `js/[section-slug].js` exists.
+
+Supports default: `customClassName` false, `align` false, `mode` false, `reusable` true.
+
+### What the trait already does (do not duplicate)
+
+* `acf_register_block_type` with `name` => `SECTION_ID`
+* Frontend enqueue when `has_block('acf/section-' . SECTION_SLUG)` on `$post` / `$otherPosts`
+* Editor enqueue via `enqueue_block_assets` when `is_admin()`
+* CSS key: `SECTION_SLUG . '-style.css'`
+* JS key (if `$hasScript`): `SECTION_SLUG . '-script.js'`
+* ACF JSON save into `sections/SECTION_SLUG/acf-json/` as `SECTION_SLUG.json` (matched by field group **key**, not title)
+* `render()` via `Partial::render` from `sections/SECTION_SLUG/partials/`
+* Optional inserter preview image: `preview/SECTION_SLUG.jpg`
+
+ACF JSON **load** paths are registered in `Theme::registerSectionAcfJsonLoadPaths()`.
+
+## Partial (`partials/[section-slug].php`)
+
+`get_field()` without `$post_id`. Collect data at the top. Alternative PHP syntax (`:`, `endif`).
+
+Required outer pattern (from `section-content`):
+
+```php
+<?php
+
+use TechnoSapiens\Core\Formatting;
+use TechnoSapiens\Core\Image;
+use TechnoSapiens\SectionMargins;
+use TechnoSapiens\SectionReferencePartial;
+
+$contentType = get_field('content_type') ?? '';
+$containerClasses = SectionReferencePartial::getContainerClasses('section-content');
+$marginTop = SectionMargins::getMarginTop();
+$marginBottom = SectionMargins::getMarginBottom();
+?>
+
+<?php if ($hasContent) : ?>
+    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-mt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-mb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?>>
+        <div class="container container--narrow section-content__container">
+            <!-- BEM content -->
+        </div>
+    </div>
+<?php endif; ?>
+```
+
+* `getContainerClasses()` always includes `section` and the slug. Optional ACF `bg` adds `[slug]--bg-*` and `ts-has-dark-background`.
+* Margins come from shared fields `section_margin_top` / `section_margin_bottom` (`SectionMargins`). Do not add those fields to the section JSON.
+* Do not use legacy block wrappers, `VisualMarginComponent`, or `PreviewNotificationComponent` unless an existing section already does.
+
+WYSIWYG: `Formatting::toHtml($html)`. Buttons: `ts-button` + style/color modifiers and `ts-button__text` (see `section-page-buttons`).
+
+Images (array return format, as in `section-content`):
+
+```php
+$contentImage = get_field('content_image') ?? [];
+$contentImageId = !empty($contentImage['ID']) ? (int) $contentImage['ID'] : 0;
+
+echo Image::render([
+    'blockClass' => 'section-content',
+    'sources' => [
+        [
+            'id' => $contentImageId,
+            'size' => 'full',
+        ],
+    ],
+]);
+```
+
+## SCSS
+
+`scss/[section-slug].scss` only unless editor CSS is required. Webpack entry becomes `[section-slug]-style.css`.
+
+```scss
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-content {
+    $self: &;
+
+    &__text {
+        gap: calc(var(--ts-gutter-width, 1rem) / 2);
+
+        &--bg-white {
+            background-color: var(--ts-color-white, white);
+
+            @include mixins.mq-up(lg) {
+                padding: 3rem;
+            }
+        }
+    }
+}
+```
+
+Nest breakpoints inside elements. Prefer `mq-up`. `mq-down` is allowed when the design needs it.
+
+## JS (optional)
+
+Omit the file and keep `$hasScript` false when native HTML/CSS is enough (accordion uses `<details>`). If JS is required: `js/[section-slug].js`, `$hasScript = true`, follow [040-javascript-organization.mdc](mdc:.cursor/rules/040-javascript-organization.mdc).
+
+## ACF JSON (`acf-json/[section-slug].json`)
+
+* Filename equals `SECTION_SLUG` (`section-content.json`).
+* Title: English, e.g. `"Section - Content"`. All labels, choices, and button texts in English.
+* Field `name`: snake_case (`content_type`). That is what `get_field()` uses.
+* `location.value`: `acf\/section-section-content` (`acf/section-` + `SECTION_SLUG`).
+* Do **not** include margin fields.
+* Keep keys unique. Saves are matched by group `key` in the JSON file.
+
+After creating a section, add the same location to `acf-json/section-settings.json` so shared margins appear in the editor.
+
+## Register in `functions.php`
+
+```php
+public static function initBlocks(): void {
+    SectionAccordion::getInstance();
+    SectionCtaBanner::getInstance();
+    SectionPageButtons::getInstance();
+    SectionContent::getInstance();
+    SectionUsps::getInstance();
+    SectionStats::getInstance();
+    SectionDivider::getInstance();
+    // [SectionName]::getInstance();
+}
+```
+
+Classes autoload from `sections/`. No extra imports.
+
+## Checklist
+
+- Thin class + `SectionReferenceTrait`
+- `SECTION_ID` / `SECTION_SLUG` as in `section-content`
+- Partial: `getContainerClasses` + `SectionMargins` + standard `section` class
+- SCSS `@use` mixins/vars and `--ts-` variables
+- ACF location `acf/section-[section-slug]`
+- `section-settings.json` location added
+- `initBlocks()` updated
+- No `BlockMarginComponent`, no legacy block wrappers, no `blocks/` path

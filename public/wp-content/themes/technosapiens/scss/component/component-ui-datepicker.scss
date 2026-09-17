@@ -1,0 +1,136 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.ui-datepicker {
+
+    //header of calendar
+    .ui-datepicker-header {
+        padding: .5rem 0 !important;
+        border-bottom: none !important;
+        margin-bottom: 0 !important;
+
+        select {
+            border: none;
+            font-size: .875rem;
+            color: var(--ts-color-primary, blue);
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                color: var(--ts-font-color-primary, black);
+            }
+        }
+
+        .ui-datepicker-title {
+            top: .125rem;
+        }
+
+        .ui-datepicker-month, .ui-datepicker-year {
+            font-family: var(--ts-font-button, 'sans-serif');
+            font-weight: var(--ts-font-weight-medium, 500);
+            font-size: .875rem;
+            font-weight: 900;
+            text-align: right;
+        }
+
+        .ui-datepicker-prev,
+        .ui-datepicker-next {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: transparent;
+            border-radius: 100%;
+            width: 1.75rem;
+            height: 1.75rem;
+            z-index: 1;
+
+            &::before {
+                top: 0 !important;
+            }
+        }
+
+        .ui-datepicker-next {
+            &::before {
+                left: -.15em !important;
+            }
+        }
+    }
+
+    //start of calendar
+    .ui-datepicker-calendar {
+        width: 18rem;
+        border-spacing: .5rem;
+
+        @include mixins.mq-up(sm) {
+            width: 20rem;
+        }
+
+        //global state of calendar
+        tr {
+            td {
+                font-size: .875rem;
+                color: var(--ts-font-color-primary, black);
+                border-radius: 100%;
+                width: 2rem;
+                height: 2rem;
+                text-align: center;
+
+                @include mixins.mq-up(sm) {
+                    width: 2.25rem;
+                    height: 2.25rem;
+                }
+            }
+        }
+    }
+
+    //default state of calendar
+    .ui-state-default {
+        font-size: .875rem;
+        color: var(--ts-font-color-primary, black);
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        border: 1px solid transparent;
+
+        @include mixins.mq-up(sm) {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+    }
+
+    //disabled state of calendar
+    .ui-state-disabled {
+        background-color: var(--ts-color-light, lightgray);
+        border: var(--ts-form-field-border, 1px solid black);
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+
+    //active state of calendar
+    .ui-state-active {
+        color: var(--ts-color-white, white) !important;
+        background-color: var(--ts-color-primary, blue) !important;
+        border: var(--ts-form-field-border, 1px solid black);
+    }
+
+    //hover state of calendar
+    .ui-state-hover {
+        color: var(--ts-color-white, white) !important;
+        background-color: var(--ts-color-primary, blue) !important;
+        border: var(--ts-form-field-border, 1px solid black);
+    }
+}
+
+.ui-datepicker-trigger {
+    position: absolute;
+    top: 50%;
+    right: 10px !important;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}

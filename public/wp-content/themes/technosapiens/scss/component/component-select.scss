@@ -1,0 +1,19 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.ts-select {
+    color: (var(--ts-font-color-primary, black));
+    font-family: (var(--ts-font-body));
+    font-size: 1rem;
+    border: var(--ts-form-field-border, 1px solid black);
+    background-color: var(--ts-form-field-background-color, white);
+    height: var(--ts-form-field-height, 3rem);
+    padding: calc(var(--ts-form-field-height, 3rem) / 4) calc((var(--ts-form-field-height, 3rem) / 6) + 1.5em) calc(var(--ts-form-field-height, 3rem) / 4) calc(var(--ts-form-field-height, 3rem) / 6);
+    border: var(--ts-form-field-border, 1px solid black);
+    border-radius: var(--ts-form-field-border-radius, 0);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .5em center;
+    background-size: 1em;
+}

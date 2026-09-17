@@ -1,0 +1,102 @@
+---
+description: Getting started guide for WordPress development with the Techno Sapiens theme
+alwaysApply: true
+---
+
+# Getting Started with Techno Sapiens Theme Documentation
+
+Index of Cursor rules for the Techno Sapiens WordPress theme.
+
+## AI Assistant Greeting
+
+Start every new chat session with:
+
+```
+Klaar om iets vet te maken? Let's gooooooo 🚀
+```
+
+## How to Use These Rules
+
+1. Reference a rule with `@[rule-filename]`
+2. Ask a specific question about that topic
+3. Follow the rules when implementing features
+
+### Sections-first workflow
+
+Most work is creating or changing **sections** (full-width ACF Gutenberg blocks):
+
+1. Conventions: [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc)
+2. Creation workflow: [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc)
+3. Authoritative boilerplate: [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc)
+
+Canonical reference: `public/wp-content/themes/technosapiens/sections/section-content`.
+
+## Auto-Documentation Policy (Global)
+
+- Do not create standalone `.md` files unless the user asks.
+- If documentation is requested, confirm path and filename first. Prefer `.mdc` for rules; `.md` only when asked.
+- Default: code and concise answers, no extra docs.
+
+## Available Documentation
+
+### Core
+
+1. [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc) — naming, structure, styling
+2. [020-security.mdc](mdc:.cursor/rules/020-security.mdc) — REST, nonces, CSRF, IDOR (agent-requestable)
+3. [025-wcag.mdc](mdc:.cursor/rules/025-wcag.mdc) — WCAG 2.1 AA primitives (agent-requestable)
+4. [030-php-html-templating.mdc](mdc:.cursor/rules/030-php-html-templating.mdc) — PHP templates and escaping
+5. [040-javascript-organization.mdc](mdc:.cursor/rules/040-javascript-organization.mdc) — JS structure
+6. [041-javascript-oop-patterns.mdc](mdc:.cursor/rules/041-javascript-oop-patterns.mdc) — ES6 classes
+7. [042-javascript-code-splitting.mdc](mdc:.cursor/rules/042-javascript-code-splitting.mdc) — dynamic imports
+8. [043-javascript-best-practices.mdc](mdc:.cursor/rules/043-javascript-best-practices.mdc) — KISS, a11y, no frameworks
+9. [050-responsive-media-queries.mdc](mdc:.cursor/rules/050-responsive-media-queries.mdc) — `mq-up` / breakpoints
+10. [055-scss-styling-conventions.mdc](mdc:.cursor/rules/055-scss-styling-conventions.mdc) — `--ts-` variables, BEM, rem
+11. [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc) — create a section
+12. [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc) — section PHP, ACF, assets
+13. [070-image-handling.mdc](mdc:.cursor/rules/070-image-handling.mdc) — `Image::render()`
+14. [015-code-formatting-consistency.mdc](mdc:.cursor/rules/015-code-formatting-consistency.mdc) — do not restyle existing code
+15. [080-post-types-conventions.mdc](mdc:.cursor/rules/080-post-types-conventions.mdc) — CPTs
+16. [090-client-documentation.mdc](mdc:.cursor/rules/090-client-documentation.mdc) — Dutch HANDLEIDING
+17. [100-prompt-templates.mdc](mdc:.cursor/rules/100-prompt-templates.mdc) — prompt templates
+18. [035-asset-enqueue.mdc](mdc:.cursor/rules/035-asset-enqueue.mdc) — webpack manifest keys
+
+### Maintenance
+
+* [999-mdc-format.mdc](mdc:.cursor/rules/999-mdc-format.mdc)
+
+## How to Reference Rules
+
+```
+@065-section-development.mdc How do I create a new homepage section?
+```
+
+## Quick Reference
+
+### Theme structure
+
+* Organization: `@010-technosapiens-conventions.mdc`
+* Templates: `@030-php-html-templating.mdc`
+
+### Writing code
+
+* PHP: `@030-php-html-templating.mdc` and `@015-code-formatting-consistency.mdc`
+* Security: `@020-security.mdc` (REST, nonces, CSRF; not always-on)
+* Accessibility: `@025-wcag.mdc` (WCAG 2.1 AA; not always-on)
+* JS: `@040-javascript-organization.mdc`, `@041-javascript-oop-patterns.mdc`, `@042-javascript-code-splitting.mdc`, `@043-javascript-best-practices.mdc`
+* SCSS: `@055-scss-styling-conventions.mdc`, `@050-responsive-media-queries.mdc`
+
+### Features
+
+* Sections: `@060-create-section.mdc` and `@065-section-development.mdc`
+* Images: `@070-image-handling.mdc`
+* Post types: `@080-post-types-conventions.mdc`
+* Client docs: `@090-client-documentation.mdc`
+
+## Debugging
+
+```php
+use TechnoSapiens\Core\Log;
+Log::log($variableToInspect);
+```
+
+Check `debug.log` and the browser console. Follow `@015-code-formatting-consistency.mdc`.

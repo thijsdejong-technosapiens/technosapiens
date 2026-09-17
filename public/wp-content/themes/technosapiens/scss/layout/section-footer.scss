@@ -1,0 +1,134 @@
+@use "../util/util-mixins" as mixins;
+
+.site-footer{
+    padding: 4rem 2rem 8rem 2rem;
+    margin-top: auto;
+    background-color: var(--ts-color-tertiary, white);
+    color: var(--ts-font-color-white, white);
+    text-align: center;
+
+    @include mixins.mq-up(xl) {
+        text-align: left;
+        padding: 4rem 2rem;
+    }
+
+    &__row {        
+        gap: var(--ts-row-gap-default, 2rem);
+
+        @include mixins.mq-up(xl) {
+            gap: 0;
+        }
+    }
+
+    &__col {
+        &--ctas {
+            @include mixins.mq-up(xl) {
+                order: 2;
+            }
+        }
+        &--links {
+            @include mixins.mq-up(xl) {
+                order: 1;
+            }
+        }
+    }   
+
+    &__contact-data {
+        p, a{
+            font-family: var(--ts-font-semibold, sans-serif);
+            font-weight: var(--ts-font-weight-semibold, 600);
+        }
+
+        p{
+            line-height: 2rem;
+        }
+
+        a{
+            color: var(--ts-color-primary, red);
+            transition: var(--ts-transition-ease-in-out, all 0.3s ease-in-out);
+
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__links-menu {
+        text-align: left;
+    }
+
+    &__links-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .text-small{
+            .site-footer__links-menu-item-link{
+                font-family: var(--ts-font-regular, sans-serif);
+                font-weight: var(--ts-font-weight-regular, 400);
+            }
+        }
+
+        .zorgkaart-menu-item{
+            &:after{
+                content: '';
+                background-image: url('/wp-content/themes/technosapiens/images/web/zorgkaart-nederland-logo.png');
+                background-size: 3.3rem 2.75rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 4.75rem;
+                height: 3.5rem;
+                padding: 0.5rem;
+                padding: 1rem;
+                background-color: var(--ts-color-white, white);
+                border-radius: var(--ts-border-radius-xs, 0.5rem);
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__links-menu-item-link {
+        padding-block: 0.25rem;
+        text-decoration: none;
+        font-family: var(--ts-font-semibold, sans-serif);
+        font-weight: var(--ts-font-weight-semibold, 600);
+        transition: var(--ts-transition-ease-in-out, all 0.3s ease-in-out);
+        display: block;
+
+        &:hover{
+            transform: translateX(0.2rem);
+        }
+    }
+
+    &__ctas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
+        @include mixins.mq-up(xl) {
+            justify-content: flex-end;
+        }
+    } 
+    
+    &__emergency-phone-number-button {
+        display: none;
+        font-weight: var(--ts-font-weight-semibold, 600);
+
+        @include mixins.mq-up(xl) {
+            display: flex;
+        }
+    }
+
+    &__logo-image{
+        max-width: 100%;
+        width: 11rem;
+    }
+}

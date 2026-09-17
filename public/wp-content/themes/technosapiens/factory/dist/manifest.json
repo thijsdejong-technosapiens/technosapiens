@@ -1,0 +1,19 @@
+{
+  "archive-filters-mobile.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-archive-filters-mobile-101233fb8ffbd9cded92.min.css",
+  "archive-filters-mobile.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-archive-filters-mobile-31d6cfe0d16ae931b73c.min.js",
+  "archive-filters-top.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-archive-filters-top-12d27cd7dc23f6d9fbb7.min.css",
+  "archive-filters-top.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-archive-filters-top-31d6cfe0d16ae931b73c.min.js",
+  "single-back-button.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-back-button-31d6cfe0d16ae931b73c.min.css",
+  "single-back-button.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-back-button-31d6cfe0d16ae931b73c.min.js",
+  "single-next-prev-posts.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-next-prev-posts-035124e8127727a83b5b.min.css",
+  "single-next-prev-posts.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-next-prev-posts-31d6cfe0d16ae931b73c.min.js",
+  "single-related-posts.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-related-posts-e35a00778c688e419d4e.min.css",
+  "single-related-posts.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-related-posts-31d6cfe0d16ae931b73c.min.js",
+  "snippet-default.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-snippet-default-61039372c49316e6ae69.min.css",
+  "snippet-default.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-snippet-default-31d6cfe0d16ae931b73c.min.js",
+  "archive-default.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-archive-default-d0795ecaa148f514c66e.min.css",
+  "archive-default.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-archive-default-31d6cfe0d16ae931b73c.min.js",
+  "single-default.css": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-default-31d6cfe0d16ae931b73c.min.css",
+  "single-default.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-single-default-31d6cfe0d16ae931b73c.min.js",
+  "ts-filter-select.js": "/wp-content/themes/technosapiens/factory/dist/wordpress-factory-plugin-ts-filter-select-3343f0f3207c06972f53.min.js"
+}

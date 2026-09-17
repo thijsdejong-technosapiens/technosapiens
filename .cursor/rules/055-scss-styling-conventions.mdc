@@ -1,0 +1,307 @@
+---
+description: SCSS styling conventions including CSS variables, BEM, mobile-first approach, and units
+globs: **/*.scss
+alwaysApply: false
+---
+# SCSS Styling Conventions
+
+## ⚠️ MANDATORY PRE-STYLING CHECKLIST ⚠️
+
+Before writing ANY SCSS, ensure you follow these conventions.
+
+## CSS Variables (CRITICAL)
+
+### Always Check StylingComponent.php First
+
+**Before creating ANY new variable**, check `inc/app/editor/StylingComponent.php` for existing CSS variables.
+
+Prefer **semantic** tokens in new SCSS; brand primitives and legacy aliases remain for existing code.
+
+Available variable categories:
+- **Fonts**: `--ts-font-heading`, `--ts-font-body`, `--ts-font-secondary`, `--ts-font-button`, `--ts-font-regular`, `--ts-font-semibold`, `--ts-font-bold`, `--ts-font-light`, `--ts-font-family-sans`
+- **Font sizes**: `--ts-font-size-*` (incl. `large-md` / `medium-md`), `--ts-line-height-*`, `--ts-icon-size-default`
+- **Semantic colors** (preferred): `--ts-color-text`, `--ts-color-text-muted`, `--ts-color-text-inverse`, `--ts-color-surface`, `--ts-color-surface-muted`, `--ts-color-border`, `--ts-color-action`, `--ts-color-action-hover`, `--ts-color-on-action`
+- **Brand primitives**: `--ts-color-primary`, `--ts-color-primary-hover`, `--ts-color-on-primary`, `--ts-color-secondary` (+ hover/on), `--ts-color-tertiary` (+ hover/on), `--ts-color-danger` (+ hover/on), `--ts-color-white`, `--ts-color-black`, `--ts-color-grey`, `--ts-color-light`
+- **Legacy font colors**: `--ts-font-color-primary`, `--ts-font-color-secondary`, `--ts-font-color-white`
+- **Font weights**: `--ts-font-weight-light` … `--ts-font-weight-bold` (bold = 600)
+- **Elevation** (preferred): `--ts-elevation-0` … `--ts-elevation-4` — legacy `--ts-shadow-sm`, `--ts-shadow-sm-hover`, `--ts-shadow-md`, `--ts-shadow-card` alias these
+- **Motion**: `--ts-duration-fast`, `--ts-duration-base`, `--ts-easing-standard`, `--ts-transition-colors`, `--ts-transition` (no longer `transition: all`)
+- **Focus / disabled**: `--ts-focus-ring`, `--ts-focus-ring-inverse`, `--ts-focus-ring-offset`, `--ts-opacity-disabled`
+- **Z-index**: `--ts-z-index-dropdown`, `--ts-z-index-sticky`, `--ts-z-index-modal`, `--ts-z-index-toast`, `--ts-z-index-admin`
+- **Radius** (preferred): `--ts-radius-none`, `--ts-radius-xs` … `--ts-radius-xxl`, `--ts-radius-pill` — legacy `--ts-border-radius-*` / `--ts-button-border-radius` still work
+- **Space**: `--ts-space-1` … `--ts-space-16` (0.25rem steps); also `--ts-gutter-width`, `--ts-row-gap-*`
+- **Grid**: `--ts-base-width`, `--ts-narrow-width`, `--ts-gutter-width`
+- **Form controls**: `--ts-form-field-height`, `--ts-form-field-border`, `--ts-form-field-border-radius`, `--ts-form-field-background-color`
+- **Buttons**: styles `filled|outlined|ghost|text|alternative` × colors `primary|secondary|tertiary|danger` via local `--ts-btn-*` in `component-button.scss` — do not add PHP `btn-*-color-*` keys
+- **Feature adapters**: GF mail tokens live in `GravityFormMailComponent`; admin-bar light tokens in `AdminBarLightComponent` (not in `StylingComponent`)
+
+### Fallback Color Rule (CRITICAL)
+
+**Always use color NAMES as fallbacks, NEVER hex codes.**
+
+```scss
+// ✅ CORRECT - color name fallback
+background-color: var(--ts-color-grey-light, grey);
+color: var(--ts-font-color-primary, black);
+border-color: var(--ts-color-border, lightgrey);
+
+// ❌ WRONG - hex code fallback
+background-color: var(--ts-color-grey-light, #f5f5f5);
+color: var(--ts-font-color-primary, #515151);
+```
+
+## Units (CRITICAL)
+
+### Always Use REM
+
+All sizing must use `rem` units (except for very specific cases like borders).
+
+```scss
+// ✅ CORRECT
+font-size: 1.5rem;
+padding: 1rem 2rem;
+margin-bottom: 2rem;
+border-radius: 0.5rem;
+gap: 1rem;
+
+// ❌ WRONG
+font-size: 24px;
+padding: 16px 32px;
+margin-bottom: 32px;
+```
+
+### Use Gutter Width Variable
+
+For consistent spacing, prefer `--ts-gutter-width` or row gap variables:
+
+```scss
+// ✅ CORRECT - uses gutter width
+margin-bottom: var(--ts-gutter-width, 2rem);
+padding: var(--ts-gutter-width, 2rem);
+gap: var(--ts-gutter-width, 2rem);
+
+// ✅ CORRECT - uses row gap variables
+margin-bottom: var(--ts-row-gap-default, 2rem);
+padding-top: var(--ts-row-gap-large, 4rem);
+```
+
+## Typography (CRITICAL)
+
+### Do NOT Add Typography Styles
+
+Text elements inherit typography from the global styles. **Do NOT add unnecessary font styling** that would need to be overridden everywhere.
+
+```scss
+// ❌ WRONG - unnecessary typography that needs overriding
+&__title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: var(--ts-font-weight-bold, 600);
+    line-height: 1.4;
+    color: var(--ts-font-color-primary, black);
+}
+
+// ✅ CORRECT - minimal styling, let typography classes handle fonts
+&__title {
+    margin: 0;
+}
+```
+
+Only add typography styles when:
+1. The design explicitly requires different styling from the default
+2. You need to override inherited styles for a specific use case
+
+## Image Dimensions
+
+### Get Dimensions from PHP Class
+
+Image dimensions are defined in the block/post-type PHP class `__construct`. Use those exact dimensions:
+
+```php
+// In PHP class __construct
+self::setSnippetImageSize([470, 350]);
+```
+
+```scss
+// ✅ CORRECT - matches PHP dimensions
+&__image {
+    width: 100%;
+    aspect-ratio: 470 / 350;
+    object-fit: cover;
+}
+
+// Or using explicit dimensions
+&__image-wrapper {
+    width: 29.375rem; // 470px in rem (470/16)
+    height: 21.875rem; // 350px in rem (350/16)
+}
+```
+
+## Mobile-First Approach (CRITICAL)
+
+### Always Write Mobile Styles First
+
+Start with mobile styles, then add breakpoints for larger screens using `mq-up` mixin.
+
+```scss
+.section-content {
+    // Mobile styles first (no media query)
+    display: flex;
+    flex-direction: column;
+    gap: var(--ts-gutter-width, 2rem);
+    padding: var(--ts-gutter-width, 2rem);
+
+    @include mixins.mq-up(md) {
+        // Tablet and up
+        flex-direction: row;
+        padding: var(--ts-row-gap-medium, 3rem);
+    }
+
+    @include mixins.mq-up(lg) {
+        // Desktop and up
+        gap: var(--ts-row-gap-large, 4rem);
+    }
+}
+```
+
+**Available breakpoints**: xs (0), sm (576px), md (768px), lg (992px), xl (1200px), xxl (1400px)
+
+## BEM Naming (CRITICAL)
+
+### Use BEM with Maximum One Level Deep
+
+```scss
+.section-content {
+    $self: &;
+
+    // Element
+    &__header {
+        // ...
+    }
+
+    &__content {
+        // ...
+    }
+
+    // Modifier on block
+    &--dark {
+        background-color: var(--ts-color-primary, blue);
+
+        // Reference element within modifier
+        #{$self}__header {
+            color: var(--ts-color-white, white);
+        }
+    }
+
+    // Modifier on element
+    &__button {
+        &--active {
+            // ...
+        }
+    }
+}
+```
+
+### ❌ Never Nest Elements
+
+```scss
+// ❌ WRONG - nested elements
+.section-content {
+    &__header {
+        &__title {
+            // Too deep!
+        }
+    }
+}
+
+// ✅ CORRECT - flat structure
+.section-content {
+    &__header {
+        // ...
+    }
+
+    &__header-title {
+        // Combine if needed
+    }
+}
+```
+
+## Common Patterns
+
+### Border Radius
+
+Always use the CSS variable:
+
+```scss
+border-radius: var(--ts-border-radius-xs, 1rem);
+// Or for buttons
+border-radius: var(--ts-button-border-radius, 0.5rem);
+```
+
+### Transitions
+
+```scss
+transition: var(--ts-transition, all 0.3s ease-in);
+```
+
+### Shadows
+
+```scss
+box-shadow: var(--ts-shadow-sm, 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+
+&:hover {
+    box-shadow: var(--ts-shadow-sm-hover, 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15));
+}
+```
+
+### Card/Container Pattern
+
+```scss
+.section-card {
+    $self: &;
+
+    background-color: var(--ts-color-white, white);
+    border-radius: var(--ts-border-radius-xs, 1rem);
+    box-shadow: var(--ts-shadow-sm, 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+    padding: var(--ts-gutter-width, 2rem);
+    transition: var(--ts-transition, all 0.3s ease-in);
+
+    &:hover {
+        box-shadow: var(--ts-shadow-sm-hover, 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15));
+    }
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: var(--ts-border-radius-xs, 1rem);
+    }
+
+    &__content {
+        margin-top: var(--ts-gutter-width, 2rem);
+    }
+
+    &__title {
+        margin: 0;
+    }
+}
+```
+
+## Quick Reference
+
+| Property | Use |
+|----------|-----|
+| Spacing | `var(--ts-space-4, 1rem)`, `var(--ts-gutter-width, 2rem)`, or `var(--ts-row-gap-*, *)` |
+| Border radius | `var(--ts-radius-sm, …)` or legacy `var(--ts-border-radius-xs, 1rem)` |
+| Button radius | `var(--ts-button-border-radius, 0.5rem)` or `var(--ts-radius-pill, 9999px)` |
+| Transition | Prefer property lists + `var(--ts-duration-base)` / `var(--ts-easing-standard)`; legacy `--ts-transition` still exists |
+| Elevation | `var(--ts-elevation-1, …)` (legacy `--ts-shadow-sm` still works) |
+| Colors | Prefer semantic `--ts-color-text` / `--ts-color-action`; always check `StylingComponent.php` |
+| Units | Always `rem` |
+| Fallbacks | Always color names, never hex |
+
+## Related Rules
+
+- Media queries: [050-responsive-media-queries.mdc](mdc:.cursor/rules/050-responsive-media-queries.mdc)
+- BEM conventions: [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc)
+- Code formatting: [015-code-formatting-consistency.mdc](mdc:.cursor/rules/015-code-formatting-consistency.mdc)

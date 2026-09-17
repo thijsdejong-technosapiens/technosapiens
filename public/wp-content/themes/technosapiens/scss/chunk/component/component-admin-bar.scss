@@ -1,0 +1,44 @@
+@use "../../util/util-variables" as vars;
+@use "../../util/util-mixins" as mixins;
+
+html.ts-has-admin-bar {
+    margin-top: 0 !important;
+
+    @media screen and (max-width: 782px) {
+        #wpadminbar {
+            position: absolute;
+        }
+    }
+
+    body {
+        padding-top: vars.$adminBarSizeMobile;
+
+        @media screen and (min-width: 781px) {
+            .ts-header {
+                top: vars.$adminBarSizeMobile;
+            }
+        }
+
+        @media screen and (max-width: 782px) {
+            padding-top: vars.$adminBarSizeDesktop;
+        }
+    }
+
+    #wpadminbar {
+        #wp-admin-bar-customize, #wp-admin-bar-updates, #wp-admin-bar-comments, #wp-admin-bar-index-status {
+            display: none !important;
+        }
+
+        .toggle-light-admin-bar .ab-item {
+            cursor: pointer;
+
+            svg {
+                width: 1.25em;
+                height: 1.25em;
+                margin-right: .5em;
+                vertical-align: middle;
+                margin-top: -.25em;
+            }
+        }
+    }
+}

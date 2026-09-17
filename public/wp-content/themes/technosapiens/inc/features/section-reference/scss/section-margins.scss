@@ -1,0 +1,50 @@
+@use "sass:list";
+@use "sass:math";
+
+@use "../../../../scss/util/util-variables" as vars;
+@use "../../../../scss/util/util-mixins" as mixins;
+
+$margins: 'smaller', 'small', 'regular', 'medium', 'large', 'larger';
+$largeMargins: 'medium', 'large', 'larger';
+
+@each $margin in $margins {
+    .section[data-mt="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        margin-top: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+
+    .section[data-mb="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        margin-bottom: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+
+    .section[data-pt="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        padding-top: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+
+    .section[data-pb="#{$margin}"] {
+        $i: list.index($margins, $margin);
+        padding-bottom: calc(#{math.div($i, 2)} * #{vars.$gutter-width});
+    }
+}
+
+@include mixins.mq-down('md') {
+    @each $largeMargin in $largeMargins {
+        .section[data-mt="#{$largeMargin}"] {
+            margin-top: calc(#{vars.$gutter-width} * 1.5);
+        }
+
+        .section[data-mb="#{$largeMargin}"] {
+            margin-bottom: calc(#{vars.$gutter-width} * 1.5);
+        }
+
+        .section[data-pt="#{$largeMargin}"] {
+            padding-top: calc(#{vars.$gutter-width} * 1.5);
+        }
+
+        .section[data-pb="#{$largeMargin}"] {
+            padding-bottom: calc(#{vars.$gutter-width} * 1.5);
+        }
+    }
+}

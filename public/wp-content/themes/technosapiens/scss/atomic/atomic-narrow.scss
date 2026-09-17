@@ -1,0 +1,8 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.ts-narrow {
+    max-width: calc(var(--ts-narrow-width, 1000px) + var(--ts-gutter-width, 2rem)) !important;
+    margin-right: auto;
+    margin-left: auto;
+}

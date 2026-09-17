@@ -1,0 +1,301 @@
+---
+description: JavaScript organization, file placement, KISS principle, and standards.
+alwaysApply: false
+---
+# JavaScript Organization Standards
+
+This document covers the core organization and file structure for JavaScript in the Techno Sapiens theme. For specialized topics, see the related documentation:
+
+- [JavaScript OOP Patterns](mdc:.cursor/rules/041-javascript-oop-patterns.mdc) - Class structure and patterns
+- [Code Splitting](mdc:.cursor/rules/042-javascript-code-splitting.mdc) - Dynamic imports and lazy loading
+- [JavaScript Best Practices](mdc:.cursor/rules/043-javascript-best-practices.mdc) - KISS principle, accessibility, and frameworks policy
+
+## Keep JavaScript in Dedicated Files, Never Inline
+
+JavaScript should **always** be placed in dedicated `.js` files and **never** included directly in PHP or HTML files.
+
+### Proper JavaScript File Placement
+
+1. **Section-specific JS**: `sections/[section-slug]/js/[section-slug].js` (enqueued by `SectionReferenceTrait` when `$hasScript = true`)
+2. **Shared functionality**: `js/lib/`, `js/functions/`, `js/utils/`, `js/chunk/`
+3. **Conditional loading**: Use dynamic imports in `technosapiens-frontend.js` for theme-wide features
+
+### ✅ Correct Approach (Conditional Loading)
+
+```javascript
+// In public/wp-content/themes/technosapiens/js/technosapiens-frontend.js:
+initMainNavigation() {
+    const $mainNavigationElement = document.querySelector('.main-navigation')
+    if ($mainNavigationElement && this.windowWidth > this.mobileBreakPoint) {
+        import(/* webpackChunkName: "main-navigation" */ "./lib/MainNavigation").then(({default: MainNavigation}) => {
+            new MainNavigation($mainNavigationElement)
+        }).catch((error) => console.log("Error importing main-navigation:", error))
+    }
+}
+```
+
+### ❌ Incorrect Approach
+
+Do not use inline `<script>` tags in PHP/HTML.
+Do not load JS unconditionally with static imports at the top level if it's not needed on every page.
+
+## Directory Structure and Naming Conventions
+
+The JavaScript files should be organized according to the established project structure:
+
+```
+js/
+├── technosapiens-frontend.js  # Main frontend entry
+├── technosapiens-admin.js     # Main admin entry
+├── lib/                       # Shared classes (MainNavigation, SideNavigation, Dialog, …)
+├── functions/                 # Standalone functionality (hover-intent, …)
+├── chunk/                     # Feature bundles (mega-menu, search-plugin, …)
+├── utils/                     # Helpers (scroll-utils, translations, …)
+└── initDialogs.js
+
+sections/[section-slug]/js/    # Section JS (webpack entry, enqueued by SectionReferenceTrait)
+    └── section-content.js
+```
+
+## Coding Standards and Best Practices
+
+1. **Use ES6+ Features**
+   - Arrow functions, const/let, classes, modules, etc.
+   - Modern class syntax for OOP
+   - Class fields for properties
+   - Template literals for string interpolation
+   - Destructuring for imports and objects
+   - Spread operator for arrays
+
+   ```javascript
+   // Class fields
+   class Frontend {
+       windowWidth = 0
+       supportsHover = window.matchMedia('(hover: hover)').matches && !('ontouchstart' in window)
+       mobileBreakPoint = 1023
+   }
+
+   // Arrow functions
+   const $hoverIntentElements = Array.from(document.querySelectorAll('.hover-intent'))
+
+   // Template literals
+   const $inputElement = $containerElement.querySelector(`${isTextarea ? `textarea` : `input`}`)
+
+   // Destructuring
+   import(/* webpackChunkName: "main-navigation" */ "./classes/MainNavigation")
+       .then(({default: MainNavigation}) => {
+           new MainNavigation($mainNavigationElement)
+       })
+
+   // Spread operator
+   const selectors = [...Array.from(document.querySelectorAll('.material-input'))]
+   ```
+
+2. **Use Dynamic Imports for Code Splitting**
+   - Lazy load features only when needed
+   - Include webpack chunk naming comments
+   - See [Code Splitting](mdc:.cursor/rules/042-javascript-code-splitting.mdc) for detailed patterns
+
+3. **Follow Consistent Naming Conventions**
+   - Use camelCase for variables and functions
+   - Use PascalCase for classes
+   - Use UPPER_SNAKE_CASE for constants
+   - **Prefix DOM element variables with `$`**
+   - For file names:
+     - Use kebab-case.js for section-specific files (e.g., section-content.js)
+     - Use camelCase.js for functionality/class files (e.g., articleClickTracking.js)
+
+   ```javascript
+   // ✅ Correct naming
+   class MaterialInput {}                              // PascalCase for classes
+   const CSS_CLASS_ACTIVE = 'is-active'                // UPPER_SNAKE_CASE for constants
+   const windowWidth = 1024                            // camelCase for variables
+   const $containerElement = document.querySelector('.container')  // $ prefix for DOM elements
+   const $toggleButtons = Array.from(...)              // $ prefix for DOM element arrays
+   ```
+
+4. **Document Your Code**
+   - Include JSDoc comments for functions and methods
+   - Document parameters, return types, and exceptions
+   - Add descriptive comments for complex logic
+   - See [JavaScript OOP Patterns](mdc:.cursor/rules/041-javascript-oop-patterns.mdc) for JSDoc examples
+
+5. **Apply Proper Error Handling**
+   - Use try/catch blocks for error-prone code
+   - Validate constructor parameters
+   - Provide fallbacks where appropriate
+   - Log errors in a user-friendly way
+   - Handle import errors with .catch()
+
+   ```javascript
+   // Parameter validation
+   constructor($containerElement = null) {
+       if ($containerElement === null || !($containerElement instanceof Element)) {
+           throw new Error('Missing required parameter `$containerElement`')
+       }
+   }
+
+   // Import error handling
+   import(/* webpackChunkName: "hover-intent" */ "./functions/hover-intent")
+       .then(({default: initHoverIntent}) => {
+           initHoverIntent($hoverIntentElements)
+       })
+       .catch((error) => console.log("Error importing hover-intent:", error))
+   ```
+
+6. **Semicolon Usage**
+
+   - **Avoid unnecessary semicolons**: Rely on JavaScript's Automatic Semicolon Insertion (ASI). Do not end statements with semicolons unless absolutely necessary to prevent ambiguity (which is rare, but can occur when a line starts with `(` or `[`).
+
+   ```javascript
+   // ✅ GOOD:
+   const y = 10
+   console.log(y)
+
+   // ❌ BAD:
+   const x = 5;
+   console.log(x);
+   ```
+
+## Adding New Features
+
+When implementing new JavaScript functionality:
+
+1. Create a dedicated file in the appropriate directory
+2. Export the functionality as an ES module
+3. Add an initialization method in the Frontend class
+4. Use conditional loading to only load the JavaScript when needed
+
+### Standard Implementation Pattern
+
+```javascript
+// In js/functions/featureName.js:
+/**
+ * Initialize feature functionality
+ * @param {Object} options - Configuration options
+ */
+const initFeature = (options = {}) => {
+    // Check if required elements exist
+    const elements = document.querySelectorAll('.feature-selector');
+    if (!elements.length) return;
+
+    // Feature implementation
+    elements.forEach(element => {
+        // Initialize feature for each element
+    });
+};
+
+export default initFeature;
+
+// In public/wp-content/themes/technosapiens/js/technosapiens-frontend.js:
+static initFeature() {
+    if (document.querySelector('.feature-selector')) {
+        import(/* webpackChunkName: "feature-name" */ "./functions/featureName")
+            .then(({ default: initFeature }) => {
+                initFeature();
+            })
+            .catch((error) => console.log("Error loading featureName", error));
+    }
+}
+```
+
+## AJAX Implementation (Using Fetch)
+
+Prefer the modern Fetch API over jQuery for AJAX calls. Always include a WordPress Nonce for security.
+
+**PHP (Register & Localize):**
+```php
+// In your PHP class:
+add_action('wp_ajax_my_action_name', [$this, 'handleMyAjaxAction']);
+add_action('wp_ajax_nopriv_my_action_name', [$this, 'handleMyAjaxAction']);
+
+// When enqueuing your script:
+wp_localize_script(self::SECTION_ID . '_scripts', 'myAjax', [
+    'ajaxUrl' => admin_url('admin-ajax.php'),
+    'nonce'   => wp_create_nonce('my_ajax_nonce_action')
+]);
+```
+
+**JavaScript (Fetch Call):**
+```javascript
+const submitMyData = async (someData) => {
+    const formData = new FormData()
+    formData.append('action', 'my_action_name')
+    formData.append('nonce', myAjax.nonce) // Use localized nonce
+    formData.append('myData', someData)
+
+    try {
+        const response = await fetch(myAjax.ajaxUrl, { // Use localized URL
+            method: 'POST',
+            body: formData
+        })
+
+        if (!response.ok) {
+            throw new Error(`Server responded with status: ${response.status}`)
+        }
+
+        const result = await response.json()
+
+        if (result.success) {
+            // Handle successful response (result.data)
+            console.log('Success:', result.data)
+        } else {
+            // Handle WordPress error response (result.data)
+            console.error('API Error:', result.data)
+        }
+    } catch (error) {
+        console.error('Fetch Error:', error)
+        // Handle network/fetch errors
+    }
+}
+```
+
+## PHP to JavaScript Data Transfer
+
+Use WordPress's data transfer mechanisms rather than hardcoding values:
+
+1. For the main frontend script, use `wp_localize_script()` in your theme's functions.php
+2. For dynamic imports, use data attributes or HTML elements to pass data
+
+### NEVER ASK THE DEVELOPER TO PLACE INLINE SCRIPTS
+
+Always use the appropriate JavaScript organization pattern and ask the developer where to place the file if clarification is needed.
+
+## Related Documentation
+
+For more specialized topics, see:
+
+- **[JavaScript OOP Patterns](mdc:.cursor/rules/041-javascript-oop-patterns.mdc)** - ES6 classes, constructor patterns, state management, event handling, JSDoc documentation, and section templates
+- **[Code Splitting](mdc:.cursor/rules/042-javascript-code-splitting.mdc)** - Conditional loading, device-specific loading, per-section loading, webpack magic comments, and performance patterns
+- **[JavaScript Best Practices](mdc:.cursor/rules/043-javascript-best-practices.mdc)** - KISS principle, progressive enhancement, accessibility patterns, front-end frameworks policy, and advanced patterns
+
+## Quick Reference
+
+### File Organization
+- Section JS: `sections/[section-slug]/js/[section-slug].js`
+- Shared classes: `js/lib/ClassName.js`
+- Shared functions: `js/functions/featureName.js`
+- Utilities: `js/utils/utilityName.js`
+
+### Naming Conventions
+- Classes: `PascalCase`
+- Variables/Functions: `camelCase`
+- Constants: `UPPER_SNAKE_CASE`
+- DOM Elements: `$prefixed`
+- Files (sections): `kebab-case.js`
+- Files (classes/functions): `camelCase.js`
+
+### Always
+- ✅ Use dynamic imports for code splitting
+- ✅ Validate constructor parameters
+- ✅ Handle import errors with .catch()
+- ✅ Document with JSDoc comments
+- ✅ Use feature detection
+- ✅ Prefix DOM elements with $
+
+### Never
+- ❌ Inline JavaScript in PHP/HTML
+- ❌ Use jQuery in custom code
+- ❌ Load JavaScript unconditionally
+- ❌ Use frameworks (React, Vue, Angular)
+- ❌ Ignore error handling

@@ -1,0 +1,175 @@
+---
+description: Generate client-facing documentation for WordPress sections, post types, or features in Dutch
+alwaysApply: false
+---
+# WordPress Sectie/Feature Documentatie Generator
+
+Wanneer gevraagd wordt om documentatie te genereren voor een WordPress sectie, post type, of nieuwe functionaliteit:
+
+## Analyseer de Code
+
+### 1. Section PHP Class / Post Type
+- Haal de beschrijving en naam op
+- Analyseer velden en functionaliteit
+- Let op image sizes en configuraties
+
+### 2. ACF JSON Bestanden
+- Parse field definities
+- Let op `conditional_logic` voor afhankelijke velden
+- Vertaal technische namen naar praktische beschrijvingen
+
+### 3. Templates
+- Begrijp hoe het praktisch wordt gebruikt
+- Identificeer belangrijke gebruikersinteracties
+
+## Genereer een HANDLEIDING.md
+
+Maak een `HANDLEIDING.md` bestand in de sectie/feature directory met deze structuur:
+
+```markdown
+# [Sectie/Feature Naam]
+
+## Sectie toevoegen
+
+Ga naar **Pages > Add New** (of bewerk een bestaande pagina), klik op de **+** knop en zoek naar "[Sectie Naam]".
+
+## Instellingen
+
+### [Veldnaam]
+[Korte uitleg wat het doet en welke opties er zijn]
+
+### [Veldnaam 2]
+[Korte uitleg]
+
+[Voor conditional velden: vermeld wanneer ze zichtbaar zijn]
+
+## Handige tips
+
+- Upload afbeeldingen van [specifieke afmetingen] voor het beste resultaat
+- [Andere concrete, praktische tip]
+- [Eventuele waarschuwing indien relevant]
+
+[Indien relevant: korte opmerking over technische details zoals responsive gedrag]
+```
+
+## Schrijfstijl
+
+### ✅ Wel:
+- **Toon**: Direct, praktisch, zonder poespas (zoals een collega die uitlegt)
+- **Taal**: Nederlands, geen technisch jargon
+- **Structuur**: Kort en to-the-point
+- **Vetgedrukte UI elementen**: **Add New**, **Pages**, etc.
+- **Concrete getallen**: Afmetingen, aantallen waar relevant
+
+### ❌ Niet:
+- Emojis
+- AI-achtige structuren zoals "Overzicht" secties
+- Uitgebreide introducties
+- "Stap 1/2/3" labels
+- "Doel/Gebruik/Gedrag" opsommingen
+- Technische termen zonder uitleg
+
+## Voorbeelden
+
+### ✅ GOED (kort en direct):
+```markdown
+### Preset
+Kies of de afbeelding links of rechts moet staan.
+```
+
+### ❌ FOUT (te uitgebreid):
+```markdown
+### Preset (Layout keuze)
+**Doel**: Bepaal aan welke kant de afbeelding en de content worden getoond
+**Gebruik**: Kies de layout die het beste past bij je pagina-ontwerp
+**Opties**:
+- Image left with content right
+- Content left with image right
+```
+
+### ✅ GOED (conditional veld):
+```markdown
+### Background Image
+Upload een achtergrondafbeelding voor de hero sectie. Aanbevolen afmeting: 1920x1080 pixels.
+
+### Background Overlay
+Alleen zichtbaar wanneer een background image is geselecteerd. Kies een kleur voor de overlay die over de afbeelding komt.
+```
+
+### ✅ GOED (praktische tip):
+```markdown
+## Handige tips
+
+- Upload afbeeldingen van minimaal 1920x1080 pixels voor scherpte op grote schermen
+- Gebruik afbeeldingen in WebP formaat voor snellere laadtijden
+- Test altijd op mobiel, de afbeelding wordt op kleine schermen bijgesneden
+```
+
+## Speciale Gevallen
+
+### Voor Repeater/Group Velden:
+```markdown
+### Items
+Voeg meerdere items toe via de **+ Add Item** knop. Elk item heeft:
+- **Titel**: Korte kop boven het item
+- **Beschrijving**: Uitgebreide tekst onder de titel
+- **Icoon**: Kies een icoon uit de lijst
+```
+
+### Voor Conditional Logic:
+Vermeld altijd duidelijk wanneer velden verschijnen:
+```markdown
+### Video URL
+Alleen zichtbaar wanneer "Media Type" is ingesteld op "Video".
+```
+
+### Voor Image Sizes:
+Gebruik concrete afmetingen uit de code:
+```markdown
+### Afbeelding Desktop
+Aanbevolen afmeting: 830x500 pixels.
+
+### Afbeelding Mobiel
+Aanbevolen afmeting: 375x300 pixels.
+```
+
+## Praktisch Voorbeeld
+
+Hieronder een volledig voorbeeld van een goede `HANDLEIDING.md`:
+
+```markdown
+# Hero Sectie
+
+## Sectie toevoegen
+
+Ga naar **Pages > Add New** (of bewerk een bestaande pagina), klik op de **+** knop en zoek naar "Hero".
+
+## Instellingen
+
+### Titel
+De hoofdtekst die groot en vet wordt weergegeven.
+
+### Ondertitel
+Kleinere tekst onder de titel. Optioneel.
+
+### Achtergrondafbeelding
+Upload een afbeelding van minimaal 1920x1080 pixels.
+
+### Achtergrondkleur
+Alleen zichtbaar wanneer geen achtergrondafbeelding is geselecteerd. Kies een kleur voor de achtergrond.
+
+### Call-to-Action Knop
+Tekst en link voor de knop. Laat leeg om geen knop te tonen.
+
+## Handige tips
+
+- Gebruik afbeeldingen met een rustige achtergrond zodat de tekst goed leesbaar blijft
+- Test altijd op mobiel, tekst wordt op kleine schermen anders weergegeven
+- Voor de beste prestaties: gebruik WebP formaat
+```
+
+## Output Locatie
+
+- **Secties**: Plaats `HANDLEIDING.md` in de sectie directory (`sections/[section-slug]/HANDLEIDING.md`)
+- **Post Types**: Plaats in een docs directory bij de post type code
+- **Features**: Overleg met de gebruiker waar het bestand moet komen

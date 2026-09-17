@@ -1,0 +1,132 @@
+{
+    "key": "group_6156aaf3cead0",
+    "title": "Section settings",
+    "fields": [
+        {
+            "key": "field_6a4a4ab0b6dc0",
+            "label": "Section margin top",
+            "name": "section_margin_top",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mt-0": "None",
+                "mt-xs": "Extra small margin",
+                "mt-s": "Small margin",
+                "mt-m": "Default margin",
+                "mt-lg": "Large margin",
+                "mt-xl": "Extra large margin"
+            },
+            "default_value": "mt-0",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0,
+            "pll_default_value": "mt-0"
+        },
+        {
+            "key": "field_6156ab4c687e8",
+            "label": "Section margin bottom",
+            "name": "section_margin_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mb-0": "None",
+                "mb-xs": "Extra small margin",
+                "mb-s": "Small margin",
+                "mb-m": "Default margin",
+                "mb-lg": "Large margin",
+                "mb-xl": "Extra large margin"
+            },
+            "default_value": "mb-0",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0,
+            "pll_default_value": "mb-0"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-accordion"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-cta-banner"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-page-buttons"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-content"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-stats"
+            }
+        ]
+    ],
+    "menu_order": 99,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "pll_display_field_instructions": 1,
+    "modified": 1789399366
+}

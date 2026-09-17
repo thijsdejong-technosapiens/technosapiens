@@ -1,0 +1,110 @@
+---
+description: Workflow for creating new Techno Sapiens page builder sections. Guides the AI step-by-step.
+alwaysApply: false
+---
+
+# Techno Sapiens Section Creation Workflow
+
+Create a new page builder **section** in the Techno Sapiens theme. Follow [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc) and the boilerplate in [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc).
+
+**Canonical reference:** `public/wp-content/themes/technosapiens/sections/section-content`. Copy that structure. Do not use EVO column-based `blocks/` patterns.
+
+## Handling User Prompts & ACF Confirmation
+
+1. **Identify the section.** From the prompt (e.g. "content", "hero"). The folder slug is always `section-[name]` in kebab-case. Example: content → `section-content`. Call this `[section-slug]`.
+
+2. **Design reference.** If the prompt has no Figma link, screenshot, or detailed description, **stop** and ask for it. Do not proceed.
+
+3. **ACF fields.**
+    * If the user listed fields, use those.
+    * If fields are missing or vague: analyse the design, propose fields (repeaters for lists, image as ACF image returning an array like `section-content`), explain choices, then ask: "Does this look correct, or would you like adjustments?"
+    * **Do not generate code** until the user confirms.
+
+## After Confirmation
+
+4. **Folder** under `/public/wp-content/themes/technosapiens/sections/[section-slug]/`:
+
+    ```
+    [section-slug]/
+    ├── [SectionName].php
+    ├── partials/
+    │   └── [section-slug].php
+    ├── scss/
+    │   └── [section-slug].scss
+    ├── acf-json/
+    │   └── [section-slug].json
+    ├── js/                    (only if JS is required)
+    │   └── [section-slug].js
+    └── preview/               (optional editor preview)
+        └── [section-slug].jpg
+    ```
+
+    Example: `section-content` → class `SectionContent`.
+
+5. **PHP class.** Thin class like `SectionContent.php`: extend `Singleton`, `use SectionReferenceTrait`, define `SECTION_ID` / `SECTION_SLUG`, call `registerReferenceSection()` in the constructor, implement `getSectionLabel()`. Do **not** copy ACF registration, enqueue, or `render()` into the class — the trait owns those.
+
+6. **Partial.** Match `partials/section-content.php`:
+    * `get_field('field_name')` with **no** `$post_id`
+    * `SectionReferencePartial::getContainerClasses('[section-slug]')` (adds `section` + slug + optional bg modifiers)
+    * `SectionMargins::getMarginTop()` / `getMarginBottom()` → `data-mt` / `data-mb`
+    * Inner layout in `.container` or `.container.container--narrow`
+    * BEM on `[section-slug]`
+    * Escape output. WYSIWYG via `Formatting::toHtml()`
+    * Images via `Image::render()` with `'blockClass' => '[section-slug]'`
+
+7. **SCSS.** Only `scss/[section-slug].scss` unless editor-only styles are required. Top of file:
+
+    ```scss
+    @use "../../../scss/util/util-mixins" as mixins;
+    @use "../../../scss/util/util-variables" as vars;
+    ```
+
+    Nest `mq-up` (and `mq-down` only if needed) **inside** each element. Use `var(--ts-...)`.
+
+8. **JS.** Omit unless the design needs it. If present, pass `$hasScript = true` to `registerReferenceSection()`. Webpack picks up `js/[section-slug].js` as `[section-slug]-script.js`.
+
+9. **ACF JSON.** Confirmed fields only. Filename `[section-slug].json`. English title like `"Section - Content"`. All labels, choices, and button texts in English. Location: `acf\/section-[section-slug]`. **Do not add margin fields** — those live in theme `acf-json/section-settings.json`.
+
+10. **Shared section settings.** Add a location rule for `acf/section-[section-slug]` to `public/wp-content/themes/technosapiens/acf-json/section-settings.json`.
+
+11. **Register** in `Theme::initBlocks()` in `functions.php`: `[SectionName]::getInstance();`
+
+## Critical Corrections
+
+### Path
+
+✅ `public/wp-content/themes/technosapiens/sections/section-content/`  
+❌ `blocks/section-content/` or theme-root `sections/` without the theme path
+
+### Thin class + trait
+
+✅ `SectionReferenceTrait` + `registerReferenceSection()`  
+❌ Hand-rolled `acf_register_block_type`, `initFrontendAssets`, or `BlockMarginComponent`
+
+### Outer markup
+
+✅ Classes from `getContainerClasses()` (`section` + `[section-slug]`) and `data-mt` / `data-mb` from `SectionMargins`  
+❌ Legacy block wrappers, VisualMarginComponent preview strips, or custom margin ACF fields
+
+### Buttons
+
+```php
+<a href="<?php echo esc_url($url); ?>"
+   class="section-page-buttons__button ts-button ts-button--style-filled ts-button--color-primary">
+    <span class="ts-button__text"><?php echo esc_html($label); ?></span>
+</a>
+```
+
+### Checklist
+
+- `SECTION_ID` = `section_` + slug with underscores (`section_section_content`)
+- `SECTION_SLUG` kebab-case with `section-` prefix
+- `has_block('acf/section-' . self::SECTION_SLUG)`
+- Manifest keys: `[section-slug]-style.css` and optional `[section-slug]-script.js`
+- Partial uses `getContainerClasses` + `SectionMargins`
+- SCSS has the two `@use` lines
+- ACF location `acf/section-[section-slug]`
+- `section-settings.json` includes the new section
+- `initBlocks()` instantiates the class
+
+Keep it complete and simple. Do not invent helpers. After generation, ask the user to check the design.

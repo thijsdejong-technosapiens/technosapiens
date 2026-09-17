@@ -1,0 +1,53 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+#wpadminbar {
+
+    #wp-admin-bar-noindex-status, #wp-admin-bar-index-status {
+        &:hover, .ab-item {
+            color: var(--ts-color-body, white);
+        }
+    }
+
+    #wp-admin-bar-noindex-status {
+        background-color: var(--ts-color-password-weak, red);
+
+        &:hover, .ab-item {
+            background-color: var(--ts-color-password-weak, red);
+        }
+    }
+
+    #wp-admin-bar-index-status {
+        background-color: var(--ts-color-password-strong, green);
+
+        &:hover, .ab-item {
+            background-color: var(--ts-color-password-strong, green);
+        }
+    }
+
+    .indexable, .not-indexable {
+        position: relative;
+        float: left;
+        font: normal 18px/1 dashicons;
+        background-image: none !important;
+        margin-right: 5px;
+
+        &:before {
+            position: relative;
+            color: var(--ts-color-white, white);
+            top: 7px;
+        }
+    }
+
+    .not-indexable {
+        &:before {
+            content: "\f534";
+        }
+    }
+
+    .indexable {
+        &:before {
+            content: "\f12a";
+        }
+    }
+}

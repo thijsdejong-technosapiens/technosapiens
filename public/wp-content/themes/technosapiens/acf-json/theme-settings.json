@@ -1,0 +1,705 @@
+{
+    "key": "group_660eb7c3922f2",
+    "title": "Theme settings",
+    "fields": [
+        {
+            "key": "field_6130e0e291560",
+            "label": "Branding",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6130d48f7d95a",
+            "label": "Logo",
+            "name": "logo_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg"
+        },
+        {
+            "key": "field_6a3e902356927",
+            "label": "Logo - inverted",
+            "name": "logo_image_diap",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_68c6f4a18d201",
+            "label": "Login background",
+            "name": "login_background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Background image for the WordPress login screen. Minimum resolution: 1920 × 1080 px (Full HD).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": 1920,
+            "min_height": 1080,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_61557ed941c32",
+            "label": "Header",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6155784a68700",
+            "label": "Enable header button",
+            "name": "enable_header_button",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable this option to add a blue button to the right side of the top navigation on desktop and the header on mobile devices.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "47",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6155787d8a4d4",
+            "label": "Header button link",
+            "name": "header_button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6155784a68700",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_6a43515a3c294",
+            "label": "Google rating",
+            "name": "google_rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a43524e3c296",
+            "label": "Google review URL",
+            "name": "google_reviews_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6a4fc01hero01",
+            "label": "Hero module fallback images",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Set default hero images here. These are used when a page has no hero images of its own.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6a4fc01hero02",
+            "label": "Desktop image",
+            "name": "hm_fallback_image_desktop",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "<div style=\"margin-bottom: .5rem\">Fallback for pages without their own hero image (desktop). <strong>Regular height<\/strong> is used by default.<\/div><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Regular height:<\/strong> recommended dimensions <code>1728 × 496 px<\/code>.<\/div><div><strong>Large height:<\/strong> recommended dimensions <code>1728 × 784 px<\/code>.<\/div>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6a4fc01hero03",
+            "label": "Mobile image",
+            "name": "hm_fallback_image_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "<div style=\"margin-bottom: .5rem\">Fallback for pages without their own hero image (mobile). <strong>Regular height<\/strong> is used by default.<\/div><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Regular height:<\/strong> recommended dimensions <code>900 × 528 px<\/code>.<\/div><div><strong>Large height:<\/strong> recommended dimensions <code>900 × 900 px<\/code>.<\/div>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6a3fb96142604",
+            "label": "Contact details",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6a3e910133214",
+            "label": "Contact details",
+            "name": "contact_data",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "ts_simple",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6a3fb98642605",
+            "label": "Emergency number",
+            "name": "emergency_phone_number",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6a4233ad22ddd",
+            "label": "Emergency number text",
+            "name": "emergency_phone_number_kopie",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a3fb98642605",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62837614e5de3",
+            "label": "Social media settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6283a74fe28c9",
+            "label": "Social media links",
+            "name": "social_media_links",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Use the fields below to configure your social media pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "New link",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6283a807e28cb",
+                    "label": "Social type",
+                    "name": "social_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Select one of the available social media types. This will determine which icon is shown.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "phone": "Phone",
+                        "email": "Email",
+                        "facebook": "Facebook",
+                        "twitter": "Twitter",
+                        "linkedin": "LinkedIn",
+                        "tiktok": "TikTok",
+                        "instagram": "Instagram",
+                        "pinterest": "Pinterest",
+                        "flickr": "Flickr",
+                        "youtube": "YouTube",
+                        "vimeo": "Vimeo",
+                        "snapchat": "Snapchat",
+                        "soundcloud": "Soundcloud",
+                        "spotify": "Spotify"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "array",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6283a74fe28c9",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_6283a797e28ca",
+                    "label": "Social link",
+                    "name": "social_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Enter the link of the company social media page here.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6283a807e28cb",
+                                "operator": "!=",
+                                "value": "phone"
+                            },
+                            {
+                                "field": "field_6283a807e28cb",
+                                "operator": "!=",
+                                "value": "email"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_6283a74fe28c9"
+                },
+                {
+                    "key": "field_62a84b6cf423a",
+                    "label": "Phone number",
+                    "name": "social_phone",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Enter the company phone number. Example: <code>+31850080200<\/code>",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6283a807e28cb",
+                                "operator": "==",
+                                "value": "phone"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "tel:",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_6283a74fe28c9"
+                },
+                {
+                    "key": "field_62a84bff3e44a",
+                    "label": "Email address",
+                    "name": "social_email",
+                    "aria-label": "",
+                    "type": "email",
+                    "instructions": "Enter the company email address. Example: <code>wordpress@technosapiens.nl<\/code>",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6283a807e28cb",
+                                "operator": "==",
+                                "value": "email"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "mailto:",
+                    "append": "",
+                    "parent_repeater": "field_6283a74fe28c9"
+                }
+            ]
+        },
+        {
+            "key": "field_624c212e8b55b",
+            "label": "404 page",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_624c229a6bed8",
+            "label": "Custom 404 page",
+            "name": "404_page_id",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Optionally use the content of the selected WordPress page instead of the default 404 page. This page will automatically get excluded from the sitemap.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_67642af7daf5b",
+            "label": "Mapbox",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67642afcdaf5c",
+            "label": "Mapbox Access Token",
+            "name": "mapbox_access_token",
+            "aria-label": "",
+            "type": "password",
+            "instructions": "In order to use Mapbox you need to generate an access token and enter it here - please see the <a target=\"_blank\" href=\"https:\/\/docs.mapbox.com\/help\/tutorials\/get-started-tokens-api\/\">official documentation<\/a> for more information.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "allow_in_bindings": 1,
+            "placeholder": "Add your Mapbox Access Token",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62c43766e986e",
+            "label": "Google Maps",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_62c43797e986f",
+            "label": "Google Maps API key",
+            "name": "google_maps_api_key",
+            "aria-label": "",
+            "type": "password",
+            "instructions": "In order to use Google maps you need to generate an API key and enter it here - please see the <a target=\"_blank\" href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key#get-an-api-key\">official documentation<\/a> for more information.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Add your Google Api Key",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f9e62ed3f76",
+            "label": "SEO settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_64f9e657d3f77",
+            "label": "Extra robots.txt content",
+            "name": "extra_robotstxt_content",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optionally add some extra content below your sitemaps in the robots.txt file of the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 20,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1789399366
+}

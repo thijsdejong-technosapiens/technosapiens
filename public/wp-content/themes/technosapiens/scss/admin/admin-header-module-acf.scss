@@ -1,0 +1,20 @@
+#acf-header-module {
+    .acf-field[data-name="hm_content"] iframe {
+        height: 150px !important;
+        min-height: 150px !important;
+    }
+
+    .acf-field[data-name="hm_iwc_content"] iframe {
+        height: 150px !important;
+        min-height: 150px !important;
+    }
+
+    .acf-field[data-name="hm_iwbc_content_bottom"] iframe {
+        height: 150px !important;
+        min-height: 150px !important;
+    }
+
+    .acf-field[data-name="hm_iwbc_overlay_strength"] input[type=number] {
+        width: 4em !important;
+    }
+}

@@ -1,0 +1,29 @@
+---
+description: security: REST routes, AJAX, nonces, capabilities, CSRF, IDOR, $_GET/$_POST, unserialize, Gravity Forms tracking
+alwaysApply: false
+---
+
+# Theme security (trust boundaries)
+
+Apply when adding or changing REST/AJAX endpoints, query-param handlers, forms, Gravity Forms tracking, or any `$_GET` / `$_POST` / `$_REQUEST` that changes state or returns data. Escaping details stay in [030-php-html-templating.mdc](mdc:.cursor/rules/030-php-html-templating.mdc). Do not mass-escape existing templates ([015-code-formatting-consistency.mdc](mdc:.cursor/rules/015-code-formatting-consistency.mdc)).
+
+## Must-dos
+
+- REST: deny by default. Do not use `permission_callback => '__return_true'` unless the payload is already public published content. Allowlist `post_type`. Cap `posts_per_page`. Prefer IDs/URLs over raw HTML in JSON.
+- State changes need a nonce and a capability check. Do not write user meta or options from an unauthenticated GET.
+- Do not load Gravity Forms entries or other private records from a guessable query parameter. Use a token, or keep tracking server-side.
+- Sanitize on input. Escape on output. Never `unserialize()` untrusted or stored third-party values; prefer `maybe_unserialize()` only when the source is trusted.
+- Do not log passwords, tokens, or form field values. `Log::log` is debug-only (`WP_DEBUG` + `WP_DEBUG_LOG`).
+- New JS: no `innerHTML` / `eval` with unsanitized strings. Pass data via `wp_localize_script` or data attributes.
+
+```php
+register_rest_route($namespace, '/get-items/', [
+    'methods' => 'GET',
+    'callback' => [$this, 'getItems'],
+    'permission_callback' => '__return_true', // only if results are public posts
+    'args' => [
+        'pt' => ['sanitize_callback' => 'sanitize_key'],
+        'ppp' => ['sanitize_callback' => 'absint'],
+    ],
+]);
+```

@@ -1,0 +1,40 @@
+@use "util-variables" as vars;
+@use "util-mixins" as mixins;
+
+// Single family — weight selects the face. Load only shipped weights (200–600).
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 200;
+    src: url('#{vars.$font-path}/poppins-v24-latin-200/poppins-v24-latin-200.woff2') format('woff2'),
+         url('#{vars.$font-path}/poppins-v24-latin-200/poppins-v24-latin-200.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{vars.$font-path}/poppins-v24-latin-regular/poppins-v24-latin-regular.woff2') format('woff2'),
+         url('#{vars.$font-path}/poppins-v24-latin-regular/poppins-v24-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    src: url('#{vars.$font-path}/poppins-v24-latin-500/poppins-v24-latin-500.woff2') format('woff2'),
+         url('#{vars.$font-path}/poppins-v24-latin-500/poppins-v24-latin-500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    src: url('#{vars.$font-path}/poppins-v24-latin-600/poppins-v24-latin-600.woff2') format('woff2'),
+         url('#{vars.$font-path}/poppins-v24-latin-600/poppins-v24-latin-600.woff') format('woff');
+}

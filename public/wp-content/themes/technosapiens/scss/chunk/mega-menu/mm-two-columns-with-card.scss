@@ -1,0 +1,260 @@
+@use "../../util/util-variables" as vars;
+@use "../../util/util-mixins" as mixins;
+
+$self: ".tcwc-preset";
+
+#{$self} {
+
+    &__row {
+        display: flex;
+        margin-left: 0 !important;
+
+        //remove EZPZ column padding to eliminate gaps for seamless hover
+        > .col:not(:last-child) {
+            padding: 0 !important;
+
+            //add visual separation without creating hover gaps
+            border-right: 1px solid var(--ts-color-light, lightgrey);
+        }
+    }
+
+    &__column {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-height: calc(90vh - (var(--ts-nav-height-top, 2.5rem) + var(--ts-nav-height, 3.75rem)) - 4rem);
+    }
+
+    &__column-wrapper {
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        //internal spacing for visual comfort without creating hover gaps
+        //add horizontal padding inside each column wrapper
+        padding: 1rem;
+
+        //first column: no left padding (flush to edge)
+        .tcwc-preset__column--level-one & {
+            padding-left: 0;
+        }
+
+        //last column: no right padding (flush to edge)  
+        .tcwc-preset__col:last-child & {
+            padding-left: 0;
+        }
+
+        //add fade effect on top and bottom of scrollable content
+        mask-image: linear-gradient(to bottom, transparent, var(--ts-color-white, white) 1rem, var(--ts-color-white, white) calc(100% - 1rem), transparent);
+
+        //style scrollbar
+        &::-webkit-scrollbar {
+            width: .25rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--ts-color-primary, blue);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--ts-horizontal-ruler-color, grey);
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+
+        //first level menu container - always visible
+        &--first {
+            display: flex;
+        }
+
+        //apply dimming only when any level 1 trigger is expanded
+        &:has(#{$self}__trigger[aria-expanded="true"]) {
+
+            //make the level 1 item that has the active submenu darker
+            #{$self}__item:has(> #{$self}__trigger[aria-expanded="true"]) {
+                background-color: var(--ts-color-light, lightgray);
+            }
+        }
+    }
+
+    &__submenu {
+        display: none;
+        flex-direction: column;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__item {
+        position: relative;
+        transition: .1s ease-in-out all;
+        background-color: transparent;
+        display: flex; //all items visible by default
+
+        //items in submenus are controlled by parent submenu visibility
+        #{$self}__submenu:not(#{$self}__submenu--active) & {
+            display: none;
+        }
+
+        &:hover {
+            background-color: var(--ts-color-light, lightgray);
+        }
+
+        //style current menu item with underline
+        &--current {
+            > #{$self}__link {
+                > #{$self}__link-text {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: currentColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &__trigger {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        padding: 1rem;
+        outline-offset: -2px;
+        border: none;
+
+        &-icon {
+            width: .75em;
+            height: .75em;
+            flex-shrink: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: .75em 1em;
+        text-decoration: none;
+        position: relative;
+        outline-offset: -2px;
+    }
+
+    &__link-text {
+        position: relative;
+    }
+
+    &__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__cta-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__cta-image-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 2/1;
+        background-color: var(--ts-color-light, lightgray);
+        border-radius: var(--ts-border-radius, .25rem) var(--ts-border-radius, .25rem) 0 0;
+        flex-shrink: 0;
+    }
+
+    &__cta-image-placeholder {
+        display: block;
+        height: 25%;
+        width: auto;
+        opacity: .25;
+        transition: var(--ts-transition-hover-transform, transform .3s ease-in-out);
+        flex-shrink: 0;
+    }
+
+    &__cta-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__cta-meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-grow: 1;
+    }
+
+    &__cta-meta-top {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    &__cta-title-link {
+        text-decoration: none;
+        outline-offset: -2px;
+    }
+
+    &__cta-title {
+        display: block;
+        margin: 0;
+    }
+
+    &__cta-text {
+        display: block;
+        margin: 0;
+    }
+
+    &__cta-button {
+        align-self: flex-start;
+
+        @include mixins.mq-down(sm) {
+            width: 100%;
+            align-self: stretch;
+        }
+    }
+
+    &__parent-title-link {
+        transition: .1s ease-in-out all;
+
+        &:hover {
+            background-color: var(--ts-color-light, lightgray);
+        }
+    }
+
+    &__parent-title {
+        display: none;
+        margin-bottom: .25rem;
+
+        &--active {
+            display: block;
+        }
+
+        &--main {
+            display: block; // <-- main parent title always visible
+        }
+    }
+}

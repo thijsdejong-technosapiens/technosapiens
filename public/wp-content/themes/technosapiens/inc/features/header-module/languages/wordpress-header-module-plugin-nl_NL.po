@@ -1,0 +1,735 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Header Module Plugin\n"
+"POT-Creation-Date: 2025-07-15 14:17+0200\n"
+"PO-Revision-Date: 2025-07-15 14:17+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wordpress-header-module-plugin.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/components/AcfFieldGroupComponent.php:80
+msgid ""
+"Use the switch below to enable or disable the header module for this page."
+msgstr ""
+"Gebruik de schakelaar hieronder om de header module te activeren of "
+"deactiveren voor deze pagina."
+
+#: classes/components/AcfFieldGroupComponent.php:91
+#: presets/image-simple/ImageSimplePreset.php:1026
+#: presets/image-simple/ImageSimplePreset.php:1046
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1107
+#: presets/image-with-content/ImageWithContentPreset.php:816
+msgid "Enabled"
+msgstr "Actief"
+
+#: classes/components/AcfFieldGroupComponent.php:92
+#: presets/image-simple/ImageSimplePreset.php:1027
+#: presets/image-simple/ImageSimplePreset.php:1047
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1108
+#: presets/image-with-content/ImageWithContentPreset.php:817
+msgid "Disabled"
+msgstr "Inactief"
+
+#: classes/components/AcfFieldGroupComponent.php:109
+msgid "Preset"
+msgstr "Preset"
+
+#: classes/components/AcfFieldGroupComponent.php:112
+msgid "Choose one of the available header module presets."
+msgstr "Kies één van de beschikbare header module presets."
+
+#: classes/components/AcfFieldGroupComponent.php:140
+msgid "Hero module"
+msgstr "Hero module"
+
+#: presets/image-simple/ImageSimplePreset.php:49
+msgid "Full width image banner"
+msgstr "Volledig brede banner"
+
+#: presets/image-simple/ImageSimplePreset.php:94
+msgid "Desktop small"
+msgstr "Desktop klein"
+
+#: presets/image-simple/ImageSimplePreset.php:107
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:105
+#: presets/image-with-content/ImageWithContentPreset.php:105
+msgid "Desktop regular"
+msgstr "Desktop normaal"
+
+#: presets/image-simple/ImageSimplePreset.php:120
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:118
+#: presets/image-with-content/ImageWithContentPreset.php:118
+msgid "Desktop large"
+msgstr "Desktop groot"
+
+#: presets/image-simple/ImageSimplePreset.php:133
+#: presets/image-with-content/ImageWithContentPreset.php:131
+msgid "Mobile"
+msgstr "Mobiel"
+
+#: presets/image-simple/ImageSimplePreset.php:426
+#: presets/image-simple/ImageSimplePreset.php:455
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:457
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:486
+#: presets/image-with-content/ImageWithContentPreset.php:394
+#: presets/image-with-content/ImageWithContentPreset.php:423
+msgid "Size"
+msgstr "Formaat"
+
+#: presets/image-simple/ImageSimplePreset.php:467
+#: presets/image-simple/ImageSimplePreset.php:538
+#: presets/image-simple/ImageSimplePreset.php:609
+msgid "Small height"
+msgstr "Kleine hoogte"
+
+#: presets/image-simple/ImageSimplePreset.php:468
+#: presets/image-simple/ImageSimplePreset.php:539
+#: presets/image-simple/ImageSimplePreset.php:610
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:498
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:544
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:573
+#: presets/image-with-content/ImageWithContentPreset.php:435
+#: presets/image-with-content/ImageWithContentPreset.php:506
+msgid "Regular height"
+msgstr "Normale hoogte"
+
+#: presets/image-simple/ImageSimplePreset.php:469
+#: presets/image-simple/ImageSimplePreset.php:540
+#: presets/image-simple/ImageSimplePreset.php:611
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:499
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:545
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:574
+#: presets/image-with-content/ImageWithContentPreset.php:436
+#: presets/image-with-content/ImageWithContentPreset.php:507
+msgid "Large height"
+msgstr "Grote hoogte"
+
+#: presets/image-simple/ImageSimplePreset.php:480
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:510
+#: presets/image-with-content/ImageWithContentPreset.php:472
+msgid "Media"
+msgstr "Media"
+
+#: presets/image-simple/ImageSimplePreset.php:509
+msgid "Media type"
+msgstr "Mediatype"
+
+#: presets/image-simple/ImageSimplePreset.php:521
+msgid "Image background"
+msgstr "Afbeelding als achtergrond"
+
+#: presets/image-simple/ImageSimplePreset.php:522
+msgid "Video background (External MP4 link)"
+msgstr "Video als achtergrond (Externe MP4 link)"
+
+#: presets/image-simple/ImageSimplePreset.php:533
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:539
+#: presets/image-with-content/ImageWithContentPreset.php:501
+msgid "Image desktop"
+msgstr "Desktop afbeelding"
+
+#: presets/image-simple/ImageSimplePreset.php:538
+#: presets/image-simple/ImageSimplePreset.php:539
+#: presets/image-simple/ImageSimplePreset.php:540
+#: presets/image-simple/ImageSimplePreset.php:574
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:544
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:545
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:573
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:574
+#: presets/image-with-content/ImageWithContentPreset.php:506
+#: presets/image-with-content/ImageWithContentPreset.php:507
+#: presets/image-with-content/ImageWithContentPreset.php:533
+#, php-format
+msgid "The ideal size for this image is %1s wide and %2s high."
+msgstr "Het ideale formaat voor deze afbeelding is %1s breed en %2s hoog."
+
+#: presets/image-simple/ImageSimplePreset.php:571
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:568
+#: presets/image-with-content/ImageWithContentPreset.php:530
+msgid "Image mobile"
+msgstr "Mobiele afbeelding"
+
+#: presets/image-simple/ImageSimplePreset.php:603
+msgid "Video URL desktop"
+msgstr "Video URL desktop"
+
+#: presets/image-simple/ImageSimplePreset.php:609
+#: presets/image-simple/ImageSimplePreset.php:610
+#: presets/image-simple/ImageSimplePreset.php:611
+#: presets/image-simple/ImageSimplePreset.php:643
+#, php-format
+msgid "The ideal size for this video is %1s wide and %2s high."
+msgstr "Het ideale formaat voor deze video is %1s breed en %2s hoog."
+
+#: presets/image-simple/ImageSimplePreset.php:637
+msgid "Video URL mobile"
+msgstr "Video URL mobiel"
+
+#: presets/image-simple/ImageSimplePreset.php:669
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:597
+msgid "Focus point"
+msgstr "Focus punt"
+
+#: presets/image-simple/ImageSimplePreset.php:672
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:600
+msgid ""
+"Optionally choose one of the available image focus points. The focus point "
+"determines which part of the image is visible when the image overflows the "
+"screen."
+msgstr ""
+"Kies één van de beschikbare focus punten (optioneel). Het focuspunt bepaalt "
+"welk deel van de afbeelding zichtbaar is wanneer de afbeelding groter is dan "
+"het scherm."
+
+#: presets/image-simple/ImageSimplePreset.php:681
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:609
+msgid "Left top"
+msgstr "Linksboven"
+
+#: presets/image-simple/ImageSimplePreset.php:682
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:610
+msgid "Left center"
+msgstr "Links in het midden"
+
+#: presets/image-simple/ImageSimplePreset.php:683
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:611
+msgid "Left bottom"
+msgstr "Linksonder"
+
+#: presets/image-simple/ImageSimplePreset.php:684
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:612
+msgid "Center top"
+msgstr "Boven in het midden"
+
+#: presets/image-simple/ImageSimplePreset.php:685
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:613
+msgid "Center center"
+msgstr "Gecentreerd"
+
+#: presets/image-simple/ImageSimplePreset.php:686
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:614
+msgid "Center bottom"
+msgstr "Onderaan in het midden"
+
+#: presets/image-simple/ImageSimplePreset.php:687
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:615
+msgid "Right top"
+msgstr "Rechtsboven"
+
+#: presets/image-simple/ImageSimplePreset.php:688
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:616
+msgid "Right center"
+msgstr "Rechts in het midden"
+
+#: presets/image-simple/ImageSimplePreset.php:689
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:617
+msgid "Right bottom"
+msgstr "Rechtsonder"
+
+#: presets/image-simple/ImageSimplePreset.php:701
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:629
+msgid "Overlay strength"
+msgstr "Overlay sterkte"
+
+#: presets/image-simple/ImageSimplePreset.php:704
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:632
+msgid ""
+"Optionally add a semi transparent layer over your image to improve the "
+"readability of the content."
+msgstr ""
+"Voeg een semi transparantie laag toe over de afbeelding om de leesbaarheid "
+"van de content te verbeteren (optioneel)."
+
+#: presets/image-simple/ImageSimplePreset.php:721
+#: presets/image-simple/ImageSimplePreset.php:842
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:649
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:905
+#: presets/image-with-content/ImageWithContentPreset.php:554
+#: presets/image-with-content/ImageWithContentPreset.php:632
+msgid "Content"
+msgstr "Content"
+
+#: presets/image-simple/ImageSimplePreset.php:750
+msgid "Alignment"
+msgstr "Uitlijning"
+
+#: presets/image-simple/ImageSimplePreset.php:762
+msgid "Left aligned content"
+msgstr "Links uitgelijnde content"
+
+#: presets/image-simple/ImageSimplePreset.php:763
+msgid "Centered content"
+msgstr "Gecentreerde content"
+
+#: presets/image-simple/ImageSimplePreset.php:774
+msgid "Top heading"
+msgstr "Bovenste heading"
+
+#: presets/image-simple/ImageSimplePreset.php:777
+msgid "Optionally add a small heading above your large heading."
+msgstr "Voeg een kleine heading toe boven je grote heading (optioneel)."
+
+#: presets/image-simple/ImageSimplePreset.php:793
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:678
+#: presets/image-with-content/ImageWithContentPreset.php:583
+msgid "Heading text"
+msgstr "Heading tekst"
+
+#: presets/image-simple/ImageSimplePreset.php:796
+#: presets/image-with-content/ImageWithContentPreset.php:586
+#, php-format
+msgid ""
+"Add a heading. If you want to highlight something. Add the following code: "
+"%1s"
+msgstr ""
+"Als je woorden wilt highlighten, kun je gebruik maken van de volgende code: "
+"%1s"
+
+#: presets/image-simple/ImageSimplePreset.php:796
+#: presets/image-with-content/ImageWithContentPreset.php:586
+msgid "{{I'm highlighted}} and i'm not"
+msgstr "{{ik ben gehighlight}} en ik niet"
+
+#: presets/image-simple/ImageSimplePreset.php:812
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:697
+#: presets/image-with-content/ImageWithContentPreset.php:602
+msgid "Heading tag"
+msgstr "Heading tag"
+
+#: presets/image-simple/ImageSimplePreset.php:815
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:700
+#: presets/image-with-content/ImageWithContentPreset.php:605
+msgid "Optionally use a different heading tag for SEO purposes."
+msgstr ""
+"Voor SEO doeleinden kun je eventueel een andere heading tag gebruiken "
+"(optioneel)."
+
+#: presets/image-simple/ImageSimplePreset.php:824
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:709
+#: presets/image-with-content/ImageWithContentPreset.php:614
+msgid "Heading one (H1)"
+msgstr "Heading één (H1)"
+
+#: presets/image-simple/ImageSimplePreset.php:825
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:710
+#: presets/image-with-content/ImageWithContentPreset.php:615
+msgid "Heading two (H2)"
+msgstr "Heading twee (H2)"
+
+#: presets/image-simple/ImageSimplePreset.php:826
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:711
+#: presets/image-with-content/ImageWithContentPreset.php:616
+msgid "Heading three (H3)"
+msgstr "Heading drie (H3)"
+
+#: presets/image-simple/ImageSimplePreset.php:827
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:712
+#: presets/image-with-content/ImageWithContentPreset.php:617
+msgid "Heading four (H4)"
+msgstr "Heading vier (H4)"
+
+#: presets/image-simple/ImageSimplePreset.php:828
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:713
+#: presets/image-with-content/ImageWithContentPreset.php:618
+msgid "Heading five (H5)"
+msgstr "Heading vijf (H5)"
+
+#: presets/image-simple/ImageSimplePreset.php:829
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:714
+#: presets/image-with-content/ImageWithContentPreset.php:619
+msgid "Heading six (H6)"
+msgstr "Heading zes (H6)"
+
+#: presets/image-simple/ImageSimplePreset.php:830
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:715
+#: presets/image-with-content/ImageWithContentPreset.php:620
+msgid "No heading tag (span)"
+msgstr "Geen heading tag (span)"
+
+#: presets/image-simple/ImageSimplePreset.php:845
+#: presets/image-with-content/ImageWithContentPreset.php:635
+msgid "Optionally add some content to display below your heading."
+msgstr "Voeg content toe onder je heading (optioneel)."
+
+#: presets/image-simple/ImageSimplePreset.php:861
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:968
+#: presets/image-with-content/ImageWithContentPreset.php:651
+msgid "Buttons"
+msgstr "Knoppen"
+
+#: presets/image-simple/ImageSimplePreset.php:864
+#: presets/image-with-content/ImageWithContentPreset.php:654
+msgid ""
+"Optionally add one or multiple buttons below the heading and content. The "
+"maximum amount of buttons that can be created is two."
+msgstr ""
+"Voeg één of meerdere knoppen toe onder je heading en content. Het maximale "
+"aantal buttons dat kan worden aangemaakt is twee."
+
+#: presets/image-simple/ImageSimplePreset.php:880
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:746
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:995
+#: presets/image-with-content/ImageWithContentPreset.php:670
+msgid "Button type"
+msgstr "Knop type"
+
+#: presets/image-simple/ImageSimplePreset.php:883
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:749
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:998
+#: presets/image-with-content/ImageWithContentPreset.php:673
+msgid "Select one of the available button types."
+msgstr "Kies één van de beschikbare knop types."
+
+#: presets/image-simple/ImageSimplePreset.php:892
+#: presets/image-with-content/ImageWithContentPreset.php:682
+msgid "Primary (default)"
+msgstr "Primair (standaard)"
+
+#: presets/image-simple/ImageSimplePreset.php:893
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:759
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1007
+#: presets/image-with-content/ImageWithContentPreset.php:683
+msgid "Secondary"
+msgstr "Secundair"
+
+#: presets/image-simple/ImageSimplePreset.php:894
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:760
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1008
+#: presets/image-with-content/ImageWithContentPreset.php:684
+msgid "Tertiary"
+msgstr "Tertiair"
+
+#: presets/image-simple/ImageSimplePreset.php:906
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:772
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1020
+#: presets/image-with-content/ImageWithContentPreset.php:696
+msgid "Button style"
+msgstr "Knop stijl"
+
+#: presets/image-simple/ImageSimplePreset.php:909
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:775
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1023
+#: presets/image-with-content/ImageWithContentPreset.php:699
+msgid "Select one of the available button styles."
+msgstr "Kies één van de beschikbare knop stijlen."
+
+#: presets/image-simple/ImageSimplePreset.php:932
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:799
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1047
+#: presets/image-with-content/ImageWithContentPreset.php:722
+msgid "Button link"
+msgstr "Knop link"
+
+#: presets/image-simple/ImageSimplePreset.php:935
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:802
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1050
+#: presets/image-with-content/ImageWithContentPreset.php:725
+msgid "Choose a link, target and text for your button."
+msgstr "Configureer de link, target en tekst van deze knop."
+
+#: presets/image-simple/ImageSimplePreset.php:949
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:816
+#: presets/image-with-content/ImageWithContentPreset.php:739
+msgid "Button size"
+msgstr "Knop formaat"
+
+#: presets/image-simple/ImageSimplePreset.php:952
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:819
+#: presets/image-with-content/ImageWithContentPreset.php:742
+msgid ""
+"Select one of the available button sizes. This size will be used for all of "
+"the buttons created above."
+msgstr ""
+"Kies één van de beschikbare knop formaten. Dit formaat zal worden gehanteerd "
+"voor alle knoppen die hieronder worden aangemaakt."
+
+#: presets/image-simple/ImageSimplePreset.php:968
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:835
+#: presets/image-with-content/ImageWithContentPreset.php:758
+msgid "Small"
+msgstr "Klein"
+
+#: presets/image-simple/ImageSimplePreset.php:969
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:836
+msgid "Medium"
+msgstr "Middelgroot"
+
+#: presets/image-simple/ImageSimplePreset.php:970
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:837
+msgid "Large (default)"
+msgstr "Groot (standaard)"
+
+#: presets/image-simple/ImageSimplePreset.php:971
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:838
+#: presets/image-with-content/ImageWithContentPreset.php:761
+msgid "Extra large"
+msgstr "Extra groot"
+
+#: presets/image-simple/ImageSimplePreset.php:983
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1064
+#: presets/image-with-content/ImageWithContentPreset.php:773
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+#: presets/image-simple/ImageSimplePreset.php:1013
+msgid "Remove bottom spacing"
+msgstr "Onderste witruimte verwijderen"
+
+#: presets/image-simple/ImageSimplePreset.php:1016
+msgid "Activate this option to remove the bottom spacing of this preset."
+msgstr ""
+"Activeer deze optie om de onderste witruimte van deze voorinstelling te "
+"verwijderen."
+
+#: presets/image-simple/ImageSimplePreset.php:1033
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1094
+#: presets/image-with-content/ImageWithContentPreset.php:803
+msgid "Remove automatic heading"
+msgstr "Verwijder automatische koptekst"
+
+#: presets/image-simple/ImageSimplePreset.php:1036
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1097
+#: presets/image-with-content/ImageWithContentPreset.php:806
+msgid ""
+"Enable this option to prevent the page from automatically displaying its "
+"title as a heading when no custom heading is set."
+msgstr ""
+"Schakel deze optie in om te voorkomen dat de paginatitel automatisch als "
+"koptekst wordt weergegeven als er geen aangepaste koptekst is ingesteld."
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:50
+msgid "Image with boxed content"
+msgstr "Afbeelding met content box"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:131
+msgid "Mobile regular"
+msgstr "Mobiel normaal"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:144
+msgid "Mobile large"
+msgstr "Mobiel groot"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:681
+msgid ""
+"Enter the text of your heading. When left empty; we will automatically "
+"display the title of this page."
+msgstr ""
+"Voer de titel van je heading in. Indien leeg gelaten tonen we de automatisch "
+"de titel van deze pagina."
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:727
+msgid "Button"
+msgstr "Knop"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:730
+msgid "Optionally add a button below your top heading."
+msgstr "Voeg een knop toe onder je bovenste heading (optioneel)."
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:758
+msgid "Primary"
+msgstr "Primair"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:850
+msgid "Box"
+msgstr "Box"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:879
+msgid "Module type"
+msgstr "Module type"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:882
+msgid ""
+"Optionally enable one of the available modules on the right side of the "
+"banner."
+msgstr ""
+"Activeer één van de beschikbare modules aan de rechterzijde van de banner."
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:891
+msgid "No module"
+msgstr "Geen module"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:892
+msgid "Text with button"
+msgstr "Tekst met knop"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:893
+msgid "Text with form"
+msgstr "Tekst met formulier"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:908
+msgid "Optionally add some content on the top side of the box."
+msgstr "Voeg content toe aan de bovenkant van de box (optioneel)."
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:939
+msgid "Form"
+msgstr "Formulier"
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:942
+msgid ""
+"Choose a Gravity Form to display in the box. Best results are achieved when "
+"using a form with a limited amount of fields."
+msgstr ""
+"Kies een Gravity Formulier om te tonen in de box. Dit werkt het beste "
+"wanneer je een formulier gebruikt met een gelimiteerd aantal velden."
+
+#: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:971
+msgid "Optionally add a button below the content of the content box."
+msgstr "Voeg een knop toe onder de content van de box (optioneel)."
+
+#: presets/image-with-content/ImageWithContentPreset.php:54
+msgid "Image with content"
+msgstr "Afbeelding met content"
+
+#: presets/image-with-content/ImageWithContentPreset.php:447
+msgid "Content layout"
+msgstr "Content layout"
+
+#: presets/image-with-content/ImageWithContentPreset.php:450
+msgid ""
+"Choose one of the available layouts for displaying your content and media."
+msgstr ""
+"Kies een van de beschikbare lay-outs voor het weergeven van uw content en "
+"media."
+
+#: presets/image-with-content/ImageWithContentPreset.php:459
+msgid "Content left with media right"
+msgstr "Content links met media rechts"
+
+#: presets/image-with-content/ImageWithContentPreset.php:460
+msgid "Media left with content right"
+msgstr "Media links met content rechts"
+
+#: presets/image-with-content/ImageWithContentPreset.php:759
+msgid "Medium (default)"
+msgstr "Medium (standaard)"
+
+#: presets/image-with-content/ImageWithContentPreset.php:760
+msgid "Large"
+msgstr "Groot"
+
+#: presets/image-with-content/ImageWithContentPreset.php:825
+msgid "Background color"
+msgstr "Achtergrond kleur"
+
+#: presets/image-with-content/ImageWithContentPreset.php:828
+msgid "Optionally choose one of the available background colors."
+msgstr "Kies één van de beschikbare achtergrond kleuren."
+
+#. Plugin Name of the plugin/theme
+msgid "WordPress header module"
+msgstr "WordPress header module"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://technosapiens.com/nl/"
+msgstr "https://technosapiens.com/nl/"
+
+#. Description of the plugin/theme
+msgid ""
+"Contains a set of header module presets to configure the hero section of "
+"every page within the website. 🚀"
+msgstr ""
+"Bevat een selectie van header module presets om de hero sectie van elke "
+"pagina binnen de website mee te configureren 🚀"
+
+#. Author of the plugin/theme
+msgid "Techno Sapiens"
+msgstr "Techno Sapiens"
+
+#~ msgid "Content with triangular image"
+#~ msgstr "Content met driehoekige afbeelding"
+
+#~ msgid "Video type"
+#~ msgstr "Video type"
+
+#~ msgid "Select a video type for your video popup."
+#~ msgstr "Kies een video type voor de video popup."
+
+#~ msgid "Vimeo"
+#~ msgstr "Vimeo"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "External MP4 link"
+#~ msgstr "Externe MP4 link"
+
+#~ msgid "WP Media (not recommended)"
+#~ msgstr "WP Media (niet raadzaam)"
+
+#~ msgid "Vimeo video ID"
+#~ msgstr "Vimeo video ID"
+
+#, php-format
+#~ msgid ""
+#~ "Enter the (numeric) Vimeo video ID which can be found within the embed "
+#~ "URL (e.g. %1s) in your Vimeo account. Example value: %2s"
+#~ msgstr ""
+#~ "Voer het (numerieke) Vimeo video ID in. Deze kun je vinden in de embed "
+#~ "URL (bijvoorbeeld %1s) van je Vimeo account. Voorbeeld waarde: %2s"
+
+#~ msgid "YouTube video URL"
+#~ msgstr "YouTube video URL"
+
+#, php-format
+#~ msgid "Enter a YouTube video link here. Example: %1s"
+#~ msgstr "Voer een YouTube video link in. Voorbeeld: %1s"
+
+#~ msgid "External video URL"
+#~ msgstr "Externe video URL"
+
+#~ msgid "Enter the URL for your externally hosted MP4 video."
+#~ msgstr "Voer de URL van de extern gehost MP4 video in."
+
+#~ msgid "WordPress media file"
+#~ msgstr "WordPress media bestand"
+
+#~ msgid "Select a MP4 video from the WP media library."
+#~ msgstr "Kies een MP4 video vanuit de WP media bibliotheek."
+
+#~ msgid "Tile top text"
+#~ msgstr "Tekst van bovenste tegel"
+
+#~ msgid "Add some content to display in top tile next to your image."
+#~ msgstr ""
+#~ "Voeg wat inhoud toe om weer te geven in de bovenste tegel naast de "
+#~ "afbeelding."
+
+#~ msgid "Tile bottom text"
+#~ msgstr "Tekst van onderste tegel"
+
+#~ msgid "Add some content to display in bottom tile next to your image."
+#~ msgstr ""
+#~ "Voeg wat inhoud toe om weer te geven in de onderste tegel naast de "
+#~ "afbeelding."
+
+#~ msgid "White color"
+#~ msgstr "Witte kleur"
+
+#~ msgid "Primary color"
+#~ msgstr "Primaire kleur"
+
+#~ msgid "Light blue color"
+#~ msgstr "Licht blauwe kleur"
+
+#~ msgid "Light purple color"
+#~ msgstr "Licht paarse kleur"
+
+#~ msgid "My epic translation string"
+#~ msgstr "Mijn epische vertaling"
+
+#~ msgid "The boilerplate for your next epic WordPress plugin 🚀"
+#~ msgstr "Het startpunt voor jouw volgende epische WordPress plugin 🚀"

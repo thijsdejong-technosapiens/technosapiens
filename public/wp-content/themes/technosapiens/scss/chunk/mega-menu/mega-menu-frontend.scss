@@ -1,0 +1,66 @@
+@use "../../util/util-mixins" as mixins;
+
+.mega-menu-navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: calc(var(--ts-nav-height-top, 2.5rem) + var(--ts-nav-height, 3.75rem));
+    left: 0;
+    width: 100%;
+    max-height: calc(90vh - var(--ts-nav-height-top, 2.5rem) - var(--ts-nav-height, 3.75rem));
+    background-color: var(--ts-color-white, white);
+    border: 1px solid var(--ts-horizontal-ruler-color, grey);
+    box-shadow: var(--ts-shadow-sm, none);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(2.5%);
+    transition: transform .1s ease-in-out, visibility .1s ease-in-out, opacity .1s ease-in-out;
+    z-index: 2;
+
+    button[id^="trigger-mm-"][aria-expanded="true"] ~ & {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+}
+
+.mega-menu-navigation__close-overlay {
+    position: fixed;
+    top: calc(var(--ts-nav-height-top, 2.5rem) + var(--ts-nav-height, 3.75rem));
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+    z-index: 1;
+
+    button[id^="trigger-mm-"][aria-expanded="true"] ~ & {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    @media (any-hover: hover) and (any-pointer: fine) {
+        pointer-events: none !important;
+    }
+}
+
+.mega-menu-navigation__close-wrapper {
+    border-bottom: 1px solid var(--ts-horizontal-ruler-color, grey);
+}
+
+.mega-menu-navigation__close-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem !important;
+}
+
+.mega-menu-navigation__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem !important;
+}

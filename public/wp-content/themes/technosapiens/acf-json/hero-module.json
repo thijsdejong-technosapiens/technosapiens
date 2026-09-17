@@ -1,0 +1,645 @@
+{
+    "key": "group_6a3ea37a53dda",
+    "title": "Hero module",
+    "fields": [
+        {
+            "key": "hm_tab_size",
+            "label": "Size",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "hm_size",
+            "label": "Size",
+            "name": "hm_size",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "regular": "Regular height",
+                "large": "Large height"
+            },
+            "default_value": "regular",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "allow_in_bindings": 1,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "hm_tab_media",
+            "label": "Media",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "hm_media_type",
+            "label": "Media type",
+            "name": "hm_media_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image as background",
+                "video": "Video as background (external MP4 link)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "image",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6a4fc01hero04",
+            "label": "Desktop image",
+            "name": "hm_image_desktop",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "<div style=\"margin-bottom: .5rem\">Image for desktop. The size depends on the <strong>Size<\/strong> setting.<\/div><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Regular height:<\/strong> recommended dimensions <code>1728 × 496 px<\/code>.<\/div><div><strong>Large height:<\/strong> recommended dimensions <code>1728 × 784 px<\/code>.<\/div>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "hm_media_type",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6a4fc01hero05",
+            "label": "Mobile image",
+            "name": "hm_image_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "<div style=\"margin-bottom: .5rem\">Image for mobile. The size depends on the <strong>Size<\/strong> setting.<\/div><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Regular height:<\/strong> recommended dimensions <code>900 × 528 px<\/code>.<\/div><div><strong>Large height:<\/strong> recommended dimensions <code>900 × 900 px<\/code>.<\/div>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "hm_media_type",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
+            "key": "hm_video_url_desktop",
+            "label": "Desktop video URL",
+            "name": "hm_video_url_desktop",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "<p>The public desktop MP4 video URL, including \"https:\/\/\".<\/p><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Small height:<\/strong> the ideal size for this video is <code>1920px<\/code> wide and <code>240px<\/code> high.<\/div><div style=\"margin-bottom: .5rem\"><strong>Regular height:<\/strong> the ideal size for this video is <code>1920px<\/code> wide and <code>480px<\/code> high.<\/div><div><strong>Large height:<\/strong> the ideal size for this video is <code>1920px<\/code> wide and <code>720px<\/code> high.<\/div>",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "hm_media_type",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "hm_video_url_mobile",
+            "label": "Mobile video URL",
+            "name": "hm_video_url_mobile",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "<p>The public mobile MP4 video URL, including \"https:\/\/\".<\/p><div style=\"margin-top: 1rem; margin-bottom: .5rem\">The ideal size for this video is <code>360px<\/code> wide and <code>360px<\/code> high.<\/div>",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "hm_media_type",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "hm_focus_point",
+            "label": "Focus point",
+            "name": "hm_focus_point",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose one of the available focus points (optional). The focus point determines which part of the image remains visible when the image is larger than the screen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left top": "Top left",
+                "left center": "Center left",
+                "left bottom": "Bottom left",
+                "center top": "Top center",
+                "center center": "Centered",
+                "center bottom": "Bottom center",
+                "right top": "Top right",
+                "right center": "Center right",
+                "right bottom": "Bottom right"
+            },
+            "default_value": "center center",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "hm_tab_content",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "hm_heading_text",
+            "label": "Heading text",
+            "name": "hm_heading_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "To highlight words, use the following syntax: <code>{{I am highlighted}} and I am not<\/code>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "hm_heading_tag",
+            "label": "Heading tag",
+            "name": "hm_heading_tag",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "For SEO purposes you can optionally use a different heading tag.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "Heading one (H1)",
+                "h2": "Heading two (H2)",
+                "h3": "Heading three (H3)",
+                "h4": "Heading four (H4)",
+                "h5": "Heading five (H5)",
+                "h6": "Heading six (H6)",
+                "span": "No heading tag (span)"
+            },
+            "default_value": "h1",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "hm_sub_heading",
+            "label": "Subheading",
+            "name": "hm_sub_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Add a small heading below your main heading (optional).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "hm_content",
+            "label": "Content",
+            "name": "hm_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Add content below your heading (optional).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "ts_simple",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "hm_buttons",
+            "label": "Buttons",
+            "name": "hm_buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add one or more buttons below your heading and content. The maximum number of buttons that can be created is two.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 2,
+            "layout": "block",
+            "button_label": "Add button",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "hm_button_type",
+                    "label": "Button type",
+                    "name": "hm_button_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Choose one of the available button types.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary (Default)",
+                        "secondary": "Secondary",
+                        "tertiary": "Tertiary"
+                    },
+                    "default_value": "primary",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "parent_repeater": "hm_buttons"
+                },
+                {
+                    "key": "hm_button_style",
+                    "label": "Button style",
+                    "name": "hm_button_style",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Choose one of the available button styles.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "filled": "Filled (Default)",
+                        "outlined": "Outlined",
+                        "text": "Text",
+                        "alternative": "Text alternative"
+                    },
+                    "default_value": "filled",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "parent_repeater": "hm_buttons"
+                },
+                {
+                    "key": "hm_button_link",
+                    "label": "Button link",
+                    "name": "hm_button_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Configure the link, target and text of this button.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "hm_buttons"
+                }
+            ]
+        },
+        {
+            "key": "hm_button_size",
+            "label": "Button size",
+            "name": "hm_button_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose one of the available button sizes. This size will be applied to all buttons created below.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "hm_buttons",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large (Default)",
+                "xlarge": "Extra large"
+            },
+            "default_value": "large",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6a3eb51109834",
+            "label": "Slot",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6a3eb51e09835",
+            "label": "Slot content type",
+            "name": "hm_slot_content",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "breadcrumbs": "Breadcrumbs",
+                "static-section": "Static section"
+            },
+            "default_value": "breadcrumbs",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6a3eb56909836",
+            "label": "Select static section",
+            "name": "hm_slot_static_section",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a3eb51e09835",
+                        "operator": "==",
+                        "value": "static-section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "static-block"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "hm_tab_advanced",
+            "label": "Advanced",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "hm_disable_automatic_heading",
+            "label": "Remove automatic heading",
+            "name": "hm_disable_automatic_heading",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable this option to prevent the page title from being displayed automatically as the heading when no custom heading is set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Enabled",
+            "ui_off_text": "Disabled",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1789399366
+}

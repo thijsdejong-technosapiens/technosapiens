@@ -1,0 +1,196 @@
+@use "../../util/util-variables" as vars;
+@use "../../util/util-mixins" as mixins;
+
+.hm-image-simple {
+    $self: &;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1728px;
+    margin: 0 auto calc(var(--ts-gutter-width, 2rem) * 2) auto;
+    width: 100%;
+
+    @include mixins.md-down {
+        margin: 0 auto var(--ts-gutter-width, 2rem) auto;
+    }
+
+    &--size-regular {
+        min-height: var(--ts-hero-height-mobile, 528px);
+
+        @include mixins.mq-up(lg) {
+            min-height: var(--ts-hero-height-regular, 496px);
+        }
+    }
+
+    &--size-large {
+        min-height: var(--ts-hero-height-mobile-large, 900px);
+
+        @include mixins.mq-up(lg) {
+            min-height: var(--ts-hero-height-large, 784px);
+        }
+    }
+
+    &--has-slot {
+        margin-bottom: 0;
+
+        @include mixins.md-down {
+            margin-bottom: 0;
+        }
+    }
+
+    &__slot-inner {
+        position: relative;
+        z-index: 30;
+        width: 100%;
+        background-color: var(--ts-color-light, white);
+        border-radius: var(--ts-border-radius-md, 2.25rem) var(--ts-border-radius-md, 2.25rem) 0 0;
+        margin-top: calc(var(--ts-border-radius-md, 2.25rem) * -1);
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+
+        @include mixins.mq-up(lg) {
+            padding: 1rem;
+        }
+
+        &--breadcrumbs {
+            padding: calc(var(--ts-border-radius-md, 2.25rem) / 2) var(--ts-border-radius-md, 2.25rem);
+        }
+    }
+
+    &__image-container {
+        z-index: 20;
+
+        &:before {
+            content: '';
+            background: var(--ts-gradient-primary, linear-gradient(180deg, #3E1F2A 0%, rgba(62, 31, 42, 0) 100%));
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            width: 100%;
+            height: var(--ts-hero-height-regular, 496px);
+        }
+    }
+
+    &__picture,
+    &__video {
+        object-position: center center;
+    }
+
+    &__picture,
+    &__image,
+    &__video {
+        z-index: 10;
+        object-fit: cover;
+    }
+
+    &__image,
+    &__image-container,
+    &__picture,
+    &__video {
+        height: 100% !important;
+    }
+
+    &__image-container,
+    &__picture,
+    &__image,
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    &__meta-container {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        z-index: 30;
+        margin-top: 11rem;
+        width: 100%;
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        z-index: 30;
+        margin-top: 11rem;
+        width: 100%;
+
+        >* {
+            margin: 0;
+        }
+
+        @include mixins.mq-up(lg) {
+            margin-top: 0;
+            margin-bottom: 6.5rem;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+    }
+
+    &__meta-top {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__heading {
+        color: var(--ts-font-color-white, white);
+    }
+
+    &__sub-heading {
+        font-size: 3rem;
+        line-height: 3.75rem;
+        font-family: var(--ts-font-light, sans-serif);
+        font-weight: var(--ts-font-weight-light, 200);
+        color: var(--ts-font-color-white, white);
+
+        @include mixins.mq-up(lg) {
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
+    }
+
+    &__highlight {
+        color: var(--ts-color-primary, blue);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        >p {
+            margin: 0;
+            color: var(--ts-font-color-white, white);
+            text-align: start !important;
+
+            a {
+                color: var(--ts-font-color-white, white) !important;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--ts-gutter-width, 2rem);
+        margin-top: calc(var(--ts-gutter-width, 2rem) / 2);
+
+        @include mixins.sm-down {
+            gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        }
+    }
+
+    &__button {
+        margin-bottom: 0;
+        width: auto !important;
+        font-weight: var(--ts-font-weight-bold, 800);
+    }
+}

@@ -1,0 +1,6 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+.hidden {
+    display: none;
+}

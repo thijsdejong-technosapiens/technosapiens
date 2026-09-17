@@ -1,0 +1,19 @@
+//WCAG 2.1 AA - handle skip link functionality - show the button on focus
+.ts-skip-link {
+    position: absolute;
+    overflow: hidden;
+    height: 1px !important;
+    width: 1px !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001; //header + 1
+    background-color: var(--ts-color-white, white);
+
+    &:focus-visible {
+        position: fixed;
+        width: auto !important;
+        height: auto !important;
+        clip: auto !important;
+    }
+}

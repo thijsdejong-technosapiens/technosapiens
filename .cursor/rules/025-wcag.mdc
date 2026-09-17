@@ -1,0 +1,35 @@
+---
+description: WCAG 2.1 AA — ts-sr-only, skip links, alt text, focus-visible, keyboard, aria, new-tab announcements
+alwaysApply: false
+---
+
+# WCAG 2.1 AA (theme primitives)
+
+Apply when adding or changing templates, links, images, forms, dialogs, or interactive JS. Skip for unrelated section/CSS work. Keyboard/focus-trap examples live in `043-javascript-best-practices.mdc`; image `alt` details in `070-image-handling.mdc`.
+
+## Existing helpers — reuse them
+
+- Visually hidden text: class `ts-sr-only` (not `hh-sr-only`, not `display: none`).
+- New-tab announcement: `WcagComponent::getSrLinkOpensInNewTabHtml()`.
+- Buttons/links: `ButtonComponent::render()` (adds `noopener`/`noreferrer` for `_blank`).
+- Skip link is already in `header.php` → `#ts-main`. Do not add a second one.
+- Focus: keep `:focus-visible` and `--ts-focus-ring` / `--ts-focus-ring-inverse`. Class `ts-no-outline` only when a component draws its own visible focus.
+
+```php
+<a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer">
+    <?php echo esc_html($label); ?>
+    <?php echo WcagComponent::getSrLinkOpensInNewTabHtml(); ?>
+</a>
+```
+
+## Must-dos for new UI
+
+- Icon-only controls get an `aria-label` (or visible text). Decorative SVG: `aria-hidden="true"` without `role="img"`.
+- Informative images: `Image::render()`. Decorative images: `'alt' => ''`.
+- Prefer native HTML (`button`, `a`, `label for`, `<dialog>`, `<details>`) over clickable `div`s.
+- Overlay/menu state: `aria-expanded` + `aria-controls`. Do not use positive `tabindex` (1, 2, 3).
+- Name, role, and value must stay in sync when JS toggles open/close.
+
+## Out of scope unless asked
+
+Do not restyle working templates for contrast or heading levels. Check 4.5:1 text / 3:1 UI contrast only when changing `StylingComponent` tokens or dark-background sections.

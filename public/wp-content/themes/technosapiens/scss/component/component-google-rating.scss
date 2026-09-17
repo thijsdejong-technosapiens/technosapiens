@@ -1,0 +1,60 @@
+@use "../util/util-variables" as vars;
+@use "../util/util-mixins" as mixins;
+
+$self: '.google-rating';
+
+.google-rating {
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        transition: var(--ts-transition, all 0.3s ease-in);
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        gap: 0.125rem;
+        color: #FBBC04;
+    }
+
+    &__star {
+        width: 1.4rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    &__score {
+        font-size: var(--ts-font-size-small, 0.875rem);
+        font-weight: var(--ts-font-weight-semibold, 600);
+        color: var(--ts-font-color-primary, black);
+        line-height: 1;
+    }
+
+    &__count {
+        font-size: var(--ts-font-size-small, 0.875rem);
+        color: var(--ts-font-color-primary, black);
+        opacity: 0.6;
+        line-height: 1;
+    }
+}
