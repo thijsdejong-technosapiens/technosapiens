@@ -5,7 +5,7 @@ use TechnoSapiens\Core\Link;
 use TechnoSapiens\Core\Image;
 
 $blogName = get_bloginfo('name');
-$logoId = get_field('logo_image', 'option') ?: '';
+$logoId = get_field('logo_image_diap', 'option') ?: '';
 $logoHtml = '';
 if ($logoId) $logoHtml = Image::render([
     'class' => 'ts-header__logo-image',

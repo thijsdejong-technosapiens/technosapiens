@@ -56,7 +56,7 @@ class StylingComponent extends Singleton {
         $cssVariables['color-danger-hover'] = (string) (new Hex($colorDanger))->darken(8);
         $cssVariables['color-on-primary'] = $colorWhite;
         $cssVariables['color-on-secondary'] = $colorWhite;
-        $cssVariables['color-on-tertiary'] = $colorWhite;
+        $cssVariables['color-on-tertiary'] = $colorPrimary;
         $cssVariables['color-on-danger'] = $colorWhite;
 
         return apply_filters('ts_css_variables', $cssVariables);

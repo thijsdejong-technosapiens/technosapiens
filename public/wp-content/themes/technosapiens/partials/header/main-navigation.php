@@ -158,7 +158,7 @@ if (!isset($items)) $items = [];
                     'text' => $headerButton->text,
                     'href' => $headerButton->url,
                     'target' => $headerButton->target,
-                    'type' => 'secondary',
+                    'type' => 'tertiary',
                     'style' => 'filled',
                     'size' => 'medium'
                 ]); ?>
