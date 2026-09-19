@@ -14,13 +14,13 @@ Use these versions to avoid incompatibility issues:
 
 ## Local setup (Herd)
 
-1. Open Herd and add the project root as a site: ```cd public``` & ```herd link websitename```
-2. Enable PHP 8.4 for this site: ```herd isolate 8.4 --site='websitename'```
+1. Open Herd and add the project root as a site: ```cd public``` & ```herd link technosapiens```
+2. Enable PHP 8.4 for this site: ```herd isolate 8.4 --site='technosapiens'```
 3. Enable HTTPS (secure) for this site: ```herd secure```
 
-Create a local database for the project (name it after the site, for example `myproject_loc`).
+Create a local database for the project (name it after the site, for example `technosapiens_loc`).
 
-The site should then be available at `https://myproject.test` (Herd uses the folder name by default).
+The site should then be available at `https://technosapiens.test` (Herd uses the folder name by default).
 
 ## Install Composer packages
 

@@ -68,10 +68,10 @@ class StylingComponent extends Singleton {
      * @return void
      */
     private function initCssVariables(): void {
-        $colorPrimary = '#9A3334';
-        $colorPrimaryDark = '#3E1F2A';
-        $colorSecondary = '#6699CD';
-        $colorTertiary = '#C3BDA2';
+        $colorPrimary = '#662264';
+        $colorPrimaryDark = '#4E134E';
+        $colorSecondary = '#E10F7E';
+        $colorTertiary = '#FDB500';
         $colorWhite = '#FFFFFF';
         $colorBlack = '#000000';
         $colorGrey = '#222222';
@@ -79,7 +79,7 @@ class StylingComponent extends Singleton {
         $colorBorder = '#EEEEEE';
         $colorBody = '#FFFFFF';
         $colorAccent = '#00132F';
-        $colorNav = '#434C58';
+        $colorNav = '#FFFFFF';
         $colorInputBg = '#EEEEEE';
         $colorInputDefault = '#CCCCCC';
         $colorInputFocus = '#666666';
@@ -88,7 +88,7 @@ class StylingComponent extends Singleton {
         $colorPasswordStrong = '#4db54f';
         $colorNotificationInfo = '#419ecd';
 
-        $fontSans = "'Poppins', sans-serif";
+        $fontSans = "'Plus Jakarta Sans', sans-serif";
 
         $elevation0 = 'none';
         $elevation1 = '0 4px 4px rgba(0,0,0,.1)';
@@ -212,12 +212,12 @@ class StylingComponent extends Singleton {
             'color-password-strong' => $colorPasswordStrong,
 
             // Font weights (match @font-face 200/400/500/600; bold maps to nearest loaded face)
-            'font-weight-light'     => 200,
-            'font-weight-semilight' => 300,
+            'font-weight-light'     => 400,
+            'font-weight-semilight' => 400,
             'font-weight-regular'   => 400,
             'font-weight-medium'    => 500,
-            'font-weight-semibold'  => 600,
-            'font-weight-bold'      => 600,
+            'font-weight-semibold'  => 700,
+            'font-weight-bold'      => 700,
 
             // --- Elevation (canonical) + legacy shadow aliases ---
             'elevation-0' => $elevation0,

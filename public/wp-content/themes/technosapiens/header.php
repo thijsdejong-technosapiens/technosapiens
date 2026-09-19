@@ -32,13 +32,11 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
         <title><?php wp_title('|', true, 'right'); ?></title>
         
         <link rel="prefetch" as="font"
-              href="<?php echo get_stylesheet_directory_uri() . '/fonts/poppins-v24-latin-500/poppins-v24-latin-200.woff2'; ?>"/>
+              href="<?php echo get_stylesheet_directory_uri() . '/fonts/plus-jakarta-sans-latin-regular/plus-jakarta-sans-latin-regular.woff2'; ?>"/>
         <link rel="prefetch" as="font"
-              href="<?php echo get_stylesheet_directory_uri() . '/fonts/poppins-v24-latin-regular/poppins-v24-latin-regular.woff2'; ?>"/>
+              href="<?php echo get_stylesheet_directory_uri() . '/fonts/plus-jakarta-sans-latin-500/plus-jakarta-sans-latin-500.woff2'; ?>"/>
         <link rel="prefetch" as="font"
-              href="<?php echo get_stylesheet_directory_uri() . '/fonts/poppins-v24-latin-500/poppins-v24-latin-500.woff2'; ?>"/>
-        <link rel="prefetch" as="font"
-              href="<?php echo get_stylesheet_directory_uri() . '/fonts/poppins-v24-latin-600/poppins-v24-latin-600.woff2'; ?>"/>
+              href="<?php echo get_stylesheet_directory_uri() . '/fonts/plus-jakarta-sans-latin-700/plus-jakarta-sans-latin-700.woff2'; ?>"/>
         <?php wp_head(); ?>
     </head>
 
