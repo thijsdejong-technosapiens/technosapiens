@@ -5,12 +5,26 @@
     flex-direction: column;
     width: 100%;
     overflow: hidden;
+
+    &--horizontal {
+        flex-direction: row;
+
+        .gradient-band {
+            flex: 1 1 0;
+            width: auto;
+        }
+    }
+
+    &--vertical {
+        flex-direction: column;
+    }
 }
 
 .gradient-band {
     flex: none;
     width: 100%;
     height: var(--gradient-band-height, 2rem);
+    opacity: 0;
 
     &--medium {
         --gradient-band-height: 2.4rem;
@@ -50,5 +64,11 @@
 
     &--stop-7 {
         background-color: var(--ts-color-gradient-stop-7, purple);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gradient-band {
+        opacity: 1;
     }
 }

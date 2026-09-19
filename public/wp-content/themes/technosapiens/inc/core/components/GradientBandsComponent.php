@@ -12,6 +12,8 @@ class GradientBandsComponent {
     const BAND_CLASS = 'gradient-band';
 
     const SIZES = ['xlarge', 'large', 'medium', 'small'];
+    const AXES = ['vertical', 'horizontal'];
+    const STAGGER_MODES = ['start', 'end', 'center'];
     const STOP_COUNT = 7;
 
     /**
@@ -31,6 +33,8 @@ class GradientBandsComponent {
      * @type string $size Container size modifier (xlarge|large|medium|small). Defaults to 'large'.
      * @type string $bandSize Optional size modifier applied to every band.
      * @type array $stops Stop numbers to render (1–7). Defaults to 1→7→1.
+     * @type string $axis Layout axis (vertical|horizontal). Defaults to 'vertical'.
+     * @type string $staggerMode Stagger order (start|end|center). Defaults to 'start'.
      * @type string $class Extra CSS classes for the container.
      * @return string
      */
@@ -39,6 +43,8 @@ class GradientBandsComponent {
             'size' => 'large',
             'bandSize' => '',
             'stops' => self::getDefaultStops(),
+            'axis' => 'vertical',
+            'staggerMode' => 'start',
             'class' => '',
         ];
 
@@ -58,12 +64,20 @@ class GradientBandsComponent {
         $stops = array_map('intval', $stops);
         if (count($stops) === 0) $stops = self::getDefaultStops();
 
+        $axis = is_string($args['axis']) ? $args['axis'] : 'vertical';
+        if (!in_array($axis, self::AXES, true)) $axis = 'vertical';
+
+        $staggerMode = is_string($args['staggerMode']) ? $args['staggerMode'] : 'start';
+        if (!in_array($staggerMode, self::STAGGER_MODES, true)) $staggerMode = 'start';
+
         $extraClass = is_string($args['class']) ? $args['class'] : '';
 
         return Partial::render('components/component-gradient-bands', [
             'size' => $size,
             'bandSize' => $bandSize,
             'stops' => $stops,
+            'axis' => $axis,
+            'staggerMode' => $staggerMode,
             'class' => $extraClass,
             'containerClass' => self::CONTAINER_CLASS,
             'bandClass' => self::BAND_CLASS,

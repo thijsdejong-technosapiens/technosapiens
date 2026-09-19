@@ -30,11 +30,26 @@ class Frontend {
         //init public methods
         this.initMainNavigation()
         this.initSideNavigation()
+        this.initGradientBands()
 
         //init static methods
         Frontend.initGravityForms()
         Frontend.initMaterialInputs()
         Frontend.initScrollBehaviour()
+    }
+
+    /**
+     * Init gradient bands stagger fade-in
+     */
+    initGradientBands() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+        const $containers = document.querySelectorAll('.gradient-bands')
+        if ($containers.length === 0) return
+
+        import(/* webpackChunkName: "gradient-bands" */ "./lib/GradientBands").then(({default: GradientBands}) => {
+            new GradientBands($containers)
+        }).catch((error) => console.log("Something went wrong while importing the gradient-bands chunk..", error))
     }
 
     /**
