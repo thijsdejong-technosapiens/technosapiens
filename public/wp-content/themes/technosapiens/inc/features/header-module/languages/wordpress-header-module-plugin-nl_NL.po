@@ -28,16 +28,16 @@ msgstr ""
 "deactiveren voor deze pagina."
 
 #: classes/components/AcfFieldGroupComponent.php:91
-#: presets/image-simple/ImageSimplePreset.php:1026
-#: presets/image-simple/ImageSimplePreset.php:1046
+#: presets/main-hero/MainHeroPreset.php:1026
+#: presets/main-hero/MainHeroPreset.php:1046
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1107
 #: presets/image-with-content/ImageWithContentPreset.php:816
 msgid "Enabled"
 msgstr "Actief"
 
 #: classes/components/AcfFieldGroupComponent.php:92
-#: presets/image-simple/ImageSimplePreset.php:1027
-#: presets/image-simple/ImageSimplePreset.php:1047
+#: presets/main-hero/MainHeroPreset.php:1027
+#: presets/main-hero/MainHeroPreset.php:1047
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1108
 #: presets/image-with-content/ImageWithContentPreset.php:817
 msgid "Disabled"
@@ -55,33 +55,33 @@ msgstr "Kies één van de beschikbare header module presets."
 msgid "Hero module"
 msgstr "Hero module"
 
-#: presets/image-simple/ImageSimplePreset.php:49
+#: presets/main-hero/MainHeroPreset.php:49
 msgid "Full width image banner"
 msgstr "Volledig brede banner"
 
-#: presets/image-simple/ImageSimplePreset.php:94
+#: presets/main-hero/MainHeroPreset.php:94
 msgid "Desktop small"
 msgstr "Desktop klein"
 
-#: presets/image-simple/ImageSimplePreset.php:107
+#: presets/main-hero/MainHeroPreset.php:107
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:105
 #: presets/image-with-content/ImageWithContentPreset.php:105
 msgid "Desktop regular"
 msgstr "Desktop normaal"
 
-#: presets/image-simple/ImageSimplePreset.php:120
+#: presets/main-hero/MainHeroPreset.php:120
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:118
 #: presets/image-with-content/ImageWithContentPreset.php:118
 msgid "Desktop large"
 msgstr "Desktop groot"
 
-#: presets/image-simple/ImageSimplePreset.php:133
+#: presets/main-hero/MainHeroPreset.php:133
 #: presets/image-with-content/ImageWithContentPreset.php:131
 msgid "Mobile"
 msgstr "Mobiel"
 
-#: presets/image-simple/ImageSimplePreset.php:426
-#: presets/image-simple/ImageSimplePreset.php:455
+#: presets/main-hero/MainHeroPreset.php:426
+#: presets/main-hero/MainHeroPreset.php:455
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:457
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:486
 #: presets/image-with-content/ImageWithContentPreset.php:394
@@ -89,15 +89,15 @@ msgstr "Mobiel"
 msgid "Size"
 msgstr "Formaat"
 
-#: presets/image-simple/ImageSimplePreset.php:467
-#: presets/image-simple/ImageSimplePreset.php:538
-#: presets/image-simple/ImageSimplePreset.php:609
+#: presets/main-hero/MainHeroPreset.php:467
+#: presets/main-hero/MainHeroPreset.php:538
+#: presets/main-hero/MainHeroPreset.php:609
 msgid "Small height"
 msgstr "Kleine hoogte"
 
-#: presets/image-simple/ImageSimplePreset.php:468
-#: presets/image-simple/ImageSimplePreset.php:539
-#: presets/image-simple/ImageSimplePreset.php:610
+#: presets/main-hero/MainHeroPreset.php:468
+#: presets/main-hero/MainHeroPreset.php:539
+#: presets/main-hero/MainHeroPreset.php:610
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:498
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:544
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:573
@@ -106,9 +106,9 @@ msgstr "Kleine hoogte"
 msgid "Regular height"
 msgstr "Normale hoogte"
 
-#: presets/image-simple/ImageSimplePreset.php:469
-#: presets/image-simple/ImageSimplePreset.php:540
-#: presets/image-simple/ImageSimplePreset.php:611
+#: presets/main-hero/MainHeroPreset.php:469
+#: presets/main-hero/MainHeroPreset.php:540
+#: presets/main-hero/MainHeroPreset.php:611
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:499
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:545
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:574
@@ -117,34 +117,34 @@ msgstr "Normale hoogte"
 msgid "Large height"
 msgstr "Grote hoogte"
 
-#: presets/image-simple/ImageSimplePreset.php:480
+#: presets/main-hero/MainHeroPreset.php:480
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:510
 #: presets/image-with-content/ImageWithContentPreset.php:472
 msgid "Media"
 msgstr "Media"
 
-#: presets/image-simple/ImageSimplePreset.php:509
+#: presets/main-hero/MainHeroPreset.php:509
 msgid "Media type"
 msgstr "Mediatype"
 
-#: presets/image-simple/ImageSimplePreset.php:521
+#: presets/main-hero/MainHeroPreset.php:521
 msgid "Image background"
 msgstr "Afbeelding als achtergrond"
 
-#: presets/image-simple/ImageSimplePreset.php:522
+#: presets/main-hero/MainHeroPreset.php:522
 msgid "Video background (External MP4 link)"
 msgstr "Video als achtergrond (Externe MP4 link)"
 
-#: presets/image-simple/ImageSimplePreset.php:533
+#: presets/main-hero/MainHeroPreset.php:533
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:539
 #: presets/image-with-content/ImageWithContentPreset.php:501
 msgid "Image desktop"
 msgstr "Desktop afbeelding"
 
-#: presets/image-simple/ImageSimplePreset.php:538
-#: presets/image-simple/ImageSimplePreset.php:539
-#: presets/image-simple/ImageSimplePreset.php:540
-#: presets/image-simple/ImageSimplePreset.php:574
+#: presets/main-hero/MainHeroPreset.php:538
+#: presets/main-hero/MainHeroPreset.php:539
+#: presets/main-hero/MainHeroPreset.php:540
+#: presets/main-hero/MainHeroPreset.php:574
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:544
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:545
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:573
@@ -156,34 +156,34 @@ msgstr "Desktop afbeelding"
 msgid "The ideal size for this image is %1s wide and %2s high."
 msgstr "Het ideale formaat voor deze afbeelding is %1s breed en %2s hoog."
 
-#: presets/image-simple/ImageSimplePreset.php:571
+#: presets/main-hero/MainHeroPreset.php:571
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:568
 #: presets/image-with-content/ImageWithContentPreset.php:530
 msgid "Image mobile"
 msgstr "Mobiele afbeelding"
 
-#: presets/image-simple/ImageSimplePreset.php:603
+#: presets/main-hero/MainHeroPreset.php:603
 msgid "Video URL desktop"
 msgstr "Video URL desktop"
 
-#: presets/image-simple/ImageSimplePreset.php:609
-#: presets/image-simple/ImageSimplePreset.php:610
-#: presets/image-simple/ImageSimplePreset.php:611
-#: presets/image-simple/ImageSimplePreset.php:643
+#: presets/main-hero/MainHeroPreset.php:609
+#: presets/main-hero/MainHeroPreset.php:610
+#: presets/main-hero/MainHeroPreset.php:611
+#: presets/main-hero/MainHeroPreset.php:643
 #, php-format
 msgid "The ideal size for this video is %1s wide and %2s high."
 msgstr "Het ideale formaat voor deze video is %1s breed en %2s hoog."
 
-#: presets/image-simple/ImageSimplePreset.php:637
+#: presets/main-hero/MainHeroPreset.php:637
 msgid "Video URL mobile"
 msgstr "Video URL mobiel"
 
-#: presets/image-simple/ImageSimplePreset.php:669
+#: presets/main-hero/MainHeroPreset.php:669
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:597
 msgid "Focus point"
 msgstr "Focus punt"
 
-#: presets/image-simple/ImageSimplePreset.php:672
+#: presets/main-hero/MainHeroPreset.php:672
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:600
 msgid ""
 "Optionally choose one of the available image focus points. The focus point "
@@ -194,57 +194,57 @@ msgstr ""
 "welk deel van de afbeelding zichtbaar is wanneer de afbeelding groter is dan "
 "het scherm."
 
-#: presets/image-simple/ImageSimplePreset.php:681
+#: presets/main-hero/MainHeroPreset.php:681
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:609
 msgid "Left top"
 msgstr "Linksboven"
 
-#: presets/image-simple/ImageSimplePreset.php:682
+#: presets/main-hero/MainHeroPreset.php:682
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:610
 msgid "Left center"
 msgstr "Links in het midden"
 
-#: presets/image-simple/ImageSimplePreset.php:683
+#: presets/main-hero/MainHeroPreset.php:683
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:611
 msgid "Left bottom"
 msgstr "Linksonder"
 
-#: presets/image-simple/ImageSimplePreset.php:684
+#: presets/main-hero/MainHeroPreset.php:684
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:612
 msgid "Center top"
 msgstr "Boven in het midden"
 
-#: presets/image-simple/ImageSimplePreset.php:685
+#: presets/main-hero/MainHeroPreset.php:685
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:613
 msgid "Center center"
 msgstr "Gecentreerd"
 
-#: presets/image-simple/ImageSimplePreset.php:686
+#: presets/main-hero/MainHeroPreset.php:686
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:614
 msgid "Center bottom"
 msgstr "Onderaan in het midden"
 
-#: presets/image-simple/ImageSimplePreset.php:687
+#: presets/main-hero/MainHeroPreset.php:687
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:615
 msgid "Right top"
 msgstr "Rechtsboven"
 
-#: presets/image-simple/ImageSimplePreset.php:688
+#: presets/main-hero/MainHeroPreset.php:688
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:616
 msgid "Right center"
 msgstr "Rechts in het midden"
 
-#: presets/image-simple/ImageSimplePreset.php:689
+#: presets/main-hero/MainHeroPreset.php:689
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:617
 msgid "Right bottom"
 msgstr "Rechtsonder"
 
-#: presets/image-simple/ImageSimplePreset.php:701
+#: presets/main-hero/MainHeroPreset.php:701
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:629
 msgid "Overlay strength"
 msgstr "Overlay sterkte"
 
-#: presets/image-simple/ImageSimplePreset.php:704
+#: presets/main-hero/MainHeroPreset.php:704
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:632
 msgid ""
 "Optionally add a semi transparent layer over your image to improve the "
@@ -253,8 +253,8 @@ msgstr ""
 "Voeg een semi transparantie laag toe over de afbeelding om de leesbaarheid "
 "van de content te verbeteren (optioneel)."
 
-#: presets/image-simple/ImageSimplePreset.php:721
-#: presets/image-simple/ImageSimplePreset.php:842
+#: presets/main-hero/MainHeroPreset.php:721
+#: presets/main-hero/MainHeroPreset.php:842
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:649
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:905
 #: presets/image-with-content/ImageWithContentPreset.php:554
@@ -262,33 +262,33 @@ msgstr ""
 msgid "Content"
 msgstr "Content"
 
-#: presets/image-simple/ImageSimplePreset.php:750
+#: presets/main-hero/MainHeroPreset.php:750
 msgid "Alignment"
 msgstr "Uitlijning"
 
-#: presets/image-simple/ImageSimplePreset.php:762
+#: presets/main-hero/MainHeroPreset.php:762
 msgid "Left aligned content"
 msgstr "Links uitgelijnde content"
 
-#: presets/image-simple/ImageSimplePreset.php:763
+#: presets/main-hero/MainHeroPreset.php:763
 msgid "Centered content"
 msgstr "Gecentreerde content"
 
-#: presets/image-simple/ImageSimplePreset.php:774
+#: presets/main-hero/MainHeroPreset.php:774
 msgid "Top heading"
 msgstr "Bovenste heading"
 
-#: presets/image-simple/ImageSimplePreset.php:777
+#: presets/main-hero/MainHeroPreset.php:777
 msgid "Optionally add a small heading above your large heading."
 msgstr "Voeg een kleine heading toe boven je grote heading (optioneel)."
 
-#: presets/image-simple/ImageSimplePreset.php:793
+#: presets/main-hero/MainHeroPreset.php:793
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:678
 #: presets/image-with-content/ImageWithContentPreset.php:583
 msgid "Heading text"
 msgstr "Heading tekst"
 
-#: presets/image-simple/ImageSimplePreset.php:796
+#: presets/main-hero/MainHeroPreset.php:796
 #: presets/image-with-content/ImageWithContentPreset.php:586
 #, php-format
 msgid ""
@@ -298,18 +298,18 @@ msgstr ""
 "Als je woorden wilt highlighten, kun je gebruik maken van de volgende code: "
 "%1s"
 
-#: presets/image-simple/ImageSimplePreset.php:796
+#: presets/main-hero/MainHeroPreset.php:796
 #: presets/image-with-content/ImageWithContentPreset.php:586
 msgid "{{I'm highlighted}} and i'm not"
 msgstr "{{ik ben gehighlight}} en ik niet"
 
-#: presets/image-simple/ImageSimplePreset.php:812
+#: presets/main-hero/MainHeroPreset.php:812
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:697
 #: presets/image-with-content/ImageWithContentPreset.php:602
 msgid "Heading tag"
 msgstr "Heading tag"
 
-#: presets/image-simple/ImageSimplePreset.php:815
+#: presets/main-hero/MainHeroPreset.php:815
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:700
 #: presets/image-with-content/ImageWithContentPreset.php:605
 msgid "Optionally use a different heading tag for SEO purposes."
@@ -317,60 +317,60 @@ msgstr ""
 "Voor SEO doeleinden kun je eventueel een andere heading tag gebruiken "
 "(optioneel)."
 
-#: presets/image-simple/ImageSimplePreset.php:824
+#: presets/main-hero/MainHeroPreset.php:824
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:709
 #: presets/image-with-content/ImageWithContentPreset.php:614
 msgid "Heading one (H1)"
 msgstr "Heading één (H1)"
 
-#: presets/image-simple/ImageSimplePreset.php:825
+#: presets/main-hero/MainHeroPreset.php:825
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:710
 #: presets/image-with-content/ImageWithContentPreset.php:615
 msgid "Heading two (H2)"
 msgstr "Heading twee (H2)"
 
-#: presets/image-simple/ImageSimplePreset.php:826
+#: presets/main-hero/MainHeroPreset.php:826
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:711
 #: presets/image-with-content/ImageWithContentPreset.php:616
 msgid "Heading three (H3)"
 msgstr "Heading drie (H3)"
 
-#: presets/image-simple/ImageSimplePreset.php:827
+#: presets/main-hero/MainHeroPreset.php:827
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:712
 #: presets/image-with-content/ImageWithContentPreset.php:617
 msgid "Heading four (H4)"
 msgstr "Heading vier (H4)"
 
-#: presets/image-simple/ImageSimplePreset.php:828
+#: presets/main-hero/MainHeroPreset.php:828
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:713
 #: presets/image-with-content/ImageWithContentPreset.php:618
 msgid "Heading five (H5)"
 msgstr "Heading vijf (H5)"
 
-#: presets/image-simple/ImageSimplePreset.php:829
+#: presets/main-hero/MainHeroPreset.php:829
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:714
 #: presets/image-with-content/ImageWithContentPreset.php:619
 msgid "Heading six (H6)"
 msgstr "Heading zes (H6)"
 
-#: presets/image-simple/ImageSimplePreset.php:830
+#: presets/main-hero/MainHeroPreset.php:830
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:715
 #: presets/image-with-content/ImageWithContentPreset.php:620
 msgid "No heading tag (span)"
 msgstr "Geen heading tag (span)"
 
-#: presets/image-simple/ImageSimplePreset.php:845
+#: presets/main-hero/MainHeroPreset.php:845
 #: presets/image-with-content/ImageWithContentPreset.php:635
 msgid "Optionally add some content to display below your heading."
 msgstr "Voeg content toe onder je heading (optioneel)."
 
-#: presets/image-simple/ImageSimplePreset.php:861
+#: presets/main-hero/MainHeroPreset.php:861
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:968
 #: presets/image-with-content/ImageWithContentPreset.php:651
 msgid "Buttons"
 msgstr "Knoppen"
 
-#: presets/image-simple/ImageSimplePreset.php:864
+#: presets/main-hero/MainHeroPreset.php:864
 #: presets/image-with-content/ImageWithContentPreset.php:654
 msgid ""
 "Optionally add one or multiple buttons below the heading and content. The "
@@ -379,74 +379,74 @@ msgstr ""
 "Voeg één of meerdere knoppen toe onder je heading en content. Het maximale "
 "aantal buttons dat kan worden aangemaakt is twee."
 
-#: presets/image-simple/ImageSimplePreset.php:880
+#: presets/main-hero/MainHeroPreset.php:880
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:746
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:995
 #: presets/image-with-content/ImageWithContentPreset.php:670
 msgid "Button type"
 msgstr "Knop type"
 
-#: presets/image-simple/ImageSimplePreset.php:883
+#: presets/main-hero/MainHeroPreset.php:883
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:749
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:998
 #: presets/image-with-content/ImageWithContentPreset.php:673
 msgid "Select one of the available button types."
 msgstr "Kies één van de beschikbare knop types."
 
-#: presets/image-simple/ImageSimplePreset.php:892
+#: presets/main-hero/MainHeroPreset.php:892
 #: presets/image-with-content/ImageWithContentPreset.php:682
 msgid "Primary (default)"
 msgstr "Primair (standaard)"
 
-#: presets/image-simple/ImageSimplePreset.php:893
+#: presets/main-hero/MainHeroPreset.php:893
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:759
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1007
 #: presets/image-with-content/ImageWithContentPreset.php:683
 msgid "Secondary"
 msgstr "Secundair"
 
-#: presets/image-simple/ImageSimplePreset.php:894
+#: presets/main-hero/MainHeroPreset.php:894
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:760
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1008
 #: presets/image-with-content/ImageWithContentPreset.php:684
 msgid "Tertiary"
 msgstr "Tertiair"
 
-#: presets/image-simple/ImageSimplePreset.php:906
+#: presets/main-hero/MainHeroPreset.php:906
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:772
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1020
 #: presets/image-with-content/ImageWithContentPreset.php:696
 msgid "Button style"
 msgstr "Knop stijl"
 
-#: presets/image-simple/ImageSimplePreset.php:909
+#: presets/main-hero/MainHeroPreset.php:909
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:775
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1023
 #: presets/image-with-content/ImageWithContentPreset.php:699
 msgid "Select one of the available button styles."
 msgstr "Kies één van de beschikbare knop stijlen."
 
-#: presets/image-simple/ImageSimplePreset.php:932
+#: presets/main-hero/MainHeroPreset.php:932
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:799
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1047
 #: presets/image-with-content/ImageWithContentPreset.php:722
 msgid "Button link"
 msgstr "Knop link"
 
-#: presets/image-simple/ImageSimplePreset.php:935
+#: presets/main-hero/MainHeroPreset.php:935
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:802
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1050
 #: presets/image-with-content/ImageWithContentPreset.php:725
 msgid "Choose a link, target and text for your button."
 msgstr "Configureer de link, target en tekst van deze knop."
 
-#: presets/image-simple/ImageSimplePreset.php:949
+#: presets/main-hero/MainHeroPreset.php:949
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:816
 #: presets/image-with-content/ImageWithContentPreset.php:739
 msgid "Button size"
 msgstr "Knop formaat"
 
-#: presets/image-simple/ImageSimplePreset.php:952
+#: presets/main-hero/MainHeroPreset.php:952
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:819
 #: presets/image-with-content/ImageWithContentPreset.php:742
 msgid ""
@@ -456,51 +456,51 @@ msgstr ""
 "Kies één van de beschikbare knop formaten. Dit formaat zal worden gehanteerd "
 "voor alle knoppen die hieronder worden aangemaakt."
 
-#: presets/image-simple/ImageSimplePreset.php:968
+#: presets/main-hero/MainHeroPreset.php:968
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:835
 #: presets/image-with-content/ImageWithContentPreset.php:758
 msgid "Small"
 msgstr "Klein"
 
-#: presets/image-simple/ImageSimplePreset.php:969
+#: presets/main-hero/MainHeroPreset.php:969
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:836
 msgid "Medium"
 msgstr "Middelgroot"
 
-#: presets/image-simple/ImageSimplePreset.php:970
+#: presets/main-hero/MainHeroPreset.php:970
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:837
 msgid "Large (default)"
 msgstr "Groot (standaard)"
 
-#: presets/image-simple/ImageSimplePreset.php:971
+#: presets/main-hero/MainHeroPreset.php:971
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:838
 #: presets/image-with-content/ImageWithContentPreset.php:761
 msgid "Extra large"
 msgstr "Extra groot"
 
-#: presets/image-simple/ImageSimplePreset.php:983
+#: presets/main-hero/MainHeroPreset.php:983
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1064
 #: presets/image-with-content/ImageWithContentPreset.php:773
 msgid "Advanced"
 msgstr "Geavanceerd"
 
-#: presets/image-simple/ImageSimplePreset.php:1013
+#: presets/main-hero/MainHeroPreset.php:1013
 msgid "Remove bottom spacing"
 msgstr "Onderste witruimte verwijderen"
 
-#: presets/image-simple/ImageSimplePreset.php:1016
+#: presets/main-hero/MainHeroPreset.php:1016
 msgid "Activate this option to remove the bottom spacing of this preset."
 msgstr ""
 "Activeer deze optie om de onderste witruimte van deze voorinstelling te "
 "verwijderen."
 
-#: presets/image-simple/ImageSimplePreset.php:1033
+#: presets/main-hero/MainHeroPreset.php:1033
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1094
 #: presets/image-with-content/ImageWithContentPreset.php:803
 msgid "Remove automatic heading"
 msgstr "Verwijder automatische koptekst"
 
-#: presets/image-simple/ImageSimplePreset.php:1036
+#: presets/main-hero/MainHeroPreset.php:1036
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1097
 #: presets/image-with-content/ImageWithContentPreset.php:806
 msgid ""

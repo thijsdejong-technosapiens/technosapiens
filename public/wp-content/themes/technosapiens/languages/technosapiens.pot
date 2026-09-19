@@ -659,7 +659,7 @@ msgstr ""
 msgid "Current archive URL: %s"
 msgstr ""
 
-#: inc/features/header-module/presets/image-simple/ImageSimplePreset.php:50
+#: inc/features/header-module/presets/main-hero/MainHeroPreset.php:50
 msgid "Full width image banner"
 msgstr ""
 

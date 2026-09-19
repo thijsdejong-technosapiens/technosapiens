@@ -27,9 +27,6 @@ if ($logoId) $logoHtml = Image::render([
     'alt' => sprintf(__("Logo %s", Theme::TEXT_DOMAIN), $blogName),
     'sources' => [['id' => $logoId]]
 ]);
-
-//get emergency phone number data
-$emergencyPhoneNumberData = ThemeSettings::getEmergencyPhoneNumberData();
 ?>
 
 <footer id="ts-footer" class="site-footer" aria-label="Main Footer">
@@ -64,18 +61,7 @@ $emergencyPhoneNumberData = ThemeSettings::getEmergencyPhoneNumberData();
                     
                     <div class="col col--1 col--xl-1/3 order-1 order-md-2 site-footer__col site-footer__col--ctas">
                         <div class="site-footer__ctas">
-                            <?php if ($emergencyPhoneNumberData->isValid): ?>
-                                <?php echo ButtonComponent::render([
-                                    'text' => $emergencyPhoneNumberData->text,
-                                    'href' => 'tel:' . $emergencyPhoneNumberData->url,
-                                    'target' => $emergencyPhoneNumberData->target,
-                                    'type' => 'primary',
-                                    'style' => 'filled',
-                                    'size' => 'small',
-                                    'class' => 'site-footer__emergency-phone-number-button'
-                                ]); ?>
-                            <?php endif; ?>
-
+                            
                             <?php if ($hasSocialLinks): ?>
                                 <?php Partial::render('components/component-social-links', ['socialLinks' => $socialLinks]); ?>
                             <?php endif; ?>

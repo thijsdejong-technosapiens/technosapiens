@@ -75,8 +75,6 @@ class AcfComponent extends Singleton {
      * @return array
      */
     public static function handleAcfApiKey(array $api): array {
-        $googleMapsApiKey = ThemeSettings::getGoogleApiKey();
-        if ($googleMapsApiKey) $api['key'] = $googleMapsApiKey;
         return $api;
     }
 }

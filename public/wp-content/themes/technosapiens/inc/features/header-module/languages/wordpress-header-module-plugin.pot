@@ -25,16 +25,16 @@ msgid "Use the switch below to enable or disable the header module for this page
 msgstr ""
 
 #: classes/components/AcfFieldGroupComponent.php:91
-#: presets/image-simple/ImageSimplePreset.php:1026
-#: presets/image-simple/ImageSimplePreset.php:1046
+#: presets/main-hero/MainHeroPreset.php:1026
+#: presets/main-hero/MainHeroPreset.php:1046
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1107
 #: presets/image-with-content/ImageWithContentPreset.php:816
 msgid "Enabled"
 msgstr ""
 
 #: classes/components/AcfFieldGroupComponent.php:92
-#: presets/image-simple/ImageSimplePreset.php:1027
-#: presets/image-simple/ImageSimplePreset.php:1047
+#: presets/main-hero/MainHeroPreset.php:1027
+#: presets/main-hero/MainHeroPreset.php:1047
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1108
 #: presets/image-with-content/ImageWithContentPreset.php:817
 msgid "Disabled"
@@ -52,33 +52,33 @@ msgstr ""
 msgid "Hero module"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:49
+#: presets/main-hero/MainHeroPreset.php:49
 msgid "Full width image banner"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:94
+#: presets/main-hero/MainHeroPreset.php:94
 msgid "Desktop small"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:107
+#: presets/main-hero/MainHeroPreset.php:107
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:105
 #: presets/image-with-content/ImageWithContentPreset.php:105
 msgid "Desktop regular"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:120
+#: presets/main-hero/MainHeroPreset.php:120
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:118
 #: presets/image-with-content/ImageWithContentPreset.php:118
 msgid "Desktop large"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:133
+#: presets/main-hero/MainHeroPreset.php:133
 #: presets/image-with-content/ImageWithContentPreset.php:131
 msgid "Mobile"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:426
-#: presets/image-simple/ImageSimplePreset.php:455
+#: presets/main-hero/MainHeroPreset.php:426
+#: presets/main-hero/MainHeroPreset.php:455
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:457
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:486
 #: presets/image-with-content/ImageWithContentPreset.php:394
@@ -86,15 +86,15 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:467
-#: presets/image-simple/ImageSimplePreset.php:538
-#: presets/image-simple/ImageSimplePreset.php:609
+#: presets/main-hero/MainHeroPreset.php:467
+#: presets/main-hero/MainHeroPreset.php:538
+#: presets/main-hero/MainHeroPreset.php:609
 msgid "Small height"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:468
-#: presets/image-simple/ImageSimplePreset.php:539
-#: presets/image-simple/ImageSimplePreset.php:610
+#: presets/main-hero/MainHeroPreset.php:468
+#: presets/main-hero/MainHeroPreset.php:539
+#: presets/main-hero/MainHeroPreset.php:610
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:498
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:544
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:573
@@ -103,9 +103,9 @@ msgstr ""
 msgid "Regular height"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:469
-#: presets/image-simple/ImageSimplePreset.php:540
-#: presets/image-simple/ImageSimplePreset.php:611
+#: presets/main-hero/MainHeroPreset.php:469
+#: presets/main-hero/MainHeroPreset.php:540
+#: presets/main-hero/MainHeroPreset.php:611
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:499
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:545
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:574
@@ -114,34 +114,34 @@ msgstr ""
 msgid "Large height"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:480
+#: presets/main-hero/MainHeroPreset.php:480
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:510
 #: presets/image-with-content/ImageWithContentPreset.php:472
 msgid "Media"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:509
+#: presets/main-hero/MainHeroPreset.php:509
 msgid "Media type"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:521
+#: presets/main-hero/MainHeroPreset.php:521
 msgid "Image background"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:522
+#: presets/main-hero/MainHeroPreset.php:522
 msgid "Video background (External MP4 link)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:533
+#: presets/main-hero/MainHeroPreset.php:533
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:539
 #: presets/image-with-content/ImageWithContentPreset.php:501
 msgid "Image desktop"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:538
-#: presets/image-simple/ImageSimplePreset.php:539
-#: presets/image-simple/ImageSimplePreset.php:540
-#: presets/image-simple/ImageSimplePreset.php:574
+#: presets/main-hero/MainHeroPreset.php:538
+#: presets/main-hero/MainHeroPreset.php:539
+#: presets/main-hero/MainHeroPreset.php:540
+#: presets/main-hero/MainHeroPreset.php:574
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:544
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:545
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:573
@@ -153,99 +153,99 @@ msgstr ""
 msgid "The ideal size for this image is %1s wide and %2s high."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:571
+#: presets/main-hero/MainHeroPreset.php:571
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:568
 #: presets/image-with-content/ImageWithContentPreset.php:530
 msgid "Image mobile"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:603
+#: presets/main-hero/MainHeroPreset.php:603
 msgid "Video URL desktop"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:609
-#: presets/image-simple/ImageSimplePreset.php:610
-#: presets/image-simple/ImageSimplePreset.php:611
-#: presets/image-simple/ImageSimplePreset.php:643
+#: presets/main-hero/MainHeroPreset.php:609
+#: presets/main-hero/MainHeroPreset.php:610
+#: presets/main-hero/MainHeroPreset.php:611
+#: presets/main-hero/MainHeroPreset.php:643
 #, php-format
 msgid "The ideal size for this video is %1s wide and %2s high."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:637
+#: presets/main-hero/MainHeroPreset.php:637
 msgid "Video URL mobile"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:669
+#: presets/main-hero/MainHeroPreset.php:669
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:597
 msgid "Focus point"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:672
+#: presets/main-hero/MainHeroPreset.php:672
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:600
 msgid ""
 "Optionally choose one of the available image focus points. The focus point determines "
 "which part of the image is visible when the image overflows the screen."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:681
+#: presets/main-hero/MainHeroPreset.php:681
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:609
 msgid "Left top"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:682
+#: presets/main-hero/MainHeroPreset.php:682
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:610
 msgid "Left center"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:683
+#: presets/main-hero/MainHeroPreset.php:683
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:611
 msgid "Left bottom"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:684
+#: presets/main-hero/MainHeroPreset.php:684
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:612
 msgid "Center top"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:685
+#: presets/main-hero/MainHeroPreset.php:685
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:613
 msgid "Center center"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:686
+#: presets/main-hero/MainHeroPreset.php:686
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:614
 msgid "Center bottom"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:687
+#: presets/main-hero/MainHeroPreset.php:687
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:615
 msgid "Right top"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:688
+#: presets/main-hero/MainHeroPreset.php:688
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:616
 msgid "Right center"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:689
+#: presets/main-hero/MainHeroPreset.php:689
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:617
 msgid "Right bottom"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:701
+#: presets/main-hero/MainHeroPreset.php:701
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:629
 msgid "Overlay strength"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:704
+#: presets/main-hero/MainHeroPreset.php:704
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:632
 msgid ""
 "Optionally add a semi transparent layer over your image to improve the readability of "
 "the content."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:721
-#: presets/image-simple/ImageSimplePreset.php:842
+#: presets/main-hero/MainHeroPreset.php:721
+#: presets/main-hero/MainHeroPreset.php:842
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:649
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:905
 #: presets/image-with-content/ImageWithContentPreset.php:554
@@ -253,183 +253,183 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:750
+#: presets/main-hero/MainHeroPreset.php:750
 msgid "Alignment"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:762
+#: presets/main-hero/MainHeroPreset.php:762
 msgid "Left aligned content"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:763
+#: presets/main-hero/MainHeroPreset.php:763
 msgid "Centered content"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:774
+#: presets/main-hero/MainHeroPreset.php:774
 msgid "Top heading"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:777
+#: presets/main-hero/MainHeroPreset.php:777
 msgid "Optionally add a small heading above your large heading."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:793
+#: presets/main-hero/MainHeroPreset.php:793
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:678
 #: presets/image-with-content/ImageWithContentPreset.php:583
 msgid "Heading text"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:796
+#: presets/main-hero/MainHeroPreset.php:796
 #: presets/image-with-content/ImageWithContentPreset.php:586
 #, php-format
 msgid "Add a heading. If you want to highlight something. Add the following code: %1s"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:796
+#: presets/main-hero/MainHeroPreset.php:796
 #: presets/image-with-content/ImageWithContentPreset.php:586
 msgid "{{I'm highlighted}} and i'm not"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:812
+#: presets/main-hero/MainHeroPreset.php:812
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:697
 #: presets/image-with-content/ImageWithContentPreset.php:602
 msgid "Heading tag"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:815
+#: presets/main-hero/MainHeroPreset.php:815
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:700
 #: presets/image-with-content/ImageWithContentPreset.php:605
 msgid "Optionally use a different heading tag for SEO purposes."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:824
+#: presets/main-hero/MainHeroPreset.php:824
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:709
 #: presets/image-with-content/ImageWithContentPreset.php:614
 msgid "Heading one (H1)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:825
+#: presets/main-hero/MainHeroPreset.php:825
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:710
 #: presets/image-with-content/ImageWithContentPreset.php:615
 msgid "Heading two (H2)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:826
+#: presets/main-hero/MainHeroPreset.php:826
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:711
 #: presets/image-with-content/ImageWithContentPreset.php:616
 msgid "Heading three (H3)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:827
+#: presets/main-hero/MainHeroPreset.php:827
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:712
 #: presets/image-with-content/ImageWithContentPreset.php:617
 msgid "Heading four (H4)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:828
+#: presets/main-hero/MainHeroPreset.php:828
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:713
 #: presets/image-with-content/ImageWithContentPreset.php:618
 msgid "Heading five (H5)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:829
+#: presets/main-hero/MainHeroPreset.php:829
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:714
 #: presets/image-with-content/ImageWithContentPreset.php:619
 msgid "Heading six (H6)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:830
+#: presets/main-hero/MainHeroPreset.php:830
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:715
 #: presets/image-with-content/ImageWithContentPreset.php:620
 msgid "No heading tag (span)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:845
+#: presets/main-hero/MainHeroPreset.php:845
 #: presets/image-with-content/ImageWithContentPreset.php:635
 msgid "Optionally add some content to display below your heading."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:861
+#: presets/main-hero/MainHeroPreset.php:861
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:968
 #: presets/image-with-content/ImageWithContentPreset.php:651
 msgid "Buttons"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:864
+#: presets/main-hero/MainHeroPreset.php:864
 #: presets/image-with-content/ImageWithContentPreset.php:654
 msgid ""
 "Optionally add one or multiple buttons below the heading and content. The maximum "
 "amount of buttons that can be created is two."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:880
+#: presets/main-hero/MainHeroPreset.php:880
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:746
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:995
 #: presets/image-with-content/ImageWithContentPreset.php:670
 msgid "Button type"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:883
+#: presets/main-hero/MainHeroPreset.php:883
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:749
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:998
 #: presets/image-with-content/ImageWithContentPreset.php:673
 msgid "Select one of the available button types."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:892
+#: presets/main-hero/MainHeroPreset.php:892
 #: presets/image-with-content/ImageWithContentPreset.php:682
 msgid "Primary (default)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:893
+#: presets/main-hero/MainHeroPreset.php:893
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:759
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1007
 #: presets/image-with-content/ImageWithContentPreset.php:683
 msgid "Secondary"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:894
+#: presets/main-hero/MainHeroPreset.php:894
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:760
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1008
 #: presets/image-with-content/ImageWithContentPreset.php:684
 msgid "Tertiary"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:906
+#: presets/main-hero/MainHeroPreset.php:906
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:772
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1020
 #: presets/image-with-content/ImageWithContentPreset.php:696
 msgid "Button style"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:909
+#: presets/main-hero/MainHeroPreset.php:909
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:775
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1023
 #: presets/image-with-content/ImageWithContentPreset.php:699
 msgid "Select one of the available button styles."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:932
+#: presets/main-hero/MainHeroPreset.php:932
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:799
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1047
 #: presets/image-with-content/ImageWithContentPreset.php:722
 msgid "Button link"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:935
+#: presets/main-hero/MainHeroPreset.php:935
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:802
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1050
 #: presets/image-with-content/ImageWithContentPreset.php:725
 msgid "Choose a link, target and text for your button."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:949
+#: presets/main-hero/MainHeroPreset.php:949
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:816
 #: presets/image-with-content/ImageWithContentPreset.php:739
 msgid "Button size"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:952
+#: presets/main-hero/MainHeroPreset.php:952
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:819
 #: presets/image-with-content/ImageWithContentPreset.php:742
 msgid ""
@@ -437,49 +437,49 @@ msgid ""
 "buttons created above."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:968
+#: presets/main-hero/MainHeroPreset.php:968
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:835
 #: presets/image-with-content/ImageWithContentPreset.php:758
 msgid "Small"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:969
+#: presets/main-hero/MainHeroPreset.php:969
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:836
 msgid "Medium"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:970
+#: presets/main-hero/MainHeroPreset.php:970
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:837
 msgid "Large (default)"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:971
+#: presets/main-hero/MainHeroPreset.php:971
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:838
 #: presets/image-with-content/ImageWithContentPreset.php:761
 msgid "Extra large"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:983
+#: presets/main-hero/MainHeroPreset.php:983
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1064
 #: presets/image-with-content/ImageWithContentPreset.php:773
 msgid "Advanced"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:1013
+#: presets/main-hero/MainHeroPreset.php:1013
 msgid "Remove bottom spacing"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:1016
+#: presets/main-hero/MainHeroPreset.php:1016
 msgid "Activate this option to remove the bottom spacing of this preset."
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:1033
+#: presets/main-hero/MainHeroPreset.php:1033
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1094
 #: presets/image-with-content/ImageWithContentPreset.php:803
 msgid "Remove automatic heading"
 msgstr ""
 
-#: presets/image-simple/ImageSimplePreset.php:1036
+#: presets/main-hero/MainHeroPreset.php:1036
 #: presets/image-with-boxed-content/ImageWithBoxedContentPreset.php:1097
 #: presets/image-with-content/ImageWithContentPreset.php:806
 msgid ""

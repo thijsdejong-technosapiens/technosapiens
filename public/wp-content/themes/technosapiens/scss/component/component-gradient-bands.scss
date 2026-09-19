@@ -1,0 +1,54 @@
+.gradient-bands {
+    --gradient-band-height: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gradient-band {
+    flex: none;
+    width: 100%;
+    height: var(--gradient-band-height, 2rem);
+
+    &--medium {
+        --gradient-band-height: 2.4rem;
+    }
+
+    &--large {
+        --gradient-band-height: 3.75rem;
+    }
+
+    &--xlarge {
+        --gradient-band-height: 8.25rem;
+    }
+
+    &--stop-1 {
+        background-color: var(--ts-color-gradient-stop-1, purple);
+    }
+
+    &--stop-2 {
+        background-color: var(--ts-color-gradient-stop-2, purple);
+    }
+
+    &--stop-3 {
+        background-color: var(--ts-color-gradient-stop-3, purple);
+    }
+
+    &--stop-4 {
+        background-color: var(--ts-color-gradient-stop-4, purple);
+    }
+
+    &--stop-5 {
+        background-color: var(--ts-color-gradient-stop-5, purple);
+    }
+
+    &--stop-6 {
+        background-color: var(--ts-color-gradient-stop-6, purple);
+    }
+
+    &--stop-7 {
+        background-color: var(--ts-color-gradient-stop-7, purple);
+    }
+}

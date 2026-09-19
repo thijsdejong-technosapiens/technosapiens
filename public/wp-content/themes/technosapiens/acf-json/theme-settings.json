@@ -163,47 +163,6 @@
             "allow_in_bindings": 1
         },
         {
-            "key": "field_6a43515a3c294",
-            "label": "Google rating",
-            "name": "google_rating",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6a43524e3c296",
-            "label": "Google review URL",
-            "name": "google_reviews_url",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_6a4fc01hero01",
             "label": "Hero module fallback images",
             "name": "",
@@ -570,79 +529,6 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_67642af7daf5b",
-            "label": "Mapbox",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_67642afcdaf5c",
-            "label": "Mapbox Access Token",
-            "name": "mapbox_access_token",
-            "aria-label": "",
-            "type": "password",
-            "instructions": "In order to use Mapbox you need to generate an access token and enter it here - please see the <a target=\"_blank\" href=\"https:\/\/docs.mapbox.com\/help\/tutorials\/get-started-tokens-api\/\">official documentation<\/a> for more information.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "allow_in_bindings": 1,
-            "placeholder": "Add your Mapbox Access Token",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_62c43766e986e",
-            "label": "Google Maps",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_62c43797e986f",
-            "label": "Google Maps API key",
-            "name": "google_maps_api_key",
-            "aria-label": "",
-            "type": "password",
-            "instructions": "In order to use Google maps you need to generate an API key and enter it here - please see the <a target=\"_blank\" href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key#get-an-api-key\">official documentation<\/a> for more information.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placeholder": "Add your Google Api Key",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_64f9e62ed3f76",
             "label": "SEO settings",
             "name": "",
@@ -702,5 +588,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789811164
+    "modified": 1789812153
 }

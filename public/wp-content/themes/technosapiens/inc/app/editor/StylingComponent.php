@@ -87,6 +87,11 @@ class StylingComponent extends Singleton {
         $colorPasswordMedium = '#f0b849';
         $colorPasswordStrong = '#4db54f';
         $colorNotificationInfo = '#419ecd';
+        $colorGradientStop1 = '#5E185E';
+        $colorGradientStop3 = '#7F1E69';
+        $colorGradientStop4 = '#971A6E';
+        $colorGradientStop5 = '#B01774';
+        $colorGradientStop6 = '#C81379';
 
         $fontSans = "'Plus Jakarta Sans', sans-serif";
 
@@ -170,6 +175,15 @@ class StylingComponent extends Singleton {
             'color-light'        => $colorLight,
             'color-body'         => $colorBody,
             'color-accent'       => $colorAccent,
+
+            // Gradient stops
+            'color-gradient-stop-1' => $colorGradientStop1,
+            'color-gradient-stop-2' => $colorPrimary,
+            'color-gradient-stop-3' => $colorGradientStop3,
+            'color-gradient-stop-4' => $colorGradientStop4,
+            'color-gradient-stop-5' => $colorGradientStop5,
+            'color-gradient-stop-6' => $colorGradientStop6,
+            'color-gradient-stop-7' => $colorSecondary,
 
             // Derived in getCssVariables(): color-*-hover, color-on-*
             'color-primary-hover'   => '',

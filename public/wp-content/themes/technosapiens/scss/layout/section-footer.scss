@@ -3,7 +3,6 @@
 .site-footer{
     padding: 4rem 2rem 8rem 2rem;
     margin-top: auto;
-    background-color: var(--ts-color-tertiary, white);
     color: var(--ts-font-color-white, white);
     text-align: center;
 
@@ -44,7 +43,7 @@
         }
 
         a{
-            color: var(--ts-color-primary, red);
+            color: var(--ts-color-white, white);
             transition: var(--ts-transition-ease-in-out, all 0.3s ease-in-out);
 
             &:hover{
@@ -69,27 +68,6 @@
             .site-footer__links-menu-item-link{
                 font-family: var(--ts-font-regular, sans-serif);
                 font-weight: var(--ts-font-weight-regular, 400);
-            }
-        }
-
-        .zorgkaart-menu-item{
-            &:after{
-                content: '';
-                background-image: url('/wp-content/themes/technosapiens/images/web/zorgkaart-nederland-logo.png');
-                background-size: 3.3rem 2.75rem;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 4.75rem;
-                height: 3.5rem;
-                padding: 0.5rem;
-                padding: 1rem;
-                background-color: var(--ts-color-white, white);
-                border-radius: var(--ts-border-radius-xs, 0.5rem);
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                pointer-events: none;
             }
         }
     }
@@ -117,15 +95,7 @@
             justify-content: flex-end;
         }
     } 
-    
-    &__emergency-phone-number-button {
-        display: none;
-        font-weight: var(--ts-font-weight-semibold, 600);
 
-        @include mixins.mq-up(xl) {
-            display: flex;
-        }
-    }
 
     &__logo-image{
         max-width: 100%;

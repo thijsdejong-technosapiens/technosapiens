@@ -29,6 +29,7 @@ html {
     width: 100%;
     font-size: var(--ts-font-size-default, 16px);
     scroll-padding-top: calc(var(--ts-nav-height-top-mobile, 2.5rem) + var(--ts-nav-height-mobile, 3.75rem) + 1rem);
+    background-color: var(--ts-color-primary-dark, #4E134E);
 
     @include mixins.mq-up(lg) {
         scroll-padding-top: calc(var(--ts-nav-height-top, 2.5rem) + var(--ts-nav-height, 3.75rem) + 2rem);

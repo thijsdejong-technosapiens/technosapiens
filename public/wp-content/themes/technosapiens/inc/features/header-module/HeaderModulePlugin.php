@@ -27,7 +27,7 @@ class HeaderModulePlugin extends Singleton {
      * @var array<int, string>
      */
     const ENABLED_PRESET_CLASSES = [
-        'ImageSimplePreset',
+        'MainHeroPreset',
     ];
 
     /**

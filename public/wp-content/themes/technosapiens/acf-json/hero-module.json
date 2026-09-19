@@ -3,252 +3,6 @@
     "title": "Hero module",
     "fields": [
         {
-            "key": "hm_tab_size",
-            "label": "Size",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "hm_size",
-            "label": "Size",
-            "name": "hm_size",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "regular": "Regular height",
-                "large": "Large height"
-            },
-            "default_value": "regular",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 1,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
-            "key": "hm_tab_media",
-            "label": "Media",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "hm_media_type",
-            "label": "Media type",
-            "name": "hm_media_type",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "100",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "image": "Image as background",
-                "video": "Video as background (external MP4 link)"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "image",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6a4fc01hero04",
-            "label": "Desktop image",
-            "name": "hm_image_desktop",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "<div style=\"margin-bottom: .5rem\">Image for desktop. The size depends on the <strong>Size<\/strong> setting.<\/div><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Regular height:<\/strong> recommended dimensions <code>1728 × 496 px<\/code>.<\/div><div><strong>Large height:<\/strong> recommended dimensions <code>1728 × 784 px<\/code>.<\/div>",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "hm_media_type",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_6a4fc01hero05",
-            "label": "Mobile image",
-            "name": "hm_image_mobile",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "<div style=\"margin-bottom: .5rem\">Image for mobile. The size depends on the <strong>Size<\/strong> setting.<\/div><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Regular height:<\/strong> recommended dimensions <code>900 × 528 px<\/code>.<\/div><div><strong>Large height:<\/strong> recommended dimensions <code>900 × 900 px<\/code>.<\/div>",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "hm_media_type",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
-        },
-        {
-            "key": "hm_video_url_desktop",
-            "label": "Desktop video URL",
-            "name": "hm_video_url_desktop",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "<p>The public desktop MP4 video URL, including \"https:\/\/\".<\/p><div style=\"margin-top: 1rem; margin-bottom: .5rem\"><strong>Small height:<\/strong> the ideal size for this video is <code>1920px<\/code> wide and <code>240px<\/code> high.<\/div><div style=\"margin-bottom: .5rem\"><strong>Regular height:<\/strong> the ideal size for this video is <code>1920px<\/code> wide and <code>480px<\/code> high.<\/div><div><strong>Large height:<\/strong> the ideal size for this video is <code>1920px<\/code> wide and <code>720px<\/code> high.<\/div>",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "hm_media_type",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "hm_video_url_mobile",
-            "label": "Mobile video URL",
-            "name": "hm_video_url_mobile",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "<p>The public mobile MP4 video URL, including \"https:\/\/\".<\/p><div style=\"margin-top: 1rem; margin-bottom: .5rem\">The ideal size for this video is <code>360px<\/code> wide and <code>360px<\/code> high.<\/div>",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "hm_media_type",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "hm_focus_point",
-            "label": "Focus point",
-            "name": "hm_focus_point",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "Choose one of the available focus points (optional). The focus point determines which part of the image remains visible when the image is larger than the screen.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "left top": "Top left",
-                "left center": "Center left",
-                "left bottom": "Bottom left",
-                "center top": "Top center",
-                "center center": "Centered",
-                "center bottom": "Bottom center",
-                "right top": "Top right",
-                "right center": "Center right",
-                "right bottom": "Bottom right"
-            },
-            "default_value": "center center",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
             "key": "hm_tab_content",
             "label": "Content",
             "name": "",
@@ -397,7 +151,8 @@
                     "choices": {
                         "primary": "Primary (Default)",
                         "secondary": "Secondary",
-                        "tertiary": "Tertiary"
+                        "tertiary": "Tertiary",
+                        "danger": "Danger"
                     },
                     "default_value": "primary",
                     "allow_null": 0,
@@ -427,6 +182,7 @@
                     "choices": {
                         "filled": "Filled (Default)",
                         "outlined": "Outlined",
+                        "ghost": "Ghost",
                         "text": "Text",
                         "alternative": "Text alternative"
                     },
@@ -498,90 +254,6 @@
             "save_options": 0
         },
         {
-            "key": "field_6a3eb51109834",
-            "label": "Slot",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6a3eb51e09835",
-            "label": "Slot content type",
-            "name": "hm_slot_content",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "breadcrumbs": "Breadcrumbs",
-                "static-section": "Static section"
-            },
-            "default_value": "breadcrumbs",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
-            "key": "field_6a3eb56909836",
-            "label": "Select static section",
-            "name": "hm_slot_static_section",
-            "aria-label": "",
-            "type": "post_object",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6a3eb51e09835",
-                        "operator": "==",
-                        "value": "static-section"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "static-block"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": []
-        },
-        {
             "key": "hm_tab_advanced",
             "label": "Advanced",
             "name": "",
@@ -641,5 +313,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789399366
+    "modified": 1789814954
 }

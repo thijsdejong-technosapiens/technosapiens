@@ -16,9 +16,6 @@ $mergedItems = array_merge($mainItems, $secondaryItems);
 //get header button data
 $headerButton = ThemeSettings::getHeaderButtonData();
 
-//get emergency phone number data
-$emergencyPhoneNumberData = ThemeSettings::getEmergencyPhoneNumberData();
-
 //get HTML classes
 $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing() ? 'has-admin-bar' : 'has-no-admin-bar')]);
 
@@ -53,20 +50,6 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
 
         <div class="ts-header__container container">
 
-            <div class="ts-header__emergency-phone-number">
-                <?php if ($emergencyPhoneNumberData->isValid): ?>
-                    <?php echo ButtonComponent::render([
-                        'text' => $emergencyPhoneNumberData->text,
-                        'href' => 'tel:' . $emergencyPhoneNumberData->url,
-                        'target' => $emergencyPhoneNumberData->target,
-                        'type' => 'primary',
-                        'style' => 'filled',
-                        'size' => 'medium',
-                        'class' => 'ts-header__emergency-phone-number-button'
-                    ]); ?>
-                <?php endif; ?>
-            </div>
-
             <div class="ts-header__inner">
             
                 <div class="ts-header__left">
@@ -81,8 +64,7 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
 
             <div class="ts-header__top">
                 <?php Partial::render('header/top-navigation', [
-                    'items' => $secondaryItems,
-                    'googleRatingData' => ThemeSettings::getGoogleRatingData(),
+                    'items' => $secondaryItems
                 ]); ?>
             </div>
 
@@ -91,8 +73,6 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
         <?php if (count($mergedItems) > 0) Partial::render('header/side-navigation', [
             'mobileMenuTopItems' => $mobileMenuTopItems,
             'mobileMenuBottomItems' => $mobileMenuBottomItems,
-            'emergencyPhoneNumberData' => $emergencyPhoneNumberData,
-            'googleRatingData' => ThemeSettings::getGoogleRatingData(),
             'headerButton' => $headerButton,
         ]); ?>
 

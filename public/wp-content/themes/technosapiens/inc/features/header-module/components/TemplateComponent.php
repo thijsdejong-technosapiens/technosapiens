@@ -48,7 +48,7 @@ class TemplateComponent extends Singleton {
 
 
                 if ($acfKey) {
-                    $preset = apply_filters('hm_preset_filter', (get_field('hm_preset', $acfKey) ?: 'image-simple'), $acfKey);
+                    $preset = apply_filters('hm_preset_filter', (get_field('hm_preset', $acfKey) ?: 'main-hero'), $acfKey);
                     $activePresets = HeaderModulePlugin::getInstance()->getActivePresets();
 
                     //get data and check if data is valid
