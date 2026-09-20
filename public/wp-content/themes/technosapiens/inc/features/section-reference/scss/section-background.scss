@@ -1,0 +1,19 @@
+.section[data-bg="bands"] {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-background {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.section[data-bg="bands"] > .container {
+    position: relative;
+    z-index: 2;
+}

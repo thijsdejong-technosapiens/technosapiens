@@ -239,6 +239,7 @@ class Theme extends Singleton {
         SectionCtaBanner::getInstance();
         SectionPageButtons::getInstance();
         SectionContent::getInstance();
+        SectionGrandTitle::getInstance();
         SectionUsps::getInstance();
         SectionStats::getInstance();
         SectionDivider::getInstance();

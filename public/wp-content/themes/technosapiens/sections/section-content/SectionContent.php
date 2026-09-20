@@ -26,4 +26,8 @@ class SectionContent extends Singleton {
     public static function getSectionLabel(): string {
         return __('Content', Theme::TEXT_DOMAIN);
     }
+
+    public static function getContentText(): string {
+        return get_field('content_text');
+    }
 }

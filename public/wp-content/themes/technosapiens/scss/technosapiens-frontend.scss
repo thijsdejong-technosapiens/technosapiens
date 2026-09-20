@@ -10,6 +10,8 @@
 @use "atomic/atomic-narrow";
 @use "atomic/atomic-global-margins";
 @use "../inc/features/section-reference/scss/section-margins";
+@use "../inc/features/section-reference/scss/section-vignet";
+@use "../inc/features/section-reference/scss/section-background";
 @use "atomic/atomic-md-child-margins";
 @use "atomic/atomic-gutenberg-content-parent";
 @use "atomic/atomic-utils";

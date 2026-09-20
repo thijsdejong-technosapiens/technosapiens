@@ -30,8 +30,7 @@ class GradientBandsComponent {
     /**
      * Renders gradient bands markup.
      * @param array $args
-     * @type string $size Container size modifier (xlarge|large|medium|small). Defaults to 'large'.
-     * @type string $bandSize Optional size modifier applied to every band.
+     * @type string $bandSize Optional size modifier applied to every band (xlarge|large|medium|small).
      * @type array $stops Stop numbers to render (1–7). Defaults to 1→7→1.
      * @type string $axis Layout axis (vertical|horizontal). Defaults to 'vertical'.
      * @type string $staggerMode Stagger order (start|end|center). Defaults to 'start'.
@@ -40,7 +39,6 @@ class GradientBandsComponent {
      */
     public static function render(array $args = []): string {
         $defaults = [
-            'size' => 'large',
             'bandSize' => '',
             'stops' => self::getDefaultStops(),
             'axis' => 'vertical',
@@ -50,9 +48,6 @@ class GradientBandsComponent {
 
         $defaults = apply_filters('ts_gradient_bands_default_args', $defaults);
         $args = apply_filters('ts_gradient_bands_args', array_merge($defaults, $args));
-
-        $size = is_string($args['size']) ? $args['size'] : '';
-        if ($size && !in_array($size, self::SIZES, true)) $size = 'large';
 
         $bandSize = is_string($args['bandSize']) ? $args['bandSize'] : '';
         if ($bandSize && !in_array($bandSize, self::SIZES, true)) $bandSize = '';
@@ -73,7 +68,6 @@ class GradientBandsComponent {
         $extraClass = is_string($args['class']) ? $args['class'] : '';
 
         return Partial::render('components/component-gradient-bands', [
-            'size' => $size,
             'bandSize' => $bandSize,
             'stops' => $stops,
             'axis' => $axis,

@@ -70,6 +70,7 @@ class StylingComponent extends Singleton {
     private function initCssVariables(): void {
         $colorPrimary = '#662264';
         $colorPrimaryDark = '#4E134E';
+        $colorPrimaryDarker = '#250525';
         $colorSecondary = '#E10F7E';
         $colorTertiary = '#FDB500';
         $colorWhite = '#FFFFFF';
@@ -166,6 +167,7 @@ class StylingComponent extends Singleton {
             // --- Brand colour primitives ---
             'color-primary'      => $colorPrimary,
             'color-primary-dark' => $colorPrimaryDark,
+            'color-primary-darker' => $colorPrimaryDarker,
             'color-secondary'    => $colorSecondary,
             'color-tertiary'     => $colorTertiary,
             'color-danger'       => $colorInvalid,

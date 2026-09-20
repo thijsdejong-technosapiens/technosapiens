@@ -1,41 +1,46 @@
 .gradient-bands {
-    --gradient-band-height: 2rem;
+    --gradient-band-size: 2.1rem;
 
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     overflow: hidden;
 
+    // Horizontal strips: full-width bands stacked under each other
     &--horizontal {
-        flex-direction: row;
-
-        .gradient-band {
-            flex: 1 1 0;
-            width: auto;
-        }
+        flex-direction: column;
     }
 
+    // Vertical strips: bands side by side
     &--vertical {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+
+        .gradient-band {
+            flex: none;
+            width: var(--gradient-band-size, 2rem);
+            height: 100%;
+        }
     }
 }
 
 .gradient-band {
     flex: none;
     width: 100%;
-    height: var(--gradient-band-height, 2rem);
+    height: var(--gradient-band-size, 2rem);
     opacity: 0;
 
     &--medium {
-        --gradient-band-height: 2.4rem;
+        --gradient-band-size: 2.4rem;
     }
 
     &--large {
-        --gradient-band-height: 3.75rem;
+        --gradient-band-size: 3.75rem;
     }
 
     &--xlarge {
-        --gradient-band-height: 8.25rem;
+        --gradient-band-size: 8.25rem;
     }
 
     &--stop-1 {

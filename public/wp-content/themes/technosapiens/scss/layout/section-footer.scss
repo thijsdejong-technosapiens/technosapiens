@@ -5,6 +5,7 @@
     margin-top: auto;
     color: var(--ts-font-color-white, white);
     text-align: center;
+    background-color: var(--ts-color-primary-darker, purple);
 
     @include mixins.mq-up(xl) {
         text-align: left;

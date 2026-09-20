@@ -24,10 +24,11 @@
     &__meta-container {
         display: flex;
         flex-direction: column;
-        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        gap: 2rem;
         z-index: 30;
         margin-top: 11rem;
         width: 100%;
+        align-items: center;
     }
 
     &__meta {
@@ -41,13 +42,6 @@
         >* {
             margin: 0;
         }
-
-        @include mixins.mq-up(lg) {
-            margin-top: 0;
-            margin-bottom: 6.5rem;
-            justify-content: flex-end;
-            flex-grow: 1;
-        }
     }
 
     &__meta-top {
@@ -57,7 +51,15 @@
     }
 
     &__heading {
-        color: var(--ts-font-color-white, white);
+        color: var(--ts-color-gradient-stop-5, purple);
+        background-color: var(--ts-font-color-white, white);
+        font-weight: var(--ts-font-weight-bold, 700);
+        margin: 0 auto;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        padding: 1rem 3rem;
+        border-radius: var(--ts-border-radius-xl, 3.125rem);
+
     }
 
     &__sub-heading {
@@ -81,11 +83,15 @@
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
+        width: 40rem;
 
         >p {
             margin: 0;
             color: var(--ts-font-color-white, white);
-            text-align: start !important;
+            text-align: center;
+            font-weight: var(--ts-font-weight-medium, 500);
+            font-size: 1.25rem;
+            line-height: 1.75rem;            
 
             a {
                 color: var(--ts-font-color-white, white) !important;

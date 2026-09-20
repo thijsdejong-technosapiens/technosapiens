@@ -1,0 +1,44 @@
+$vignetHeight: 12.5rem;
+$vignetColor: var(--ts-color-primary-darker, purple);
+
+$vignetSolid: 1rem;
+
+$vignetGradientTop: linear-gradient(
+    to bottom,
+    color-mix(in srgb, #{$vignetColor} 100%, transparent) 0,
+    color-mix(in srgb, #{$vignetColor} 100%, transparent) $vignetSolid,
+    color-mix(in srgb, #{$vignetColor} 0%, transparent) 100%
+);
+
+$vignetGradientBottom: linear-gradient(
+    to top,
+    color-mix(in srgb, #{$vignetColor} 100%, transparent) 0,
+    color-mix(in srgb, #{$vignetColor} 100%, transparent) $vignetSolid,
+    color-mix(in srgb, #{$vignetColor} 0%, transparent) 100%
+);
+
+.section[data-vignet-top="true"],
+.section[data-vignet-bottom="true"] {
+    position: relative;
+}
+
+.section[data-vignet-top="true"]::before,
+.section[data-vignet-bottom="true"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: min(#{$vignetHeight}, 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section[data-vignet-top="true"]::before {
+    top: 0;
+    background-image: $vignetGradientTop;
+}
+
+.section[data-vignet-bottom="true"]::after {
+    bottom: 0;
+    background-image: $vignetGradientBottom;
+}

@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @var string $size
  * @var string $bandSize
  * @var int[] $stops
  * @var string $axis
@@ -11,7 +10,6 @@
  * @var string $bandClass
  */
 
-if (!isset($size)) $size = 'large';
 if (!isset($bandSize)) $bandSize = '';
 if (!isset($stops) || !is_array($stops)) $stops = array_merge(range(1, 7), range(6, 1));
 if (!isset($axis)) $axis = 'vertical';
@@ -21,7 +19,6 @@ if (!isset($containerClass)) $containerClass = 'gradient-bands';
 if (!isset($bandClass)) $bandClass = 'gradient-band';
 
 $containerClasses = [$containerClass];
-if ($size) $containerClasses[] = $containerClass . '--' . $size;
 if ($axis) $containerClasses[] = $containerClass . '--' . $axis;
 if ($class) $containerClasses[] = $class;
 

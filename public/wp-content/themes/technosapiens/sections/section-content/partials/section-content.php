@@ -1,61 +1,37 @@
 <?php
 
-use TechnoSapiens\Core\Formatting;
-use TechnoSapiens\Core\Image;
+use TechnoSapiens\SectionBackground;
+use TechnoSapiens\SectionContent;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
-
-$contentType = get_field('content_type') ?? '';
-$contentText = get_field('content_text') ?? '';
-$contentTextBg = get_field('content_text_bg') ?? 'none';
-$roundedCornersPosition = get_field('rounded_corners_position') ?? 'all';
-$contentImage = get_field('content_image') ?? [];
-$contentImageId = !empty($contentImage['ID']) ? (int) $contentImage['ID'] : 0;
-
-$textClasses = ['section-content__text'];
-if ($contentType === 'text' && $contentTextBg === 'white') {
-    $textClasses[] = 'section-content__text--bg-white';
-
-    if ($roundedCornersPosition === 'top') {
-        $textClasses[] = 'section-content__text--rounded-top';
-    } elseif ($roundedCornersPosition === 'bottom') {
-        $textClasses[] = 'section-content__text--rounded-bottom';
-    }
-}
-
-$hasContent = ($contentType === 'text' && $contentText) || ($contentType === 'image' && $contentImageId);
+use TechnoSapiens\SectionVignet;
+use TechnoSapiens\Core\GradientBandsComponent;
 
 $containerClasses = SectionReferencePartial::getContainerClasses('section-content');
 $marginTop = SectionMargins::getMarginTop();
 $marginBottom = SectionMargins::getMarginBottom();
+$vignetTop = SectionVignet::getVignetTop();
+$vignetBottom = SectionVignet::getVignetBottom();
+$backgroundType = SectionBackground::getBackgroundType();
+$backgroundBandsAxis = SectionBackground::getBackgroundBandsAxis();
+$backgroundBandsAnimDir = SectionBackground::getBackgroundBandsAnimDir();
+
+$contentText = SectionContent::getContentText();
 ?>
 
-<?php if ($hasContent) : ?>
-    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-mt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-mb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?>>
-        <div class="container container--narrow section-content__container<?php echo ($contentType === 'image' ? ' section-content__container--has-image' : ''); ?>">
-
-            <?php if ($contentType === 'text') : ?>
-
-                <div class="<?php echo esc_attr(implode(' ', $textClasses)); ?>">
-                    <?php echo Formatting::toHtml($contentText); ?>
-                </div>
-
-            <?php elseif ($contentType === 'image' && $contentImageId) : ?>
-
-                <figure class="section-content__figure">
-                    <?php echo Image::render([
-                        'blockClass' => 'section-content',
-                        'sources' => [
-                            [
-                                'id' => $contentImageId,
-                                'size' => 'full',
-                            ],
-                        ],
-                    ]); ?>
-                </figure>
-
-            <?php endif; ?>
-
+<div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?>>
+    
+    <?php if ($backgroundType === 'bands') : ?>
+        <div class="section-background">
+            <?php echo GradientBandsComponent::render([
+                'bandSize' => 'xlarge',
+                'axis' => $backgroundBandsAxis ?: 'vertical',
+                'staggerMode' => $backgroundBandsAnimDir ?: 'start',
+            ]); ?>
         </div>
+    <?php endif; ?>
+
+    <div class="container container--narrow section-content__container">
+        <?php echo do_shortcode($contentText); ?>
     </div>
-<?php endif; ?>
+</div>

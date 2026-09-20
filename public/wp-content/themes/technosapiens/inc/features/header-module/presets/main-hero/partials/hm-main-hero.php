@@ -13,10 +13,9 @@ use TechnoSapiens\Core\GradientBandsComponent;
 
         <div class="hm-main-hero__background">
             <?php echo GradientBandsComponent::render([
-                'size' => 'small',
                 'bandSize' => 'small',
-                'axis' => 'vertical',
-                'staggerMode' => 'center',                
+                'axis' => 'horizontal',
+                'staggerMode' => 'start',
             ]); ?>
         </div>
 

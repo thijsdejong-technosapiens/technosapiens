@@ -1,0 +1,17 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-grand-title {
+    $self: &;
+
+    &__container {
+        z-index: 2;
+    }
+
+    &__text {
+        font-size: 4.5rem !important;
+        line-height: 6rem !important;
+        font-weight: var(--ts-font-weight-bold, 700);
+        color: var(--ts-color-white, white);
+    }
+}
