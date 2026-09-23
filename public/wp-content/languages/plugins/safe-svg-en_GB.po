@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Safe SVG - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-07 10:06:22+0000\n"
+"PO-Revision-Date: 2026-09-23 13:45:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,22 @@ msgstr ""
 "X-Generator: GlotPress/4.1.0\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Safe SVG - Stable (latest release)\n"
+
+#: includes/safe-svg-sanitizer.php:247 includes/safe-svg-sanitizer.php:286
+msgid "The SVG file could not be read."
+msgstr "The SVG file could not be read."
+
+#: includes/safe-svg-sanitizer.php:237
+msgid "The requested attachment is not an SVG."
+msgstr "The requested attachment is not an SVG."
+
+#: includes/safe-svg-sanitizer.php:229
+msgid "Invalid SVG attachment."
+msgstr "Invalid SVG attachment."
+
+#: includes/safe-svg-sanitizer.php:296
+msgid "The SVG could not be sanitized."
+msgstr "The SVG could not be sanitised."
 
 #: includes/safe-svg-settings.php:192
 msgid "Allow large SVG files"
@@ -31,7 +47,7 @@ msgstr "Safe SVG Settings"
 msgid "Select which user roles can upload SVG files."
 msgstr "Select which user roles can upload SVG files."
 
-#: safe-svg.php:289
+#: safe-svg.php:282
 msgid "Sorry, you are not allowed to upload SVG files."
 msgstr "Sorry, you are not allowed to upload SVG files."
 
@@ -55,7 +71,7 @@ msgid "Safe SVG"
 msgstr "Safe SVG"
 
 #: includes/blocks.php:59 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:313
+#: includes/blocks/safe-svg/edit.js:351
 msgid "SafeSvg"
 msgstr "SafeSvg"
 
@@ -74,8 +90,8 @@ msgstr "https://wordpress.org/plugins/safe-svg/"
 msgid "10up"
 msgstr "10up"
 
-#: safe-svg.php:429 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:163
+#: safe-svg.php:384 dist/safe-svg-block.js:1
+#: includes/blocks/safe-svg/edit.js:193
 msgid "Full Size"
 msgstr "Full Size"
 
@@ -84,12 +100,12 @@ msgstr "Full Size"
 msgid "https://10up.com"
 msgstr "https://10up.com"
 
-#: safe-svg.php:432
+#: safe-svg.php:387
 msgid "Large"
 msgstr "Large"
 
-#: safe-svg.php:431 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:166
+#: safe-svg.php:386 dist/safe-svg-block.js:1
+#: includes/blocks/safe-svg/edit.js:196
 msgid "Medium"
 msgstr "Medium"
 
@@ -98,12 +114,12 @@ msgstr "Medium"
 msgid "Safe SVG"
 msgstr "Safe SVG"
 
-#: safe-svg.php:298
+#: safe-svg.php:291
 msgid "Sorry, this file couldn't be sanitized so for security reasons wasn't uploaded"
 msgstr "Sorry, this file couldn't be sanitised, so for security reasons it wasn't uploaded"
 
-#: safe-svg.php:430 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:169
+#: safe-svg.php:385 dist/safe-svg-block.js:1
+#: includes/blocks/safe-svg/edit.js:199
 msgid "Thumbnail"
 msgstr "Thumbnail"
 

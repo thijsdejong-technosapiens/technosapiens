@@ -2997,7 +2997,8 @@ Content-Type: text/html;
 	 * @return string|false
 	 */
 	public static function get_key() {
-		if ( defined( 'GF_LICENSE_KEY' ) ) {
+		// GoDaddy hasn't removed their old starter license code, so the GD_GF_LICENSE_KEY check allows impacted customers to edit the key on the settings page.
+		if ( defined( 'GF_LICENSE_KEY' ) && ! ( defined( 'GD_GF_LICENSE_KEY' ) && GF_LICENSE_KEY === GD_GF_LICENSE_KEY ) ) {
 			return md5( GF_LICENSE_KEY );
 		}
 

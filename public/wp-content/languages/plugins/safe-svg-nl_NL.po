@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Safe SVG - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-07 18:58:55+0000\n"
+"PO-Revision-Date: 2026-09-23 06:41:09+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,22 @@ msgstr ""
 "X-Generator: GlotPress/4.1.0\n"
 "Language: nl\n"
 "Project-Id-Version: Plugins - Safe SVG - Stable (latest release)\n"
+
+#: includes/safe-svg-sanitizer.php:247 includes/safe-svg-sanitizer.php:286
+msgid "The SVG file could not be read."
+msgstr "Het SVG bestand kon niet worden gelezen."
+
+#: includes/safe-svg-sanitizer.php:296
+msgid "The SVG could not be sanitized."
+msgstr "De SVG kon niet worden gesaniteerd."
+
+#: includes/safe-svg-sanitizer.php:237
+msgid "The requested attachment is not an SVG."
+msgstr "De opgevraagde bijlage is geen SVG."
+
+#: includes/safe-svg-sanitizer.php:229
+msgid "Invalid SVG attachment."
+msgstr "Ongeldige SVG bijlage."
 
 #: includes/safe-svg-settings.php:194
 msgid "Turning this on will allow SVG files larger than 10MB to be uploaded. This can impact performance and is not recommended unless needed."
@@ -27,7 +43,7 @@ msgstr "Grote SVG bestanden toestaan"
 msgid "User Roles"
 msgstr "Gebruikersrollen"
 
-#: safe-svg.php:289
+#: safe-svg.php:282
 msgid "Sorry, you are not allowed to upload SVG files."
 msgstr "Je hebt geen toestemming om bestanden te uploaden."
 
@@ -50,7 +66,7 @@ msgid "Safe SVG"
 msgstr "Safe SVG"
 
 #: includes/blocks.php:59 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:313
+#: includes/blocks/safe-svg/edit.js:351
 msgid "SafeSvg"
 msgstr "SafeSvg"
 
@@ -84,22 +100,22 @@ msgstr "10up"
 msgid "https://10up.com"
 msgstr "https://10up.com"
 
-#: safe-svg.php:432
+#: safe-svg.php:387
 msgid "Large"
 msgstr "Groot"
 
-#: safe-svg.php:431 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:166
+#: safe-svg.php:386 dist/safe-svg-block.js:1
+#: includes/blocks/safe-svg/edit.js:196
 msgid "Medium"
 msgstr "Gemiddeld"
 
-#: safe-svg.php:430 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:169
+#: safe-svg.php:385 dist/safe-svg-block.js:1
+#: includes/blocks/safe-svg/edit.js:199
 msgid "Thumbnail"
 msgstr "Thumbnail"
 
-#: safe-svg.php:429 dist/safe-svg-block.js:1
-#: includes/blocks/safe-svg/edit.js:163
+#: safe-svg.php:384 dist/safe-svg-block.js:1
+#: includes/blocks/safe-svg/edit.js:193
 msgid "Full Size"
 msgstr "Volledige grootte"
 
@@ -108,6 +124,6 @@ msgstr "Volledige grootte"
 msgid "You appear to be running a development version of Safe SVG. Please run %1$s in order for things to work properly."
 msgstr "Je lijkt een ontwikkelingsversie van Safe SVG uit te voeren. Voer %1$s uit om ervoor te zorgen dat de dingen goed werken."
 
-#: safe-svg.php:298
+#: safe-svg.php:291
 msgid "Sorry, this file couldn't be sanitized so for security reasons wasn't uploaded"
 msgstr "Dit bestand kon niet worden opgeschoond, dus om veiligheidsredenen is het niet geüpload"

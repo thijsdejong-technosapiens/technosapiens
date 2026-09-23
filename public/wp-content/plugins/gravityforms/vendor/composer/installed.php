@@ -3,7 +3,7 @@
         'name' => 'gravityforms/gravityforms',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '97e0b8d0a8f60f01ce14d7711641818a7c5c3b4d',
+        'reference' => '1f1edfc83c478e4199ad3421070a79ad158b2956',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'gravityforms/gravityforms' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '97e0b8d0a8f60f01ce14d7711641818a7c5c3b4d',
+            'reference' => '1f1edfc83c478e4199ad3421070a79ad158b2956',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
