@@ -34,6 +34,9 @@
         overflow: hidden;
         transition: all 300ms ease-in-out;
         border: 1px solid transparent;
+        // Above __top::before hover bridge, which extends upward over the logo
+        position: relative;
+        z-index: 1;
     }
 
     &__left {
@@ -107,9 +110,11 @@
         }
     }
 
-    &__logo-image {
-        width: 18rem;
+    &__logo-image, &__logo-wordmark {
+        width: auto;
         height: 5.9rem;
+        // SVG defaults to visiblePainted — gaps between paths miss the parent <a>
+        pointer-events: none;
     }
 
     &__logo-wordmark {

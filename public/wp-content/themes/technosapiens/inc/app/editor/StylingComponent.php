@@ -73,7 +73,7 @@ class StylingComponent extends Singleton {
         $colorPrimaryDarker = '#250525';
         $colorSecondary = '#E10F7E';
         $colorTertiary = '#FDB500';
-        $colorWhite = '#FFFFFF';
+        $colorWhite = '#FBFBF3';
         $colorBlack = '#000000';
         $colorGrey = '#222222';
         $colorLight = '#F3F2EB';

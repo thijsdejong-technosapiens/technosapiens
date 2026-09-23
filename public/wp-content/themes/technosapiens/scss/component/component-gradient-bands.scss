@@ -30,6 +30,7 @@
     width: 100%;
     height: var(--gradient-band-size, 2rem);
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 
     &--medium {
         --gradient-band-size: 2.4rem;

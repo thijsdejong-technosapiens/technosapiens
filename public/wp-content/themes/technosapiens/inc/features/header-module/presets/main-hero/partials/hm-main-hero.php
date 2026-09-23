@@ -15,7 +15,7 @@ use TechnoSapiens\Core\GradientBandsComponent;
             <?php echo GradientBandsComponent::render([
                 'bandSize' => 'small',
                 'axis' => 'horizontal',
-                'staggerMode' => 'start',
+                'staggerMode' => 'center',
             ]); ?>
         </div>
 
