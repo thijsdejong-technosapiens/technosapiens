@@ -365,6 +365,13 @@
                 "operator": "==",
                 "value": "acf\/section-section-brands"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-3dfolio"
+            }
         ]
     ],
     "menu_order": 99,
@@ -379,5 +386,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1790428800
+    "modified": 1790460000
 }

@@ -1,0 +1,110 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-3dfolio {
+    $self: &;
+
+    --section-3dfolio-brand: #662364;
+
+    &__stage {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background-color: var(--section-3dfolio-brand);
+    }
+
+    &__canvas-host {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+
+        &[hidden] {
+            display: none;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__popup-root {
+        position: absolute;
+        inset: 0;
+        z-index: var(--ts-z-index-dropdown, 10);
+        pointer-events: none;
+
+        &[hidden] {
+            display: none;
+        }
+    }
+
+    &__popup {
+        pointer-events: auto;
+        max-width: 22.5rem;
+        padding: var(--ts-space-4, 1rem);
+        background-color: var(--ts-color-surface, white);
+        color: var(--ts-color-text, black);
+        border-radius: var(--ts-radius-sm, 0.5rem);
+        box-shadow: var(--ts-elevation-2, 0 0.25rem 1rem rgba(0, 0, 0, 0.2));
+    }
+
+    &__popup-title {
+        margin: 0 0 var(--ts-space-2, 0.5rem);
+    }
+
+    &__popup-body {
+        margin: 0;
+    }
+
+    &__popup-close {
+        position: absolute;
+        top: var(--ts-space-2, 0.5rem);
+        right: var(--ts-space-2, 0.5rem);
+    }
+
+    &__placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--ts-gutter-width, 2rem);
+        color: var(--ts-color-text-inverse, white);
+        text-align: center;
+    }
+
+    &__placeholder-text {
+        margin: 0;
+    }
+
+    &__placeholder-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--ts-space-4, 1rem);
+        justify-content: center;
+    }
+
+    &__placeholder-item {
+        margin: 0;
+    }
+
+    &__placeholder-title {
+        margin: 0;
+        font-weight: var(--ts-font-weight-semibold, 600);
+    }
+
+    &__placeholder-body {
+        margin-top: var(--ts-space-2, 0.5rem);
+    }
+
+    &__data {
+        display: none;
+    }
+}
