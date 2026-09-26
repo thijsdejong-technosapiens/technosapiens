@@ -235,14 +235,10 @@ class Theme extends Singleton {
     public static function initBlocks(): void {
 
         //init section blocks
-        SectionAccordion::getInstance();
-        SectionCtaBanner::getInstance();
-        SectionPageButtons::getInstance();
         SectionContent::getInstance();
         SectionGrandTitle::getInstance();
         SectionUsps::getInstance();
-        SectionStats::getInstance();
-        SectionDivider::getInstance();
+        SectionCards::getInstance();
     }
 }
 

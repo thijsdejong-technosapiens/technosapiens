@@ -11,7 +11,7 @@ class GradientBandsComponent {
     const CONTAINER_CLASS = 'gradient-bands';
     const BAND_CLASS = 'gradient-band';
 
-    const SIZES = ['xlarge', 'large', 'medium', 'small'];
+    const SIZES = ['xlarge', 'large', 'medium', 'small']; // add sizes in rem: xlarge: 8.25rem, large: 3.75rem, medium: 2.4rem, small: 2.1rem
     const AXES = ['vertical', 'horizontal'];
     const STAGGER_MODES = ['start', 'end', 'center'];
     const STOP_COUNT = 7;

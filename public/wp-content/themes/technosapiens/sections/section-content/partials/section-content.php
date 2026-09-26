@@ -15,6 +15,7 @@ $vignetBottom = SectionVignet::getVignetBottom();
 $backgroundType = SectionBackground::getBackgroundType();
 $backgroundBandsAxis = SectionBackground::getBackgroundBandsAxis();
 $backgroundBandsAnimDir = SectionBackground::getBackgroundBandsAnimDir();
+$backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 
 $contentText = SectionContent::getContentText();
 ?>
@@ -24,7 +25,7 @@ $contentText = SectionContent::getContentText();
     <?php if ($backgroundType === 'bands') : ?>
         <div class="section-background">
             <?php echo GradientBandsComponent::render([
-                'bandSize' => 'xlarge',
+                'bandSize' => $backgroundBandsSize ?: 'medium',
                 'axis' => $backgroundBandsAxis ?: 'vertical',
                 'staggerMode' => $backgroundBandsAnimDir ?: 'start',
             ]); ?>

@@ -232,6 +232,45 @@
             "save_options": 0
         },
         {
+            "key": "field_6aaef84e3c58f",
+            "label": "Bands size",
+            "name": "background_bands_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6aaef7702bdba",
+                        "operator": "==",
+                        "value": "bands"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "xlarge": "Extra large",
+                "large": "Large",
+                "medium": "Medium",
+                "small": "Small"
+            },
+            "default_value": "medium",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_6aaef8153c58e",
             "label": "Bands animation direction",
             "name": "background_bands_anim_dir",
@@ -312,6 +351,13 @@
                 "operator": "==",
                 "value": "acf\/section-section-stats"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-cards"
+            }
         ]
     ],
     "menu_order": 99,
@@ -326,5 +372,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789851845
+    "modified": 1790428800
 }

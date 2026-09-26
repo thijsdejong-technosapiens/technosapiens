@@ -7,12 +7,20 @@ class SectionBackground {
     private const TYPE_FIELD = 'background_type';
     private const BANDS_AXIS_FIELD = 'background_bands_axis';
     private const BANDS_ANIM_DIR_FIELD = 'background_bands_anim_dir';
+    private const BANDS_SIZE_FIELD = 'background_bands_size';
 
     private const TYPE_BANDS = 'bands';
 
     private const BANDS_AXES = [
         'horizontal',
         'vertical',
+    ];
+
+    private const BANDS_SIZES = [
+        'xlarge',
+        'large',
+        'medium',
+        'small',
     ];
 
     private const BANDS_ANIM_DIR_MAP = [
@@ -83,15 +91,39 @@ class SectionBackground {
     }
 
     /**
+     * Get the bands size for the current section.
+     *
+     * @return string
+     */
+    public static function getBackgroundBandsSize(): string {
+        if (self::getBackgroundType() !== self::TYPE_BANDS) {
+            return '';
+        }
+
+        $value = get_field(self::BANDS_SIZE_FIELD);
+
+        if (!is_string($value) || $value === '') {
+            return '';
+        }
+
+        if (!in_array($value, self::BANDS_SIZES, true)) {
+            return '';
+        }
+
+        return $value;
+    }
+
+    /**
      * Get background settings for the current section.
      *
-     * @return array{type: string, bandsAxis: string, bandsAnimDir: string}
+     * @return array{type: string, bandsAxis: string, bandsAnimDir: string, bandsSize: string}
      */
     public static function getBackground(): array {
         return [
             'type' => self::getBackgroundType(),
             'bandsAxis' => self::getBackgroundBandsAxis(),
             'bandsAnimDir' => self::getBackgroundBandsAnimDir(),
+            'bandsSize' => self::getBackgroundBandsSize(),
         ];
     }
 }

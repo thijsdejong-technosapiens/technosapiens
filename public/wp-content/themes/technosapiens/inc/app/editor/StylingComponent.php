@@ -103,6 +103,7 @@ class StylingComponent extends Singleton {
         $elevation4 = '4px 4px 12px 0 rgba(0, 0, 0, 0.20)';
 
         $radiusXs = '0.5rem';
+        $radiusBase = '1rem';
         $radiusSm = '1.9rem';
         $radiusMd = '2.25rem';
         $radiusLg = '2.9rem';
@@ -270,6 +271,7 @@ class StylingComponent extends Singleton {
             // --- Radius (canonical + legacy names) ---
             'radius-none'          => $radiusNone,
             'radius-xs'            => $radiusXs,
+            'radius-base'          => $radiusBase,
             'radius-sm'            => $radiusSm,
             'radius-md'            => $radiusMd,
             'radius-lg'            => $radiusLg,
@@ -277,6 +279,7 @@ class StylingComponent extends Singleton {
             'radius-xxl'           => $radiusXxl,
             'radius-pill'          => $radiusPill,
             'border-radius-xs'     => $radiusXs,
+            'border-radius-base'   => $radiusBase,
             'border-radius-sm'     => $radiusSm,
             'border-radius-md'     => $radiusMd,
             'border-radius-lg'     => $radiusLg,
