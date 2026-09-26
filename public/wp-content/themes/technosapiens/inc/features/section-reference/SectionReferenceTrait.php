@@ -173,7 +173,7 @@ trait SectionReferenceTrait {
     public function render(array $block, string $content = '', bool $is_preview = false, int|string $post_id = 0): string {
         $isExample = !empty($block['data']['is_example']);
 
-        if (($isExample || $is_preview) && SectionReferencePartial::hasPreviewImage(self::SECTION_SLUG)) {
+        if ($isExample || $is_preview) {
             $bar = SectionReferencePartial::renderEditorBar(self::SECTION_SLUG, static::getSectionLabel());
             echo $bar;
 

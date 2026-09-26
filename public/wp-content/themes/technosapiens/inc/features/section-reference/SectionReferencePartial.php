@@ -86,23 +86,27 @@ class SectionReferencePartial {
 
     /**
      * Build compact editor bar HTML for block inserter and canvas preview.
+     * Thumbnail is optional; title and icon always render.
      * @param string $sectionSlug
      * @param string $label
      * @return string
      */
     public static function renderEditorBar(string $sectionSlug, string $label): string {
-        if (!self::hasPreviewImage($sectionSlug)) {
-            return '';
-        }
-
         $icon = esc_attr(self::getSectionIcon($sectionSlug));
+        $thumb = '';
+
+        if (self::hasPreviewImage($sectionSlug)) {
+            $thumb = '<img class="section-reference-editor-bar__thumb" src="'
+                . esc_url(self::getPreviewImageUrl($sectionSlug))
+                . '" alt="">';
+        }
 
         return '<div class="section-reference-editor-bar">'
             . '<span class="section-reference-editor-bar__title">'
             . '<span class="section-reference-editor-bar__icon dashicons dashicons-' . $icon . '" aria-hidden="true"></span>'
             . '<span class="section-reference-editor-bar__label">' . esc_html($label) . '</span>'
             . '</span>'
-            . '<img class="section-reference-editor-bar__thumb" src="' . esc_url(self::getPreviewImageUrl($sectionSlug)) . '" alt="">'
+            . $thumb
             . '</div>';
     }
 
