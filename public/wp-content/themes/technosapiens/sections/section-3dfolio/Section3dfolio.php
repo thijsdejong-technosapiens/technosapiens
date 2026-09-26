@@ -20,7 +20,7 @@ class Section3dfolio extends Singleton {
         $this->registerReferenceSection(
             __('3D folio section.', Theme::TEXT_DOMAIN),
             'images-alt',
-            false,
+            true,
             $supports,
             $postTypes
         );
@@ -53,7 +53,7 @@ class Section3dfolio extends Singleton {
             $cases[] = [
                 'imageUrl' => $imageUrl,
                 'title' => $title,
-                'body' => $content ? Formatting::toHtml($content) : '',
+                'body' => $content ? wp_kses_post(Formatting::toHtml($content)) : '',
             ];
 
             if (count($cases) >= self::MAX_CASES) {

@@ -13,10 +13,10 @@ todos:
     status: completed
   - id: phase2-three
     content: "Fase 2 (na go): npm three + section-3dfolio.js scene, interactie, face-popup"
-    status: pending
+    status: completed
   - id: phase2-verify
     content: "Fase 2: Webpack build + smoke-check enqueue, 16:9 stage, interactie"
-    status: pending
+    status: completed
 isProject: false
 ---
 
