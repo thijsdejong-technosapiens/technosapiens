@@ -77,13 +77,4 @@
             color: var(--ts-font-color-primary, blue);
         }
     }
-
-    .hm-main-hero__slot & {
-        background-color: transparent;
-        margin-bottom: 0;
-    }
-
-    @include mixins.mq-down(md) {
-        //display: none;
-    }
 }

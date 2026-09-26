@@ -1,0 +1,148 @@
+{
+    "key": "group_6d9e0f1a2b3c4",
+    "title": "Section - Brands",
+    "fields": [
+        {
+            "key": "field_6d9e0f1a2b3c5",
+            "label": "Section title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6d9e0f1a2b3c6",
+            "label": "Heading tag",
+            "name": "title_heading_tag",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "Heading 2",
+                "h3": "Heading 3",
+                "h4": "Heading 4"
+            },
+            "default_value": "h2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6d9e0f1a2b3c7",
+            "label": "Brands",
+            "name": "brands",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_6d9e0f1a2b3c8",
+            "button_label": "Add brand",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6d9e0f1a2b3c8",
+                    "label": "Logo",
+                    "name": "brand_logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "PNG, JPG or SVG. Prefer flat logos with transparency for the white filter effect.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,jpg,jpeg,svg",
+                    "allow_in_bindings": 0,
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_6d9e0f1a2b3c7"
+                },
+                {
+                    "key": "field_6d9e0f1a2b3c9",
+                    "label": "Link",
+                    "name": "brand_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Optional. Opens in a new tab.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_6d9e0f1a2b3c7"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-brands"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1790440547
+}

@@ -358,6 +358,13 @@
                 "operator": "==",
                 "value": "acf\/section-section-cards"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-section-brands"
+            }
         ]
     ],
     "menu_order": 99,

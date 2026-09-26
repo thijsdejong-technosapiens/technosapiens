@@ -1,0 +1,63 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-brands {
+    $self: &;
+
+    &__title {
+        margin: 0 0 4rem 0;
+        text-align: center;
+        color: var(--ts-color-text-inverse, white);
+    }
+
+    &__grid {
+        align-items: center;
+        // gap y axis (vertical)    
+        row-gap: var(--ts-gutter-width, 2rem);
+    }
+
+    &__item-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: var(--ts-focus-ring-inverse, 0.125rem solid white);
+            outline-offset: var(--ts-focus-ring-offset, 0.25rem);
+        }
+    }
+
+    &__logo {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: auto;
+        height: auto;
+        max-width: 90%;
+        max-height: 50%;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        transform: scale(1);
+        transition: transform var(--ts-duration-base, 0.3s) var(--ts-easing-standard, ease);
+    }
+
+    &__logo:hover #{$self}__image,
+    &__link:focus-within #{$self}__image {
+        transform: scale(1.05);
+    }
+}

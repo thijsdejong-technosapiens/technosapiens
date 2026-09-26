@@ -239,6 +239,7 @@ class Theme extends Singleton {
         SectionGrandTitle::getInstance();
         SectionUsps::getInstance();
         SectionCards::getInstance();
+        SectionBrands::getInstance();
     }
 }
 

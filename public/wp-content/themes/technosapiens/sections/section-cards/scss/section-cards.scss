@@ -3,7 +3,7 @@
     $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
     &__title {
-        margin: 0 0 var(--ts-gutter-width, 2rem);
+        margin: 0 0 6rem 0;
         text-align: center;
         color: var(--ts-color-text-inverse, white);
     }

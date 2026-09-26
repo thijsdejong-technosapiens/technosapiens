@@ -7,6 +7,11 @@ use TechnoSapiens\SectionReferencePartial;
 use TechnoSapiens\SectionVignet;
 use TechnoSapiens\Core\GradientBandsComponent;
 
+$sectionContent = SectionContent::getInstance();
+$sectionTitle = $sectionContent->getSectionTitle();
+$titleHeadingTag = $sectionContent->getTitleHeadingTag();
+$contentText = SectionContent::getContentText();
+
 $containerClasses = SectionReferencePartial::getContainerClasses('section-content');
 $marginTop = SectionMargins::getMarginTop();
 $marginBottom = SectionMargins::getMarginBottom();
@@ -16,8 +21,6 @@ $backgroundType = SectionBackground::getBackgroundType();
 $backgroundBandsAxis = SectionBackground::getBackgroundBandsAxis();
 $backgroundBandsAnimDir = SectionBackground::getBackgroundBandsAnimDir();
 $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
-
-$contentText = SectionContent::getContentText();
 ?>
 
 <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?>>
@@ -33,6 +36,14 @@ $contentText = SectionContent::getContentText();
     <?php endif; ?>
 
     <div class="container container--narrow section-content__container">
-        <?php echo do_shortcode($contentText); ?>
+        <?php if ($sectionTitle) : ?>
+            <<?php echo esc_attr($titleHeadingTag); ?> class="section-content__title">
+                <?php echo esc_html($sectionTitle); ?>
+            </<?php echo esc_attr($titleHeadingTag); ?>>
+        <?php endif; ?>
+
+        <div class="section-content__text">
+            <?php echo do_shortcode($contentText); ?>
+        </div>
     </div>
 </div>
