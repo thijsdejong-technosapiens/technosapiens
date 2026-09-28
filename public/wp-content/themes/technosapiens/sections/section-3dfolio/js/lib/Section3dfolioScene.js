@@ -26,7 +26,7 @@ const TAU = Math.PI * 2
 
 /**
  * Section 3D Folio scene
- * Standing hex prism with one case per 16:9 side face, idle yaw, drag, click-to-open and cursor tilt.
+ * Standing hex prism with one case per 1:1 side face, idle yaw, drag, click-to-open and cursor tilt.
  */
 export default class Section3dfolioScene {
     STAGE_SELECTOR = '.section-3dfolio__stage'
@@ -44,12 +44,12 @@ export default class Section3dfolioScene {
 
     FACE_COUNT = 6
     FACE_WIDTH = 1
-    FACE_ASPECT = 16 / 9
+    FACE_ASPECT = 1
     CAMERA_FOV = 35
     // Low enough to look at the faces, high enough to still read the top
     CAMERA_ELEVATION_DEG = 20
     // Fraction of the limiting frustum axis the prism should fill
-    CAMERA_FIT_FILL = 0.65
+    CAMERA_FIT_FILL = 0.75
     MAX_PIXEL_RATIO = 2
     AMBIENT_INTENSITY = 1.4
     DIRECTIONAL_INTENSITY = 1.6
@@ -203,7 +203,7 @@ export default class Section3dfolioScene {
     }
 
     /**
-     * Six 16:9 side planes around a regular hexagon (side = face width) plus top/bottom caps
+     * Six 1:1 side planes around a regular hexagon (side = face width) plus top/bottom caps
      */
     buildPrism() {
         const brandColor = this.getBrandColor()
@@ -356,7 +356,7 @@ export default class Section3dfolioScene {
     }
 
     /**
-     * Crop the texture like `object-fit: cover` on a 16:9 face
+     * Crop the texture like `object-fit: cover` on a 1:1 face
      * @param {Texture} texture
      */
     applyCoverFit(texture) {
