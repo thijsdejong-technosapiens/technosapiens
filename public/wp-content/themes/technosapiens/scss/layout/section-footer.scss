@@ -13,7 +13,7 @@
     }
 
     &__row {        
-        gap: var(--ts-row-gap-default, 2rem);
+        gap: var(--ts-space-8, 2rem);
 
         @include mixins.mq-up(xl) {
             gap: 0;
@@ -35,7 +35,7 @@
 
     &__contact-data {
         p, a{
-            font-family: var(--ts-font-semibold, sans-serif);
+            font-family: var(--ts-font-family-sans, sans-serif);
             font-weight: var(--ts-font-weight-semibold, 600);
         }
 
@@ -45,7 +45,7 @@
 
         a{
             color: var(--ts-color-white, white);
-            transition: var(--ts-transition-ease-in-out, all 0.3s ease-in-out);
+            transition: opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), color var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
 
             &:hover{
                 opacity: 0.7;
@@ -67,7 +67,7 @@
 
         .text-small{
             .site-footer__links-menu-item-link{
-                font-family: var(--ts-font-regular, sans-serif);
+                font-family: var(--ts-font-family-sans, sans-serif);
                 font-weight: var(--ts-font-weight-regular, 400);
             }
         }
@@ -76,9 +76,9 @@
     &__links-menu-item-link {
         padding-block: 0.25rem;
         text-decoration: none;
-        font-family: var(--ts-font-semibold, sans-serif);
+        font-family: var(--ts-font-family-sans, sans-serif);
         font-weight: var(--ts-font-weight-semibold, 600);
-        transition: var(--ts-transition-ease-in-out, all 0.3s ease-in-out);
+        transition: opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), color var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
         display: block;
 
         &:hover{

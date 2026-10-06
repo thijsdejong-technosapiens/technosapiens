@@ -13,7 +13,7 @@
     &__grid {
         align-items: center;
         // gap y axis (vertical)    
-        row-gap: var(--ts-gutter-width, 2rem);
+        row-gap: var(--ts-space-8, 2rem);
     }
 
     &__item-wrap {
@@ -29,8 +29,8 @@
         text-decoration: none;
 
         &:focus-visible {
-            outline: var(--ts-focus-ring-inverse, 0.125rem solid white);
-            outline-offset: var(--ts-focus-ring-offset, 0.25rem);
+            outline: var(--ts-stroke-thin, 2px) solid var(--ts-color-focus-ring, white);
+            outline-offset: 0.125rem;
         }
     }
 

@@ -7,8 +7,8 @@
     align-items: center;
     justify-content: center;
     gap: .5em;
-    font-size: calc(var(--ts-pagination-size, 2.5rem) / 2.5);
-    margin: var(--ts-gutter-width, 2rem) auto;
+    font-size: calc(var(--ts-size-button-sm, 2.5rem) / 2.5);
+    margin: var(--ts-space-8, 2rem) auto;
     z-index: 1;
 
     @include mixins.mq-down(sm) {
@@ -22,13 +22,13 @@
         flex-shrink: 0;
 
         &:not(.dots) {
-            width: var(--ts-pagination-size, 2.5rem);
-            height: var(--ts-pagination-size, 2.5rem);
+            width: var(--ts-size-button-sm, 2.5rem);
+            height: var(--ts-size-button-sm, 2.5rem);
             border-radius: var(--ts-radius-foundation-pill, 3.125rem);
 
             @include mixins.mq-down(sm) {
-                width: calc(var(--ts-pagination-size, 2.5rem) * .8);
-                height: calc(var(--ts-pagination-size, 2.5rem) * .8);
+                width: calc(var(--ts-size-button-sm, 2.5rem) * .8);
+                height: calc(var(--ts-size-button-sm, 2.5rem) * .8);
             }
         }
     }
@@ -37,12 +37,12 @@
         text-decoration: none;
 
         &.prev, &.next {
-            width: calc(var(--ts-pagination-size, 2.5rem) * 1.25);
-            height: calc(var(--ts-pagination-size, 2.5rem) * 1.25);
+            width: calc(var(--ts-size-button-sm, 2.5rem) * 1.25);
+            height: calc(var(--ts-size-button-sm, 2.5rem) * 1.25);
 
             @include mixins.mq-down(sm) {
-                width: var(--ts-pagination-size, 2.5rem);
-                height: var(--ts-pagination-size, 2.5rem);
+                width: var(--ts-size-button-sm, 2.5rem);
+                height: var(--ts-size-button-sm, 2.5rem);
             }
         }
 

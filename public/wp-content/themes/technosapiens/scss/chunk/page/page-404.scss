@@ -5,7 +5,7 @@
 
     &__content {
         align-items: center;
-        margin: var(--ts-gutter-width, 2rem) 0;
+        margin: var(--ts-space-8, 2rem) 0;
 
         @include mixins.mq-down(lg) {
             margin: 0;
@@ -27,12 +27,12 @@
             margin-top: 0;
 
             &:not(:last-child) {
-                margin-bottom: var(--ts-gutter-width, 2rem);
+                margin-bottom: var(--ts-space-8, 2rem);
             }
         }
 
         @include mixins.mq-down(lg) {
-            margin-bottom: var(--ts-gutter-width, 2rem);
+            margin-bottom: var(--ts-space-8, 2rem);
         }
     }
 }

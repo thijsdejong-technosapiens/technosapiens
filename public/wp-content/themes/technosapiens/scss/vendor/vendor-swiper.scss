@@ -23,9 +23,9 @@
 :root {
     --swiper-theme-color: var(--ts-color-primary, blue);
     --swiper-pagination-bullet-inactive-color: var(--ts-color-primary, blue);
-    --swiper-pagination-bullet-width: calc(var(--ts-gutter-width, 2rem) / 2);
-    --swiper-pagination-bullet-height: calc(var(--ts-gutter-width, 2rem) / 2);
-    --swiper-pagination-bullet-horizontal-gap: calc(var(--ts-gutter-width, 2rem) / 6);
+    --swiper-pagination-bullet-width: calc(var(--ts-space-8, 2rem) / 2);
+    --swiper-pagination-bullet-height: calc(var(--ts-space-8, 2rem) / 2);
+    --swiper-pagination-bullet-horizontal-gap: calc(var(--ts-space-8, 2rem) / 6);
 }
 
 .swiper {

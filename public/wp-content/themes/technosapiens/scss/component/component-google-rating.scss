@@ -9,7 +9,7 @@ $self: '.google-rating';
         display: block;
         text-decoration: none;
         color: inherit;
-        transition: var(--ts-transition, all 0.3s ease-in);
+        transition: opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), color var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
@@ -45,14 +45,14 @@ $self: '.google-rating';
     }
 
     &__score {
-        font-size: var(--ts-font-size-small, 0.875rem);
+        font-size: var(--ts-font-size-body-small, 1rem);
         font-weight: var(--ts-font-weight-semibold, 600);
         color: var(--ts-font-color-primary, black);
         line-height: 1;
     }
 
     &__count {
-        font-size: var(--ts-font-size-small, 0.875rem);
+        font-size: var(--ts-font-size-body-small, 1rem);
         color: var(--ts-font-color-primary, black);
         opacity: 0.6;
         line-height: 1;

@@ -5,12 +5,12 @@
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    max-width: calc(#{vars.$base-width} + var(--ts-gutter-width, 2rem));
+    max-width: calc(#{vars.$base-width} + var(--ts-space-8, 2rem));
     margin: 0 auto;
-    padding: 0 calc(var(--ts-gutter-width, 2rem) / 2);
+    padding: 0 calc(var(--ts-space-8, 2rem) / 2);
 
     @include mixins.mq-up(xl) {
-        padding: 0 var(--ts-gutter-width, 2rem);
+        padding: 0 var(--ts-space-8, 2rem);
     }
 
     &.fluid {
@@ -27,6 +27,6 @@
     }
 
     &--narrow{
-        max-width: calc(#{vars.$narrow-width} + var(--ts-gutter-width, 2rem));
+        max-width: calc(#{vars.$narrow-width} + var(--ts-space-8, 2rem));
     }
 }

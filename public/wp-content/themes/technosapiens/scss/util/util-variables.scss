@@ -11,7 +11,7 @@ $narrow-width: var(--ts-narrow-width, 1188px);
 // Gutter width defines the spacing around a colum.
 // e.g. 20px will result in a margin of 10px all round.
 
-$gutter-width: var(--ts-gutter-width, 2rem);
+$gutter-width: var(--ts-space-8, 2rem);
 
 // Column count defines the maximum columns allowed in 1 row.
 // After which the next column will be forced to a new row.
@@ -35,11 +35,11 @@ $breakpoints: (
 );
 
 $ezpz-gap-sizes: (
-        small: var(--ts-row-gap-small, 1rem),
-        default: var(--ts-row-gap-default, 2rem),
-        medium: var(--ts-row-gap-medium, 3rem),
-        large: var(--ts-row-gap-large, 4rem),
-        xlarge: var(--ts-row-gap-xlarge, 5rem),
+        small: var(--ts-space-4, 1rem),
+        default: var(--ts-space-8, 2rem),
+        medium: var(--ts-space-12, 3rem),
+        large: var(--ts-space-16, 4rem),
+        xlarge: var(--ts-space-20, 5rem),
 );
 
 $ezpz-gutter: $gutter-width;

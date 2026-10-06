@@ -21,7 +21,7 @@
     &__items {
         height: 100%;
         display: flex;
-        gap: calc(var(--ts-gutter-width) / 4);
+        gap: calc(var(--ts-space-8) / 4);
     }
 
     &__item {
@@ -132,7 +132,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        font-size: var(--ts-font-size-large, 1.25rem);
+        font-size: var(--ts-font-size-h4, 1.25rem);
         padding: 0 .75em;
         height: 100%;
         opacity: 1;
@@ -247,7 +247,7 @@
 
             #{$self}__sub-toggle {
                 position: static;
-                padding: calc(var(--ts-gutter-width, 2rem) / 2);
+                padding: calc(var(--ts-space-8, 2rem) / 2);
                 height: unset;
 
                 &[aria-expanded="true"]+#{$self}__second-sub-menu {
@@ -264,8 +264,8 @@
     &__sub-menu-item-link {
         display: flex;
         align-items: center;
-        gap: calc(var(--ts-gutter-width, 2rem) / 4);
-        padding: calc(var(--ts-gutter-width, 2rem) / 4);
+        gap: calc(var(--ts-space-8, 2rem) / 4);
+        padding: calc(var(--ts-space-8, 2rem) / 4);
         flex-grow: 1;
         text-decoration: none;
         color: var(--ts-color-black, black);
@@ -338,7 +338,7 @@
         display: flex;
         text-decoration: none;
         color: var(--ts-color-primary, blue);
-        padding: calc(var(--ts-gutter-width, 2rem) / 2);
+        padding: calc(var(--ts-space-8, 2rem) / 2);
         background-color: transparent;
         transition: .1s ease-in-out background-color;
     }

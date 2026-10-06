@@ -16,15 +16,15 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        padding-left: var(--ts-gutter-width, 2rem);
-        padding-right: var(--ts-gutter-width, 2rem);
+        padding-left: var(--ts-space-8, 2rem);
+        padding-right: var(--ts-space-8, 2rem);
 
         &:not(.ts-narrow):not(.block-row--stretch-narrow) {
-            max-width: calc(var(--ts-base-width, 1410px) + var(--ts-gutter-width, 2rem));
+            max-width: calc(var(--ts-base-width, 1410px) + var(--ts-space-8, 2rem));
         }
 
         @include mixins.mq-down(lg) {
-            padding: 0 calc(var(--ts-gutter-width, 2rem) / 2);
+            padding: 0 calc(var(--ts-space-8, 2rem) / 2);
         }
     }
 }

@@ -4,35 +4,35 @@
 $self: '.ts-alert';
 
 .ts-alert {
-    --alert-color: var(--ts-notification-default, gray);
+    --alert-color: var(--ts-color-black, gray);
 
     display: flex;
     align-items: flex-start;
     position: relative;
     gap: .75rem;
-    border-radius: var(--ts-form-field-border-radius, 0);
+    border-radius: 0.25rem;
     padding: 1rem;
     z-index: 0;
 
     .gform_wrapper & {
-        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 3 * 2);
+        margin-bottom: calc(var(--ts-space-8, 2rem) / 3 * 2);
     }
 
     // Types
     &--type-error {
-        --alert-color: var(--ts-notification-error, red);
+        --alert-color: var(--ts-color-feedback-error, red);
     }
 
     &--type-success {
-        --alert-color: var(--ts-notification-success, limegreen);
+        --alert-color: var(--ts-color-feedback-success, limegreen);
     }
 
     &--type-warning {
-        --alert-color: var(--ts-notification-warning, gold);
+        --alert-color: var(--ts-color-feedback-warning, gold);
     }
 
     &--type-informational {
-        --alert-color: var(--ts-notification-informational, blue);
+        --alert-color: var(--ts-color-feedback-info, blue);
     }
 
     // Styles

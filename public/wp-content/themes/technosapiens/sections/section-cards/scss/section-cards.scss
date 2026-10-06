@@ -142,7 +142,7 @@
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
-        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        gap: calc(var(--ts-space-8, 2rem) / 2);
         padding: 2.5rem 3rem 3rem 3rem;
         min-height: 100%;
         transform: translateZ(0.5rem);
@@ -150,7 +150,7 @@
 
     &__card-title {
         margin: 0;
-        font-family: var(--ts-font-heading, sans-serif);
+        font-family: var(--ts-font-family-sans, sans-serif);
         font-size: 2rem;
         line-height: 1.2;
         font-weight: var(--ts-font-weight-bold, 600);
@@ -170,7 +170,7 @@
     }
 
     &__card-action {
-        padding-top: calc(var(--ts-gutter-width, 2rem) / 2);
+        padding-top: calc(var(--ts-space-8, 2rem) / 2);
     }
 }
 

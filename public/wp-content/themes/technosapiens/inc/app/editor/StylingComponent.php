@@ -70,88 +70,27 @@ class StylingComponent extends Singleton {
         $colorRed800 = '#8F1D1D';
         $colorBlue600 = '#1F5FAD';
 
-        // Legacy locals that are not in the Figma primitive ramp
+        // Legacy locals that are not in the Figma primitive ramp (still referenced by used aliases)
         $colorPrimary = $colorPlum600;
         $colorPrimaryDark = $colorPlum800;
-        $colorPrimaryDarker = $colorPlum950;
-        $colorSecondary = $colorPink500;
-        $colorTertiary = $colorYellow500;
         $colorWhite = $colorCream50;
         $colorBlack = '#000000';
-        $colorGrey = '#222222';
         $colorLight = '#F3F2EB';
         $colorBorder = '#EEEEEE';
         $colorBody = '#FFFFFF';
         $colorAccent = '#00132F';
         $colorNav = '#FFFFFF';
-        $colorInputBg = '#EEEEEE';
-        $colorInputDefault = '#CCCCCC';
-        $colorInputFocus = '#666666';
-        $colorPasswordMedium = '#f0b849';
         $colorPasswordStrong = '#4db54f';
 
         $fontSans = "'Plus Jakarta Sans', sans-serif";
 
-        $elevation0 = 'none';
         $elevation1 = '0 4px 4px rgba(0,0,0,.1)';
         $elevation2 = '0 8px 8px rgba(0,0,0,.15)';
         $elevation3 = '0 25px 100px 0px rgba(0,0,0,0.15)';
-        $elevation4 = '4px 4px 12px 0 rgba(0, 0, 0, 0.20)';
 
         $this->cssVariables = [
             // --- Type: one family; apply weight at the call site ---
-            'font-family-sans'  => $fontSans,
-            'font-heading'      => $fontSans,
-            'font-body'         => $fontSans,
-            'font-secondary'    => $fontSans,
-            'font-button'       => $fontSans,
-            'font-bold'         => $fontSans,
-            'font-label'        => $fontSans,
-            'font-light'        => $fontSans,
-            'font-regular'      => $fontSans,
-            'font-semibold'     => $fontSans,
-
-            // --- Sizes ---
-            'font-size-default' => '1rem',
-            'icon-size-default' => '1rem',
-
-            // Font sizes + line heights (mobile); *-md used at mq-up(md)
-            'font-size-extra-large'   => '1.5rem',
-            'line-height-extra-large' => '2rem',
-
-            'font-size-large'        => '1.25rem',
-            'line-height-large'      => '1.5rem',
-            'font-size-large-md'     => '1.25rem',
-            'line-height-large-md'   => '1.75rem',
-
-            'font-size-medium'       => '1.125rem',
-            'line-height-medium'     => '1.5rem',
-            'font-size-medium-md'    => '1.125rem',
-            'line-height-medium-md'  => '1.625rem',
-
-            'font-size-base'         => '1rem',
-            'line-height-base'       => '1.25rem',
-            'line-height-base-md'    => '1.5rem',
-
-            'font-size-small'        => '0.9rem',
-            'line-height-small'      => '1.125rem',
-            'line-height-small-md'   => '1.375rem',
-
-            'font-size-tiny'         => '0.75rem',
-            'line-height-tiny'       => '0.875rem',
-            'line-height-tiny-md'    => '1.125rem',
-
-            'font-size-caption'      => '0.75rem',
-            'line-height-caption'    => '0.875rem',
-            'line-height-caption-md' => '1.125rem',
-
-            'font-size-counter'      => '3rem',
-            'line-height-counter'    => '3.5rem',
-
-            'font-size-body-large'   => '1.125rem',
-            'line-height-body-large' => '1.75rem',
-            'font-size-body-large-md'   => '1.25rem',
-            'line-height-body-large-md' => '2rem',
+            'font-family-sans' => $fontSans,
 
             // Figma Responsive collection. Mobile is the default; *-md is Desktop (768px).
             'font-size-display'      => '3rem',
@@ -202,16 +141,14 @@ class StylingComponent extends Singleton {
             'color-red-800'   => $colorRed800,
             'color-blue-600'  => $colorBlue600,
 
-            // Brand aliases used across sections (same hex as the primitives above)
+            // Brand aliases still consumed by SCSS/PHP (same hex as the primitives above)
             'color-primary'        => $colorPlum600,
             'color-primary-dark'   => $colorPlum800,
             'color-primary-darker' => $colorPlum950,
             'color-secondary'      => $colorPink500,
             'color-tertiary'       => $colorYellow500,
-            'color-danger'         => $colorRed700,
             'color-white'          => $colorCream50,
             'color-black'          => $colorBlack,
-            'color-grey'           => $colorGrey,
             'color-light'          => $colorLight,
             'color-body'           => $colorBody,
             'color-accent'         => $colorAccent,
@@ -225,15 +162,9 @@ class StylingComponent extends Singleton {
             'color-gradient-stop-6' => $colorPink600,
             'color-gradient-stop-7' => $colorPink500,
 
-            // Figma color/action/* (explicit steps, not a computed lighten/darken)
+            // Brand hover / on-colour still consumed outside button recipes
             'color-primary-hover'   => $colorPlum750,
-            'color-secondary-hover' => $colorPink600,
-            'color-tertiary-hover'  => $colorYellow600,
-            'color-danger-hover'    => $colorRed800,
             'color-on-primary'      => $colorCream50,
-            'color-on-secondary'    => $colorCream50,
-            'color-on-tertiary'     => $colorPlum950,
-            'color-on-danger'       => $colorCream50,
 
             // Figma Semantic collection. text/default and surface/page are the dark-page roles.
             // color-text and color-surface stay the light-page roles sections already use.
@@ -269,63 +200,40 @@ class StylingComponent extends Singleton {
 
             // Light-page roles already consumed by sections
             'color-text'          => $colorPrimaryDark,
-            'color-text-muted'    => $colorInputDefault,
             'color-text-inverse'  => $colorCream50,
             'color-surface'       => $colorBody,
-            'color-surface-muted' => $colorLight,
             'color-border'        => $colorBorder,
-            'color-action'        => $colorPlum600,
-            'color-action-hover'  => $colorPlum750,
-            'color-on-action'     => $colorCream50,
 
             // Legacy font-colour aliases (same hex as semantic text roles)
             'font-color-primary'   => $colorPrimaryDark,
-            'font-color-secondary' => $colorSecondary,
-            'font-color-tertiary'  => $colorInputDefault,
             'font-color-white'     => $colorWhite,
             'font-color-nav'       => $colorNav,
             'font-color-nav-hover' => $colorPrimary,
 
-            // Inputs
-            'color-input-bg'      => $colorInputBg,
-            'color-input-default' => $colorInputDefault,
-            'color-input-focus'   => $colorInputFocus,
-            'color-input-invalid' => $colorRed700,
-
             // Password strength
             'color-password-weak'   => $colorRed700,
-            'color-password-medium' => $colorPasswordMedium,
             'color-password-strong' => $colorPasswordStrong,
 
             // Font weights (match @font-face 200/400/500/600; bold maps to nearest loaded face)
             'font-weight-light'     => 400,
-            'font-weight-semilight' => 400,
             'font-weight-regular'   => 400,
             'font-weight-medium'    => 500,
             'font-weight-semibold'  => 700,
             'font-weight-bold'      => 700,
 
             // --- Elevation ---
-            'elevation-0' => $elevation0,
             'elevation-1' => $elevation1,
             'elevation-2' => $elevation2,
             'elevation-3' => $elevation3,
-            'elevation-4' => $elevation4,
 
             // --- Motion ---
-            'duration-fast'           => '0.15s',
-            'duration-base'           => '0.25s',
-            'duration-slow'           => '0.4s',
-            'easing-standard'         => 'cubic-bezier(0.2, 0, 0, 1)',
-            'transition-colors'       => 'background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out',
-            'transition'              => 'background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in, opacity 0.3s ease-in, box-shadow 0.3s ease-in, transform 0.3s ease-in',
-            'transition-ease-in-out'  => 'background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out',
+            'duration-fast'   => '0.15s',
+            'duration-base'   => '0.25s',
+            'duration-slow'   => '0.4s',
+            'easing-standard' => 'cubic-bezier(0.2, 0, 0, 1)',
 
-            // --- Focus + disabled ---
-            'focus-ring'         => "2px solid {$colorPrimaryDark}",
-            'focus-ring-inverse' => "2px solid {$colorWhite}",
-            'focus-ring-offset'  => '0.125rem',
-            'opacity-disabled'   => '0.4',
+            // --- Disabled ---
+            'opacity-disabled' => '0.4',
 
             // --- Z-index ---
             'z-index-base'     => '0',
@@ -357,58 +265,35 @@ class StylingComponent extends Singleton {
             'space-10' => '2.5rem',
             'space-12' => '3rem',
             'space-16' => '4rem',
+            'space-20' => '5rem',
             // Figma space/* is named by pixels. The step scale above already covers 4–64px under space-1…space-16.
             'space-96' => '6rem',
 
-            // Gradients
-            'gradient-primary' => "linear-gradient(180deg, {$colorPrimaryDark} 0%, rgba(62, 31, 42, 0) 100%)",
-
-            // Pagination
-            'pagination-size' => '2.5rem',
-
-            // Grid
+            // Grid layout widths (no Figma equivalent)
             'base-width'   => '1410px',
             'narrow-width' => '1188px',
-            'gutter-width' => '2rem',
 
-            // Horizontal ruler
-            'horizontal-ruler-width' => '1px',
-            'horizontal-ruler-color' => $colorBorder,
-
-            // Navigation chrome
+            // Navigation chrome (feature layout; no Figma equivalent)
             'nav-height-top'        => '2.5rem',
             'nav-height-top-mobile' => '0rem',
             'nav-height'            => '3.75rem',
             'nav-height-mobile'     => '3.75rem',
-            'nav-background-color'  => $colorWhite,
 
-            // Row gaps (legacy; prefer space-* for new work)
-            'row-gap-small'   => '1rem',
-            'row-gap-default' => '2rem',
-            'row-gap-medium'  => '3rem',
-            'row-gap-large'   => '4rem',
-            'row-gap-xlarge'  => '5rem',
-
-            // Feedback (not brand)
-            'notification-default'       => $colorGrey,
-            'notification-informational' => $colorBlue600,
-            'notification-success'       => $colorGreen600,
-            'notification-warning'       => $colorYellow500,
-            'notification-error'         => $colorRed700,
-            'color-feedback-info'        => $colorBlue600,
-            'color-feedback-success'     => $colorGreen600,
-            'color-feedback-warning'     => $colorYellow500,
-            'color-feedback-error'       => $colorRed700,
+            // Feedback
+            'color-feedback-info'    => $colorBlue600,
+            'color-feedback-success' => $colorGreen600,
+            'color-feedback-warning' => $colorYellow500,
+            'color-feedback-error'   => $colorRed700,
 
             // Figma size/* and stroke/*
-            'size-button-sm'  => '2.5rem',
-            'size-button-md'  => '3rem',
-            'size-button-lg'  => '3.5rem',
-            'size-hit-area'   => '2.75rem',
+            'size-button-sm'    => '2.5rem',
+            'size-button-md'    => '3rem',
+            'size-button-lg'    => '3.5rem',
+            'size-hit-area'     => '2.75rem',
             'size-field-height' => '3rem',
-            'stroke-thin'     => '2px',
-            'stroke-medium'   => '4px',
-            'stroke-thick'    => '8px',
+            'stroke-thin'       => '2px',
+            'stroke-medium'     => '4px',
+            'stroke-thick'      => '8px',
             'container-padding'    => '1rem',
             'container-padding-md' => '2rem',
             'section-spacing'      => '3rem',
@@ -417,12 +302,6 @@ class StylingComponent extends Singleton {
             'grid-gutter-md'       => '1.5rem',
             'grid-columns'         => '4',
             'grid-columns-md'      => '12',
-
-            // Form controls (shared by GF, search, password, selects — not GF-only)
-            'form-field-height'           => '3rem',
-            'form-field-border-radius'    => '0.25rem',
-            'form-field-border'           => '1px solid #c7c9d9',
-            'form-field-background-color' => $colorWhite,
         ];
     }
 

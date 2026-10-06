@@ -19,7 +19,7 @@
         width: 100%;
         height: 100%;
         background-color: transparent;
-        font-family: var(--ts-font-body, sans-serif);
+        font-family: var(--ts-font-family-sans, sans-serif);
         outline-offset: -2px;
 
         &:hover {
@@ -98,8 +98,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: calc(var(--ts-gutter-width, 2rem) * 3) 0;
-        background-color: var(--ts-nav-background-color, white);
+        padding: calc(var(--ts-space-8, 2rem) * 3) 0;
+        background-color: var(--ts-color-white, white);
         box-shadow: var(--ts-elevation-1, 0 .25rem .25rem rgba(0, 0, 0, .1));
         cursor: auto;
         transform: translateY(-110%);
@@ -107,13 +107,13 @@
         z-index: 10;
 
         @include mixins.lg-down {
-            padding: calc(var(--ts-gutter-width, 2rem) * 2) 0;
+            padding: calc(var(--ts-space-8, 2rem) * 2) 0;
         }
     }
 
     &__heading {
         display: block;
-        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 2);
+        margin-bottom: calc(var(--ts-space-8, 2rem) / 2);
     }
 
     &__field-container {
@@ -126,11 +126,11 @@
     }
 
     &__field-input {
-        height: var(--ts-form-field-height, 3rem);
+        height: var(--ts-size-field-height, 3rem);
         padding: 0 3.5rem 0 1rem !important;
-        background-color: var(--ts-form-field-background-color, lightblue) !important;
-        border: var(--ts-form-field-border, none) !important;
-        border-radius: var(--ts-form-field-border-radius, 0);
+        background-color: var(--ts-color-white, lightblue) !important;
+        border: 1px solid var(--ts-color-border, lightgrey) !important;
+        border-radius: 0.25rem;
         color: var(--ts-font-color-primary, black);
         font-size: 1rem;
 
@@ -168,7 +168,7 @@
 
     &__description {
         display: block;
-        margin-top: calc(var(--ts-gutter-width, 2rem) / 2);
+        margin-top: calc(var(--ts-space-8, 2rem) / 2);
         color: var(--ts-font-color-nav, darkgrey);
         font-size: 1rem;
         opacity: .8;
@@ -182,7 +182,7 @@
         display: block;
         position: absolute;
         top: -3rem;
-        right: var(--ts-gutter-width, 2rem);
+        right: var(--ts-space-8, 2rem);
         width: 3rem;
         height: 3rem;
         padding: .5rem;
@@ -191,7 +191,7 @@
         transform-origin: center center;
 
         @include mixins.lg-down {
-            right: calc(var(--ts-gutter-width, 2rem) / 2);
+            right: calc(var(--ts-space-8, 2rem) / 2);
         }
 
         &:hover {

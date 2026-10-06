@@ -8,16 +8,16 @@
 
 .editor-post-title__input,
 .editor-post-title {
-    font-family: var(--ts-font-heading, sans-serif);
+    font-family: var(--ts-font-family-sans, sans-serif);
     font-weight: 700;
     color: var(--ts-font-color-primary, black);
 }
 
 //set correct font styling for preview
 .is-root-container.block-editor-block-list__layout {
-    font-family: var(--ts-font-body);
+    font-family: var(--ts-font-family-sans);
     font-weight: 500;
-    font-size: var(--ts-font-size-default, 16px);
+    font-size: var(--ts-font-size-body-base, 1rem);
     color: var(--ts-font-color-primary, black);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

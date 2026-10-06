@@ -10,7 +10,7 @@
     min-height: 27.3rem;
 
     @include mixins.md-down {
-        margin: 0 auto var(--ts-gutter-width, 2rem) auto;
+        margin: 0 auto var(--ts-space-8, 2rem) auto;
     }
 
     &__background {
@@ -35,7 +35,7 @@
     &__meta {
         display: flex;
         flex-direction: column;
-        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        gap: calc(var(--ts-space-8, 2rem) / 2);
         z-index: 30;
         margin-top: 11rem;
         width: 100%;
@@ -66,7 +66,7 @@
     &__sub-heading {
         font-size: 3rem;
         line-height: 3.75rem;
-        font-family: var(--ts-font-light, sans-serif);
+        font-family: var(--ts-font-family-sans, sans-serif);
         font-weight: var(--ts-font-weight-light, 200);
         color: var(--ts-font-color-white, white);
 
@@ -104,11 +104,11 @@
     &__buttons {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--ts-gutter-width, 2rem);
-        margin-top: calc(var(--ts-gutter-width, 2rem) / 2);
+        gap: var(--ts-space-8, 2rem);
+        margin-top: calc(var(--ts-space-8, 2rem) / 2);
 
         @include mixins.sm-down {
-            gap: calc(var(--ts-gutter-width, 2rem) / 2);
+            gap: calc(var(--ts-space-8, 2rem) / 2);
         }
     }
 

@@ -1,7 +1,7 @@
 @use "../../util/util-mixins" as mixins;
 
 .archive-header {
-    padding: var(--ts-gutter-width, 2rem) 0 !important;
+    padding: var(--ts-space-8, 2rem) 0 !important;
     color: var(--ts-color-primary, blue);
 
     &__heading {
@@ -20,8 +20,8 @@
 }
 
 .archive-search-bar {
-    margin-bottom: var(--ts-gutter-width, 2rem);
-    padding: var(--ts-gutter-width, 2rem) 0;
+    margin-bottom: var(--ts-space-8, 2rem);
+    padding: var(--ts-space-8, 2rem) 0;
     background-color: var(--ts-color-light, lightblue);
 
     @include mixins.lg-down {
@@ -38,11 +38,11 @@
     }
 
     &__field-input {
-        height: var(--ts-form-field-height, 3rem);
+        height: var(--ts-size-field-height, 3rem);
         padding: 0 3.5rem 0 1rem !important;
         background-color: var(--ts-color-white, white) !important;
         border: none !important;
-        border-radius: var(--ts-form-field-border-radius, 0);
+        border-radius: 0.25rem;
         color: var(--ts-font-color-primary, black);
         font-size: 1rem;
 
@@ -98,7 +98,7 @@
 .archive-filters {
     &__mobile {
         display: none;
-        margin: var(--ts-gutter-width, 2rem) auto;
+        margin: var(--ts-space-8, 2rem) auto;
 
         select {
             width: 100%;
@@ -112,8 +112,8 @@
     &__desktop {
         display: none;
         flex-wrap: wrap;
-        gap: calc(var(--ts-gutter-width, 2rem) / 2);
-        margin: var(--ts-gutter-width, 2rem) auto;
+        gap: calc(var(--ts-space-8, 2rem) / 2);
+        margin: var(--ts-space-8, 2rem) auto;
 
         @include mixins.mq-up(md) {
             display: flex;
@@ -124,18 +124,18 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: calc(var(--ts-gutter-width, 2rem) / 2);
+        gap: calc(var(--ts-space-8, 2rem) / 2);
     }
 
     &__button {
         display: flex;
         align-items: center;
         gap: .625em;
-        padding: calc(var(--ts-gutter-width, 2rem) / 3) calc(var(--ts-gutter-width, 2rem) / 2) calc(var(--ts-gutter-width, 2rem) / 3) calc(var(--ts-gutter-width, 2rem) / 1.5);
+        padding: calc(var(--ts-space-8, 2rem) / 3) calc(var(--ts-space-8, 2rem) / 2) calc(var(--ts-space-8, 2rem) / 3) calc(var(--ts-space-8, 2rem) / 1.5);
         background-color: var(--ts-color-light, lightgrey);
         border-radius: var(--ts-radius-foundation-pill, 3.125rem);
         cursor: pointer;
-        font-family: var(--ts-font-button, sans-serif);
+        font-family: var(--ts-font-family-sans, sans-serif);
         font-weight: var(--ts-font-weight-medium, 500);
         text-decoration: none;
         transition: background-color .25s ease-in-out;
@@ -200,10 +200,10 @@
 }
 
 .archive-results {
-    padding: var(--ts-gutter-width, 2rem) 0;
+    padding: var(--ts-space-8, 2rem) 0;
 
     @include mixins.mq-up(lg) {
-        margin-top: calc(var(--ts-gutter-width, 2rem) * -1);
+        margin-top: calc(var(--ts-space-8, 2rem) * -1);
 
         .col.snippet-col {
             &:not(:first-child):not(:nth-child(2)) {
@@ -224,7 +224,7 @@
             border-top: 1px solid var(--ts-color-light, lightblue);
 
             &:last-child {
-                margin-bottom: calc(var(--ts-gutter-width, 2rem) * -1);
+                margin-bottom: calc(var(--ts-space-8, 2rem) * -1);
                 border-bottom: 1px solid var(--ts-color-light, lightblue);
             }
         }
@@ -244,8 +244,8 @@
         content: "";
         position: absolute;
         top: 0;
-        left: calc(var(--ts-gutter-width, 2rem) / 2 * -1);
-        width: calc(100% + var(--ts-gutter-width, 2rem));
+        left: calc(var(--ts-space-8, 2rem) / 2 * -1);
+        width: calc(100% + var(--ts-space-8, 2rem));
         height: 100%;
         background-color: var(--ts-color-white, white);
         pointer-events: none;
@@ -263,10 +263,10 @@
         justify-content: space-between;
         gap: 1rem;
         position: relative;
-        width: calc(100% + var(--ts-gutter-width, 2rem) * 2);
+        width: calc(100% + var(--ts-space-8, 2rem) * 2);
         height: 100%;
-        margin-left: calc(var(--ts-gutter-width, 2rem) * -1);
-        padding: var(--ts-gutter-width, 2rem);
+        margin-left: calc(var(--ts-space-8, 2rem) * -1);
+        padding: var(--ts-space-8, 2rem);
         z-index: 2;
     }
 
@@ -277,15 +277,15 @@
 
     &__title {
         display: block;
-        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 4);
+        margin-bottom: calc(var(--ts-space-8, 2rem) / 4);
     }
 
     &__labels {
         display: flex;
         flex-wrap: wrap;
-        gap: calc(var(--ts-gutter-width, 2rem) / 4);
+        gap: calc(var(--ts-space-8, 2rem) / 4);
         margin-top: 0;
-        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 2);
+        margin-bottom: calc(var(--ts-space-8, 2rem) / 2);
         z-index: 2;
     }
 

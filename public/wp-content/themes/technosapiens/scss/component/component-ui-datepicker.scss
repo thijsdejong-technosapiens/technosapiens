@@ -26,7 +26,7 @@
         }
 
         .ui-datepicker-month, .ui-datepicker-year {
-            font-family: var(--ts-font-button, 'sans-serif');
+            font-family: var(--ts-font-family-sans, 'sans-serif');
             font-weight: var(--ts-font-weight-medium, 500);
             font-size: .875rem;
             font-weight: 900;
@@ -103,7 +103,7 @@
     //disabled state of calendar
     .ui-state-disabled {
         background-color: var(--ts-color-light, lightgray);
-        border: var(--ts-form-field-border, 1px solid black);
+        border: 1px solid var(--ts-color-border, lightgrey);
 
         &:hover {
             cursor: not-allowed;
@@ -114,14 +114,14 @@
     .ui-state-active {
         color: var(--ts-color-white, white) !important;
         background-color: var(--ts-color-primary, blue) !important;
-        border: var(--ts-form-field-border, 1px solid black);
+        border: 1px solid var(--ts-color-border, lightgrey);
     }
 
     //hover state of calendar
     .ui-state-hover {
         color: var(--ts-color-white, white) !important;
         background-color: var(--ts-color-primary, blue) !important;
-        border: var(--ts-form-field-border, 1px solid black);
+        border: 1px solid var(--ts-color-border, lightgrey);
     }
 }
 

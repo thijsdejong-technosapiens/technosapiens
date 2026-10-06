@@ -57,7 +57,7 @@ $self: ".tcwc-preset";
         }
 
         &::-webkit-scrollbar-track {
-            background-color: var(--ts-horizontal-ruler-color, grey);
+            background-color: var(--ts-color-border, grey);
         }
     }
 

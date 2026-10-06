@@ -9,7 +9,7 @@
     width: 100%;
     max-height: calc(90vh - var(--ts-nav-height-top, 2.5rem) - var(--ts-nav-height, 3.75rem));
     background-color: var(--ts-color-white, white);
-    border: 1px solid var(--ts-horizontal-ruler-color, grey);
+    border: 1px solid var(--ts-color-border, grey);
     box-shadow: var(--ts-elevation-1, none);
     opacity: 0;
     visibility: hidden;
@@ -50,7 +50,7 @@
 }
 
 .mega-menu-navigation__close-wrapper {
-    border-bottom: 1px solid var(--ts-horizontal-ruler-color, grey);
+    border-bottom: 1px solid var(--ts-color-border, grey);
 }
 
 .mega-menu-navigation__close-container {

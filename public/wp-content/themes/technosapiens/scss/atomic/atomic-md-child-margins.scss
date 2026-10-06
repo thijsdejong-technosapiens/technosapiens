@@ -3,11 +3,11 @@
 
 .ts-md-child-margins {
     > * {
-        margin-bottom: calc(var(--ts-gutter-width, 2rem) * 2) !important;
+        margin-bottom: calc(var(--ts-space-8, 2rem) * 2) !important;
 
         &.ts-md-child-margin-small {
             @include mixins.mq-down(md) {
-                margin-bottom: var(--ts-gutter-width, 2rem) !important;
+                margin-bottom: var(--ts-space-8, 2rem) !important;
             }
         }
 

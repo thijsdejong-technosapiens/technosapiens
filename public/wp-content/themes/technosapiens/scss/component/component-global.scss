@@ -27,7 +27,7 @@ html {
     height: 100%;
     min-height: 100%;
     width: 100%;
-    font-size: var(--ts-font-size-default, 16px);
+    font-size: var(--ts-font-size-body-base, 1rem);
     scroll-padding-top: calc(var(--ts-nav-height-top-mobile, 2.5rem) + var(--ts-nav-height-mobile, 3.75rem) + 1rem);
     background-color: var(--ts-color-primary-dark, #4E134E);
 
@@ -75,7 +75,7 @@ main {
 
     //add some automatic padding to the top of the main content when there is no header module and no breadcrumbs
     body:not(.has-header-module):not(:has(.breadcrumbs)) & {
-        padding-top: var(--ts-gutter-width, 2rem);
+        padding-top: var(--ts-space-8, 2rem);
     }
 }
 

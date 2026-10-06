@@ -11,7 +11,7 @@
 
     //add some margin to the bottom of the breadcrumbs when used as direct children of the the main tag
     main > & {
-        margin-bottom: var(--ts-gutter-width, 2rem);
+        margin-bottom: var(--ts-space-8, 2rem);
     }
 
     span, a {
@@ -24,8 +24,8 @@
         text-decoration: none;
 
         //make hitbox better
-        padding: calc(var(--ts-gutter-width, 2rem) / 4);
-        margin: calc((var(--ts-gutter-width, 2rem) / 4) * -1);
+        padding: calc(var(--ts-space-8, 2rem) / 4);
+        margin: calc((var(--ts-space-8, 2rem) / 4) * -1);
     }
 
     &__icon {

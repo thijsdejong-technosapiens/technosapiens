@@ -145,7 +145,7 @@ $self: '.side-navigation';
     &__link {
         display: flex;
         align-items: center;
-        gap: calc(var(--ts-gutter-width, 2rem) / 3);
+        gap: calc(var(--ts-space-8, 2rem) / 3);
         padding: 0.75rem 1.5rem;
         width: 100%;
         text-decoration: none;
@@ -157,7 +157,7 @@ $self: '.side-navigation';
 
         &--children {
             justify-content: space-between;
-            font-family: var(--ts-font-body, "sans-serif");
+            font-family: var(--ts-font-family-sans, "sans-serif");
             background: transparent;
 
             &[aria-expanded="true"] {
@@ -169,7 +169,7 @@ $self: '.side-navigation';
 
         &--top {
             &#{$self}__link--menu-back {
-                font-family: var(--ts-font-body, "sans-serif");
+                font-family: var(--ts-font-family-sans, "sans-serif");
                 background: transparent;
                 color: var(--ts-color-primary, blue);
                 border-bottom: 1px solid rgba(0, 0, 0, .08);

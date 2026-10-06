@@ -85,16 +85,16 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: calc(var(--ts-gutter-width, 1em) * 2.25);
-        height: calc(var(--ts-gutter-width, 1em) * 2.25);
-        padding: calc(var(--ts-gutter-width, 1em) / 3);
+        width: calc(var(--ts-space-8, 1em) * 2.25);
+        height: calc(var(--ts-space-8, 1em) * 2.25);
+        padding: calc(var(--ts-space-8, 1em) / 3);
         background-color: var(--ts-color-primary, blue);
         display: flex;
         flex-direction: column;
         align-items: center;
         cursor: pointer;
         transition: .25s ease-in-out background-color;
-        transform: translateY(calc((var(--ts-gutter-width, 1em) * 2.25) * -1));
+        transform: translateY(calc((var(--ts-space-8, 1em) * 2.25) * -1));
 
         &:hover {
             background-color: var(--ts-color-primary-hover, blue);
