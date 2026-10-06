@@ -10,7 +10,7 @@
     max-height: calc(90vh - var(--ts-nav-height-top, 2.5rem) - var(--ts-nav-height, 3.75rem));
     background-color: var(--ts-color-white, white);
     border: 1px solid var(--ts-horizontal-ruler-color, grey);
-    box-shadow: var(--ts-shadow-sm, none);
+    box-shadow: var(--ts-elevation-1, none);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

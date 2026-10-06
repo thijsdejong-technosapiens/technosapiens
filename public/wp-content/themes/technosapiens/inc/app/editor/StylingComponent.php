@@ -3,7 +3,6 @@
 namespace TechnoSapiens;
 
 use TechnoSapiens\Core\Singleton;
-use OzdemirBurak\Iris\Color\Hex;
 
 /**
  * Class StylingComponent
@@ -37,29 +36,11 @@ class StylingComponent extends Singleton {
     }
 
     /**
-     * Resolve derived tokens (hovers, on-colours) from brand primitives.
+     * CSS variables, including Figma semantic aliases set in initCssVariables.
      * @return array|string[]
      */
     public function getCssVariables(): array {
-        $cssVariables = $this->cssVariables;
-
-        $colorPrimary = (string) $cssVariables['color-primary'];
-        $colorSecondary = (string) $cssVariables['color-secondary'];
-        $colorTertiary = (string) $cssVariables['color-tertiary'];
-        $colorDanger = (string) $cssVariables['color-danger'];
-        $colorWhite = (string) $cssVariables['color-white'];
-
-        // Brand hover + on-colour roles (single derivation point)
-        $cssVariables['color-primary-hover'] = (string) (new Hex($colorPrimary))->lighten(8);
-        $cssVariables['color-secondary-hover'] = (string) (new Hex($colorSecondary))->darken(8);
-        $cssVariables['color-tertiary-hover'] = (string) (new Hex($colorTertiary))->darken(8);
-        $cssVariables['color-danger-hover'] = (string) (new Hex($colorDanger))->darken(8);
-        $cssVariables['color-on-primary'] = $colorWhite;
-        $cssVariables['color-on-secondary'] = $colorWhite;
-        $cssVariables['color-on-tertiary'] = $colorPrimary;
-        $cssVariables['color-on-danger'] = $colorWhite;
-
-        return apply_filters('ts_css_variables', $cssVariables);
+        return apply_filters('ts_css_variables', $this->cssVariables);
     }
 
     /**
@@ -68,12 +49,34 @@ class StylingComponent extends Singleton {
      * @return void
      */
     private function initCssVariables(): void {
-        $colorPrimary = '#662264';
-        $colorPrimaryDark = '#4E134E';
-        $colorPrimaryDarker = '#250525';
-        $colorSecondary = '#E10F7E';
-        $colorTertiary = '#FDB500';
-        $colorWhite = '#FBFBF3';
+        // Figma Primitives collection (❖ Foundations). Hex matches the variable values.
+        $colorPlum950 = '#250525';
+        $colorPlum800 = '#4E134E';
+        $colorPlum750 = '#580F58';
+        $colorPlum700 = '#5E185E';
+        $colorPlum650 = '#631F63';
+        $colorPlum600 = '#662264';
+        $colorPlum500 = '#7F1E69';
+        $colorPlum400 = '#971A6E';
+        $colorPlum300 = '#B01774';
+        $colorPink600 = '#C81379';
+        $colorPink500 = '#E10F7E';
+        $colorYellow500 = '#FDB500';
+        $colorYellow600 = '#E0A200';
+        $colorYellow700 = '#C48D00';
+        $colorCream50 = '#FBFBF3';
+        $colorGreen600 = '#1E7A46';
+        $colorRed700 = '#B3261E';
+        $colorRed800 = '#8F1D1D';
+        $colorBlue600 = '#1F5FAD';
+
+        // Legacy locals that are not in the Figma primitive ramp
+        $colorPrimary = $colorPlum600;
+        $colorPrimaryDark = $colorPlum800;
+        $colorPrimaryDarker = $colorPlum950;
+        $colorSecondary = $colorPink500;
+        $colorTertiary = $colorYellow500;
+        $colorWhite = $colorCream50;
         $colorBlack = '#000000';
         $colorGrey = '#222222';
         $colorLight = '#F3F2EB';
@@ -84,15 +87,8 @@ class StylingComponent extends Singleton {
         $colorInputBg = '#EEEEEE';
         $colorInputDefault = '#CCCCCC';
         $colorInputFocus = '#666666';
-        $colorInvalid = '#FF0000';
         $colorPasswordMedium = '#f0b849';
         $colorPasswordStrong = '#4db54f';
-        $colorNotificationInfo = '#419ecd';
-        $colorGradientStop1 = '#5E185E';
-        $colorGradientStop3 = '#7F1E69';
-        $colorGradientStop4 = '#971A6E';
-        $colorGradientStop5 = '#B01774';
-        $colorGradientStop6 = '#C81379';
 
         $fontSans = "'Plus Jakarta Sans', sans-serif";
 
@@ -101,16 +97,6 @@ class StylingComponent extends Singleton {
         $elevation2 = '0 8px 8px rgba(0,0,0,.15)';
         $elevation3 = '0 25px 100px 0px rgba(0,0,0,0.15)';
         $elevation4 = '4px 4px 12px 0 rgba(0, 0, 0, 0.20)';
-
-        $radiusXs = '0.5rem';
-        $radiusBase = '1rem';
-        $radiusSm = '1.9rem';
-        $radiusMd = '2.25rem';
-        $radiusLg = '2.9rem';
-        $radiusXl = '3.125rem';
-        $radiusXxl = '4.4rem';
-        $radiusPill = '9999px';
-        $radiusNone = '0';
 
         $this->cssVariables = [
             // --- Type: one family; apply weight at the call site ---
@@ -162,52 +148,135 @@ class StylingComponent extends Singleton {
             'font-size-counter'      => '3rem',
             'line-height-counter'    => '3.5rem',
 
-            'font-size-body-large'   => '1.25rem',
-            'line-height-body-large' => '2rem',
+            'font-size-body-large'   => '1.125rem',
+            'line-height-body-large' => '1.75rem',
+            'font-size-body-large-md'   => '1.25rem',
+            'line-height-body-large-md' => '2rem',
 
-            // --- Brand colour primitives ---
-            'color-primary'      => $colorPrimary,
-            'color-primary-dark' => $colorPrimaryDark,
-            'color-primary-darker' => $colorPrimaryDarker,
-            'color-secondary'    => $colorSecondary,
-            'color-tertiary'     => $colorTertiary,
-            'color-danger'       => $colorInvalid,
-            'color-white'        => $colorWhite,
-            'color-black'        => $colorBlack,
-            'color-grey'         => $colorGrey,
-            'color-light'        => $colorLight,
-            'color-body'         => $colorBody,
-            'color-accent'       => $colorAccent,
+            // Figma Responsive collection. Mobile is the default; *-md is Desktop (768px).
+            'font-size-display'      => '3rem',
+            'font-size-display-md'   => '5rem',
+            'line-height-display'    => '3.5rem',
+            'line-height-display-md' => '6rem',
+            'font-size-h1'           => '2.25rem',
+            'font-size-h1-md'        => '3.25rem',
+            'line-height-h1'         => '2.75rem',
+            'line-height-h1-md'      => '4rem',
+            'font-size-h2'           => '1.75rem',
+            'font-size-h2-md'        => '2.25rem',
+            'line-height-h2'         => '2rem',
+            'line-height-h2-md'      => '2.75rem',
+            'font-size-h3'           => '1.5rem',
+            'font-size-h3-md'        => '1.75rem',
+            'line-height-h3'         => '1.75rem',
+            'line-height-h3-md'      => '2rem',
+            'font-size-h4'           => '1.25rem',
+            'font-size-h4-md'        => '1.5rem',
+            'line-height-h4'         => '1.5rem',
+            'line-height-h4-md'      => '1.75rem',
+            'font-size-body-base'      => '1rem',
+            'font-size-body-base-md'   => '1.125rem',
+            'line-height-body-base'    => '1.5rem',
+            'line-height-body-base-md' => '1.75rem',
+            'font-size-body-small'      => '1rem',
+            'line-height-body-small'    => '1.5rem',
 
-            // Gradient stops
-            'color-gradient-stop-1' => $colorGradientStop1,
-            'color-gradient-stop-2' => $colorPrimary,
-            'color-gradient-stop-3' => $colorGradientStop3,
-            'color-gradient-stop-4' => $colorGradientStop4,
-            'color-gradient-stop-5' => $colorGradientStop5,
-            'color-gradient-stop-6' => $colorGradientStop6,
-            'color-gradient-stop-7' => $colorSecondary,
+            // --- Figma color primitives ---
+            'color-plum-950'  => $colorPlum950,
+            'color-plum-800'  => $colorPlum800,
+            'color-plum-750'  => $colorPlum750,
+            'color-plum-700'  => $colorPlum700,
+            'color-plum-650'  => $colorPlum650,
+            'color-plum-600'  => $colorPlum600,
+            'color-plum-500'  => $colorPlum500,
+            'color-plum-400'  => $colorPlum400,
+            'color-plum-300'  => $colorPlum300,
+            'color-pink-600'  => $colorPink600,
+            'color-pink-500'  => $colorPink500,
+            'color-yellow-500' => $colorYellow500,
+            'color-yellow-600' => $colorYellow600,
+            'color-yellow-700' => $colorYellow700,
+            'color-cream-50'  => $colorCream50,
+            'color-green-600' => $colorGreen600,
+            'color-red-700'   => $colorRed700,
+            'color-red-800'   => $colorRed800,
+            'color-blue-600'  => $colorBlue600,
 
-            // Derived in getCssVariables(): color-*-hover, color-on-*
-            'color-primary-hover'   => '',
-            'color-secondary-hover' => '',
-            'color-tertiary-hover'  => '',
-            'color-danger-hover'    => '',
-            'color-on-primary'      => '',
-            'color-on-secondary'    => '',
-            'color-on-tertiary'     => '',
-            'color-on-danger'       => '',
+            // Brand aliases used across sections (same hex as the primitives above)
+            'color-primary'        => $colorPlum600,
+            'color-primary-dark'   => $colorPlum800,
+            'color-primary-darker' => $colorPlum950,
+            'color-secondary'      => $colorPink500,
+            'color-tertiary'       => $colorYellow500,
+            'color-danger'         => $colorRed700,
+            'color-white'          => $colorCream50,
+            'color-black'          => $colorBlack,
+            'color-grey'           => $colorGrey,
+            'color-light'          => $colorLight,
+            'color-body'           => $colorBody,
+            'color-accent'         => $colorAccent,
 
-            // --- Semantic colour roles (sections should prefer these) ---
+            // Gradient stops (same ramp as plum/pink primitives)
+            'color-gradient-stop-1' => $colorPlum700,
+            'color-gradient-stop-2' => $colorPlum600,
+            'color-gradient-stop-3' => $colorPlum500,
+            'color-gradient-stop-4' => $colorPlum400,
+            'color-gradient-stop-5' => $colorPlum300,
+            'color-gradient-stop-6' => $colorPink600,
+            'color-gradient-stop-7' => $colorPink500,
+
+            // Figma color/action/* (explicit steps, not a computed lighten/darken)
+            'color-primary-hover'   => $colorPlum750,
+            'color-secondary-hover' => $colorPink600,
+            'color-tertiary-hover'  => $colorYellow600,
+            'color-danger-hover'    => $colorRed800,
+            'color-on-primary'      => $colorCream50,
+            'color-on-secondary'    => $colorCream50,
+            'color-on-tertiary'     => $colorPlum950,
+            'color-on-danger'       => $colorCream50,
+
+            // Figma Semantic collection. text/default and surface/page are the dark-page roles.
+            // color-text and color-surface stay the light-page roles sections already use.
+            'color-brand-primary'    => $colorPlum600,
+            'color-brand-secondary'  => $colorPink500,
+            'color-brand-tertiary'   => $colorYellow500,
+            'color-text-default'     => $colorCream50,
+            'color-text-accent'      => $colorPink500,
+            'color-text-on-primary'  => $colorCream50,
+            'color-text-on-tertiary' => $colorPlum950,
+            'color-text-on-feedback' => $colorCream50,
+            'color-text-placeholder' => $colorPlum500,
+            'color-surface-page'     => $colorPlum950,
+            'color-surface-panel'    => $colorPlum800,
+            'color-surface-panel-alt' => $colorPlum700,
+            'color-surface-card'     => $colorCream50,
+            'color-border-accent'    => $colorPink600,
+            'color-border-strong'    => $colorPink500,
+            'color-border-field'     => $colorPlum500,
+            'color-border-field-hover' => $colorPlum400,
+            'color-action-primary'         => $colorPlum600,
+            'color-action-primary-hover'   => $colorPlum750,
+            'color-action-primary-pressed' => $colorPlum800,
+            'color-action-secondary'         => $colorPink500,
+            'color-action-secondary-hover'   => $colorPink600,
+            'color-action-secondary-pressed' => $colorPlum400,
+            'color-action-tertiary'         => $colorYellow500,
+            'color-action-tertiary-hover'   => $colorYellow600,
+            'color-action-tertiary-pressed' => $colorYellow700,
+            'color-action-danger'         => $colorRed700,
+            'color-action-danger-hover'   => $colorRed800,
+            'color-focus-ring' => $colorCream50,
+
+            // Light-page roles already consumed by sections
             'color-text'          => $colorPrimaryDark,
             'color-text-muted'    => $colorInputDefault,
-            'color-text-inverse'  => $colorWhite,
+            'color-text-inverse'  => $colorCream50,
             'color-surface'       => $colorBody,
             'color-surface-muted' => $colorLight,
             'color-border'        => $colorBorder,
-            'color-action'        => $colorPrimary,
-            'color-action-hover'  => '',
-            'color-on-action'     => $colorWhite,
+            'color-action'        => $colorPlum600,
+            'color-action-hover'  => $colorPlum750,
+            'color-on-action'     => $colorCream50,
 
             // Legacy font-colour aliases (same hex as semantic text roles)
             'font-color-primary'   => $colorPrimaryDark,
@@ -221,10 +290,10 @@ class StylingComponent extends Singleton {
             'color-input-bg'      => $colorInputBg,
             'color-input-default' => $colorInputDefault,
             'color-input-focus'   => $colorInputFocus,
-            'color-input-invalid' => $colorInvalid,
+            'color-input-invalid' => $colorRed700,
 
             // Password strength
-            'color-password-weak'   => $colorInvalid,
+            'color-password-weak'   => $colorRed700,
             'color-password-medium' => $colorPasswordMedium,
             'color-password-strong' => $colorPasswordStrong,
 
@@ -236,21 +305,18 @@ class StylingComponent extends Singleton {
             'font-weight-semibold'  => 700,
             'font-weight-bold'      => 700,
 
-            // --- Elevation (canonical) + legacy shadow aliases ---
+            // --- Elevation ---
             'elevation-0' => $elevation0,
             'elevation-1' => $elevation1,
             'elevation-2' => $elevation2,
             'elevation-3' => $elevation3,
             'elevation-4' => $elevation4,
-            'shadow-sm'       => $elevation1,
-            'shadow-sm-hover' => $elevation2,
-            'shadow-md'       => $elevation3,
-            'shadow-card'     => $elevation4,
 
             // --- Motion ---
             'duration-fast'           => '0.15s',
-            'duration-base'           => '0.3s',
-            'easing-standard'         => 'ease-in-out',
+            'duration-base'           => '0.25s',
+            'duration-slow'           => '0.4s',
+            'easing-standard'         => 'cubic-bezier(0.2, 0, 0, 1)',
             'transition-colors'       => 'background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out',
             'transition'              => 'background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in, opacity 0.3s ease-in, box-shadow 0.3s ease-in, transform 0.3s ease-in',
             'transition-ease-in-out'  => 'background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out',
@@ -262,30 +328,22 @@ class StylingComponent extends Singleton {
             'opacity-disabled'   => '0.4',
 
             // --- Z-index ---
+            'z-index-base'     => '0',
             'z-index-dropdown' => '100',
             'z-index-sticky'   => '200',
+            'z-index-overlay'  => '300',
+            // modal/toast stay above the Figma scale so WP admin chrome and dialogs keep stacking
             'z-index-modal'    => '1000',
             'z-index-toast'    => '1100',
             'z-index-admin'    => '99999',
 
-            // --- Radius (canonical + legacy names) ---
-            'radius-none'          => $radiusNone,
-            'radius-xs'            => $radiusXs,
-            'radius-base'          => $radiusBase,
-            'radius-sm'            => $radiusSm,
-            'radius-md'            => $radiusMd,
-            'radius-lg'            => $radiusLg,
-            'radius-xl'            => $radiusXl,
-            'radius-xxl'           => $radiusXxl,
-            'radius-pill'          => $radiusPill,
-            'border-radius-xs'     => $radiusXs,
-            'border-radius-base'   => $radiusBase,
-            'border-radius-sm'     => $radiusSm,
-            'border-radius-md'     => $radiusMd,
-            'border-radius-lg'     => $radiusLg,
-            'border-radius-xl'     => $radiusXl,
-            'border-radius-xxl'    => $radiusXxl,
-            'button-border-radius' => $radiusXl,
+            // Figma radius/* in rem (8 / 16 / 24 / 30 / 46.4 / 50).
+            'radius-foundation-xs'   => '0.5rem',
+            'radius-foundation-sm'   => '1rem',
+            'radius-foundation-md'   => '1.5rem',
+            'radius-foundation-lg'   => '1.875rem',
+            'radius-foundation-xl'   => '2.9rem',
+            'radius-foundation-pill' => '3.125rem',
 
             // --- Space scale (0.25rem steps) ---
             'space-1'  => '0.25rem',
@@ -299,6 +357,8 @@ class StylingComponent extends Singleton {
             'space-10' => '2.5rem',
             'space-12' => '3rem',
             'space-16' => '4rem',
+            // Figma space/* is named by pixels. The step scale above already covers 4–64px under space-1…space-16.
+            'space-96' => '6rem',
 
             // Gradients
             'gradient-primary' => "linear-gradient(180deg, {$colorPrimaryDark} 0%, rgba(62, 31, 42, 0) 100%)",
@@ -331,14 +391,32 @@ class StylingComponent extends Singleton {
 
             // Feedback (not brand)
             'notification-default'       => $colorGrey,
-            'notification-informational' => $colorNotificationInfo,
-            'notification-success'       => $colorPasswordStrong,
-            'notification-warning'       => $colorPasswordMedium,
-            'notification-error'         => $colorInvalid,
-            'color-feedback-info'        => $colorNotificationInfo,
-            'color-feedback-success'     => $colorPasswordStrong,
-            'color-feedback-warning'     => $colorPasswordMedium,
-            'color-feedback-error'       => $colorInvalid,
+            'notification-informational' => $colorBlue600,
+            'notification-success'       => $colorGreen600,
+            'notification-warning'       => $colorYellow500,
+            'notification-error'         => $colorRed700,
+            'color-feedback-info'        => $colorBlue600,
+            'color-feedback-success'     => $colorGreen600,
+            'color-feedback-warning'     => $colorYellow500,
+            'color-feedback-error'       => $colorRed700,
+
+            // Figma size/* and stroke/*
+            'size-button-sm'  => '2.5rem',
+            'size-button-md'  => '3rem',
+            'size-button-lg'  => '3.5rem',
+            'size-hit-area'   => '2.75rem',
+            'size-field-height' => '3rem',
+            'stroke-thin'     => '2px',
+            'stroke-medium'   => '4px',
+            'stroke-thick'    => '8px',
+            'container-padding'    => '1rem',
+            'container-padding-md' => '2rem',
+            'section-spacing'      => '3rem',
+            'section-spacing-md'   => '6rem',
+            'grid-gutter'          => '1rem',
+            'grid-gutter-md'       => '1.5rem',
+            'grid-columns'         => '4',
+            'grid-columns-md'      => '12',
 
             // Form controls (shared by GF, search, password, selects — not GF-only)
             'form-field-height'           => '3rem',
@@ -354,9 +432,6 @@ class StylingComponent extends Singleton {
      */
     private function generateCssVariablesString(): string {
         $variables = $this->getCssVariables();
-
-        // Semantic action-hover aliases the derived brand hover after Iris runs
-        $variables['color-action-hover'] = $variables['color-primary-hover'];
 
         $cssVariableStrings = [];
         foreach ($variables as $variableKey => $variableValue) {
@@ -398,9 +473,6 @@ class StylingComponent extends Singleton {
      */
     public function getCssVariable(string $variableKey, string $defaultValue): string {
         $variables = $this->getCssVariables();
-        if ($variableKey === 'color-action-hover') {
-            return (string) ($variables['color-primary-hover'] ?? $defaultValue);
-        }
         $value = $variables[$variableKey] ?? $defaultValue;
         return $value === '' ? $defaultValue : (string) $value;
     }

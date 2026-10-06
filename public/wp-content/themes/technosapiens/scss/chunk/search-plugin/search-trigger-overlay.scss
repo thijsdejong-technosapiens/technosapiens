@@ -100,7 +100,7 @@
         width: 100%;
         padding: calc(var(--ts-gutter-width, 2rem) * 3) 0;
         background-color: var(--ts-nav-background-color, white);
-        box-shadow: var(--ts-shadow-sm, 0 .25rem .25rem rgba(0, 0, 0, .1));
+        box-shadow: var(--ts-elevation-1, 0 .25rem .25rem rgba(0, 0, 0, .1));
         cursor: auto;
         transform: translateY(-110%);
         transition: transform .25s ease-in-out;

@@ -133,7 +133,7 @@
         gap: .625em;
         padding: calc(var(--ts-gutter-width, 2rem) / 3) calc(var(--ts-gutter-width, 2rem) / 2) calc(var(--ts-gutter-width, 2rem) / 3) calc(var(--ts-gutter-width, 2rem) / 1.5);
         background-color: var(--ts-color-light, lightgrey);
-        border-radius: var(--ts-button-border-radius, 0);
+        border-radius: var(--ts-radius-foundation-pill, 3.125rem);
         cursor: pointer;
         font-family: var(--ts-font-button, sans-serif);
         font-weight: var(--ts-font-weight-medium, 500);

@@ -8,74 +8,57 @@ $self: '.ts-button';
     align-items: center;
     appearance: none;
     font-family: var(--ts-font-button, sans-serif) !important;
-    font-weight: var(--ts-font-weight-medium, 500);
+    font-weight: var(--ts-font-weight-bold, 700);
     text-decoration: none;
     cursor: pointer;
     line-height: 1.25em;
 
-    // Color recipes: set local roles only. Styles consume --ts-btn-*.
+    // Figma Button types. Local roles only; styles consume --ts-btn-*.
     &--color-primary {
-        --ts-btn-bg: var(--ts-color-primary, red);
-        --ts-btn-fg: var(--ts-color-on-primary, white);
-        --ts-btn-border: var(--ts-color-primary, red);
-        --ts-btn-bg-hover: var(--ts-color-primary-hover, red);
-        --ts-btn-fg-hover: var(--ts-color-on-primary, white);
-
-        .ts-has-dark-background & {
-            --ts-btn-bg: var(--ts-color-secondary, blue);
-            --ts-btn-fg: var(--ts-color-primary, red);
-            --ts-btn-border: var(--ts-color-secondary, blue);
-            --ts-btn-bg-hover: var(--ts-color-secondary-hover, blue);
-            --ts-btn-fg-hover: var(--ts-color-primary, red);
-        }
+        --ts-btn-bg: var(--ts-color-action-primary, purple);
+        --ts-btn-fg: var(--ts-color-text-on-primary, white);
+        --ts-btn-border: var(--ts-color-cream-50, white);
+        --ts-btn-bg-hover: var(--ts-color-action-primary-hover, purple);
+        --ts-btn-fg-hover: var(--ts-color-text-on-primary, white);
+        --ts-btn-bg-pressed: var(--ts-color-action-primary-pressed, purple);
+        --ts-btn-ghost: var(--ts-color-action-primary, purple);
     }
 
     &--color-secondary {
-        --ts-btn-bg: var(--ts-color-secondary, blue);
-        --ts-btn-fg: var(--ts-color-on-secondary, white);
-        --ts-btn-border: var(--ts-color-primary, red);
-        --ts-btn-bg-hover: var(--ts-color-secondary-hover, blue);
-        --ts-btn-fg-hover: var(--ts-color-on-secondary, white);
+        --ts-btn-bg: transparent;
+        --ts-btn-fg: var(--ts-color-action-secondary, deeppink);
+        --ts-btn-border: var(--ts-color-action-secondary, deeppink);
+        --ts-btn-bg-hover: var(--ts-color-action-secondary-hover, deeppink);
+        --ts-btn-fg-hover: var(--ts-color-cream-50, white);
+        --ts-btn-border-hover: var(--ts-color-action-secondary, deeppink);
+        --ts-btn-bg-pressed: var(--ts-color-action-secondary-pressed, purple);
+        --ts-btn-ghost: var(--ts-color-action-secondary, deeppink);
 
+        // Figma secondary label is cream, which only reads on the dark page
         .ts-has-dark-background & {
-            --ts-btn-bg: var(--ts-color-secondary, blue);
-            --ts-btn-fg: var(--ts-color-primary, red);
-            --ts-btn-border: var(--ts-color-secondary, blue);
-            --ts-btn-bg-hover: var(--ts-color-secondary-hover, blue);
-            --ts-btn-fg-hover: var(--ts-color-primary, red);
+            --ts-btn-fg: var(--ts-color-cream-50, white);
+            --ts-btn-fg-hover: var(--ts-color-cream-50, white);
         }
     }
 
     &--color-tertiary {
-        --ts-btn-bg: var(--ts-color-tertiary, tan);
-        --ts-btn-fg: var(--ts-color-on-tertiary, white);
-        --ts-btn-border: var(--ts-color-tertiary, tan);
-        --ts-btn-bg-hover: var(--ts-color-tertiary-hover, tan);
-        --ts-btn-fg-hover: var(--ts-color-on-tertiary, white);
-
-        .ts-has-dark-background & {
-            --ts-btn-bg: var(--ts-color-tertiary, tan);
-            --ts-btn-fg: var(--ts-color-on-tertiary, white);
-            --ts-btn-border: var(--ts-color-tertiary, tan);
-            --ts-btn-bg-hover: var(--ts-color-tertiary-hover, tan);
-            --ts-btn-fg-hover: var(--ts-color-on-tertiary, white);
-        }
+        --ts-btn-bg: var(--ts-color-action-tertiary, gold);
+        --ts-btn-fg: var(--ts-color-text-on-tertiary, black);
+        --ts-btn-border: transparent;
+        --ts-btn-bg-hover: var(--ts-color-action-tertiary-hover, gold);
+        --ts-btn-fg-hover: var(--ts-color-text-on-tertiary, black);
+        --ts-btn-bg-pressed: var(--ts-color-action-tertiary-pressed, gold);
+        --ts-btn-ghost: var(--ts-color-action-tertiary, gold);
     }
 
     &--color-danger {
-        --ts-btn-bg: var(--ts-color-danger, red);
-        --ts-btn-fg: var(--ts-color-on-danger, white);
-        --ts-btn-border: var(--ts-color-danger, red);
-        --ts-btn-bg-hover: var(--ts-color-danger-hover, red);
-        --ts-btn-fg-hover: var(--ts-color-on-danger, white);
-
-        .ts-has-dark-background & {
-            --ts-btn-bg: var(--ts-color-danger, red);
-            --ts-btn-fg: var(--ts-color-on-danger, white);
-            --ts-btn-border: var(--ts-color-danger, red);
-            --ts-btn-bg-hover: var(--ts-color-danger-hover, red);
-            --ts-btn-fg-hover: var(--ts-color-on-danger, white);
-        }
+        --ts-btn-bg: var(--ts-color-action-danger, red);
+        --ts-btn-fg: var(--ts-color-text-on-feedback, white);
+        --ts-btn-border: transparent;
+        --ts-btn-bg-hover: var(--ts-color-action-danger-hover, red);
+        --ts-btn-fg-hover: var(--ts-color-text-on-feedback, white);
+        --ts-btn-bg-pressed: var(--ts-color-action-danger-hover, red);
+        --ts-btn-ghost: var(--ts-color-action-danger, red);
     }
 
     &:focus-visible {
@@ -96,19 +79,13 @@ $self: '.ts-button';
     }
 
     &--size-small {
-        font-size: .875rem;
+        font-size: var(--ts-font-size-body-small, 1rem);
     }
 
-    &--size-medium {
-        font-size: 1rem;
-    }
-
-    &--size-large {
-        font-size: 1.125em;
-    }
-
+    &--size-medium,
+    &--size-large,
     &--size-xlarge {
-        font-size: 1.25rem;
+        font-size: var(--ts-font-size-body-base-md, 1.125rem);
     }
 
     &--icon-position-left {
@@ -150,22 +127,25 @@ $self: '.ts-button';
             color var(--ts-duration-fast, .15s) var(--ts-easing-standard, ease-in-out),
             border-color var(--ts-duration-fast, .15s) var(--ts-easing-standard, ease-in-out);
 
-        border-radius: var(--ts-button-border-radius, 0);
+        border-radius: var(--ts-radius-foundation-lg, 1rem);
+        border-style: solid;
+        border-width: var(--ts-stroke-thin, 2px);
+        border-color: var(--ts-btn-border, transparent);
 
         &#{$self}--size-small {
-            padding: .4375rem 1.25rem;
+            min-height: var(--ts-size-button-sm, 2.5rem);
+            padding: 0 var(--ts-space-4, 1rem);
         }
 
         &#{$self}--size-medium {
-            padding: .6875rem 1.5rem;
+            min-height: var(--ts-size-button-md, 3rem);
+            padding: 0 var(--ts-space-6, 1.5rem);
         }
 
-        &#{$self}--size-large {
-            padding: .8125rem 1.75rem;
-        }
-
+        &#{$self}--size-large,
         &#{$self}--size-xlarge {
-            padding: 1.0625rem 2rem;
+            min-height: var(--ts-size-button-lg, 3.5rem);
+            padding: 0 var(--ts-space-8, 2rem);
         }
 
         @include mixins.mq-down(sm) {
@@ -199,36 +179,38 @@ $self: '.ts-button';
 
         &:hover {
             background-color: var(--ts-btn-bg-hover, blue);
+            border-color: var(--ts-btn-border-hover, var(--ts-btn-border, transparent));
             color: var(--ts-btn-fg-hover, white);
         }
 
         &:active {
-            filter: brightness(0.95);
+            background-color: var(--ts-btn-bg-pressed, var(--ts-btn-bg-hover, blue));
+            color: var(--ts-btn-fg-hover, white);
         }
     }
 
     &--style-outlined {
         gap: .5em;
         background-color: transparent;
-        border: solid 2px var(--ts-btn-border, blue);
-        color: var(--ts-btn-border, blue);
+        color: var(--ts-btn-fg, white);
 
         &:hover {
-            background-color: var(--ts-btn-bg, blue);
-            border-color: var(--ts-btn-bg, blue);
-            color: var(--ts-btn-fg, white);
+            background-color: var(--ts-btn-bg-hover, blue);
+            border-color: var(--ts-btn-border-hover, var(--ts-btn-border, blue));
+            color: var(--ts-btn-fg-hover, white);
         }
 
         &:active {
-            filter: brightness(0.95);
+            background-color: var(--ts-btn-bg-pressed, var(--ts-btn-bg-hover, blue));
+            color: var(--ts-btn-fg-hover, white);
         }
     }
 
     &--style-ghost {
         gap: .5em;
         background-color: transparent;
-        border: solid 2px transparent;
-        color: var(--ts-btn-bg, blue);
+        border-color: transparent;
+        color: var(--ts-btn-ghost, var(--ts-btn-bg, blue));
 
         &:hover {
             background-color: color-mix(in srgb, var(--ts-btn-bg, blue) 12%, transparent);

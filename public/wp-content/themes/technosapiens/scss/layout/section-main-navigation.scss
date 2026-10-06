@@ -26,7 +26,7 @@
 
     &__item {
         position: relative;
-        border-radius: var(--ts-button-border-radius, 3.125rem);
+        border-radius: var(--ts-radius-foundation-pill, 3.125rem);
         display: none;
 
         @include mixins.lg {
@@ -176,7 +176,7 @@
         min-width: 12.5rem;
         pointer-events: none;
         //background-color: var(--ts-color-white, white);
-        box-shadow: var(--ts-shadow-sm, none);
+        box-shadow: var(--ts-elevation-1, none);
 
         @include mixins.lg {
             position: absolute;
@@ -300,7 +300,7 @@
         min-width: 12.5rem;
         pointer-events: none;
         background-color: var(--ts-color-white, white);
-        box-shadow: var(--ts-shadow-sm, none);
+        box-shadow: var(--ts-elevation-1, none);
         transition: opacity .2s ease-in-out, transform .2s ease-in-out, visibility 0s linear .2s;
     }
 
