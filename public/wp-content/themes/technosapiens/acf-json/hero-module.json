@@ -151,14 +151,14 @@
                     "choices": {
                         "primary": "Primary (Default)",
                         "secondary": "Secondary",
-                        "tertiary": "Tertiary",
-                        "danger": "Danger"
+                        "tertiary": "Tertiary"
                     },
                     "default_value": "primary",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
                     "create_options": 0,
@@ -182,7 +182,6 @@
                     "choices": {
                         "filled": "Filled (Default)",
                         "outlined": "Outlined",
-                        "ghost": "Ghost",
                         "text": "Text",
                         "alternative": "Text alternative"
                     },
@@ -313,5 +312,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789814954
+    "modified": 1791296635
 }

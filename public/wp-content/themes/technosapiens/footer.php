@@ -36,12 +36,12 @@ if ($logoId) $logoHtml = Image::render([
                 <div class="col col--1 col--xl-1/4 site-footer__col site-footer__col--logo">
                     <a href="<?php echo Link::getHomePageUrl(); ?>"
                     target="_self"
-                    class="footer__logo"
+                    class="site-footer__logo"
                     aria-label="<?php _e("Navigate to the home page", Theme::TEXT_DOMAIN); ?>">
                         <?php if ($logoHtml): ?>
                             <?php echo $logoHtml; ?>
                         <?php elseif ($blogName): ?>
-                            <strong class="footer__logo-placeholder h3">
+                            <strong class="site-footer__logo-placeholder h3">
                                 <?php echo $blogName; ?>
                             </strong>
                         <?php endif; ?>

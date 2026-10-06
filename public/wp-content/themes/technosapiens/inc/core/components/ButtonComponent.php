@@ -90,10 +90,6 @@ class ButtonComponent extends Singleton {
                     'value' => 'tertiary',
                     'label' => __('Tertiary', Core::TEXT_DOMAIN),
                 ],
-                (object)[
-                    'value' => 'danger',
-                    'label' => __('Danger', Core::TEXT_DOMAIN),
-                ],
             ]);
 
             //set default button styles
@@ -105,10 +101,6 @@ class ButtonComponent extends Singleton {
                 (object)[
                     'value' => 'outlined',
                     'label' => __('Outlined', Core::TEXT_DOMAIN),
-                ],
-                (object)[
-                    'value' => 'ghost',
-                    'label' => __('Ghost', Core::TEXT_DOMAIN),
                 ],
                 (object)[
                     'value' => 'text',
@@ -248,6 +240,9 @@ class ButtonComponent extends Singleton {
      * @return string
      */
     public function getParsedButtonStyle(string $buttonStyle): string {
+        // Ghost was removed as a duplicate of outlined; map legacy CMS values.
+        if ($buttonStyle === 'ghost') $buttonStyle = 'outlined';
+
         $buttonStyles = self::getButtonStyles(true);
         if (!$buttonStyle || (count($buttonStyles) > 0 && !in_array($buttonStyle, $buttonStyles))) return $this->getDefaultButtonStyle();
         return $buttonStyle;

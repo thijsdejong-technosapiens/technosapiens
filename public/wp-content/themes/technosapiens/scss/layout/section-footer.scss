@@ -36,11 +36,7 @@
     &__contact-data {
         p, a{
             font-family: var(--ts-font-family-sans, sans-serif);
-            font-weight: var(--ts-font-weight-semibold, 600);
-        }
-
-        p{
-            line-height: 2rem;
+            line-height: var(--ts-line-height-body-base-md, 1.75rem); 
         }
 
         a{
@@ -97,9 +93,18 @@
         }
     } 
 
+    &__col--logo {
+        align-self: flex-start;
+    }
 
-    &__logo-image{
+    &__logo {
+        display: block;
+    }
+
+    &__logo-image {
+        display: block;
         max-width: 100%;
-        width: 11rem;
+        width: 12rem;
+        height: auto;
     }
 }
