@@ -29,8 +29,8 @@ class AcfComponent extends Singleton {
      * @return array
      */
     public static function filterWysiwygEditorToolbars(array $toolbars): array {
-        $toolbars['HH simple'] = [];
-        $toolbars['HH simple'][1] = [
+        $toolbars['TS simple'] = [];
+        $toolbars['TS simple'][1] = [
             'bold',
             'italic',
             'underline',

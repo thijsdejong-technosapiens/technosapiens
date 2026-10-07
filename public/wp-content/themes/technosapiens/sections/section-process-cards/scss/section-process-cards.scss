@@ -1,0 +1,78 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-process-cards {
+    $self: &;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__gradient-wrap {
+        width: 100%;
+        height: calc(100% + 6rem);
+        background: linear-gradient(180deg, var(--ts-color-pink-600, deeppink) 0%, var(--ts-color-plum-800, purple) 100%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        border-radius: var(--ts-radius-foundation-md, 1rem);
+        max-width: 74rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &:not(.is-ready) &__card {
+        opacity: 0;
+        transform: translateY(2.5rem);
+    }
+
+    &__card {
+        padding: 2rem;
+        background-color: var(--ts-color-surface-muted, #F5F5F5); //border-radius: var(--radius-sm);
+        background: var(--ts-color-plum-800, #261629);
+        border-radius: var(--ts-radius-foundation-md, 1rem);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 100%;
+    }
+
+    &__card-title {
+        color: var(--ts-color-white, #FFFFFF);
+    }
+
+    &__card-text {
+        margin-bottom: 0;
+        color: var(--ts-color-white, #FFFFFF);
+    }
+
+    &__action {
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-process-cards:not(.is-ready) .section-process-cards__card {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (scripting: none) {
+    .section-process-cards:not(.is-ready) .section-process-cards__card {
+        opacity: 1;
+        transform: none;
+    }
+}

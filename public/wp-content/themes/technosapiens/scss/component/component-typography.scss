@@ -35,19 +35,18 @@ body {
 p {
     font-size: 1rem;
     line-height: 1.6;
-}
 
-p {
     a {
         color: var(--ts-color-tertiary, #736199) !important;
         text-decoration: none !important;
         font-family: var(--ts-font-family-sans, sans-serif);
         font-weight: var(--ts-font-weight-bold, 700);
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             opacity: 0.8;
         }
-    }
+    }    
 }
 
 strong,

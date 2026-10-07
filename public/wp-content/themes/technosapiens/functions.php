@@ -240,6 +240,7 @@ class Theme extends Singleton {
         SectionUsps::getInstance();
         SectionCards::getInstance();
         SectionBrands::getInstance();
+        SectionProcessCards::getInstance();
         Section3dfolio::getInstance();
     }
 }
