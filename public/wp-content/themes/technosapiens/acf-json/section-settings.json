@@ -176,7 +176,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "100",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -212,7 +212,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -249,15 +249,15 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "xlarge": "Extra large",
-                "large": "Large",
+                "small": "Small",
                 "medium": "Medium",
-                "small": "Small"
+                "large": "Large",
+                "xlarge": "Extra large"
             },
             "default_value": "medium",
             "return_format": "value",
@@ -288,13 +288,13 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "top-bottom": "Top to bottom",
-                "bottom-top": "Bottom to top",
+                "top-bottom": "Top to bottom \/ Left to right",
+                "bottom-top": "Bottom to top \/ Right to left",
                 "center": "Centered"
             },
             "default_value": "none",
@@ -314,70 +314,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/section-section-accordion"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-grand-title"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-cta-banner"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-page-buttons"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-content"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-stats"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-cards"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-brands"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-process-cards"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-section-3dfolio"
+                "value": "all"
             }
         ]
     ],
@@ -393,5 +330,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1790480001
+    "modified": 1791363761
 }

@@ -2,7 +2,7 @@ import {gsap} from 'gsap'
 
 /**
  * class GradientBands
- * Stagger-fades gradient band children once when their container enters the viewport.
+ * Stagger-fades gradient band children once when their container enters the top half of the viewport.
  * ScrollTrigger is intentionally not imported; add it later only if scrub/pin is required.
  */
 class GradientBands {
@@ -29,7 +29,7 @@ class GradientBands {
     }
 
     /**
-     * Observe each container; IO fires immediately for already-visible elements.
+     * Observe each container; IO fires when the container intersects the top half of the viewport.
      */
     initObserver() {
         this.state.observer = new IntersectionObserver((entries) => {
@@ -40,7 +40,8 @@ class GradientBands {
             })
         }, {
             root: null,
-            rootMargin: '0px',
+            // Shrink root to top half so bands below mid-viewport do not trigger yet.
+            rootMargin: '0px 0px -33% 0px',
             threshold: 0,
         })
 

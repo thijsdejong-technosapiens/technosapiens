@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-29 21:05:31+0000\n"
+"PO-Revision-Date: 2026-10-03 07:56:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,11 +11,35 @@ msgstr ""
 "Language: nl\n"
 "Project-Id-Version: Plugins - Loco Translate - Stable (latest release)\n"
 
-#: tpl/admin/config/settings.php:248
+#. Translators: %s is replaced with a directory path which is denied write
+#. access by the plugin settings
+#: src/fs/FileWriter.php:311
+msgid "Write access to %s is disallowed by the plugin settings"
+msgstr "Schrijftoegang tot %s is niet toegestaan door de plugin instellingen"
+
+#: tpl/admin/config/settings.php:217
+msgid "Restricted base directories"
+msgstr "Beperkte basisfolders"
+
+#: src/admin/init/InitPoController.php:372
+msgid "No target locations are writeable. Check your settings"
+msgstr "Er zijn geen schrijfbaar doellocaties. Controleer je instellingen"
+
+#: tpl/admin/config/settings.php:228
+msgid "Directory restrictions are relative to the WordPress root (ABSPATH)."
+msgstr "Folderbeperkingen zijn relatief ten opzichte van de WordPress root (ABSPATH)."
+
+#. Translators: %s is replaced with the name of a file that cannot be read due
+#. to a directory restriction
+#: src/gettext/Data.php:38
+msgid "Access to %s is disallowed by the plugin settings"
+msgstr "Toegang tot %s is niet toegestaan door de plugin instellingen"
+
+#: tpl/admin/config/settings.php:257
 msgid "All users with the selected roles will be able to create and update translation files in any writeable location."
 msgstr "Alle gebruikers met de geselecteerde rollen zullen in staat zijn om vertaalbestanden te maken en te updaten in elke beschrijfbare locatie."
 
-#: tpl/admin/config/settings.php:252
+#: tpl/admin/config/settings.php:261
 msgid "Roles marked † have low privileges, and may be assigned to untrusted site users."
 msgstr "Rollen gemarkeerd met † hebben lage privileges, en kunnen toegewezen worden aan niet-vertrouwde locatie gebruikers."
 
@@ -23,15 +47,11 @@ msgstr "Rollen gemarkeerd met † hebben lage privileges, en kunnen toegewezen w
 msgid "Write access denied"
 msgstr "Schrijftoegang geweigerd"
 
-#: src/fs/FileWriter.php:309
-msgid "File modification disallowed by the plugin settings"
-msgstr "Bestandsbewerking niet toegestaan door de plugin instellingen"
-
 #: tpl/admin/file/info.php:98
 msgid "Write protected directory"
 msgstr "Schrijfbeveiligde folder"
 
-#: tpl/admin/config/settings.php:217
+#: tpl/admin/config/settings.php:223
 msgid "Restricted writeable directories"
 msgstr "Beperkte schrijfbare folders"
 
@@ -76,11 +96,11 @@ msgstr "Je kunt een bestaand PO bestand kopiëren (aanbevolen), of rechtstreeks 
 msgid "System"
 msgstr "Systeem"
 
-#: src/admin/DebugController.php:929
+#: src/admin/DebugController.php:941
 msgid "String debugger"
 msgstr "String debugger"
 
-#: src/admin/bundle/ViewController.php:152
+#: src/admin/bundle/ViewController.php:154
 msgid "Custom translations may not work without System translations installed"
 msgstr "Aangepaste vertalingen werken mogelijk niet zonder dat Systeemvertalingen zijn geïnstalleerd"
 
@@ -93,7 +113,7 @@ msgid "Useful links:"
 msgstr "Bruikbare links:"
 
 #. translators: %u is a number of files which were successfully deleted
-#: src/admin/file/DeleteController.php:59
+#: src/admin/file/DeleteController.php:60
 msgid "%u file deleted"
 msgid_plural "%u files deleted"
 msgstr[0] "%u bestand verwijderd"
@@ -117,7 +137,7 @@ msgid "No formatting errors detected"
 msgstr "Geen format fouten gevonden"
 
 #. Translators: Button that validates current translation formatting
-#: src/admin/file/EditController.php:226
+#: src/admin/file/EditController.php:227
 msgctxt "Editor"
 msgid "Check"
 msgstr "Controleer"
@@ -223,7 +243,7 @@ msgid "Save"
 msgstr "Opslaan"
 
 #. translators: %s is the quantity of files which were successfully moved
-#: src/admin/file/MoveController.php:98
+#: src/admin/file/MoveController.php:102
 msgid "%s file moved"
 msgid_plural "%s files moved"
 msgstr[0] "%s bestand verplaatst"
@@ -298,7 +318,7 @@ msgstr "Synchroniseren PO bestanden"
 msgid "Fuzzy matching tolerance"
 msgstr "Tolerantie fuzzy matching"
 
-#: src/admin/bundle/ViewController.php:107
+#: src/admin/bundle/ViewController.php:109
 msgid "Upload PO"
 msgstr "Upload PO"
 
@@ -310,7 +330,7 @@ msgstr "Upload"
 msgid "Upload a translation file"
 msgstr "Upload een vertalingsbestand"
 
-#: src/ajax/UploadController.php:70
+#: src/ajax/UploadController.php:72
 msgid "Your file is identical to the existing one"
 msgstr "Je bestand is gelijk aan het bestaande"
 
@@ -323,7 +343,7 @@ msgid "Info and tutorials"
 msgstr "Info en tutorials"
 
 #. Translators: %s will be replaced with the name of a missing POT file
-#: src/ajax/SyncController.php:55
+#: src/ajax/SyncController.php:56
 msgid "Falling back to source extraction because %s is missing"
 msgstr "Terugvallen op source extractie omdat %s ontbreekt"
 
@@ -341,7 +361,7 @@ msgid "Suggest translation"
 msgstr "Vertaling voorstellen"
 
 #. Translators: Button that opens window for auto-translating
-#: src/admin/file/EditController.php:224
+#: src/admin/file/EditController.php:225
 msgctxt "Editor"
 msgid "Auto"
 msgstr "Auto"
@@ -388,7 +408,7 @@ msgid "Overwrite existing translations"
 msgstr "Bestaande vertalingen overschrijven"
 
 #: tpl/admin/config/apis.php:157 tpl/admin/config/apis.php:161
-#: tpl/admin/config/settings.php:247
+#: tpl/admin/config/settings.php:256
 msgid "Important"
 msgstr "Belangrijk"
 
@@ -493,7 +513,7 @@ msgstr "Deze plugin heeft geen eigen vertaalbestanden, maar kan worden vertaald 
 msgid "Editing of POT (template) files"
 msgstr "Bewerken van POT (template) bestanden"
 
-#: src/admin/file/EditController.php:181
+#: src/admin/file/EditController.php:182
 msgid "This is NOT a translation file. Manual editing of source strings is not recommended."
 msgstr "Dit is GEEN vertaalbestand. Handmatig bewerken van bronreeksen wordt niet aanbevolen."
 
@@ -503,7 +523,7 @@ msgid_plural "The following files will be moved/renamed to the new location:"
 msgstr[0] "Het volgende bestand wordt verplaatst/hernoemd naar de nieuwe locatie:"
 msgstr[1] "De volgende bestanden worden verplaatst/hernoemd naar de nieuwe locatie:"
 
-#: src/fs/FileWriter.php:320
+#: src/fs/FileWriter.php:322
 msgid "Modification of POT (template) files is disallowed by the plugin settings"
 msgstr "Wijziging van POT (template) bestanden is niet toegestaan ​​door de plugin instellingen"
 
@@ -516,7 +536,7 @@ msgid "Enable Ajax file uploads"
 msgstr "Activeer Ajax bestand uploads"
 
 #. translators: Page title where %s is the name of a file to be moved
-#: src/admin/file/MoveController.php:122 src/admin/file/MoveController.php:151
+#: src/admin/file/MoveController.php:126 src/admin/file/MoveController.php:155
 msgid "Move %s"
 msgstr "Verplaats %s"
 
@@ -524,26 +544,26 @@ msgstr "Verplaats %s"
 msgid "Move files"
 msgstr "Verplaats bestanden"
 
-#: src/admin/file/BaseController.php:125
+#: src/admin/file/BaseController.php:124
 msgid "Relocate"
 msgstr "Verhuizen"
 
 #. translators: %s is the quantity of files which failed to be moved
-#: src/admin/file/MoveController.php:103
+#: src/admin/file/MoveController.php:107
 msgid "%s file could not be moved"
 msgid_plural "%s files could not be moved"
 msgstr[0] "%s bestand kan niet worden verplaatst"
 msgstr[1] "%s bestanden konden niet worden verplaatst"
 
-#: src/ajax/FsConnectController.php:127
+#: src/ajax/FsConnectController.php:119
 msgid "This directory is managed by WordPress. Removed files may be restored during updates"
 msgstr "Deze folder wordt beheerd door WordPress. Verwijderde bestanden kunnen tijdens updates worden hersteld"
 
-#: src/ajax/FsConnectController.php:160
+#: src/ajax/FsConnectController.php:152
 msgid "This move operation requires permission"
 msgstr "Voor deze verplaatsingsbewerking is toestemming vereist"
 
-#: src/fs/FileWriter.php:241
+#: src/fs/FileWriter.php:242
 msgid "Parent directory isn't writable"
 msgstr "Hoofdfolder is niet beschrijfbaar"
 
@@ -563,7 +583,7 @@ msgstr "Handmatig installeren"
 msgid "A newer version of Loco Translate is available for download"
 msgstr "Er is een nieuwere versie van Loco Translate beschikbaar om te downloaden"
 
-#: src/admin/bundle/ViewController.php:116
+#: src/admin/bundle/ViewController.php:118
 msgid "View template"
 msgstr "Bekijk template"
 
@@ -693,34 +713,34 @@ msgstr "Talen &lsaquo; Loco"
 
 #. translators: %s is a file name to be rolled back to a previous version.
 #. translators: Page title where %s refers to a file name
-#: src/admin/file/DiffController.php:59 src/admin/file/DiffController.php:78
+#: src/admin/file/DiffController.php:74 src/admin/file/DiffController.php:91
 msgid "Restore %s"
 msgstr "Herstellen %s"
 
-#: src/admin/file/DiffController.php:35
+#: src/admin/file/DiffController.php:56
 msgid "File restored"
 msgstr "Bestand hersteld"
 
-#: src/admin/file/BaseController.php:124 tpl/admin/file/diff.php:31
+#: src/admin/file/BaseController.php:123 tpl/admin/file/diff.php:31
 msgid "Restore"
 msgstr "Herstellen"
 
-#: src/admin/config/SettingsController.php:159
+#: src/admin/config/SettingsController.php:160
 #: tpl/admin/config/settings.php:210
 msgid "Disallow"
 msgstr "Weigeren"
 
-#: src/admin/config/SettingsController.php:157
+#: src/admin/config/SettingsController.php:158
 #: tpl/admin/config/settings.php:212
 msgid "Allow"
 msgstr "Toestaan"
 
-#: src/admin/config/SettingsController.php:158
+#: src/admin/config/SettingsController.php:159
 msgid "Allow (with warning)"
 msgstr "Toestaan (met waarschuwing)"
 
 #. translators: Where %s is a file name
-#: src/ajax/DiffController.php:47
+#: src/ajax/DiffController.php:42
 msgid "Revisions are identical, you can delete %s"
 msgstr "Revisies zijn identiek, je kan %s verwijderen"
 
@@ -733,7 +753,7 @@ msgid "Click \"Connect\" to authenticate with the server"
 msgstr "Klik op \"Verbinden\" om te authenticeren met de server"
 
 #. translators: Where %s is the name of the invalid POT file
-#: src/admin/file/EditController.php:138 src/ajax/SyncController.php:72
+#: src/admin/file/EditController.php:139 src/ajax/SyncController.php:74
 msgid "Translation template is invalid (%s)"
 msgstr "Vertaling template is ongeldig (%s)"
 
@@ -745,27 +765,27 @@ msgstr "Inloggegevens opslaan in sessie"
 msgid "Modification of installed files"
 msgstr "Aanpassing van geïnstalleerde bestanden"
 
-#: src/ajax/FsConnectController.php:130
+#: src/ajax/FsConnectController.php:122
 msgid "Changes to this file may be overwritten or deleted when you update WordPress"
 msgstr "Wijzigingen in dit bestand kunnen worden overschreven of verwijderd wanneer je WordPress updatet"
 
-#: src/admin/bundle/LocaleController.php:148
-#: src/admin/file/EditController.php:132 src/admin/file/EditController.php:183
+#: src/admin/bundle/LocaleController.php:151
+#: src/admin/file/EditController.php:133 src/admin/file/EditController.php:184
 #: tpl/admin/common/inc-fsconn.php:16 tpl/admin/common/inc-fsconn.php:41
 #: tpl/admin/config/apis.php:171 tpl/admin/config/prefs.php:45
-#: tpl/admin/config/settings.php:261 tpl/admin/errors/no-backups.php:22
+#: tpl/admin/config/settings.php:270 tpl/admin/errors/no-backups.php:22
 msgid "Documentation"
 msgstr "Documentatie"
 
-#: src/admin/bundle/LocaleController.php:155
+#: src/admin/bundle/LocaleController.php:158
 msgid "See all core translations"
 msgstr "Zie alle core vertalingen"
 
-#: src/fs/FileWriter.php:304
+#: src/fs/FileWriter.php:305
 msgid "Modification of installed files is disallowed by the plugin settings"
 msgstr "Aanpassing van geïnstalleerde bestanden wordt niet toegestaan ​​door de plugin instellingen"
 
-#: src/admin/bundle/LocaleController.php:147
+#: src/admin/bundle/LocaleController.php:150
 msgid "No core translation files are installed for this language"
 msgstr "Er zijn geen core vertalingsbestanden geïnstalleerd voor deze taal"
 
@@ -775,23 +795,23 @@ msgctxt "Plural category"
 msgid "Zero"
 msgstr "Nul"
 
-#: src/ajax/FsConnectController.php:163
+#: src/ajax/FsConnectController.php:155
 msgid "Saving this file requires permission"
 msgstr "Om dit bestand op te slaan is toestemming nodig"
 
-#: src/ajax/FsConnectController.php:157
+#: src/ajax/FsConnectController.php:149
 msgid "Deleting this file requires permission"
 msgstr "Om dit bestand te verwijderen is toestemming nodig"
 
-#: src/ajax/FsConnectController.php:154
+#: src/ajax/FsConnectController.php:146
 msgid "Creating this file requires permission"
 msgstr "Voor het maken van dit bestand is toestemming nodig"
 
-#: src/ajax/FsConnectController.php:124
+#: src/ajax/FsConnectController.php:116
 msgid "This directory is managed by WordPress, be careful what you delete"
 msgstr "Deze map wordt beheerd door WordPress, wees voorzichtig met wat je verwijdert"
 
-#: src/ajax/FsConnectController.php:121
+#: src/ajax/FsConnectController.php:113
 msgid "This file may be overwritten or deleted when you update WordPress"
 msgstr "Dit bestand kan worden overschreven of verwijderd wanneer je WordPress update"
 
@@ -840,7 +860,7 @@ msgstr "Maximale lijnlengte (nul blokkeert wrapping)"
 
 #. Translators: (1) Number of files (2) Maximum size of file that will be
 #. included (3) Size of the largest encountered
-#: src/ajax/SyncController.php:99
+#: src/ajax/SyncController.php:101
 msgid "%1$s file has been skipped because it's %3$s. (Max is %2$s). Check all strings are present before saving."
 msgid_plural "%1$s files over %2$s have been skipped. (Largest is %3$s). Check all strings are present before saving."
 msgstr[0] "%1$s bestand is overgeslagen omdat het %3$s is. (Max is %2$s). Controleer of alle strings aanwezig zijn voor het opslaan."
@@ -895,7 +915,7 @@ msgstr "Volledige documentatie"
 msgid "https://localise.biz/wordpress/plugin"
 msgstr "https://localise.biz/wordpress/plugin"
 
-#: src/admin/bundle/LocaleController.php:165 tpl/admin/root.php:58
+#: src/admin/bundle/LocaleController.php:168 tpl/admin/root.php:58
 msgid "See all plugins"
 msgstr "Bekijk alle plugins"
 
@@ -918,33 +938,33 @@ msgstr "Configuratie opgeslagen"
 msgid "Overview"
 msgstr "Overzicht"
 
-#: src/admin/bundle/LocaleController.php:164 src/admin/Navigation.php:30
+#: src/admin/bundle/LocaleController.php:167 src/admin/Navigation.php:30
 #: src/mvc/AdminRouter.php:41
 msgid "Plugins"
 msgstr "Plugins"
 
-#: src/admin/bundle/LocaleController.php:159 src/admin/Navigation.php:27
+#: src/admin/bundle/LocaleController.php:162 src/admin/Navigation.php:27
 #: src/mvc/AdminRouter.php:36
 msgid "Themes"
 msgstr "Thema's"
 
 #. Translators: button for removing a string when manually editing a POT file
-#: src/admin/file/EditController.php:215
+#: src/admin/file/EditController.php:216
 msgctxt "Editor"
 msgid "Remove"
 msgstr "Verwijderen"
 
 #. Translators: button for adding a new string when manually editing a POT file
-#: src/admin/file/EditController.php:213
+#: src/admin/file/EditController.php:214
 msgctxt "Editor"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/admin/file/DiffController.php:45
+#: src/admin/file/DiffController.php:63
 msgid "File deleted"
 msgstr "Bestand verwijderd"
 
-#: src/admin/file/BaseController.php:126 tpl/admin/bundle/inc-po-table.php:66
+#: src/admin/file/BaseController.php:125 tpl/admin/bundle/inc-po-table.php:66
 #: tpl/admin/bundle/locale.php:75 tpl/admin/file/diff.php:32
 msgid "Delete"
 msgstr "Verwijderen"
@@ -958,7 +978,7 @@ msgstr "Vertaal thema's"
 msgid "Translate themes and plugins directly in WordPress"
 msgstr "Vertaal thema's en plugins direct vanuit WordPress"
 
-#: src/admin/bundle/LocaleController.php:134
+#: src/admin/bundle/LocaleController.php:137
 #: src/admin/list/LocalesController.php:35 tpl/admin/init/init-po.php:45
 msgid "Installed languages"
 msgstr "Geïnstalleerde talen"
@@ -980,7 +1000,7 @@ msgstr "Geavanceerd"
 msgid "Invalid locale"
 msgstr "Ongeldige locale"
 
-#: src/admin/file/EditController.php:216 src/ajax/ApisController.php:36
+#: src/admin/file/EditController.php:217 src/ajax/ApisController.php:36
 #: tpl/admin/bundle/conf.php:147
 msgid "Help"
 msgstr "Help"
@@ -1004,18 +1024,18 @@ msgid "Configure %s"
 msgstr "Configureer %s"
 
 #. Translators: Button for downloading a PO, MO or POT file
-#: src/admin/file/EditController.php:228
+#: src/admin/file/EditController.php:229
 msgctxt "Editor"
 msgid "Download"
 msgstr "Download"
 
-#: src/admin/file/BaseController.php:122
+#: src/admin/file/BaseController.php:121
 msgid "Source"
 msgstr "Bron"
 
 #: src/admin/config/ApisController.php:69
 #: src/admin/config/PrefsController.php:42
-#: src/admin/config/SettingsController.php:168
+#: src/admin/config/SettingsController.php:169
 #: src/admin/config/VersionController.php:22 src/mvc/AdminRouter.php:58
 #: tpl/admin/help/tab-config.php:2
 msgid "Plugin settings"
@@ -1035,13 +1055,13 @@ msgstr "Gebruikers opties"
 msgid "Site options"
 msgstr "Site opties"
 
-#: src/admin/bundle/ViewController.php:99 src/admin/file/BaseController.php:145
-#: src/admin/init/InitPoController.php:27
-#: src/admin/init/InitPoController.php:133
+#: src/admin/bundle/ViewController.php:101
+#: src/admin/file/BaseController.php:144 src/admin/init/InitPoController.php:27
+#: src/admin/init/InitPoController.php:132
 msgid "New language"
 msgstr "Nieuwe taal"
 
-#: src/admin/bundle/LocaleController.php:160 tpl/admin/root.php:43
+#: src/admin/bundle/LocaleController.php:163 tpl/admin/root.php:43
 msgid "See all themes"
 msgstr "Bekijk alle thema's"
 
@@ -1179,14 +1199,14 @@ msgstr "Plugin niet gevonden: %s"
 msgid "Visit official site"
 msgstr "Bezoek de officiële site"
 
-#: src/admin/file/BaseController.php:123 tpl/admin/bundle/inc-po-table.php:25
+#: src/admin/file/BaseController.php:122 tpl/admin/bundle/inc-po-table.php:25
 #: tpl/admin/bundle/locale.php:43
 msgid "File info"
 msgstr "Bestandsinformatie"
 
 #. translators: Page title where %s is the name of a file to be deleted
-#: src/admin/file/DeleteController.php:79
-#: src/admin/file/DeleteController.php:98
+#: src/admin/file/DeleteController.php:82
+#: src/admin/file/DeleteController.php:99
 msgid "Delete %s"
 msgstr "Verwijder %s"
 
@@ -1283,7 +1303,7 @@ msgstr "Over de Tokenizer"
 msgid "File not found"
 msgstr "Bestand niet gevonden"
 
-#: src/fs/FileWriter.php:245
+#: src/fs/FileWriter.php:246
 msgid "Failed to save file"
 msgstr "Kan bestand niet opslaan"
 
@@ -1322,11 +1342,11 @@ msgstr "Upgraden naar %s"
 msgid "Version %s"
 msgstr "Versie %s"
 
-#: tpl/admin/config/settings.php:232
+#: tpl/admin/config/settings.php:241
 msgid "Allow full access to these roles"
 msgstr "Volledige toegang tot deze rollen toestaan"
 
-#: tpl/admin/config/settings.php:226
+#: tpl/admin/config/settings.php:235
 msgid "Grant access to roles"
 msgstr "Geef toegang tot rollen"
 
@@ -1430,7 +1450,7 @@ msgstr "XML geleverd is leeg"
 msgid "Text Domain cannot be empty"
 msgstr "Tekstdomein mag niet leeg zijn"
 
-#: src/ajax/FsConnectController.php:117
+#: src/ajax/FsConnectController.php:109
 msgid "Connected to remote file system"
 msgstr "Verbonden met extern bestandssysteem"
 
@@ -1438,34 +1458,34 @@ msgstr "Verbonden met extern bestandssysteem"
 msgid "New template file"
 msgstr "Nieuwe template file"
 
-#: src/admin/init/InitPoController.php:130
+#: src/admin/init/InitPoController.php:129
 msgid "Initializing new translations in unknown set"
 msgstr "Initialiseren van nieuwe vertalingen in onbekende set"
 
 #. translators: %s refers to the slug/handle of a theme or plugin
-#: src/admin/init/InitPoController.php:126
+#: src/admin/init/InitPoController.php:125
 msgid "Initializing new translations in \"%s\""
 msgstr "Initialiseren van nieuwe vertalingen in \"%s\""
 
-#: src/admin/file/InfoController.php:181
+#: src/admin/file/InfoController.php:182
 msgid "File does not have a valid header"
 msgstr "Bestand heeft geen geldige header"
 
 #. Translators: Button that runs in-editor sync/operation
-#: src/admin/file/EditController.php:220
+#: src/admin/file/EditController.php:221
 msgctxt "Editor"
 msgid "Sync"
 msgstr "Synchroniseren"
 
-#: src/admin/file/BaseController.php:121
+#: src/admin/file/BaseController.php:120
 msgid "Editor"
 msgstr "Editor"
 
-#: src/admin/config/SettingsController.php:123
+#: src/admin/config/SettingsController.php:124
 msgid "Super Admin"
 msgstr "Superbeheerder"
 
-#: src/admin/config/DebugController.php:55
+#: src/admin/config/DebugController.php:57
 msgid "System diagnostics"
 msgstr "Systeemdiagnose"
 
@@ -1506,7 +1526,7 @@ msgstr "Tekst domein"
 msgid "Go to WordPress Core"
 msgstr "Ga naar WordPress Core"
 
-#: src/admin/bundle/LocaleController.php:154 src/package/Core.php:85
+#: src/admin/bundle/LocaleController.php:157 src/package/Core.php:85
 msgid "WordPress Core"
 msgstr "WordPress Core"
 
@@ -1573,7 +1593,7 @@ msgstr[1] "%1$s strings gevonden in %2$s"
 
 #. translators: Warning that deleting a file will also delete others. %s
 #. indicates that quantity.
-#: src/admin/file/DeleteController.php:104
+#: src/admin/file/DeleteController.php:105
 msgid "%s dependent file will also be deleted"
 msgid_plural "%s dependent files will also be deleted"
 msgstr[0] "%s afhankelijk bestand wordt ook verwijderd"
@@ -1584,7 +1604,7 @@ msgid "No translations found for \"%s\""
 msgstr "Geen vertalingen gevonden voor \"%s\""
 
 #. Translators: Button that reloads current screen
-#: src/admin/file/EditController.php:222
+#: src/admin/file/EditController.php:223
 msgctxt "Editor"
 msgid "Revert"
 msgstr "Terugzetten"
@@ -1593,7 +1613,7 @@ msgstr "Terugzetten"
 msgid "New template"
 msgstr "Nieuwe template"
 
-#: src/fs/FileWriter.php:299
+#: src/fs/FileWriter.php:300
 msgid "File modification is disallowed by your WordPress config"
 msgstr "Bestandswijziging is niet toegestaan ​​door je WordPress configuratie"
 
@@ -1772,7 +1792,7 @@ msgid "%s is not a Gettext file"
 msgstr "%s is geen Gettext bestand"
 
 #. translators: %s refers to a file name, for which a delete operation failed.
-#: src/fs/FileWriter.php:193
+#: src/fs/FileWriter.php:194
 msgid "Failed to delete %s"
 msgstr "Verwijderen van %s is mislukt"
 
@@ -1788,7 +1808,7 @@ msgstr "Bericht"
 
 #. translators: %s refers to the name of a new file to be created, but which
 #. already existed
-#: src/api/WordPressFileSystem.php:87
+#: src/api/WordPressFileSystem.php:78
 msgid "%s already exists in this folder"
 msgstr "%s bestaat al in deze map"
 
@@ -1802,7 +1822,7 @@ msgstr "PO bestand opgeslagen, maar de MO bestandscompilatie is mislukt"
 
 #. translators: %s refers to a directory where a backup file could not be
 #. created due to file permissions
-#: src/fs/Revisions.php:222
+#: src/fs/Revisions.php:201
 msgid "Failed to create backup file in \"%s\". Check file permissions or disable backups"
 msgstr "Het maken van een back-upbestand is mislukt \"%s\" Controleer bestandsmachtigingen of schakel back-ups uit"
 
@@ -1810,7 +1830,7 @@ msgstr "Het maken van een back-upbestand is mislukt \"%s\" Controleer bestandsma
 msgid "PO file saved and MO file compiled"
 msgstr "PO bestand opgeslagen en MO bestand gecompileerd"
 
-#: src/ajax/MsginitController.php:75
+#: src/ajax/MsginitController.php:72
 msgid "MO file exists for this language already. Delete it first"
 msgstr "MO bestand bestaat al voor deze taal. Verwijder het eerst"
 
@@ -1823,20 +1843,20 @@ msgid "Skip template"
 msgstr "Template overslaan"
 
 #. Translators: Button that saves translations to disk
-#: src/admin/file/EditController.php:218
+#: src/admin/file/EditController.php:219
 msgctxt "Editor"
 msgid "Save"
 msgstr "Opslaan"
 
 #. Translators: Button that toggles between "code" and regular text editing
 #. modes
-#: src/admin/file/EditController.php:234
+#: src/admin/file/EditController.php:235
 msgctxt "Editor"
 msgid "Toggle code view"
 msgstr "Toggle code weergave"
 
 #. Translators: Button that toggles invisible characters
-#: src/admin/file/EditController.php:232
+#: src/admin/file/EditController.php:233
 msgctxt "Editor"
 msgid "Toggle invisibles"
 msgstr "Toggle onzichtbare tekens"
@@ -1847,16 +1867,16 @@ msgid "Editing %1$s in %2$s"
 msgstr "Bewerken van %1$s in %2$s"
 
 #. translators: %s refers to the name of a POT file
-#: src/admin/file/EditController.php:131
+#: src/admin/file/EditController.php:132
 msgid "Translations don't match template. Run sync to update from %s"
 msgstr "Vertalingen komen niet overeen met template. Voer synchronisatie uit om vanaf te updaten %s"
 
-#: src/admin/bundle/ViewController.php:133
+#: src/admin/bundle/ViewController.php:135
 #: src/admin/init/InitPoController.php:229 tpl/admin/init/init-pot.php:40
 msgid "Create template"
 msgstr "Maak template"
 
-#: src/admin/bundle/ViewController.php:124
+#: src/admin/bundle/ViewController.php:126
 msgid "Edit template"
 msgstr "Bewerk template"
 
@@ -1909,7 +1929,7 @@ msgstr "Aangepast"
 
 #. translators: %s refers to a directory name which was expected to be an
 #. ordinary file
-#: src/fs/FileWriter.php:210
+#: src/fs/FileWriter.php:211
 msgid "\"%s\" is a directory, not a file"
 msgstr "\"%s\" is een folder, geen bestand"
 
@@ -1945,15 +1965,15 @@ msgstr "Laatst uitgepakt"
 msgid "This bundle's configuration is saved in the WordPress database"
 msgstr "De configuratie van deze bundel wordt opgeslagen in de WordPress database"
 
-#: src/fs/FileWriter.php:289
+#: src/fs/FileWriter.php:290
 msgid "Failed to build directory path"
 msgstr "Kan geen pad naar de folder maken"
 
-#: src/fs/FileWriter.php:281
+#: src/fs/FileWriter.php:282
 msgid "Failed to create directory"
 msgstr "Maken van folder mislukt"
 
-#: src/fs/FileWriter.php:235
+#: src/fs/FileWriter.php:236
 msgid "Permission denied to update file"
 msgstr "Toestemming geweigerd om bestand te updaten"
 
@@ -2084,7 +2104,7 @@ msgstr "Loco heeft de <a href=\"http://php.net/manual/en/book.tokenizer.php\" ta
 
 #. translators: Warning that the language in the file header (1) does not match
 #. the file name (2)
-#: src/admin/file/InfoController.php:189
+#: src/admin/file/InfoController.php:190
 msgid "Language header is \"%1$s\" but file name contains \"%2$s\""
 msgstr "Taal header is \"%1$s\" maar bestandsnaam bevat \"%2$s\""
 
@@ -2150,7 +2170,7 @@ msgid "Pending"
 msgstr "In afwachting"
 
 #. Translators: Placeholder text for text filter above editor
-#: src/admin/file/EditController.php:230
+#: src/admin/file/EditController.php:231
 msgid "Filter translations"
 msgstr "Filter vertalingen"
 
@@ -2186,7 +2206,7 @@ msgid "Strings up to date with source code"
 msgstr "Strings up-to-date met broncode"
 
 #. translators: Success notice where %s is a file extension, e.g. "PO"
-#: src/admin/file/HeadController.php:91 src/gettext/Compiler.php:287
+#: src/admin/file/HeadController.php:94 src/gettext/Compiler.php:287
 msgid "%s file saved"
 msgstr "%s bestand opgeslagen"
 
@@ -2217,7 +2237,7 @@ msgid "Compiling MO files"
 msgstr "MO bestanden compileren"
 
 #: tpl/admin/config/apis.php:170 tpl/admin/config/prefs.php:44
-#: tpl/admin/config/settings.php:260
+#: tpl/admin/config/settings.php:269
 msgid "Save settings"
 msgstr "Instellingen opslaan"
 
@@ -2249,11 +2269,11 @@ msgstr "%s%% vertaald"
 
 #: src/admin/config/ApisController.php:53
 #: src/admin/config/PrefsController.php:26
-#: src/admin/config/SettingsController.php:103
+#: src/admin/config/SettingsController.php:104
 msgid "Settings saved"
 msgstr "Instellingen opgeslagen"
 
-#: src/admin/file/EditController.php:182 src/mvc/AdminRouter.php:59
+#: src/admin/file/EditController.php:183 src/mvc/AdminRouter.php:59
 #: src/mvc/AdminRouter.php:64 tpl/admin/common/inc-fsconn.php:18
 #: tpl/admin/common/inc-fsconn.php:43 tpl/admin/errors/no-backups.php:24
 #: tpl/ajax/modal-apis-empty.php:15
