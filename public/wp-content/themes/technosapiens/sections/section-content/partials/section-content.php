@@ -4,12 +4,14 @@ use TechnoSapiens\SectionBackground;
 use TechnoSapiens\SectionContent;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 use TechnoSapiens\Core\GradientBandsComponent;
 
 $sectionContent = SectionContent::getInstance();
 $sectionTitle = $sectionContent->getSectionTitle();
-$titleHeadingTag = $sectionContent->getTitleHeadingTag();
+$titleHeadingTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 $contentText = SectionContent::getContentText();
 
 $containerClasses = SectionReferencePartial::getContainerClasses('section-content');
@@ -38,7 +40,7 @@ $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 
     <div class="container container--narrow section-content__container">
         <?php if ($sectionTitle) : ?>
-            <<?php echo esc_attr($titleHeadingTag); ?> class="section-content__title">
+            <<?php echo esc_attr($titleHeadingTag); ?> class="section-content__title <?php echo esc_attr($titleHeadingSize); ?>">
                 <?php echo wp_kses_post($sectionTitle); ?>
             </<?php echo esc_attr($titleHeadingTag); ?>>
         <?php endif; ?>

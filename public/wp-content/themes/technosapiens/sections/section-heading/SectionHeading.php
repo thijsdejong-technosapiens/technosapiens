@@ -30,20 +30,4 @@ class SectionHeading extends Singleton {
     public static function getTitleText(): string {
         return get_field('title_text');
     }
-
-    public static function getTitleTag(): string {
-        return get_field('title_heading_tag') ?: 'h2';
-    }
-
-    public static function getTitleHeadingSize(): string {
-        $size = get_field('title_heading_size');
-
-        if (!$size) {
-            return 'display';
-        }
-
-        $allowed = ['display', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-
-        return in_array($size, $allowed, true) ? $size : 'display';
-    }
 }

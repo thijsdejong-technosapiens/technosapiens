@@ -12,7 +12,6 @@ class SectionCards extends Singleton {
     public const SECTION_ID = 'section_section_cards';
     public const SECTION_SLUG = 'section-cards';
 
-    private const ALLOWED_HEADING_TAGS = ['h2', 'h3', 'h4'];
     private const ALLOWED_CARDS_PER_ROW = [1, 2, 3, 4];
     private const MAX_CARDS = 4;
 
@@ -35,16 +34,6 @@ class SectionCards extends Singleton {
 
     public function getSectionTitle(): string {
         return get_field('section_title') ?? '';
-    }
-
-    public function getTitleHeadingTag(): string {
-        $tag = get_field('title_heading_tag') ?: 'h2';
-
-        if (!in_array($tag, self::ALLOWED_HEADING_TAGS, true)) {
-            return 'h2';
-        }
-
-        return $tag;
     }
 
     public function getCardsPerRow(): int {

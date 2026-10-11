@@ -6,11 +6,13 @@ use TechnoSapiens\SectionBackground;
 use TechnoSapiens\SectionContentAlt;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 
 $sectionContentAlt = SectionContentAlt::getInstance();
 $sectionTitle = $sectionContentAlt->getSectionTitle();
-$titleHeadingTag = $sectionContentAlt->getTitleHeadingTag();
+$titleHeadingTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 $contentText = $sectionContentAlt->getContentText();
 $contentLink = $sectionContentAlt->getContentLink();
 $hasContent = $sectionTitle || $contentText || !empty($contentLink);
@@ -43,7 +45,7 @@ $cardBandsWaitFor = $backgroundType === 'bands' ? '.section-background .gradient
 
         <div class="container section-content-alt__container">
             <?php if ($sectionTitle) : ?>
-                <<?php echo esc_attr($titleHeadingTag); ?> class="section-content-alt__title">
+                <<?php echo esc_attr($titleHeadingTag); ?> class="section-content-alt__title <?php echo esc_attr($titleHeadingSize); ?>">
                     <?php echo wp_kses_post($sectionTitle); ?>
                 </<?php echo esc_attr($titleHeadingTag); ?>>
             <?php endif; ?>

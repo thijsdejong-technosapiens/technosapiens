@@ -7,11 +7,13 @@ use TechnoSapiens\SectionBackground;
 use TechnoSapiens\SectionBrands;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 
 $sectionBrands = SectionBrands::getInstance();
 $sectionTitle = $sectionBrands->getSectionTitle();
-$titleHeadingTag = $sectionBrands->getTitleHeadingTag();
+$titleHeadingTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 $brands = $sectionBrands->getBrands();
 $hasContent = $sectionTitle || !empty($brands);
 
@@ -51,7 +53,7 @@ $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 
         <div class="container">
             <?php if ($sectionTitle) : ?>
-                <<?php echo esc_attr($titleHeadingTag); ?> class="section-brands__title">
+                <<?php echo esc_attr($titleHeadingTag); ?> class="section-brands__title <?php echo esc_attr($titleHeadingSize); ?>">
                     <?php echo wp_kses_post($sectionTitle); ?>
                 </<?php echo esc_attr($titleHeadingTag); ?>>
             <?php endif; ?>

@@ -6,11 +6,13 @@ use TechnoSapiens\SectionBackground;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionProcessCards;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 
 $sectionProcessCards = SectionProcessCards::getInstance();
 $sectionTitle = $sectionProcessCards->getSectionTitle();
-$titleHeadingTag = $sectionProcessCards->getTitleHeadingTag();
+$titleHeadingTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 $cards = $sectionProcessCards->getCards();
 $callToAction = $sectionProcessCards->getCallToAction();
 $hasContent = $sectionTitle || !empty($cards) || !empty($callToAction);
@@ -44,7 +46,7 @@ $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
             <div class="section-process-cards__wrap">
 
                 <?php if ($sectionTitle) : ?>
-                    <<?php echo esc_attr($titleHeadingTag); ?> class="section-process-cards__title">
+                    <<?php echo esc_attr($titleHeadingTag); ?> class="section-process-cards__title <?php echo esc_attr($titleHeadingSize); ?>">
                         <?php echo wp_kses_post($sectionTitle); ?>
                     </<?php echo esc_attr($titleHeadingTag); ?>>
                 <?php endif; ?>

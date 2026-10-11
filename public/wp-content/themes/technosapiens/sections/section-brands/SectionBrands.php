@@ -14,8 +14,6 @@ class SectionBrands extends Singleton {
     public const IMAGE_BRAND_LOGO = 'section-brands-logo';
     public const IMAGE_BRAND_LOGO_X2 = 'section-brands-logo-x2';
 
-    private const ALLOWED_HEADING_TAGS = ['h2', 'h3', 'h4'];
-
     protected function __construct() {
         $supports = [];
         $postTypes = [];
@@ -42,16 +40,6 @@ class SectionBrands extends Singleton {
 
     public function getSectionTitle(): string {
         return get_field('section_title') ?? '';
-    }
-
-    public function getTitleHeadingTag(): string {
-        $tag = get_field('title_heading_tag') ?: 'h2';
-
-        if (!in_array($tag, self::ALLOWED_HEADING_TAGS, true)) {
-            return 'h2';
-        }
-
-        return $tag;
     }
 
     public function getBrands(): array {

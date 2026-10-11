@@ -6,11 +6,13 @@ use TechnoSapiens\SectionBackground;
 use TechnoSapiens\SectionCards;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 
 $sectionCards = SectionCards::getInstance();
 $sectionTitle = $sectionCards->getSectionTitle();
-$titleHeadingTag = $sectionCards->getTitleHeadingTag();
+$titleHeadingTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 $cardsPerRow = $sectionCards->getCardsPerRow();
 $cards = $sectionCards->getCards();
 $hasContent = $sectionTitle || !empty($cards);
@@ -52,7 +54,7 @@ $cardBandsDelayStep = 0.15;
 
         <div class="container">
             <?php if ($sectionTitle) : ?>
-                <<?php echo esc_attr($titleHeadingTag); ?> class="section-cards__title">
+                <<?php echo esc_attr($titleHeadingTag); ?> class="section-cards__title <?php echo esc_attr($titleHeadingSize); ?>">
                     <?php echo wp_kses_post($sectionTitle); ?>
                 </<?php echo esc_attr($titleHeadingTag); ?>>
             <?php endif; ?>

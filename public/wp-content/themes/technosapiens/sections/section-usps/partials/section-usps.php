@@ -3,10 +3,13 @@
 use TechnoSapiens\Core\Image;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionUsps;
 
 $sectionUsps = SectionUsps::getInstance();
 $uspsTitle = $sectionUsps->getUspsTitle();
+$titleHeadingTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 $uspsImageId = $sectionUsps->getUspsImageId();
 $uspsItems = $sectionUsps->getUspsItems();
 $hasContent = $uspsTitle || $uspsImageId || !empty($uspsItems);
@@ -40,7 +43,7 @@ $marginBottom = SectionMargins::getMarginBottom();
                 <?php if ($uspsTitle || !empty($uspsItems)) : ?>
                     <div class="section-usps__col section-usps__col--content">
                         <?php if ($uspsTitle) : ?>
-                            <h2 class="section-usps__title"><?php echo wp_kses_post($uspsTitle); ?></h2>
+                            <<?php echo esc_attr($titleHeadingTag); ?> class="section-usps__title <?php echo esc_attr($titleHeadingSize); ?>"><?php echo wp_kses_post($uspsTitle); ?></<?php echo esc_attr($titleHeadingTag); ?>>
                         <?php endif; ?>
 
                         <?php if (!empty($uspsItems)) : ?>

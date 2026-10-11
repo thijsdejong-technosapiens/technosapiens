@@ -5,6 +5,7 @@ use TechnoSapiens\SectionBackground;
 use TechnoSapiens\SectionHeading;
 use TechnoSapiens\SectionMargins;
 use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 
 $containerClasses = SectionReferencePartial::getContainerClasses('section-heading');
@@ -19,8 +20,8 @@ $backgroundBandsAnimDir = SectionBackground::getBackgroundBandsAnimDir();
 $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 
 $titleText = SectionHeading::getTitleText();
-$titleTag = SectionHeading::getTitleTag();
-$titleHeadingSize = SectionHeading::getTitleHeadingSize();
+$titleTag = SectionTitleHeading::getTag();
+$titleHeadingSize = SectionTitleHeading::getSize();
 
 ?>
 

@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "70",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -33,14 +33,50 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
                 "h2": "Heading 2",
                 "h3": "Heading 3",
-                "h4": "Heading 4"
+                "h4": "Heading 4",
+                "h5": "Heading 5",
+                "h6": "Heading 6"
+            },
+            "default_value": "h2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6a4d0a4b3e5f6",
+            "label": "Heading size",
+            "name": "title_heading_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "display": "Display",
+                "h1": "Heading 1",
+                "h2": "Heading 2",
+                "h3": "Heading 3",
+                "h4": "Heading 4",
+                "h5": "Heading 5",
+                "h6": "Heading 6"
             },
             "default_value": "h2",
             "return_format": "value",
@@ -176,7 +212,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/section-section-cards"
+                "value": "acf/section-section-cards"
             }
         ]
     ],
@@ -192,5 +228,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789900000
+    "modified": 1791746418
 }
