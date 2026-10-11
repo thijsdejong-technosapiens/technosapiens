@@ -235,6 +235,7 @@ class Theme extends Singleton {
         //init section blocks
         SectionContent::getInstance();
         SectionContentAlt::getInstance();
+        SectionContentBanner::getInstance();
         SectionHeading::getInstance();
         SectionUsps::getInstance();
         SectionCards::getInstance();

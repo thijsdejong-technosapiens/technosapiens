@@ -1,0 +1,57 @@
+.section-content-banner {
+    &__title {
+        margin: 0 0 6rem 0;
+        text-align: center;
+    }
+
+    &__card-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 59rem;
+        margin: 0 auto;
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        border-radius: var(--ts-radius-foundation-sm, 1rem);
+        background-color: var(--ts-color-plum-800, purple);
+    }
+
+    &__card-body {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(var(--ts-space-8, 2rem) / 2);
+        padding: 2rem 5rem;
+        min-height: 100%;
+    }
+
+    &__card-content {
+        color: var(--ts-color-text-inverse, white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(var(--ts-space-8, 2rem) / 2);
+        text-align: center;
+        width: 100%;
+    }
+
+    &__card-action {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: calc(var(--ts-space-8, 2rem) / 2);
+        width: 100%;
+    }
+
+    &__card-button {
+        position: relative;
+    }
+}
