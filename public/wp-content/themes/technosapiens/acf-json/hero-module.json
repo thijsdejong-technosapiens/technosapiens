@@ -289,6 +289,26 @@
             "ui_on_text": "Enabled",
             "ui_off_text": "Disabled",
             "ui": 1
+        },
+        {
+            "key": "hm_vignet_bottom",
+            "label": "Bottom gradient",
+            "name": "hm_vignet_bottom",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable a bottom gradient fade (vignet), the same as section vignet bottom.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Enabled",
+            "ui_off_text": "Disabled",
+            "ui": 1
         }
     ],
     "location": [
@@ -312,5 +332,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1791296635
+    "modified": 1791386820
 }

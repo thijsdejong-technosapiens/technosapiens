@@ -3,6 +3,22 @@
     overflow: hidden;
 }
 
+.section[data-bg="solid"] {
+    color: var(--ts-color-text-inverse, white);
+
+    &[data-bg-color="primary"] {
+        background-color: var(--ts-color-primary, purple);
+    }
+
+    &[data-bg-color="secondary"] {
+        background-color: var(--ts-color-secondary, deeppink);
+    }
+
+    &[data-bg-color="dark"] {
+        background-color: var(--ts-color-primary-darker, black);
+    }
+}
+
 .section-background {
     position: absolute;
     pointer-events: none;

@@ -35,6 +35,7 @@ body {
 p {
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--ts-font-color-cream, #F6F3EB);
 
     a {
         color: var(--ts-color-tertiary, #736199) !important;
@@ -66,9 +67,11 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6,
+.display {
     font-family: var(--ts-font-family-sans, sans-serif);
     font-weight: var(--ts-font-weight-semibold, 700);
+    color: var(--ts-font-color-cream, #F6F3EB);
 }
 
 h1,
@@ -82,6 +85,13 @@ h1,
         font-size: var(--ts-font-size-display-md, 5rem);
         line-height: var(--ts-line-height-display-md, 6rem);
     }
+}
+
+.display {
+    font-size: 4.5rem;
+    line-height: 6rem;
+    font-weight: var(--ts-font-weight-bold, 700);
+    font-family: var(--ts-font-family-sans, sans-serif);
 }
 
 h2,
@@ -221,4 +231,16 @@ h6,
 
 .text-center {
     text-align: center;
+}
+
+.text-color-primary {
+    color: var(--ts-color-primary, blue);
+}
+
+.text-color-secondary {
+    color: var(--ts-color-secondary, pink);
+}
+
+.text-color-tertiary {
+    color: var(--ts-color-tertiary, yellow);
 }

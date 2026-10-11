@@ -24,12 +24,12 @@ $size: 2.5rem;
         height: $size;
         transition: background-color .2s ease-in-out;
         background-color: var(--ts-color-on-primary, white);
-        color: var(--ts-color-tertiary, white);
+        color: var(--ts-color-primary, #736199);
 
         &:hover {
             #{$self} {
                 &__item-icon {
-                    color: var(--ts-color-primary, red);
+                    color: var(--ts-color-secondary, #736199);
                 }
             }
         }

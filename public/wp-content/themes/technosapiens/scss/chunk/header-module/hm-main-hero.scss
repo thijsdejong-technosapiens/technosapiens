@@ -68,7 +68,7 @@
         line-height: 3.75rem;
         font-family: var(--ts-font-family-sans, sans-serif);
         font-weight: var(--ts-font-weight-light, 200);
-        color: var(--ts-font-color-white, white);
+        color: var(--ts-font-color-cream, #F6F3EB);
 
         @include mixins.mq-up(lg) {
             font-size: 3.5rem;
@@ -88,14 +88,14 @@
 
         >p {
             margin: 0;
-            color: var(--ts-font-color-white, white);
+            color: var(--ts-font-color-cream, #F6F3EB);
             text-align: center;
             font-weight: var(--ts-font-weight-medium, 500);
             font-size: 1.25rem;
             line-height: 1.75rem;            
 
             a {
-                color: var(--ts-font-color-white, white) !important;
+                color: var(--ts-font-color-cream, #F6F3EB) !important;
                 text-decoration: underline !important;
             }
         }

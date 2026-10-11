@@ -9,7 +9,7 @@ use TechnoSapiens\Core\GradientBandsComponent;
 
 ?>
 
-    <div class="hm-main-hero">
+    <div class="hm-main-hero"<?php if (!empty($data->vignetBottom)) : ?> data-vignet-bottom="true"<?php endif; ?>>
 
         <div class="hm-main-hero__background">
             <?php echo GradientBandsComponent::render([

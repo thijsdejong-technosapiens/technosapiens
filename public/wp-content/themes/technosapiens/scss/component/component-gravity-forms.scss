@@ -50,7 +50,7 @@
         margin-top: .5em;
 
         .ts-has-dark-background & {
-            color: var(--ts-font-color-white, white);
+            color: var(--ts-font-color-cream, #F6F3EB);
         }
     }
 
@@ -92,7 +92,7 @@
         color: (var(--ts-font-color-primary, black));
 
         .ts-has-dark-background & {
-            color: var(--ts-font-color-white, white);
+            color: var(--ts-font-color-cream, #F6F3EB);
         }
     }
 
@@ -102,7 +102,7 @@
         color: (var(--ts-font-color-primary, black));
 
         .ts-has-dark-background & {
-            color: var(--ts-font-color-white, white);
+            color: var(--ts-font-color-cream, #F6F3EB);
         }
     }
 
@@ -132,7 +132,7 @@
             }
 
             .ts-has-dark-background & {
-                color: var(--ts-font-color-white, white);
+                color: var(--ts-font-color-cream, #F6F3EB);
             }
         }
 
@@ -141,7 +141,7 @@
                 color: var(--ts-font-color-primary, black);
 
                 .ts-has-dark-background & {
-                    color: var(--ts-font-color-white, white);
+                    color: var(--ts-font-color-cream, #F6F3EB);
                 }
             }
         }
@@ -218,7 +218,7 @@
                     color: var(--ts-font-color-primary, black);
 
                     .ts-has-dark-background & {
-                        color: var(--ts-font-color-white, white);
+                        color: var(--ts-font-color-cream, #F6F3EB);
                     }
                 }
             }
@@ -231,7 +231,7 @@
                 font-size: .75rem;
 
                 .ts-has-dark-background & {
-                    color: var(--ts-font-color-white, white);
+                    color: var(--ts-font-color-cream, #F6F3EB);
                 }
 
                 &::file-selector-button {
@@ -240,7 +240,7 @@
                     line-height: 1rem;
                     font-size: 1rem;
                     background-color: var(--ts-font-color-primary, black);
-                    color: var(--ts-color-white, white);
+                    color: var(--ts-font-color-cream, #F6F3EB);
                     border-radius: var(--ts-radius-foundation-pill, 3.125rem);
                     border-width: 0;
                     padding: .5rem 1rem;
@@ -261,7 +261,7 @@
                 font-size: .75rem;
 
                 .ts-has-dark-background & {
-                    color: var(--ts-font-color-white, white);
+                    color: var(--ts-font-color-cream, #F6F3EB);
                 }
             }
 
@@ -303,7 +303,7 @@
             font-size: .75rem;
 
             .ts-has-dark-background & {
-                color: var(--ts-font-color-white, white);
+                color: var(--ts-font-color-cream, #F6F3EB);
             }
         }
     }
@@ -358,7 +358,7 @@
                 opacity: 1;
 
                 .ts-has-dark-background & {
-                    color: var(--ts-font-color-white, white);
+                    color: var(--ts-font-color-cream, #F6F3EB);
                 }
 
                 &:before {
@@ -467,7 +467,7 @@
                 opacity: 1;
 
                 .ts-has-dark-background & {
-                    color: var(--ts-font-color-white, white);
+                    color: var(--ts-font-color-cream, #F6F3EB);
                 }
 
                 &:before {

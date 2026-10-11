@@ -34,6 +34,8 @@ class GradientBandsComponent {
      * @type array $stops Stop numbers to render (1–7). Defaults to 1→7→1.
      * @type string $axis Layout axis (vertical|horizontal). Defaults to 'vertical'.
      * @type string $staggerMode Stagger order (start|end|center). Defaults to 'start'.
+     * @type float|int|string $delay Optional start delay in seconds after trigger (and after waitFor).
+     * @type string $waitFor Optional CSS selector for a bands container that must finish first (scoped to nearest section).
      * @type string $class Extra CSS classes for the container.
      * @return string
      */
@@ -43,6 +45,8 @@ class GradientBandsComponent {
             'stops' => self::getDefaultStops(),
             'axis' => 'vertical',
             'staggerMode' => 'start',
+            'delay' => 0,
+            'waitFor' => '',
             'class' => '',
         ];
 
@@ -65,6 +69,11 @@ class GradientBandsComponent {
         $staggerMode = is_string($args['staggerMode']) ? $args['staggerMode'] : 'start';
         if (!in_array($staggerMode, self::STAGGER_MODES, true)) $staggerMode = 'start';
 
+        $delay = is_numeric($args['delay']) ? (float)$args['delay'] : 0.0;
+        if ($delay < 0) $delay = 0.0;
+
+        $waitFor = is_string($args['waitFor']) ? trim($args['waitFor']) : '';
+
         $extraClass = is_string($args['class']) ? $args['class'] : '';
 
         return Partial::render('components/component-gradient-bands', [
@@ -72,6 +81,8 @@ class GradientBandsComponent {
             'stops' => $stops,
             'axis' => $axis,
             'staggerMode' => $staggerMode,
+            'delay' => $delay,
+            'waitFor' => $waitFor,
             'class' => $extraClass,
             'containerClass' => self::CONTAINER_CLASS,
             'bandClass' => self::BAND_CLASS,

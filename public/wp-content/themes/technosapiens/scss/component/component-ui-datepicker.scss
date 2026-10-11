@@ -112,14 +112,14 @@
 
     //active state of calendar
     .ui-state-active {
-        color: var(--ts-color-white, white) !important;
+        color: var(--ts-font-color-cream, #F6F3EB) !important;
         background-color: var(--ts-color-primary, blue) !important;
         border: 1px solid var(--ts-color-border, lightgrey);
     }
 
     //hover state of calendar
     .ui-state-hover {
-        color: var(--ts-color-white, white) !important;
+        color: var(--ts-font-color-cream, #F6F3EB) !important;
         background-color: var(--ts-color-primary, blue) !important;
         border: 1px solid var(--ts-color-border, lightgrey);
     }

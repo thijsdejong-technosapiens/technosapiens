@@ -4,18 +4,18 @@ namespace TechnoSapiens;
 
 use TechnoSapiens\Core\Singleton;
 
-class SectionGrandTitle extends Singleton {
+class SectionHeading extends Singleton {
     use SectionReferenceTrait;
 
-    public const SECTION_ID = 'section_section_grand_title';
-    public const SECTION_SLUG = 'section-grand-title';
+    public const SECTION_ID = 'section_section_heading';
+    public const SECTION_SLUG = 'section-heading';
 
     protected function __construct() {
         $supports = [];
         $postTypes = [];
 
         $this->registerReferenceSection(
-            __('Grand title section.', Theme::TEXT_DOMAIN),
+            __('Heading section.', Theme::TEXT_DOMAIN),
             'heading',
             false,
             $supports,
@@ -24,7 +24,7 @@ class SectionGrandTitle extends Singleton {
     }
 
     public static function getSectionLabel(): string {
-        return __('Grand title', Theme::TEXT_DOMAIN);
+        return __('Heading', Theme::TEXT_DOMAIN);
     }
 
     public static function getTitleText(): string {
@@ -33,5 +33,17 @@ class SectionGrandTitle extends Singleton {
 
     public static function getTitleTag(): string {
         return get_field('title_heading_tag') ?: 'h2';
+    }
+
+    public static function getTitleHeadingSize(): string {
+        $size = get_field('title_heading_size');
+
+        if (!$size) {
+            return 'display';
+        }
+
+        $allowed = ['display', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
+        return in_array($size, $allowed, true) ? $size : 'display';
     }
 }

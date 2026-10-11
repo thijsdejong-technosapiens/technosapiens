@@ -8,10 +8,8 @@ use TechnoSapiens\Core\ButtonComponent;
 
 //get navigation links
 $mainItems = Navigation::getLinksByThemeLocation(Theme::MENU_PRIMARY);
-$secondaryItems = Navigation::getLinksByThemeLocation(Theme::MENU_SECONDARY);
 $mobileMenuTopItems = Navigation::getLinksByThemeLocation(Theme::MENU_MOBILE_TOP);
 $mobileMenuBottomItems = Navigation::getLinksByThemeLocation(Theme::MENU_MOBILE_BOTTOM);
-$mergedItems = array_merge($mainItems, $secondaryItems);
 
 //get header button data
 $headerButton = ThemeSettings::getHeaderButtonData();
@@ -62,15 +60,9 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
 
             </div>
 
-            <div class="ts-header__top">
-                <?php Partial::render('header/top-navigation', [
-                    'items' => $secondaryItems
-                ]); ?>
-            </div>
-
         </div>
 
-        <?php if (count($mergedItems) > 0) Partial::render('header/side-navigation', [
+        <?php if (count($mainItems) > 0) Partial::render('header/side-navigation', [
             'mobileMenuTopItems' => $mobileMenuTopItems,
             'mobileMenuBottomItems' => $mobileMenuBottomItems,
             'headerButton' => $headerButton,

@@ -103,7 +103,7 @@ body.login {
 
 .login.login--has-background #nav a,
 .login.login--has-background #backtoblog a {
-    color: var(--ts-color-white, white) !important;
+    color: var(--ts-font-color-cream, #F6F3EB) !important;
     text-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.35);
 }
 
@@ -116,7 +116,7 @@ body.login {
 .login.login--has-background #nav a:hover,
 .login.login--has-background #backtoblog a:hover,
 .login.login--has-background h1 a:hover {
-    color: var(--ts-color-white, white) !important;
+    color: var(--ts-font-color-cream, #F6F3EB) !important;
 }
 
 .login .message,
@@ -136,5 +136,5 @@ body.login {
 }
 
 .login.login--has-background .privacy-policy-page-link a {
-    color: var(--ts-color-white, white) !important;
+    color: var(--ts-font-color-cream, #F6F3EB) !important;
 }

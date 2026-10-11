@@ -1,0 +1,10 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-heading {
+    $self: &;
+
+    &__container {
+        z-index: 2;
+    }
+}

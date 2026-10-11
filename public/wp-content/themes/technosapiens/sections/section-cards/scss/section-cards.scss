@@ -5,7 +5,6 @@
     &__title {
         margin: 0 0 6rem 0;
         text-align: center;
-        color: var(--ts-color-text-inverse, white);
     }
 
     &__grid {
@@ -36,6 +35,9 @@
         transform-style: preserve-3d;
         transition: transform 0.8s $returnEasing;
         will-change: transform;
+        // preserve-3d frames sit above the body in Z; without this, browsers
+        // mis-hit-test the button while the card is tilted
+        pointer-events: none;
     }
 
     &__card-wrap:hover &__card {
@@ -146,6 +148,8 @@
         padding: 2.5rem 3rem 4rem 3rem;
         min-height: 100%;
         transform: translateZ(0.5rem);
+        transform-style: preserve-3d;
+        pointer-events: auto;
     }
 
     &__card-title {
@@ -170,7 +174,15 @@
     }
 
     &__card-action {
+        position: relative;
         padding-top: calc(var(--ts-space-8, 2rem) / 2);
+        // sit in front of the white frame (2.75rem) so the full button stays hittable while tilted
+        transform: translateZ(3rem);
+    }
+
+    &__card-button {
+        position: relative;
+        pointer-events: auto;
     }
 }
 

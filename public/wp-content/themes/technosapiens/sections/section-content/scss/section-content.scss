@@ -3,13 +3,8 @@
 
 .section-content {
     $self: &;
-    color: var(--ts-color-white, white);
     font-size: 1.25rem;
     line-height: 1.75rem;
-
-    p, h2, h3, h4, h5, h6 {
-        color: var(--ts-color-white, white);
-    }
 
     p{
         font-size: 1.25rem;

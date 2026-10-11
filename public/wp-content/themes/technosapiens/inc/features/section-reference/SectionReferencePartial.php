@@ -123,7 +123,7 @@ class SectionReferencePartial {
             $classes[] = $sectionClass . '--bg-' . $background;
         }
 
-        if (self::hasDarkBackground($background)) {
+        if (self::hasDarkBackground($background) || SectionBackground::hasDarkBackground()) {
             $classes[] = 'ts-has-dark-background';
         }
 

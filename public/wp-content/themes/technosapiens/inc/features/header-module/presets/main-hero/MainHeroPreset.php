@@ -78,6 +78,7 @@ class MainHeroPreset extends Singleton {
         //advanced
         $defaultData->removeBottomSpacing = false;
         $defaultData->removeAutomaticHeading = false;
+        $defaultData->vignetBottom = false;
 
         return $defaultData;
     }
@@ -102,6 +103,9 @@ class MainHeroPreset extends Singleton {
 
         //handle option to remove bottom spacing
         $data->removeAutomaticHeading = get_field('hm_disable_automatic_heading', $acfKey) ?: false;
+
+        //handle optional bottom gradient (vignet)
+        $data->vignetBottom = (bool) get_field('hm_vignet_bottom', $acfKey);
 
         //handle automatic heading value
         if (!$data->headingText && !$data->removeAutomaticHeading) {

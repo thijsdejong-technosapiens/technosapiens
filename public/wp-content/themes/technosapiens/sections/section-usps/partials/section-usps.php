@@ -40,7 +40,7 @@ $marginBottom = SectionMargins::getMarginBottom();
                 <?php if ($uspsTitle || !empty($uspsItems)) : ?>
                     <div class="section-usps__col section-usps__col--content">
                         <?php if ($uspsTitle) : ?>
-                            <h2 class="section-usps__title"><?php echo esc_html($uspsTitle); ?></h2>
+                            <h2 class="section-usps__title"><?php echo wp_kses_post($uspsTitle); ?></h2>
                         <?php endif; ?>
 
                         <?php if (!empty($uspsItems)) : ?>

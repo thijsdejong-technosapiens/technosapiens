@@ -1,18 +1,18 @@
 {
-    "key": "group_6b7c8d9e0f1a2",
-    "title": "Section - Grand title",
+    "key": "group_7c5bd7365757d",
+    "title": "Section - Content Alt",
     "fields": [
         {
-            "key": "field_6aaee8e9340f4",
-            "label": "Title text",
-            "name": "title_text",
+            "key": "field_7c5bd78cd0c81",
+            "label": "Section title",
+            "name": "section_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "70",
                 "class": "",
                 "id": ""
             },
@@ -24,7 +24,7 @@
             "append": ""
         },
         {
-            "key": "field_6aaeea7128b01",
+            "key": "field_7c5bd78cd0c82",
             "label": "Heading tag",
             "name": "title_heading_tag",
             "aria-label": "",
@@ -33,17 +33,14 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "h1": "Heading 1",
                 "h2": "Heading 2",
                 "h3": "Heading 3",
-                "h4": "Heading 4",
-                "h5": "Heading 5",
-                "h6": "Heading 6"
+                "h4": "Heading 4"
             },
             "default_value": "h2",
             "return_format": "value",
@@ -55,6 +52,44 @@
             "placeholder": "",
             "create_options": 0,
             "save_options": 0
+        },
+        {
+            "key": "field_7c5bd78cd0c80",
+            "label": "Text",
+            "name": "content_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "ts_simple",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_7c5bd78cd0c83",
+            "label": "Link",
+            "name": "content_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Button label uses the link title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -62,7 +97,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/section-section-grand-title"
+                "value": "acf\/section-section-content-alt"
             }
         ]
     ],
@@ -78,5 +113,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789848947
+    "modified": 1791380613
 }

@@ -3,6 +3,9 @@
 .env.*
 !.env.example
 
+# macOS
+.DS_Store
+
 # Core
 /public/wp-admin/
 /public/wp-content/index.php

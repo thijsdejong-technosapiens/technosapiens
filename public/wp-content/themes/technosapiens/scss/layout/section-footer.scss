@@ -3,7 +3,7 @@
 .site-footer{
     padding: 4rem 2rem 8rem 2rem;
     margin-top: auto;
-    color: var(--ts-font-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     text-align: center;
     background-color: var(--ts-color-primary-darker, purple);
 
@@ -40,7 +40,7 @@
         }
 
         a{
-            color: var(--ts-color-white, white);
+            color: var(--ts-font-color-cream, #F6F3EB);
             transition: opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), color var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
 
             &:hover{

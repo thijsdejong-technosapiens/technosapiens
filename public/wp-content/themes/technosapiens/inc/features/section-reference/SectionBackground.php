@@ -5,11 +5,24 @@ namespace TechnoSapiens;
 class SectionBackground {
 
     private const TYPE_FIELD = 'background_type';
+    private const COLOR_FIELD = 'background_color';
     private const BANDS_AXIS_FIELD = 'background_bands_axis';
     private const BANDS_ANIM_DIR_FIELD = 'background_bands_anim_dir';
     private const BANDS_SIZE_FIELD = 'background_bands_size';
 
     private const TYPE_BANDS = 'bands';
+    private const TYPE_SOLID = 'solid';
+
+    private const TYPES = [
+        self::TYPE_BANDS,
+        self::TYPE_SOLID,
+    ];
+
+    private const COLORS = [
+        'primary',
+        'secondary',
+        'dark',
+    ];
 
     private const BANDS_AXES = [
         'horizontal',
@@ -41,11 +54,43 @@ class SectionBackground {
             return '';
         }
 
-        if ($value !== self::TYPE_BANDS) {
+        if (!in_array($value, self::TYPES, true)) {
             return '';
         }
 
         return $value;
+    }
+
+    /**
+     * Get the solid background color for the current section.
+     *
+     * @return string
+     */
+    public static function getBackgroundColor(): string {
+        if (self::getBackgroundType() !== self::TYPE_SOLID) {
+            return '';
+        }
+
+        $value = get_field(self::COLOR_FIELD);
+
+        if (!is_string($value) || $value === '') {
+            return '';
+        }
+
+        if (!in_array($value, self::COLORS, true)) {
+            return '';
+        }
+
+        return $value;
+    }
+
+    /**
+     * Whether the current section solid background needs light foreground styling.
+     *
+     * @return bool
+     */
+    public static function hasDarkBackground(): bool {
+        return self::getBackgroundColor() !== '';
     }
 
     /**
@@ -116,11 +161,12 @@ class SectionBackground {
     /**
      * Get background settings for the current section.
      *
-     * @return array{type: string, bandsAxis: string, bandsAnimDir: string, bandsSize: string}
+     * @return array{type: string, color: string, bandsAxis: string, bandsAnimDir: string, bandsSize: string}
      */
     public static function getBackground(): array {
         return [
             'type' => self::getBackgroundType(),
+            'color' => self::getBackgroundColor(),
             'bandsAxis' => self::getBackgroundBandsAxis(),
             'bandsAnimDir' => self::getBackgroundBandsAnimDir(),
             'bandsSize' => self::getBackgroundBandsSize(),

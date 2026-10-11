@@ -13,7 +13,7 @@ p > a {
     color: var(--ts-color-primary, blue);
 
     .ts-has-dark-background & {
-        color: var(--ts-color-white, white);
+        color: var(--ts-font-color-cream, #F6F3EB);
         text-decoration: underline;
     }
 }
@@ -74,7 +74,7 @@ input[type=radio]:checked:before {
 .wp-core-ui .button-primary {
     background: var(--ts-color-primary, blue);
     border-color: var(--ts-color-primary, blue);
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     box-shadow: 0 1px 0 var(--ts-color-primary, blue);
     text-shadow: 0 -1px 1px var(--ts-color-primary, blue), 1px 0 1px var(--ts-color-primary, blue), 0 1px 1px var(--ts-color-primary, blue), -1px 0 1px var(--ts-color-primary, blue);
 }
@@ -82,7 +82,7 @@ input[type=radio]:checked:before {
 .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
     background: var(--ts-color-secondary, fuchsia);
     border-color: var(--ts-color-secondary, fuchsia);
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     box-shadow: 0 1px 0 var(--ts-color-secondary, fuchsia);
     text-shadow: 0 -1px 1px var(--ts-color-secondary, fuchsia), 1px 0 1px var(--ts-color-secondary, fuchsia), 0 1px 1px var(--ts-color-secondary, fuchsia), -1px 0 1px var(--ts-color-secondary, fuchsia);
 }
@@ -117,7 +117,7 @@ input[type=radio]:checked:before {
 }
 
 .wp-core-ui .wp-ui-primary {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background-color: var(--ts-color-accent, #111)
 }
 
@@ -126,7 +126,7 @@ input[type=radio]:checked:before {
 }
 
 .wp-core-ui .wp-ui-highlight {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background-color: var(--ts-color-secondary, fuchsia)
 }
 
@@ -135,7 +135,7 @@ input[type=radio]:checked:before {
 }
 
 .wp-core-ui .wp-ui-notification {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background-color: #69a8bb
 }
 
@@ -148,7 +148,7 @@ input[type=radio]:checked:before {
 }
 
 .tablenav .tablenav-pages a:focus, .tablenav .tablenav-pages a:hover, .wrap .add-new-h2:hover, .wrap .page-title-action:hover {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background-color: var(--ts-color-accent, #111)
 }
 
@@ -167,7 +167,7 @@ input[type=radio]:checked:before {
 #adminmenu a {
     display: flex;
     align-items: center;
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #adminmenu div.wp-menu-image:before {
@@ -175,12 +175,12 @@ input[type=radio]:checked:before {
 }
 
 #adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background-color: var(--ts-color-primary, blue)
 }
 
 #adminmenu li.menu-top:hover div.wp-menu-image:before, #adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 .about-wrap h2 .nav-tab-active, .nav-tab-active, .nav-tab-active:hover {
@@ -205,15 +205,15 @@ input[type=radio]:checked:before {
 }
 
 #adminmenu .wp-has-current-submenu .wp-submenu a:focus, #adminmenu .wp-has-current-submenu .wp-submenu a:hover, #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:focus, #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:hover, #adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu a:focus, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu a:hover, .folded #adminmenu .wp-has-current-submenu .wp-submenu a:focus, .folded #adminmenu .wp-has-current-submenu .wp-submenu a:hover {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a, #adminmenu .wp-submenu li.current a, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:focus, #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:hover, #adminmenu .wp-submenu li.current a:focus, #adminmenu .wp-submenu li.current a:hover, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:focus, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:hover {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.current:after {
@@ -221,21 +221,21 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: var(--ts-color-primary, blue)
 }
 
 #adminmenu a.current:hover div.wp-menu-image:before, #adminmenu li a:focus div.wp-menu-image:before, #adminmenu li.opensub div.wp-menu-image:before, #adminmenu li.wp-has-current-submenu a:focus div.wp-menu-image:before, #adminmenu li.wp-has-current-submenu div.wp-menu-image:before, #adminmenu li.wp-has-current-submenu.opensub div.wp-menu-image:before, #adminmenu li:hover div.wp-menu-image:before, .ie8 #adminmenu li.opensub div.wp-menu-image:before {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #adminmenu .awaiting-mod, #adminmenu .update-plugins {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: var(--ts-color-primary, blue)
 }
 
 #adminmenu li a.wp-has-current-submenu .update-plugins, #adminmenu li.current a .awaiting-mod, #adminmenu li.menu-top:hover > a .update-plugins, #adminmenu li:hover a .awaiting-mod {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: #26292c
 }
 
@@ -244,17 +244,17 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #collapse-button:focus, #collapse-button:hover {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: var(--ts-color-primary, blue);
 }
 
 #wpadminbar {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: var(--color-accent-darker, black);
 }
 
 #wpadminbar .ab-item, #wpadminbar a.ab-item, #wpadminbar > #wp-toolbar span.ab-label, #wpadminbar > #wp-toolbar span.noticon {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #wpadminbar .ab-icon, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:after, #wpadminbar .ab-item:before {
@@ -262,7 +262,7 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #wpadminbar .ab-top-menu > li.menupop.hover > .ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus, #wpadminbar.nojs .ab-top-menu > li.menupop:hover > .ab-item, #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item, #wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: var(--ts-color-primary, blue);
 }
 
@@ -271,7 +271,7 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #wpadminbar:not(.mobile) li:hover #adminbarsearch:before, #wpadminbar:not(.mobile) li:hover .ab-icon:before, #wpadminbar:not(.mobile) li:hover .ab-item:after, #wpadminbar:not(.mobile) li:hover .ab-item:before {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #wpadminbar .menupop .ab-sub-wrapper {
@@ -291,7 +291,7 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a, #wpadminbar .quicklinks .menupop ul li a:focus, #wpadminbar .quicklinks .menupop ul li a:focus strong, #wpadminbar .quicklinks .menupop ul li a:hover, #wpadminbar .quicklinks .menupop ul li a:hover strong, #wpadminbar .quicklinks .menupop.hover ul li a:focus, #wpadminbar .quicklinks .menupop.hover ul li a:hover, #wpadminbar li #adminbarsearch.adminbar-focused:before, #wpadminbar li .ab-item:focus .ab-icon:before, #wpadminbar li .ab-item:focus:before, #wpadminbar li a:focus .ab-icon:before, #wpadminbar li.hover .ab-icon:before, #wpadminbar li.hover .ab-item:before, #wpadminbar li:hover #adminbarsearch:before, #wpadminbar li:hover .ab-icon:before, #wpadminbar li:hover .ab-item:before, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus, #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
 }
 
 #wpadminbar .menupop .menupop > .ab-item:hover:before, #wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover > a .blavatar, #wpadminbar .quicklinks li a:focus .blavatar, #wpadminbar .quicklinks li a:hover .blavatar, #wpadminbar.mobile .quicklinks .ab-icon:before, #wpadminbar.mobile .quicklinks .ab-item:before {
@@ -307,7 +307,7 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #wpadminbar > #wp-toolbar > #wp-admin-bar-top-secondary > #wp-admin-bar-search #adminbarsearch input.adminbar-input:focus {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background: var(--ts-color-accent, #111);
 }
 
@@ -317,7 +317,7 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 #wpadminbar #wp-admin-bar-user-info .display-name {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 #wpadminbar #wp-admin-bar-user-info a:hover .display-name {
@@ -371,30 +371,30 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 }
 
 body.more-filters-opened .more-filters {
-    color: var(--ts-color-white, white);
+    color: var(--ts-font-color-cream, #F6F3EB);
     background-color: var(--ts-color-accent, #111);
 }
 
 body.more-filters-opened .more-filters:before {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 body.more-filters-opened .more-filters:focus, body.more-filters-opened .more-filters:hover {
     background-color: var(--ts-color-primary, blue);
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 body.more-filters-opened .more-filters:focus:before, body.more-filters-opened .more-filters:hover:before {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 .widgets-chooser li.widgets-chooser-selected {
     background-color: var(--ts-color-primary, blue);
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 .widgets-chooser li.widgets-chooser-selected:before, .widgets-chooser li.widgets-chooser-selected:focus:before {
-    color: var(--ts-color-white, white)
+    color: var(--ts-font-color-cream, #F6F3EB)
 }
 
 div#wp-responsive-toggle a:before {

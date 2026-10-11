@@ -207,6 +207,7 @@ class StylingComponent extends Singleton {
             // Legacy font-colour aliases (same hex as semantic text roles)
             'font-color-primary'   => $colorPrimaryDark,
             'font-color-white'     => $colorWhite,
+            'font-color-cream'     => '#F6F3EB',
             'font-color-nav'       => $colorNav,
             'font-color-nav-hover' => $colorPrimary,
 

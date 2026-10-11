@@ -36,7 +36,6 @@ class Theme extends Singleton {
      * @var string
      */
     const MENU_PRIMARY = 'menu-primary';
-    const MENU_SECONDARY = 'menu-secondary';
     const MENU_FOOTER = 'menu-footer';
     const MENU_MOBILE_TOP = 'menu-mobile-top';
     const MENU_MOBILE_BOTTOM = 'menu-mobile-bottom';
@@ -113,7 +112,6 @@ class Theme extends Singleton {
     public static function initMenuLocations(): void {
         register_nav_menus([
             self::MENU_PRIMARY => __('Primary menu', self::TEXT_DOMAIN),
-            self::MENU_SECONDARY => __('Secondary menu', self::TEXT_DOMAIN),
             self::MENU_FOOTER => __('Footer menu', self::TEXT_DOMAIN),
             self::MENU_MOBILE_TOP => __('Mobile top menu', self::TEXT_DOMAIN),
             self::MENU_MOBILE_BOTTOM => __('Mobile bottom menu', self::TEXT_DOMAIN)
@@ -236,7 +234,8 @@ class Theme extends Singleton {
 
         //init section blocks
         SectionContent::getInstance();
-        SectionGrandTitle::getInstance();
+        SectionContentAlt::getInstance();
+        SectionHeading::getInstance();
         SectionUsps::getInstance();
         SectionCards::getInstance();
         SectionBrands::getInstance();

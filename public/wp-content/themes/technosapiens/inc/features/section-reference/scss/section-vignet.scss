@@ -18,12 +18,14 @@ $vignetGradientBottom: linear-gradient(
 );
 
 .section[data-vignet-top="true"],
-.section[data-vignet-bottom="true"] {
+.section[data-vignet-bottom="true"],
+.hm-main-hero[data-vignet-bottom="true"] {
     position: relative;
 }
 
 .section[data-vignet-top="true"]::before,
-.section[data-vignet-bottom="true"]::after {
+.section[data-vignet-bottom="true"]::after,
+.hm-main-hero[data-vignet-bottom="true"]::after {
     content: "";
     position: absolute;
     left: 0;
@@ -38,7 +40,8 @@ $vignetGradientBottom: linear-gradient(
     background-image: $vignetGradientTop;
 }
 
-.section[data-vignet-bottom="true"]::after {
+.section[data-vignet-bottom="true"]::after,
+.hm-main-hero[data-vignet-bottom="true"]::after {
     bottom: 0;
     background-image: $vignetGradientBottom;
 }

@@ -177,7 +177,7 @@ class SectionCardsMotion {
     CARD_WRAP_SELECTOR = '.section-cards__card-wrap'
     READY_CLASS = 'is-ready'
 
-    Y_STEP_REM = 3
+    Y_STEP_REM = 1
     RESIZE_DEBOUNCE_MS = 150
     SCRUB_START = 'top 80%'
     SCRUB_END = 'bottom 80%'
