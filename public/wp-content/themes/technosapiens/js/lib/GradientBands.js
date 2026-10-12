@@ -94,7 +94,7 @@ class GradientBands {
             duration: this.DURATION,
             stagger: this.STAGGER,
             delay,
-            ease: 'power1.out',
+            ease: 'power1.inOut',
             onComplete: () => this.markComplete($container),
         })
     }

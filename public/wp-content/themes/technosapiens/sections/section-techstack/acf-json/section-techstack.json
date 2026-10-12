@@ -1,0 +1,212 @@
+{
+    "key": "group_cf7dcd15d86b4",
+    "title": "Section - Techstack",
+    "fields": [
+        {
+            "key": "field_0f74162e4f04e",
+            "label": "Section title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_c5d3aca6e5370",
+            "label": "Heading tag",
+            "name": "title_heading_tag",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "Heading 2",
+                "h3": "Heading 3",
+                "h4": "Heading 4",
+                "h5": "Heading 5",
+                "h6": "Heading 6"
+            },
+            "default_value": "h2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_dd9aa621c8581",
+            "label": "Heading size",
+            "name": "title_heading_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "display": "Display",
+                "h1": "Heading 1",
+                "h2": "Heading 2",
+                "h3": "Heading 3",
+                "h4": "Heading 4",
+                "h5": "Heading 5",
+                "h6": "Heading 6"
+            },
+            "default_value": "h2",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_9acbf9dc400d1",
+            "label": "Groups",
+            "name": "techstack_groups",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Each group needs at least one logo. Groups without logos are not shown.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_957fa8a451cd1",
+            "button_label": "Add group",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_957fa8a451cd1",
+                    "label": "Group title",
+                    "name": "group_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_9acbf9dc400d1"
+                },
+                {
+                    "key": "field_e8103411222cf",
+                    "label": "Group text",
+                    "name": "group_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_9acbf9dc400d1"
+                },
+                {
+                    "key": "field_03d554ad3a9b4",
+                    "label": "Logos",
+                    "name": "group_logos",
+                    "aria-label": "",
+                    "type": "gallery",
+                    "instructions": "SVG or PNG. Prefer flat logos with transparency for the white filter effect. Optional media Alt text is shown under each logo.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min": "",
+                    "max": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "png,svg",
+                    "insert": "append",
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_9acbf9dc400d1"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/section-section-techstack"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1791812007
+}
