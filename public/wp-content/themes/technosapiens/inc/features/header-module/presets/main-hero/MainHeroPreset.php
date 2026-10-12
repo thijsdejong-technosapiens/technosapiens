@@ -98,7 +98,7 @@ class MainHeroPreset extends Singleton {
         $data->headingText = get_field('hm_heading_text', $acfKey) ?: '';
         preg_match_all('/\{\{(.*?)\}\}/m', $data->headingText, $matches, PREG_SET_ORDER, 0);
         if ($matches && count($matches) > 0) {
-            foreach ($matches as $match) $data->headingText = str_replace($match[0], '<span class="hm-main-hero__highlight">' . $match[1] . '</span>', $data->headingText);
+            foreach ($matches as $match) $data->headingText = str_replace($match[0], '<span class="text-color-primary">' . $match[1] . '</span>', $data->headingText);
         }
 
         //handle option to remove bottom spacing

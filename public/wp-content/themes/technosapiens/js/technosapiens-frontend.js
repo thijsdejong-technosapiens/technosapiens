@@ -31,6 +31,7 @@ class Frontend {
         this.initMainNavigation()
         this.initSideNavigation()
         this.initGradientBands()
+        this.initTextColorScrub()
 
         //init static methods
         Frontend.initGravityForms()
@@ -50,6 +51,20 @@ class Frontend {
         import(/* webpackChunkName: "gradient-bands" */ "./lib/GradientBands").then(({default: GradientBands}) => {
             new GradientBands($containers)
         }).catch((error) => console.log("Something went wrong while importing the gradient-bands chunk..", error))
+    }
+
+    /**
+     * Init cream-to-color letter scrub on colored text spans
+     */
+    initTextColorScrub() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+        const $targets = document.querySelectorAll('.text-color-primary, .text-color-secondary, .text-color-tertiary')
+        if ($targets.length === 0) return
+
+        import(/* webpackChunkName: "text-color-scrub" */ "./lib/TextColorScrub").then(({default: TextColorScrub}) => {
+            new TextColorScrub($targets)
+        }).catch((error) => console.log("Something went wrong while importing the text-color-scrub chunk..", error))
     }
 
     /**

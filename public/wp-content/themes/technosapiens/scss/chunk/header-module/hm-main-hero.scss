@@ -112,10 +112,6 @@
         }
     }
 
-    &__highlight {
-        color: var(--ts-color-primary, blue);
-    }
-
     &__content {
         display: flex;
         flex-direction: column;
