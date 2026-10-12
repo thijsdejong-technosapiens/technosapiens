@@ -19,8 +19,7 @@ $hasContent = $sectionTitle || !empty($brands);
 
 $columnClasses = [
     'col',
-    'col--1/2',
-    'col--md-1/3',
+    'col--1/3',
     'col--lg-1/4',
     'col--xxl-1/6',
     'section-brands__item-wrap',

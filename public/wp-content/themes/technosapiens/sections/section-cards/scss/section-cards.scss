@@ -1,14 +1,26 @@
+@use "../../../scss/util/util-mixins" as mixins;
+
 .section-cards {
     $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
     $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
+    .container {
+        padding-inline: var(--ts-space-8, 2rem);
+    }
+
     &__title {
-        margin: 0 0 6rem 0;
+        margin: 0 0 var(--ts-gutter-width, 2rem) 0;
         text-align: center;
+        overflow-wrap: break-word;
+
+        @include mixins.mq-up(lg) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__grid {
         padding-top: calc(1rem + var(--section-cards-ladder-offset, 0rem));
+        row-gap: var(--ts-space-8, 2rem);
     }
 
     &__card-wrap {
@@ -17,7 +29,12 @@
         min-width: 0;
         perspective: 75rem;
         transform-style: preserve-3d;
-        padding: 0 2rem !important;
+        // room for decorative frames without forcing horizontal scroll
+        padding: 1.5rem 0.75rem !important;
+
+        @include mixins.mq-up(md) {
+            padding: 0 2rem !important;
+        }
     }
 
     &:not(.is-ready) &__card-wrap {
@@ -56,25 +73,40 @@
         backface-visibility: hidden;
 
         &--white {
-            top: -0.9rem;
-            right: 1rem;
-            bottom: 1.3rem;
-            left: -0.9rem;
+            top: -0.5rem;
+            right: 0;
+            bottom: 0;
+            left: -0.25rem;
             border-width: 2px;
             border-color: var(--ts-color-white, white);
             z-index: 2;
             transform: translateZ(2.75rem);
+
+            @include mixins.mq-up(md) {
+                top: -0.9rem;
+                right: 1rem;
+                bottom: 1.3rem;
+                left: -0.9rem;
+            }
         }
 
         &--pink {
-            top: -2.5rem;
-            right: -0.3rem;
-            bottom: 2rem;
-            left: 1rem;
-            border-width: 8px;
+            top: -1.75rem;
+            right: -1rem;
+            bottom: 0.5rem;
+            left: 0;
+            border-width: 6px;
             border-color: var(--ts-color-secondary, magenta);
             z-index: 1;
             transform: translateZ(1.25rem);
+
+            @include mixins.mq-up(md) {
+                top: -2.5rem;
+                right: -0.3rem;
+                bottom: 2rem;
+                left: 1rem;
+                border-width: 8px;
+            }
         }
     }
 
@@ -145,24 +177,36 @@
         flex-direction: column;
         flex: 1 1 auto;
         gap: calc(var(--ts-space-8, 2rem) / 2);
-        padding: 2.5rem 3rem 4rem 3rem;
+        padding: 1.5rem 1.25rem 2rem;
+        min-width: 0;
         min-height: 100%;
         transform: translateZ(0.5rem);
         transform-style: preserve-3d;
         pointer-events: auto;
+
+        @include mixins.mq-up(md) {
+            padding: 2.5rem 3rem 4rem 3rem;
+        }
     }
 
     &__card-title {
         margin: 0;
         font-family: var(--ts-font-family-sans, sans-serif);
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.2;
         font-weight: var(--ts-font-weight-bold, 600);
         color: var(--ts-color-text-inverse, white);
+        overflow-wrap: break-word;
+
+        @include mixins.mq-up(md) {
+            font-size: 2rem;
+        }
     }
 
     &__card-content {
         color: var(--ts-color-text-inverse, white);
+        min-width: 0;
+        overflow-wrap: break-word;
 
         > *:first-child {
             margin-top: 0;
@@ -176,13 +220,20 @@
     &__card-action {
         position: relative;
         padding-top: calc(var(--ts-space-8, 2rem) / 2);
+        margin-bottom: var(--ts-space-4, 1rem);
         // sit in front of the white frame (2.75rem) so the full button stays hittable while tilted
         transform: translateZ(3rem);
+
+        @include mixins.mq-up(md) {
+            margin-bottom: 0;
+        }
     }
 
-    &__card-button {
+    &__card-button.ts-button:not(.ts-button--style-text):not(.ts-button--style-alternative) {
         position: relative;
         pointer-events: auto;
+        width: auto;
+        max-width: 100%;
     }
 }
 

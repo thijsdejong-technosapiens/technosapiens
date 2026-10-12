@@ -7,10 +7,12 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    min-height: 27.3rem;
+    min-height: auto;
+    margin: 0 auto var(--ts-space-8, 2rem) auto;
 
-    @include mixins.md-down {
-        margin: 0 auto var(--ts-space-8, 2rem) auto;
+    @include mixins.mq-up(md) {
+        min-height: 27.3rem;
+        margin-bottom: 0;
     }
 
     &__background {
@@ -25,11 +27,14 @@
     &__meta-container {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: var(--ts-space-6, 1.5rem);
         z-index: 30;
-        margin-top: 11rem;
         width: 100%;
         align-items: center;
+
+        @include mixins.mq-up(md) {
+            gap: 2rem;
+        }
     }
 
     &__meta {
@@ -37,8 +42,12 @@
         flex-direction: column;
         gap: calc(var(--ts-space-8, 2rem) / 2);
         z-index: 30;
-        margin-top: 11rem;
+        margin-top: 6.5rem;
         width: 100%;
+
+        @include mixins.mq-up(md) {
+            margin-top: 11rem;
+        }
 
         >* {
             margin: 0;
@@ -48,27 +57,54 @@
     &__meta-top {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
+        width: 100%;
+        text-align: center;
     }
 
     &__heading {
         color: var(--ts-color-gradient-stop-5, purple);
         background-color: var(--ts-font-color-white, white);
         font-weight: var(--ts-font-weight-bold, 700);
-        margin: 0 auto;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        padding: 1rem 3rem;
+        margin: 0;
+        max-width: 100%;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding: 0.625rem 1.25rem;
         border-radius: var(--ts-radius-foundation-pill, 3.125rem);
+        box-sizing: border-box;
 
+        @include mixins.mq-up(sm) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding: 0.75rem 2rem;
+        }
+
+        @include mixins.mq-up(md) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            padding: 1rem 3rem;
+        }
     }
 
     &__sub-heading {
-        font-size: 3rem;
-        line-height: 3.75rem;
+        font-size: 1.75rem;
+        line-height: 2.25rem;
         font-family: var(--ts-font-family-sans, sans-serif);
         font-weight: var(--ts-font-weight-light, 200);
-        color: var(--ts-font-color-cream, #F6F3EB);
+        color: var(--ts-font-color-cream, cream);
+        max-width: 100%;
+
+        @include mixins.mq-up(sm) {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+        }
+
+        @include mixins.mq-up(md) {
+            font-size: 3rem;
+            line-height: 3.75rem;
+        }
 
         @include mixins.mq-up(lg) {
             font-size: 3.5rem;
@@ -84,18 +120,24 @@
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-        width: 40rem;
+        width: 100%;
+        max-width: 40rem;
 
         >p {
             margin: 0;
-            color: var(--ts-font-color-cream, #F6F3EB);
+            color: var(--ts-font-color-cream, cream);
             text-align: center;
             font-weight: var(--ts-font-weight-medium, 500);
-            font-size: 1.25rem;
-            line-height: 1.75rem;            
+            font-size: 1rem;
+            line-height: 1.5rem;
+
+            @include mixins.mq-up(md) {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
 
             a {
-                color: var(--ts-font-color-cream, #F6F3EB) !important;
+                color: var(--ts-font-color-cream, cream) !important;
                 text-decoration: underline !important;
             }
         }
@@ -104,11 +146,13 @@
     &__buttons {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--ts-space-8, 2rem);
+        justify-content: center;
+        gap: calc(var(--ts-space-8, 2rem) / 2);
         margin-top: calc(var(--ts-space-8, 2rem) / 2);
+        width: 100%;
 
-        @include mixins.sm-down {
-            gap: calc(var(--ts-space-8, 2rem) / 2);
+        @include mixins.mq-up(sm) {
+            gap: var(--ts-space-8, 2rem);
         }
     }
 

@@ -11,20 +11,32 @@
         line-height: 1.75rem;
     }
 
-    @for $i from 1 through 3 {
-        p:nth-child(#{$i}) {
-            padding-left: $i * 8rem;
-            padding-right: (3 - $i) * 8rem;
-        }
-    }
-
     &__title {
-        margin: 0 0 6rem 0;
+        margin: 0 0 var(--ts-gutter-width, 2rem) 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        text-align: center;
+
+        @include mixins.mq-up(lg) {
+            margin-bottom: 6rem;
+            text-align: left;
+        }
     }
 
     &__text{
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        min-width: 0;
+        max-width: 100%;
+
+        @include mixins.mq-up(lg) {
+            @for $i from 1 through 3 {
+                p:nth-child(#{$i}) {
+                    padding-left: $i * 8rem;
+                    padding-right: (3 - $i) * 8rem;
+                }
+            }
+        }
     }
 }

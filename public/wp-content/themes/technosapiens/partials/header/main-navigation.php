@@ -160,6 +160,7 @@ if (!isset($items)) $items = [];
                     'target' => $headerButton->target,
                     'type' => 'tertiary',
                     'style' => 'filled',
+                    'class' => 'main-navigation__item-button',
                     'size' => 'medium'
                 ]); ?>
 

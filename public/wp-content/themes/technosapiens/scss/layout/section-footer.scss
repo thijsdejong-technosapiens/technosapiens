@@ -1,7 +1,7 @@
 @use "../util/util-mixins" as mixins;
 
 .site-footer{
-    padding: 4rem 2rem 8rem 2rem;
+    padding: 2rem 2rem 3rem 2rem;
     margin-top: auto;
     color: var(--ts-font-color-cream, #F6F3EB);
     text-align: center;
@@ -23,12 +23,17 @@
     &__col {
         &--ctas {
             @include mixins.mq-up(xl) {
-                order: 2;
+                order: 3;
             }
         }
         &--links {
             @include mixins.mq-up(xl) {
                 order: 1;
+            }
+        }
+        &--links-secondary {
+            @include mixins.mq-up(xl) {
+                order: 2;
             }
         }
     }   
@@ -50,7 +55,38 @@
     }
 
     &__links-menu {
-        text-align: left;
+        $self: &;
+
+        text-align: center;
+
+        @include mixins.mq-up(xl) {
+            text-align: left;
+        }
+
+        &--secondary {
+            #{$self}-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--ts-space-4, 1rem);
+
+                @include mixins.mq-up(xl) {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 0.25rem;
+                }
+            }
+
+            #{$self}-item-link {
+                font-size: var(--ts-font-size-sm, 0.9rem);
+                font-weight: var(--ts-font-weight-regular, 400);
+
+                @include mixins.mq-up(xl) {
+                    font-size: inherit;
+                    font-weight: var(--ts-font-weight-bold, 700);
+                }
+            }
+        }
     }
 
     &__links-menu-list {
@@ -65,6 +101,10 @@
             .site-footer__links-menu-item-link{
                 font-family: var(--ts-font-family-sans, sans-serif);
                 font-weight: var(--ts-font-weight-regular, 400);
+
+                @include mixins.mq-up(xl) {
+                    font-weight: var(--ts-font-weight-bold, 700);
+                }
             }
         }
     }
@@ -73,8 +113,8 @@
         padding-block: 0.25rem;
         text-decoration: none;
         font-family: var(--ts-font-family-sans, sans-serif);
-        font-weight: var(--ts-font-weight-semibold, 600);
-        transition: opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), color var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
+        font-weight: var(--ts-font-weight-bold, 700);
+        transition: opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), color var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease), transform var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
         display: block;
 
         &:hover{
@@ -94,11 +134,20 @@
     } 
 
     &__col--logo {
-        align-self: flex-start;
+        align-self: center;
+
+        @include mixins.mq-up(xl) {
+            align-self: flex-start;
+        }
     }
 
     &__logo {
         display: block;
+        margin-inline: auto;
+
+        @include mixins.mq-up(xl) {
+            margin-inline: 0;
+        }
     }
 
     &__logo-image {

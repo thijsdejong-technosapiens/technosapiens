@@ -124,7 +124,19 @@
             align-items: center;
             display: flex;
             margin-left: 1rem;
+        }
+    }
 
+    &__item-button.ts-button:not(.ts-button--style-text):not(.ts-button--style-alternative) {
+        font-size: var(--ts-font-size-body-small, 1rem);
+        min-height: var(--ts-size-button-sm, 2.5rem);
+        padding: 0 var(--ts-space-4, 1rem);
+        width: auto;
+
+        @include mixins.mq-up(lg) {
+            font-size: var(--ts-font-size-body-base-md, 1.125rem);
+            min-height: var(--ts-size-button-md, 3rem);
+            padding: 0 var(--ts-space-6, 1.5rem);
         }
     }
 

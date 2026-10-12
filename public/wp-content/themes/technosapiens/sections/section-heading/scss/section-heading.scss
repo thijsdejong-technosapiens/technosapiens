@@ -6,5 +6,29 @@
 
     &__container {
         z-index: 2;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    &__title {
+        margin: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+
+        &.display {
+            font-size: var(--ts-font-size-h1, 2.25rem);
+            line-height: var(--ts-line-height-h1, 2.75rem);
+
+            @include mixins.mq-up(sm) {
+                font-size: var(--ts-font-size-display, 3rem);
+                line-height: var(--ts-line-height-display, 3.5rem);
+            }
+
+            @include mixins.mq-up(md) {
+                font-size: 4.5rem;
+                line-height: 6rem;
+            }
+        }
     }
 }

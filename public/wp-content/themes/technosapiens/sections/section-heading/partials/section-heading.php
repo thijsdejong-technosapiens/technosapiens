@@ -38,6 +38,6 @@ $titleHeadingSize = SectionTitleHeading::getSize();
     <?php endif; ?>
 
     <div class="container section-heading__container">
-        <<?php echo esc_attr($titleTag); ?> class="text-center <?php echo esc_attr($titleHeadingSize); ?>"><?php echo wp_kses_post($titleText); ?></<?php echo esc_attr($titleTag); ?>>
+        <<?php echo esc_attr($titleTag); ?> class="section-heading__title text-center <?php echo esc_attr($titleHeadingSize); ?>"><?php echo wp_kses_post($titleText); ?></<?php echo esc_attr($titleTag); ?>>
     </div>
 </div>
