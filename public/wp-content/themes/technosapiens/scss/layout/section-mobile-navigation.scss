@@ -1,0 +1,113 @@
+@use "../util/util-mixins" as mixins;
+
+$mobile-navigation-height: 3.25rem;
+$mobile-navigation-offset: var(--ts-space-4, 1rem);
+
+// space the fixed bar occupies at the bottom of the viewport, consumed by the footer and scroll padding
+:root {
+    @include mixins.mq-down(lg) {
+        --ts-mobile-navigation-clearance: calc(#{$mobile-navigation-height} + #{$mobile-navigation-offset} * 2 + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+// keeps keyboard-focused and anchor-targeted elements from ending up behind the bar
+html {
+    @include mixins.mq-down(lg) {
+        scroll-padding-bottom: var(--ts-mobile-navigation-clearance, 0rem);
+    }
+}
+
+.mobile-navigation {
+    $self: &;
+    position: fixed;
+    z-index: var(--ts-z-index-sticky, 200);
+    left: max(#{$mobile-navigation-offset}, env(safe-area-inset-left, 0px));
+    right: max(#{$mobile-navigation-offset}, env(safe-area-inset-right, 0px));
+    bottom: calc(#{$mobile-navigation-offset} + env(safe-area-inset-bottom, 0px));
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition:
+        transform var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease),
+        opacity var(--ts-duration-base, 0.25s) var(--ts-easing-standard, ease);
+
+    @include mixins.mq-up(lg) {
+        display: none;
+    }
+
+    &--hidden {
+        transform: translateY(calc(100% + #{$mobile-navigation-offset} + env(safe-area-inset-bottom, 0px)));
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &#{$self}--hidden {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: var(--ts-space-1, 0.25rem);
+        box-sizing: border-box;
+        width: max-content;
+        max-width: 100%;
+        min-height: $mobile-navigation-height;
+        margin: 0;
+        padding: var(--ts-space-1, 0.25rem) var(--ts-space-2, 0.5rem);
+        list-style: none;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        background-color: var(--ts-color-surface, white);
+        border-radius: var(--ts-radius-foundation-pill, 3.125rem);
+        box-shadow: var(--ts-elevation-2, none);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-shrink: 0;
+
+        &--current {
+            #{$self}__link {
+                color: var(--ts-font-color-cream, ivory);
+                background-color: var(--ts-color-primary, purple);
+
+                &:focus-visible {
+                    outline-color: var(--ts-font-color-cream, ivory);
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        min-height: 2.75rem;
+        padding: 0 var(--ts-space-3, 0.75rem);
+        color: var(--ts-color-text, purple);
+        text-decoration: none;
+        text-transform: lowercase;
+        white-space: nowrap;
+        border-radius: var(--ts-radius-foundation-pill, 3.125rem);
+    }
+
+    // the scroll container clips anything outside it, so focus rings are drawn inside the element
+    :focus-visible {
+        outline: var(--ts-stroke-thin, 2px) solid var(--ts-color-text, purple);
+        outline-offset: -0.25rem;
+    }
+}

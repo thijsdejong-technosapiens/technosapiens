@@ -30,25 +30,4 @@ class HeaderUtils {
 
         return $listItemClasses;
     }
-
-    /**
-     * Get CSS classes for list item
-     * @param \stdClass $item
-     * @param string $baseCssClass
-     * @return array
-     */
-    public static function getSideNavigationListItemClassesByItem(\stdClass $item, string $baseCssClass): array {
-
-        //start setting up item CSS classes
-        $listItemClasses = [$baseCssClass];
-
-        //check if hash link
-        $isHashLink = $item->link === '#';
-
-        //handle scenario where item is current or current parent
-        if (!$isHashLink && $item->isCurrent) $listItemClasses[] = $baseCssClass . '--current';
-        if (!$isHashLink && $item->isCurrentParent) $listItemClasses[] = $baseCssClass . '--current-parent';
-
-        return $listItemClasses;
-    }
 }

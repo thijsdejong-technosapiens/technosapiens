@@ -15,7 +15,7 @@ class TextColorScrub {
     TARGET_SELECTOR = '.text-color-primary, .text-color-secondary, .text-color-tertiary'
     SENTENCE_SELECTOR = 'h1, h2, h3, h4, h5, h6, p, li, blockquote, figcaption'
     TRIGGER_SELECTOR = '.section, .hm-main-hero'
-    EXCLUDED_SELECTOR = '#ts-footer, .main-navigation, .side-navigation'
+    EXCLUDED_SELECTOR = '#ts-footer, .main-navigation'
     START_COLOR_VARIABLE = '--ts-font-color-cream'
     START_COLOR_FALLBACK = 'ivory'
     SCRUB_START = 'top 75%'

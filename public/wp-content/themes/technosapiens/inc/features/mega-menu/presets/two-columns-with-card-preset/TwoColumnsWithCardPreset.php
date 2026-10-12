@@ -62,9 +62,6 @@ class TwoColumnsWithCardPreset extends Singleton {
         //init classes
         $this->initImageSizes();
 
-        //make sure that the mega menu items are rendered in the side navigation
-        add_filter('ts_side_navigation_item', [$this, 'addMegaMenuItemsToSideNavigation'], 10, 1);
-
         //init front-end assets
         add_action('wp_enqueue_scripts', function () {
             $this->initFrontendAssets();
@@ -92,27 +89,6 @@ class TwoColumnsWithCardPreset extends Singleton {
     public function initImageSizes(): void {
         add_image_size(self::IMAGE_TCWC_CARD, 600, 300, true);
         add_image_size(self::IMAGE_TCWC_VARIABLE, 600, 0, false);
-    }
-
-    /**
-     * Replace side navigation item children with mega menu items if available
-     * @param \stdClass $item
-     * @return \stdClass
-     */
-    public function addMegaMenuItemsToSideNavigation(\stdClass $item): \stdClass {
-        if (NavMenuItemResolver::isMegaMenuItem($item) && $mmId = NavMenuItemResolver::getMegaMenuIdForItem($item)) {
-
-            //bail if the mega menu post is not visible
-            if (!MegaMenuUsageResolver::getInstance()->isMegaMenuPostVisible($mmId)) return $item;
-
-            $mmPreset = get_field('mm_preset', $mmId) ?? '';
-            if ($mmPreset === $this->getPresetKey()) {
-                $data = $this->getPresetData($mmId);
-                if ($data->selectedMenuLinks && count($data->selectedMenuLinks) > 0) $item->children = $data->selectedMenuLinks;
-            }
-        }
-
-        return $item;
     }
 
     /**

@@ -1,7 +1,6 @@
 <?php
 
 use TechnoSapiens\Core\ButtonComponent;
-use TechnoSapiens\Core\Partial;
 use TechnoSapiens\Core\WcagComponent;
 use TechnoSapiens\HeaderUtils;
 use TechnoSapiens\MegaMenuPlugin\NavMenuItemResolver;
@@ -171,5 +170,4 @@ if (!isset($items)) $items = [];
 
     <?php do_action('ts_render_search_trigger', ['element' => 'div']); ?>
 
-    <?php Partial::render('header/menu-toggle-button', ['modifier' => 'open']); ?>
 </nav>

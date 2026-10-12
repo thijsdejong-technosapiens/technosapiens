@@ -4,12 +4,9 @@ use TechnoSapiens\Core\Navigation;
 use TechnoSapiens\Core\Partial;
 use TechnoSapiens\Theme;
 use TechnoSapiens\ThemeSettings;
-use TechnoSapiens\Core\ButtonComponent;
 
 //get navigation links
 $mainItems = Navigation::getLinksByThemeLocation(Theme::MENU_PRIMARY);
-$mobileMenuTopItems = Navigation::getLinksByThemeLocation(Theme::MENU_MOBILE_TOP);
-$mobileMenuBottomItems = Navigation::getLinksByThemeLocation(Theme::MENU_MOBILE_BOTTOM);
 
 //get header button data
 $headerButton = ThemeSettings::getHeaderButtonData();
@@ -62,12 +59,8 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
 
         </div>
 
-        <?php if (count($mainItems) > 0) Partial::render('header/side-navigation', [
-            'mobileMenuTopItems' => $mobileMenuTopItems,
-            'mobileMenuBottomItems' => $mobileMenuBottomItems,
-            'headerButton' => $headerButton,
-        ]); ?>
-
         <?php do_action('ts_render_search_overlay'); ?>
 
     </header>
+
+    <?php Partial::render('header/mobile-navigation', ['items' => $mainItems]); ?>

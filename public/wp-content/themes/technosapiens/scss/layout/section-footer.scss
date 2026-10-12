@@ -2,6 +2,7 @@
 
 .site-footer{
     padding: 2rem 2rem 3rem 2rem;
+    padding-bottom: calc(3rem + var(--ts-mobile-navigation-clearance, 0rem));
     margin-top: auto;
     color: var(--ts-font-color-cream, #F6F3EB);
     text-align: center;

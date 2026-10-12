@@ -29,7 +29,7 @@ class Frontend {
 
         //init public methods
         this.initMainNavigation()
-        this.initSideNavigation()
+        this.initMobileNavigation()
         this.initGradientBands()
         this.initTextColorScrub()
 
@@ -80,14 +80,16 @@ class Frontend {
     }
 
     /**
-     * Init side navigation
+     * Init mobile bottom navigation scroll show/hide
      */
-    initSideNavigation() {
-        const $sideNavigationElement = document.querySelector('.side-navigation')
-        if ($sideNavigationElement && this.windowWidth <= this.mobileBreakPoint) {
-            import(/* webpackChunkName: "side-navigation" */ "./lib/SideNavigation").then(({default: SideNavigation}) => {
-                new SideNavigation($sideNavigationElement)
-            }).catch((error) => console.log("Something went wrong while importing the side-navigation chunk..", error))
+    initMobileNavigation() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+        const $mobileNavigationElement = document.querySelector('.mobile-navigation')
+        if ($mobileNavigationElement && this.windowWidth <= this.mobileBreakPoint) {
+            import(/* webpackChunkName: "mobile-navigation" */ "./lib/MobileNavigation").then(({default: MobileNavigation}) => {
+                new MobileNavigation($mobileNavigationElement)
+            }).catch((error) => console.log("Something went wrong while importing the mobile-navigation chunk..", error))
         }
     }
 

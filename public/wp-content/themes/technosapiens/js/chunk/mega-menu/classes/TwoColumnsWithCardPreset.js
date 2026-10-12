@@ -12,7 +12,7 @@ const VELOCITY_SAMPLE_COUNT = 3    // Number of mouse positions to track for vel
 /**
  * Class TwoColumnsWithCardPreset (Simplified)
  * Handles internal navigation within the mega menu for the two-columns-with-card preset.
- * Simplified version following SideNavigation.js patterns.
+ * Simplified version following nested navigation patterns.
  */
 class TwoColumnsWithCardPreset {
 
