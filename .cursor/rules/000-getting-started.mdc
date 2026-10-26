@@ -28,6 +28,7 @@ Most work is creating or changing **sections** (full-width ACF Gutenberg blocks)
 1. Conventions: [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc)
 2. Creation workflow: [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc)
 3. Authoritative boilerplate: [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc)
+4. Shared chrome (margins, vignettes, backgrounds, titles): [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc)
 
 Canonical reference: `public/wp-content/themes/technosapiens/sections/section-content`.
 
@@ -53,12 +54,13 @@ Canonical reference: `public/wp-content/themes/technosapiens/sections/section-co
 10. [055-scss-styling-conventions.mdc](mdc:.cursor/rules/055-scss-styling-conventions.mdc) — `--ts-` variables, BEM, rem
 11. [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc) — create a section
 12. [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc) — section PHP, ACF, assets
-13. [070-image-handling.mdc](mdc:.cursor/rules/070-image-handling.mdc) — `Image::render()`
-14. [015-code-formatting-consistency.mdc](mdc:.cursor/rules/015-code-formatting-consistency.mdc) — do not restyle existing code
-15. [080-post-types-conventions.mdc](mdc:.cursor/rules/080-post-types-conventions.mdc) — CPTs
-16. [090-client-documentation.mdc](mdc:.cursor/rules/090-client-documentation.mdc) — Dutch HANDLEIDING
-17. [100-prompt-templates.mdc](mdc:.cursor/rules/100-prompt-templates.mdc) — prompt templates
-18. [035-asset-enqueue.mdc](mdc:.cursor/rules/035-asset-enqueue.mdc) — webpack manifest keys
+13. [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc) — margins, vignettes, backgrounds, titles
+14. [070-image-handling.mdc](mdc:.cursor/rules/070-image-handling.mdc) — `Image::render()`
+15. [015-code-formatting-consistency.mdc](mdc:.cursor/rules/015-code-formatting-consistency.mdc) — do not restyle existing code
+16. [080-post-types-conventions.mdc](mdc:.cursor/rules/080-post-types-conventions.mdc) — CPTs
+17. [090-client-documentation.mdc](mdc:.cursor/rules/090-client-documentation.mdc) — Dutch HANDLEIDING
+18. [100-prompt-templates.mdc](mdc:.cursor/rules/100-prompt-templates.mdc) — prompt templates
+19. [035-asset-enqueue.mdc](mdc:.cursor/rules/035-asset-enqueue.mdc) — webpack manifest keys
 
 ### Maintenance
 
@@ -87,7 +89,7 @@ Canonical reference: `public/wp-content/themes/technosapiens/sections/section-co
 
 ### Features
 
-* Sections: `@060-create-section.mdc` and `@065-section-development.mdc`
+* Sections: `@060-create-section.mdc`, `@065-section-development.mdc`, and `@066-section-shared-features.mdc`
 * Images: `@070-image-handling.mdc`
 * Post types: `@080-post-types-conventions.mdc`
 * Client docs: `@090-client-documentation.mdc`

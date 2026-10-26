@@ -37,7 +37,7 @@ Notes:
 - `[section-slug]` is kebab-case with `section-` prefix, e.g. `section-hero`.
 - Design reference is mandatory. The AI must ask if it is missing.
 - Image fields should match `section-content` (return format array).
-- Do not add margin fields; `section-settings.json` handles them.
+- Do not add margin, vignet, or background fields; theme `section-settings.json` handles them (`@066-section-shared-features.mdc`).
 
 ---
 

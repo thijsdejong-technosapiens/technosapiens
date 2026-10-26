@@ -1,0 +1,126 @@
+---
+description: sections: shared chrome — margins, vignettes, backgrounds, titles, ACF JSON, data attributes
+globs: **/sections/**/*,**/inc/features/section-reference/**/*,**/acf-json/section-settings.json
+alwaysApply: false
+---
+
+# Section Shared Features
+
+Shared section chrome used by reference sections under `sections/`. Helpers live in `inc/features/section-reference/`. Global SCSS is loaded from `scss/technosapiens-frontend.scss`. Canonical partial: `sections/section-content/partials/section-content.php`.
+
+For creating sections see [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc) and [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc).
+
+## Do not reimplement in section ACF
+
+These fields belong in theme `acf-json/section-settings.json` (location: all blocks). Never add them to a section’s own `acf-json/[section-slug].json`:
+
+| ACF field | Helper | Outer data attr |
+|---|---|---|
+| `section_margin_top` / `section_margin_bottom` | `SectionMargins` | `data-pt` / `data-pb` |
+| `section_vignet_top` / `section_vignet_bottom` | `SectionVignet` | `data-vignet-top` / `data-vignet-bottom` |
+| `background_type` (+ solid/bands options) | `SectionBackground` | `data-bg` / `data-bg-color` |
+
+Margin ACF values (`mt-s`, `mb-lg`, …) map to tokens: `smaller`, `small`, `regular`, `large`, `larger`. Empty / `*-0` → omit the attribute. New sections use **padding** attrs (`data-pt` / `data-pb`), not legacy `data-mt` / `data-mb`.
+
+## Outer wrapper (required pattern)
+
+Collect shared data at the top of the partial, then output one outer `.section` root:
+
+```php
+use TechnoSapiens\Core\GradientBandsComponent;
+use TechnoSapiens\SectionBackground;
+use TechnoSapiens\SectionMargins;
+use TechnoSapiens\SectionReferencePartial;
+use TechnoSapiens\SectionTitleHeading;
+use TechnoSapiens\SectionVignet;
+
+$containerClasses = SectionReferencePartial::getContainerClasses('section-content');
+$marginTop = SectionMargins::getMarginTop();
+$marginBottom = SectionMargins::getMarginBottom();
+$vignetTop = SectionVignet::getVignetTop();
+$vignetBottom = SectionVignet::getVignetBottom();
+$backgroundType = SectionBackground::getBackgroundType();
+$backgroundColor = SectionBackground::getBackgroundColor();
+$backgroundBandsAxis = SectionBackground::getBackgroundBandsAxis();
+$backgroundBandsAnimDir = SectionBackground::getBackgroundBandsAnimDir();
+$backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
+```
+
+```php
+<div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?>>
+```
+
+`getContainerClasses($slug)` always returns `section` + `$slug`. Optional legacy ACF `bg` adds `$slug--bg-*`. Solid backgrounds (or legacy black/darkgrey) add `ts-has-dark-background` for inverse text/controls.
+
+Inner content goes in `.container` or `.container.container--narrow` (plus BEM `[slug]__container` when useful).
+
+## Backgrounds
+
+Types from `background_type`: `bands` | `solid` (or empty = none).
+
+* **Solid** — set `data-bg="solid"` and `data-bg-color` to `primary` | `secondary` | `dark`. Styles in `section-background.scss` (inverse text + brand fills). No extra markup.
+* **Bands** — set `data-bg="bands"`. Render as the first child of the section root:
+
+```php
+<?php if ($backgroundType === 'bands') : ?>
+    <div class="section-background">
+        <?php echo GradientBandsComponent::render([
+            'bandSize' => $backgroundBandsSize ?: 'medium',
+            'axis' => $backgroundBandsAxis ?: 'vertical',
+            'staggerMode' => $backgroundBandsAnimDir ?: 'start',
+        ]); ?>
+    </div>
+<?php endif; ?>
+```
+
+| ACF field | Values | Maps to |
+|---|---|---|
+| `background_bands_axis` | `horizontal`, `vertical` | `axis` |
+| `background_bands_size` | `small` … `xlarge` | `bandSize` |
+| `background_bands_anim_dir` | `top-bottom`, `bottom-top`, `center` | `staggerMode` `start` / `end` / `center` |
+
+Do not invent custom section background systems; reuse `SectionBackground` + `GradientBandsComponent`.
+
+## Vignettes
+
+True/false ACF → `data-vignet-top="true"` / `data-vignet-bottom="true"`. Pseudo-element gradients come from `section-vignet.scss`. No extra HTML.
+
+## Section title + heading controls
+
+Most content sections include these **in the section’s own ACF JSON** (not in `section-settings.json`):
+
+| Field | Type | Notes |
+|---|---|---|
+| `section_title` | text | Via class getter, e.g. `getSectionTitle()` |
+| `title_heading_tag` | select | `h2`–`h6` (default `h2`) — `SectionTitleHeading::getTag()` |
+| `title_heading_size` | select | `display`, `h1`–`h6` (default `h2`) — `SectionTitleHeading::getSize()` |
+
+Render pattern:
+
+```php
+<?php if ($sectionTitle) : ?>
+    <<?php echo esc_attr($titleHeadingTag); ?> class="section-content__title <?php echo esc_attr($titleHeadingSize); ?>">
+        <?php echo wp_kses_post($sectionTitle); ?>
+    </<?php echo esc_attr($titleHeadingTag); ?>>
+<?php endif; ?>
+```
+
+`section-heading` uses `title_text` instead of `section_title` (same tag/size fields). Keep field `name`s snake_case; labels English.
+
+## Section ACF JSON
+
+* Path: `sections/[section-slug]/acf-json/[section-slug].json`
+* Title: `"Section - [Label]"` (English)
+* Location: `acf/section-[section-slug]` (escaped in JSON as `acf\/section-…`)
+* Only section-specific fields (title, content, repeaters, images, …)
+* Unique group/field `key`s; trait saves by group **key**
+* Shared margins / vignettes / backgrounds: theme `acf-json/section-settings.json` only
+
+## Checklist for new/updated partials
+
+- [ ] `SectionReferencePartial::getContainerClasses('[slug]')`
+- [ ] `SectionMargins` → `data-pt` / `data-pb`
+- [ ] `SectionVignet` → `data-vignet-top` / `data-vignet-bottom`
+- [ ] `SectionBackground` → `data-bg` / `data-bg-color` + bands markup when needed
+- [ ] Title: `section_title` (+ tag/size) or intentional exception like `title_text`
+- [ ] No duplicate shared fields in section ACF JSON

@@ -5,7 +5,7 @@ alwaysApply: false
 
 # Techno Sapiens Section Creation Workflow
 
-Create a new page builder **section** in the Techno Sapiens theme. Follow [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc) and the boilerplate in [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc).
+Create a new page builder **section** in the Techno Sapiens theme. Follow [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc), the boilerplate in [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc), and shared chrome in [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc).
 
 **Canonical reference:** `public/wp-content/themes/technosapiens/sections/section-content`. Copy that structure. Do not use EVO column-based `blocks/` patterns.
 
@@ -45,8 +45,7 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 
 6. **Partial.** Match `partials/section-content.php`:
     * `get_field('field_name')` with **no** `$post_id`
-    * `SectionReferencePartial::getContainerClasses('[section-slug]')` (adds `section` + slug + optional bg modifiers)
-    * `SectionMargins::getMarginTop()` / `getMarginBottom()` → `data-mt` / `data-mb`
+    * Shared chrome per [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc): `getContainerClasses`, margins → `data-pt`/`data-pb`, vignettes, backgrounds (+ bands markup), section title + heading tag/size
     * Inner layout in `.container` or `.container.container--narrow`
     * BEM on `[section-slug]`
     * Escape output. WYSIWYG via `Formatting::toHtml()`
@@ -63,11 +62,9 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 
 8. **JS.** Omit unless the design needs it. If present, pass `$hasScript = true` to `registerReferenceSection()`. Webpack picks up `js/[section-slug].js` as `[section-slug]-script.js`.
 
-9. **ACF JSON.** Confirmed fields only. Filename `[section-slug].json`. English title like `"Section - Content"`. All labels, choices, and button texts in English. Location: `acf\/section-[section-slug]`. **Do not add margin fields** — those live in theme `acf-json/section-settings.json`.
+9. **ACF JSON.** Confirmed fields only. Filename `[section-slug].json`. English title like `"Section - Content"`. All labels, choices, and button texts in English. Location: `acf\/section-[section-slug]`. **Do not add** margin, vignet, or background fields — those live in theme `acf-json/section-settings.json` (applies to all blocks). Include `section_title` + `title_heading_tag` / `title_heading_size` when the section has a title (see [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc)).
 
-10. **Shared section settings.** Add a location rule for `acf/section-[section-slug]` to `public/wp-content/themes/technosapiens/acf-json/section-settings.json`.
-
-11. **Register** in `Theme::initBlocks()` in `functions.php`: `[SectionName]::getInstance();`
+10. **Register** in `Theme::initBlocks()` in `functions.php`: `[SectionName]::getInstance();`
 
 ## Critical Corrections
 
@@ -83,8 +80,8 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 
 ### Outer markup
 
-✅ Classes from `getContainerClasses()` (`section` + `[section-slug]`) and `data-mt` / `data-mb` from `SectionMargins`  
-❌ Legacy block wrappers, VisualMarginComponent preview strips, or custom margin ACF fields
+✅ Shared chrome from [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc) (`getContainerClasses`, `data-pt`/`data-pb`, vignettes, backgrounds)  
+❌ Legacy block wrappers, VisualMarginComponent preview strips, or custom margin/vignet/background ACF fields in the section JSON
 
 ### Buttons
 
@@ -101,10 +98,9 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 - `SECTION_SLUG` kebab-case with `section-` prefix
 - `has_block('acf/section-' . self::SECTION_SLUG)`
 - Manifest keys: `[section-slug]-style.css` and optional `[section-slug]-script.js`
-- Partial uses `getContainerClasses` + `SectionMargins`
+- Partial uses shared chrome per `@066-section-shared-features.mdc`
 - SCSS has the two `@use` lines
-- ACF location `acf/section-[section-slug]`
-- `section-settings.json` includes the new section
+- ACF location `acf/section-[section-slug]`; no shared margin/vignet/background fields
 - `initBlocks()` instantiates the class
 
 Keep it complete and simple. Do not invent helpers. After generation, ask the user to check the design.

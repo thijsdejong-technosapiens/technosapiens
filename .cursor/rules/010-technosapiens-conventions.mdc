@@ -88,3 +88,4 @@ Validate input. Escape output ([030-php-html-templating.mdc](mdc:.cursor/rules/0
 1. [010-technosapiens-conventions.mdc](mdc:.cursor/rules/010-technosapiens-conventions.mdc)
 2. [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc)
 3. [065-section-development.mdc](mdc:.cursor/rules/065-section-development.mdc)
+4. [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc)

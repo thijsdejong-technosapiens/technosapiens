@@ -5,7 +5,7 @@ alwaysApply: false
 
 # Techno Sapiens Section Development
 
-Authoritative boilerplate for section PHP, partials, SCSS, ACF, and assets. Use with [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc). Copy `sections/section-content`. Do not generate column-based `blocks/` classes.
+Authoritative boilerplate for section PHP, partials, SCSS, ACF, and assets. Use with [060-create-section.mdc](mdc:.cursor/rules/060-create-section.mdc). Shared margins/vignettes/backgrounds/titles: [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc). Copy `sections/section-content`. Do not generate column-based `blocks/` classes.
 
 Placeholders: `[section-slug]` = kebab-case with `section-` prefix (`section-content`). `[SectionName]` = PascalCase (`SectionContent`). `[section_slug]` = slug with underscores (`section_content`).
 
@@ -82,22 +82,11 @@ ACF JSON **load** paths are registered in `Theme::registerSectionAcfJsonLoadPath
 
 Required outer pattern (from `section-content`):
 
+Required outer chrome (margins, vignettes, backgrounds, titles) matches `section-content` and is documented in [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc). Use `data-pt` / `data-pb` (not legacy `data-mt` / `data-mb`).
+
 ```php
-<?php
-
-use TechnoSapiens\Core\Formatting;
-use TechnoSapiens\Core\Image;
-use TechnoSapiens\SectionMargins;
-use TechnoSapiens\SectionReferencePartial;
-
-$contentType = get_field('content_type') ?? '';
-$containerClasses = SectionReferencePartial::getContainerClasses('section-content');
-$marginTop = SectionMargins::getMarginTop();
-$marginBottom = SectionMargins::getMarginBottom();
-?>
-
 <?php if ($hasContent) : ?>
-    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-mt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-mb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?>>
+    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php /* + vignette + background data attrs — see 066 */ ?>>
         <div class="container container--narrow section-content__container">
             <!-- BEM content -->
         </div>
@@ -105,8 +94,6 @@ $marginBottom = SectionMargins::getMarginBottom();
 <?php endif; ?>
 ```
 
-* `getContainerClasses()` always includes `section` and the slug. Optional ACF `bg` adds `[slug]--bg-*` and `ts-has-dark-background`.
-* Margins come from shared fields `section_margin_top` / `section_margin_bottom` (`SectionMargins`). Do not add those fields to the section JSON.
 * Do not use legacy block wrappers, `VisualMarginComponent`, or `PreviewNotificationComponent` unless an existing section already does.
 
 WYSIWYG: `Formatting::toHtml($html)`. Buttons: `ts-button` + style/color modifiers and `ts-button__text` (see `section-page-buttons`).
@@ -165,10 +152,9 @@ Omit the file and keep `$hasScript` false when native HTML/CSS is enough (accord
 * Title: English, e.g. `"Section - Content"`. All labels, choices, and button texts in English.
 * Field `name`: snake_case (`content_type`). That is what `get_field()` uses.
 * `location.value`: `acf\/section-section-content` (`acf/section-` + `SECTION_SLUG`).
-* Do **not** include margin fields.
+* Do **not** include margin, vignet, or background fields (theme `section-settings.json`).
+* Include `section_title` + `title_heading_tag` / `title_heading_size` when the section has a title.
 * Keep keys unique. Saves are matched by group `key` in the JSON file.
-
-After creating a section, add the same location to `acf-json/section-settings.json` so shared margins appear in the editor.
 
 ## Register in `functions.php`
 
@@ -191,9 +177,8 @@ Classes autoload from `sections/`. No extra imports.
 
 - Thin class + `SectionReferenceTrait`
 - `SECTION_ID` / `SECTION_SLUG` as in `section-content`
-- Partial: `getContainerClasses` + `SectionMargins` + standard `section` class
+- Partial: shared chrome per [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc)
 - SCSS `@use` mixins/vars and `--ts-` variables
-- ACF location `acf/section-[section-slug]`
-- `section-settings.json` location added
+- ACF location `acf/section-[section-slug]`; no shared margin/vignet/background fields in section JSON
 - `initBlocks()` updated
 - No `BlockMarginComponent`, no legacy block wrappers, no `blocks/` path
