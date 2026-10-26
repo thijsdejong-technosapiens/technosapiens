@@ -7,6 +7,7 @@ use TechnoSapiens\ThemeSettings;
 
 //get navigation links
 $mainItems = Navigation::getLinksByThemeLocation(Theme::MENU_PRIMARY);
+$mobileItems = Navigation::getLinksByThemeLocation(Theme::MENU_MOBILE);
 
 //get header button data
 $headerButton = ThemeSettings::getHeaderButtonData();
@@ -63,4 +64,4 @@ $htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing()
 
     </header>
 
-    <?php Partial::render('header/mobile-navigation', ['items' => $mainItems]); ?>
+    <?php Partial::render('header/mobile-navigation', ['items' => $mobileItems]); ?>

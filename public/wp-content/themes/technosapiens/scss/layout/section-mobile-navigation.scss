@@ -23,7 +23,7 @@ html {
     z-index: var(--ts-z-index-sticky, 200);
     left: max(#{$mobile-navigation-offset}, env(safe-area-inset-left, 0px));
     right: max(#{$mobile-navigation-offset}, env(safe-area-inset-right, 0px));
-    bottom: calc(#{$mobile-navigation-offset} + env(safe-area-inset-bottom, 0px));
+    bottom: calc(#{$mobile-navigation-offset} + env(safe-area-inset-bottom, 0px) + 1rem);
     width: max-content;
     max-width: 100%;
     margin-inline: auto;

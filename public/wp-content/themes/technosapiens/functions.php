@@ -36,6 +36,7 @@ class Theme extends Singleton {
      * @var string
      */
     const MENU_PRIMARY = 'menu-primary';
+    const MENU_MOBILE = 'menu-mobile';
     const MENU_FOOTER = 'menu-footer';
     const MENU_FOOTER_SECONDARY = 'menu-footer-secondary';
 
@@ -111,6 +112,7 @@ class Theme extends Singleton {
     public static function initMenuLocations(): void {
         register_nav_menus([
             self::MENU_PRIMARY => __('Primary menu', self::TEXT_DOMAIN),
+            self::MENU_MOBILE => __('Mobile menu', self::TEXT_DOMAIN),
             self::MENU_FOOTER => __('Footer menu', self::TEXT_DOMAIN),
             self::MENU_FOOTER_SECONDARY => __('Secondary footer menu', self::TEXT_DOMAIN),
         ]);
