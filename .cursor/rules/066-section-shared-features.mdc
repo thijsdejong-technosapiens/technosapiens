@@ -115,6 +115,7 @@ Render pattern:
 * Only section-specific fields (title, content, repeaters, images, …)
 * Unique group/field `key`s; trait saves by group **key**
 * Shared margins / vignettes / backgrounds: theme `acf-json/section-settings.json` only
+* After any section ACF JSON is added or changed, sync with `php public/shell/update-acf-groups.php` (project root) — required on delivery
 
 ## Checklist for new/updated partials
 
@@ -124,3 +125,4 @@ Render pattern:
 - [ ] `SectionBackground` → `data-bg` / `data-bg-color` + bands markup when needed
 - [ ] Title: `section_title` (+ tag/size) or intentional exception like `title_text`
 - [ ] No duplicate shared fields in section ACF JSON
+- [ ] Ran `php public/shell/update-acf-groups.php` after delivery / ACF JSON changes

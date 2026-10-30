@@ -1,0 +1,450 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-chat-form {
+    $self: &;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--ts-space-6, 1.5rem);
+        max-width: 44rem;
+        margin-inline: auto;
+    }
+
+    &__title {
+        margin: 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        width: 4.5rem;
+        height: 4.5rem;
+
+        @include mixins.mq-up(md) {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+    }
+
+    &__logo-image {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &__logo-rotating-shape {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: section-chat-form-logo-rotate 12s linear infinite;
+    }
+
+    &__chatbox {
+        position: relative;
+        width: 100%;
+        background-color: var(--ts-color-white, white);
+        border: 1px solid var(--ts-color-border, lightgrey);
+        border-radius: var(--ts-radius-foundation-lg, 1.875rem);
+        padding: var(--ts-space-5, 1.25rem) var(--ts-space-5, 1.25rem) 4.25rem;
+        box-shadow: var(--ts-elevation-1, 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06));
+        transition: box-shadow var(--ts-duration-fast, 0.15s) var(--ts-easing-standard, ease),
+            border-color var(--ts-duration-fast, 0.15s) var(--ts-easing-standard, ease);
+
+        &:focus-within {
+            box-shadow: var(--ts-elevation-2, 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1));
+        }
+    }
+
+    &__form {
+        width: 100%;
+
+        .gform_wrapper {
+            margin: 0;
+        }
+
+        .gform_heading,
+        .gform_required_legend,
+        .gfield_required,
+        .gfield_description {
+            display: none;
+        }
+
+        //placeholders instead of visible labels; keep label for assistive tech
+        .gfield_label {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .gform_fields {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--ts-space-4, 1rem);
+
+            @include mixins.mq-up(sm) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .gfield {
+            margin: 0;
+            position: relative;
+        }
+
+        .ts-chat-message {
+            @include mixins.mq-up(sm) {
+                grid-column: 1 / -1;
+            }
+
+            .ginput_container {
+                position: relative;
+                padding-left: 1.75rem;
+
+                //AI sparkle before placeholder / text
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0.35rem;
+                    left: 0;
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: var(--ts-color-text, black);
+                    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6L12 2zm7 11l.9 3.1L23 17l-3.1.9L19 21l-.9-3.1L15 17l3.1-.9L19 13zM5 14l.6 2L8 17l-2.4.6L5 20l-.6-2.4L2 17l2.4-.6L5 14z'/%3E%3C/svg%3E");
+                    mask-size: contain;
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6L12 2zm7 11l.9 3.1L23 17l-3.1.9L19 21l-.9-3.1L15 17l3.1-.9L19 13zM5 14l.6 2L8 17l-2.4.6L5 20l-.6-2.4L2 17l2.4-.6L5 14z'/%3E%3C/svg%3E");
+                    -webkit-mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    -webkit-mask-position: center;
+                    pointer-events: none;
+                }
+            }
+
+            .ginput_container textarea {
+                min-height: 6.5rem;
+                resize: vertical;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                padding: 0.15rem 0 0;
+                height: auto;
+                box-shadow: none;
+                color: var(--ts-color-text, black);
+                font-size: 1rem;
+                line-height: 1.5;
+
+                &::placeholder {
+                    color: var(--ts-color-text, black);
+                    opacity: 0.45;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .ts-chat-name,
+        .ts-chat-email {
+            .ginput_container input {
+                width: 100%;
+                height: 2.75rem;
+                border: 1px solid var(--ts-color-border, lightgrey);
+                border-radius: var(--ts-radius-foundation-sm, 1rem);
+                background-color: var(--ts-color-white, white);
+                padding: 0 var(--ts-space-4, 1rem);
+                box-shadow: none;
+                color: var(--ts-color-text, black);
+                font-size: 0.9375rem;
+
+                &::placeholder {
+                    color: var(--ts-color-text, black);
+                    opacity: 0.45;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    outline: var(--ts-stroke-thin, 2px) solid var(--ts-color-action-secondary, deeppink);
+                    outline-offset: 0.125rem;
+                    border-color: var(--ts-color-border, lightgrey);
+
+                    .ts-has-dark-background & {
+                        outline-color: var(--ts-color-focus-ring, white);
+                    }
+                }
+            }
+        }
+
+        .ts-chat-email {
+            @include mixins.mq-up(sm) {
+                padding-right: 3.5rem;
+            }
+        }
+
+        .gform_footer,
+        .gform_page_footer {
+            position: absolute;
+            right: var(--ts-space-5, 1.25rem);
+            bottom: var(--ts-space-4, 1rem);
+            margin: 0;
+            width: auto;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 2;
+        }
+
+        .gform_button.ts-button,
+        .gform-button.ts-button,
+        .gform_button,
+        .gform-button {
+            $hit: var(--ts-size-hit-area, 2.75rem);
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: $hit;
+            min-width: $hit;
+            max-width: $hit;
+            height: $hit;
+            min-height: $hit;
+            padding: 0;
+            margin: 0;
+            border-radius: var(--ts-radius-foundation-sm, 1rem);
+            background-color: var(--ts-color-black, black);
+            background-image: none;
+            color: var(--ts-color-white, white);
+            border: 0;
+            box-shadow: none;
+            gap: 0;
+
+            &:hover:not(:disabled),
+            &:focus-visible:not(:disabled) {
+                background-color: var(--ts-color-plum-950, black);
+                background-image: none;
+                color: var(--ts-color-white, white);
+            }
+
+            &:focus-visible {
+                outline: var(--ts-stroke-thin, 2px) solid var(--ts-color-action-secondary, deeppink);
+                outline-offset: 0.125rem;
+
+                .ts-has-dark-background & {
+                    outline-color: var(--ts-color-focus-ring, white);
+                }
+            }
+
+            &:disabled {
+                opacity: var(--ts-opacity-disabled, 0.4);
+                cursor: not-allowed;
+            }
+
+            .ts-button__text {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        }
+
+        .section-chat-form__submit-icon {
+            width: 1.125rem;
+            height: 1.125rem;
+            display: block;
+            flex-shrink: 0;
+        }
+    }
+
+    &__mic {
+        $hit: var(--ts-size-hit-area, 2.75rem);
+
+        position: absolute;
+        right: calc(var(--ts-space-5, 1.25rem) + #{$hit} + var(--ts-space-1, 0.25rem));
+        bottom: var(--ts-space-4, 1rem);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: $hit;
+        min-width: $hit;
+        height: $hit;
+        min-height: $hit;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-radius: var(--ts-radius-foundation-sm, 1rem);
+        background-color: transparent;
+        color: var(--ts-color-text, black);
+        opacity: 0.55;
+        cursor: pointer;
+        z-index: 2;
+
+        &:hover,
+        &:focus-visible {
+            opacity: 1;
+            background-color: var(--ts-color-light, whitesmoke);
+        }
+
+        &:focus-visible {
+            outline: var(--ts-stroke-thin, 2px) solid var(--ts-color-action-secondary, deeppink);
+            outline-offset: 0.125rem;
+
+            .ts-has-dark-background & {
+                outline-color: var(--ts-color-focus-ring, white);
+            }
+        }
+
+        &[aria-pressed="true"] {
+            opacity: 1;
+            color: var(--ts-color-action-secondary, deeppink);
+            background-color: var(--ts-color-light, whitesmoke);
+        }
+
+        &[hidden] {
+            display: none;
+        }
+    }
+
+    &__mic-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        display: block;
+    }
+
+    &__topics {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--ts-space-3, 0.75rem);
+        width: 100%;
+    }
+
+    &__topic {
+        $hit: var(--ts-size-hit-area, 2.75rem);
+
+        display: inline-flex;
+        align-items: center;
+        gap: var(--ts-space-2, 0.5rem);
+        min-height: $hit;
+        padding: var(--ts-space-2, 0.5rem) var(--ts-space-4, 1rem);
+        border: 1px solid transparent;
+        border-radius: var(--ts-radius-foundation-pill, 3.125rem);
+        font-family: var(--ts-font-family-sans, sans-serif);
+        font-size: 0.9375rem;
+        line-height: 1.3;
+        cursor: pointer;
+        transition: border-color var(--ts-duration-fast, 0.15s) var(--ts-easing-standard, ease),
+            box-shadow var(--ts-duration-fast, 0.15s) var(--ts-easing-standard, ease);
+
+        &:focus-visible {
+            outline: var(--ts-stroke-thin, 2px) solid var(--ts-color-action-secondary, deeppink);
+            outline-offset: 0.125rem;
+
+            .ts-has-dark-background & {
+                outline-color: var(--ts-color-focus-ring, white);
+            }
+        }
+
+        &[aria-pressed="true"] {
+            border-color: currentColor;
+            box-shadow: var(--ts-elevation-1, 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08));
+        }
+
+        &--blue {
+            background-color: aliceblue;
+            color: darkblue;
+        }
+
+        &--green {
+            background-color: honeydew;
+            color: darkgreen;
+        }
+
+        &--orange {
+            background-color: seashell;
+            color: saddlebrown;
+        }
+
+        &--cyan {
+            background-color: azure;
+            color: teal;
+        }
+
+        &--purple {
+            background-color: lavender;
+            color: rebeccapurple;
+        }
+    }
+
+    &__topic-icon {
+        display: inline-flex;
+        width: 1.125rem;
+        height: 1.125rem;
+        flex-shrink: 0;
+
+        img,
+        .section-chat-form__image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    &__topic-label {
+        white-space: nowrap;
+    }
+
+    &__hint {
+        margin: 0;
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        color: var(--ts-color-text, black);
+        opacity: 0.7;
+
+        &[hidden] {
+            display: none;
+        }
+    }
+}
+
+@keyframes section-chat-form-logo-rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-chat-form__logo-rotating-shape {
+        animation: none;
+    }
+
+    .section-chat-form__topic,
+    .section-chat-form__mic,
+    .section-chat-form__chatbox {
+        transition: none;
+    }
+}

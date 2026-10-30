@@ -156,6 +156,16 @@ Omit the file and keep `$hasScript` false when native HTML/CSS is enough (accord
 * Include `section_title` + `title_heading_tag` / `title_heading_size` when the section has a title.
 * Keep keys unique. Saves are matched by group `key` in the JSON file.
 
+### Sync after delivery
+
+When the section is delivered (or ACF JSON was added/changed), sync field groups into WordPress:
+
+```bash
+php public/shell/update-acf-groups.php
+```
+
+Run from the project root. Required so the admin shows the new/updated fields; do not leave JSON unsynced.
+
 ## Register in `functions.php`
 
 ```php
@@ -182,3 +192,4 @@ Classes autoload from `sections/`. No extra imports.
 - ACF location `acf/section-[section-slug]`; no shared margin/vignet/background fields in section JSON
 - `initBlocks()` updated
 - No `BlockMarginComponent`, no legacy block wrappers, no `blocks/` path
+- Ran `php public/shell/update-acf-groups.php` after delivery

@@ -243,6 +243,7 @@ class Theme extends Singleton {
         SectionTechstack::getInstance();
         SectionProcessCards::getInstance();
         Section3dfolio::getInstance();
+        SectionChatForm::getInstance();
     }
 }
 

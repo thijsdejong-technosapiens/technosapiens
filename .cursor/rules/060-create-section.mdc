@@ -66,6 +66,14 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 
 10. **Register** in `Theme::initBlocks()` in `functions.php`: `[SectionName]::getInstance();`
 
+11. **ACF sync (required after delivery).** When the section (or any ACF JSON change for it) is complete, run the shell sync so WordPress picks up the field groups from JSON:
+
+    ```bash
+    php public/shell/update-acf-groups.php
+    ```
+
+    Run this from the project root. Do not skip it — new/updated `acf-json` files are not live in the admin until synced.
+
 ## Critical Corrections
 
 ### Path
@@ -102,5 +110,6 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 - SCSS has the two `@use` lines
 - ACF location `acf/section-[section-slug]`; no shared margin/vignet/background fields
 - `initBlocks()` instantiates the class
+- Ran `php public/shell/update-acf-groups.php` after delivery so ACF fields are synced
 
 Keep it complete and simple. Do not invent helpers. After generation, ask the user to check the design.

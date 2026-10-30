@@ -4,16 +4,16 @@ overview: "Nieuwe `section-chat-form` die een Gravity Form hybrid als chatbot-UI
 todos:
   - id: scaffold
     content: Scaffold section-chat-form (PHP class met GF select load_field, partial, SCSS, JS, ACF JSON) + register in initBlocks
-    status: pending
+    status: completed
   - id: ui-css
     content: "Chatbot layout: logo, input chrome, progressive name/email, topic pills (preset kleur-modifiers), disabled send, focus-visible, reduced motion"
-    status: pending
+    status: completed
   - id: js-behavior
     content: "JS: reveal (hidden attr + live region), topics aria-pressed + ?topic= allowlist, Web Speech mic met status, submit gate + aria-describedby, topic field sync"
-    status: pending
+    status: completed
   - id: admin-bar
     content: Filter ts_admin_bar_light_used_gravity_form_ids for this section's gravity_form_id
-    status: pending
+    status: completed
 isProject: false
 ---
 

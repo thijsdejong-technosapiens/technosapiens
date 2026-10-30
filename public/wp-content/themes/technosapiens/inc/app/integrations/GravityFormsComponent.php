@@ -23,13 +23,8 @@ class GravityFormsComponent extends Singleton {
             //filter gravity form field CSS classes
             add_filter('gform_field_css_class', [$this, 'filterFieldClasses'], 10, 3);
 
-            //remove placeholder attribute from all fields
-            add_filter('gform_field_content', function (string $fieldContent) {
-                $regex = '/placeholder=\'(.*?)\'/m';
-                preg_match_all($regex, $fieldContent, $matches, PREG_SET_ORDER);
-                if ($matches && count($matches) > 0) foreach ($matches as $match) if (count($match) > 1) $fieldContent = str_replace($match[0], '', $fieldContent);
-                return $fieldContent;
-            }, 10, 1);
+            //remove placeholder attribute from fields (keep placeholders on chat-form fields)
+            add_filter('gform_field_content', [$this, 'filterFieldContentPlaceholders'], 10, 2);
 
             //change submit button from input to button
             add_filter('gform_submit_button', [$this, 'filterSubmitButton'], 10, 2);
@@ -61,6 +56,11 @@ class GravityFormsComponent extends Singleton {
         //add field type to css classes
         $classes .= ' type-' . $field->type;
 
+        //chat-form fields use placeholders + hidden labels instead of material inputs
+        if (self::isChatFormField($field)) {
+            return $classes;
+        }
+
         //add material input CSS classes based on type and default value
         $materialTypes = [
             'text',
@@ -80,6 +80,37 @@ class GravityFormsComponent extends Singleton {
         }
 
         return $classes;
+    }
+
+    /**
+     * Strip placeholders except on section-chat-form mapped fields.
+     * @param string $fieldContent
+     * @param mixed $field
+     * @return string
+     */
+    public static function filterFieldContentPlaceholders(string $fieldContent, $field = null): string {
+        if ($field && self::isChatFormField($field)) {
+            return $fieldContent;
+        }
+
+        $regex = '/placeholder=\'(.*?)\'/m';
+        preg_match_all($regex, $fieldContent, $matches, PREG_SET_ORDER);
+        if ($matches && count($matches) > 0) foreach ($matches as $match) if (count($match) > 1) $fieldContent = str_replace($match[0], '', $fieldContent);
+
+        return $fieldContent;
+    }
+
+    /**
+     * Whether a GF field is mapped for the chat-form section.
+     * @param mixed $field
+     * @return bool
+     */
+    private static function isChatFormField($field): bool {
+        if (!is_object($field) || empty($field->cssClass)) {
+            return false;
+        }
+
+        return (bool) preg_match('/(^|\s)ts-chat-/', (string) $field->cssClass);
     }
 
     /**
