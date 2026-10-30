@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-29 06:21:39+0000\n"
+"PO-Revision-Date: 2026-10-27 06:37:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,187 @@ msgstr ""
 "X-Generator: GlotPress/4.1.0\n"
 "Language: nl\n"
 "Project-Id-Version: Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release)\n"
+
+#. translators: %s expands to the name of the SEO field, e.g. "SEO title".
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:272
+msgid "The %s for the post."
+msgstr "De %s van het bericht."
+
+#. translators: %s expands to "Yoast AI Generate".
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:186
+msgid "A hint about %s to relay to the user. Only present when a title or description field was updated on a site without Yoast SEO Premium. Meant to be assisting users that seek SEO-optimised titles and descriptions."
+msgstr "Een tip over %s om aan de gebruiker door te geven. Verschijnt alleen als een titel- of beschrijvingsveld is aangepast op een site zonder Yoast SEO Premium. Bedoeld om gebruikers te helpen die op zoek zijn naar SEO-geoptimaliseerde titels en beschrijvingen."
+
+#. translators: %1$s expands to "Yoast AI Generate", %2$s expands to a URL.
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:141
+msgid "%1$s can write SEO-optimised titles and descriptions, more details here: %2$s"
+msgstr "%1$s kan SEO-geoptimaliseerde titels en beschrijvingen schrijven, meer info hier: %2$s"
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:229
+msgid "Whether search engines should be told not to follow the links on this post."
+msgstr "Of zoekmachines moeten worden verteld de links in dit bericht niet te volgen."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:233
+msgid "Whether search engines should be told not to index the images on this post."
+msgstr "Of zoekmachines verteld moet worden om de afbeeldingen in dit bericht niet te indexeren."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:237
+msgid "Whether search engines should be told not to show a cached copy of this post."
+msgstr "Of zoekmachines verteld moet worden om geen gecachte kopie van dit bericht weer te geven."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:241
+msgid "Whether search engines should be told not to show a snippet of this post in the search results."
+msgstr "Of zoekmachines verteld moet worden om geen snippet van dit bericht in de zoekresultaten weer te geven."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:221
+msgid "Whether the post is marked as cornerstone content."
+msgstr "Of het bericht als hoeksteencontent gemarkeerd is."
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:154
+msgid "The Schema.org page type stored for the post. Null means no override is set and the default for the post type applies."
+msgstr "Het Schema.org paginatype dat voor het bericht is opgeslagen. Null betekent dat er geen overschrijving is ingesteld en dat de standaard voor het berichttype van toepassing is."
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:158
+msgid "The Schema.org article type stored for the post. Null means no override is set and the default for the post type applies."
+msgstr "Het Schema.org artikeltype dat voor het bericht is opgeslagen. Null betekent dat er geen overschrijving is ingesteld en dat de standaard voor het berichttype van toepassing is."
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:129
+msgid "The custom canonical URL as stored for the post. Null when no custom value is set; the rendered companion field carries what is actually output."
+msgstr "De aangepaste canonieke URL zoals opgeslagen voor het bericht. Null wanneer geen aangepaste waarde is ingesteld; het gerenderde begeleidende veld bevat wat daadwerkelijk wordt uitgevoerd."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:217
+msgid "The custom canonical URL for the post. Use null or an empty string to remove it and fall back to the default canonical."
+msgstr "De aangepaste canonieke URL voor het bericht. Null of een lege string gebruiken om die te verwijderen en terug te vallen op de standaard canonieke URL."
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:133
+msgid "The canonical URL as output on the front end: the custom value when set, otherwise the permalink of the post. Null when nothing is output."
+msgstr "De canonieke URL zoals uitgevoerd op de front-end: de aangepaste waarde wanneer ingesteld, anders de permalink van het bericht. Null wanneer niets wordt uitgevoerd."
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/ability-categories-integration.php:45
+msgid "Abilities for %s data and operations."
+msgstr "Abilities voor %s gegevens en bewerkingen."
+
+#. translators: %s expands to the name of the SEO field, e.g. "SEO title".
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:108
+msgid "The custom %s as stored for the post, which may contain unexpanded replacement variables. Null when no custom value is set; the rendered companion field carries what is actually output."
+msgstr "De aangepaste %s zoals opgeslagen voor het bericht, die mogelijk niet-uitgevouwen vervangingsvariabelen bevat. Null wanneer geen aangepaste waarde is ingesteld; het gerenderde begeleidende veld bevat wat daadwerkelijk wordt uitgevoerd."
+
+#: src/bulk-editor/user-interface/posts-overview-bulk-actions-integration.php:110
+msgid "Bulk edit"
+msgstr "Bulk bewerking"
+
+#. translators: 1: description of the failing object (e.g. "post #123"); 2:
+#. underlying error message.
+#: src/exceptions/indexable/indexing-failed-exception.php:53
+msgid "Yoast SEO could not build the indexable for %1$s: %2$s"
+msgstr "Yoast SEO kon de indexable voor %1$s niet opbouwen: %2$s"
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:138
+msgid "Whether search engines are told not to index this post. true means noindex (the post is excluded from search results); false means the post is forced to be indexed; null means no setting is stored and the post-type default applies."
+msgstr "Of zoekmachines te horen krijgen dit bericht niet te indexeren. true betekent noindex (het bericht wordt uitgesloten van zoekresultaten); false betekent dat het bericht geforceerd geïndexeerd wordt; null betekent dat er geen instelling is opgeslagen en dat de standaard voor het bericht type van toepassing is."
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:144
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:145
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:243
+msgid "Open Graph title"
+msgstr "Open Graph titel"
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:146
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:147
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:244
+msgid "Open Graph description"
+msgstr "Open Graph beschrijving"
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:225
+msgid "Whether search engines should be told not to index this post. true sets noindex (the post is excluded from search results); false forces the post to be indexed; null clears the setting and falls back to the post-type default."
+msgstr "Of zoekmachines te horen moeten krijgen dit bericht niet te indexeren. true stelt noindex in (het bericht wordt uitgesloten van zoekresultaten); false dwingt af dat het bericht geïndexeerd wordt; null wist de instelling en valt terug op de standaard van het berichttype."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:249
+msgid "The Schema.org page type for the post. Must be one of the supported page types. Use null or an empty string to clear it and fall back to the default."
+msgstr "Het Schema.org pagina type voor het bericht. Moet een van de pagina types met ondersteuning zijn. Null of een lege string gebruiken om het te wissen en terug te vallen op de standaardwaarde."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:253
+msgid "The Schema.org article type for the post. Must be one of the supported article types. Use null or an empty string to clear it and fall back to the default."
+msgstr "Het Schema.org artikeltype voor het bericht. Moet een van de ondersteunde artikeltypes zijn. Null of een lege string gebruiken om het te wissen en terug te vallen op de standaardwaarde."
+
+#. translators: %s expands to the name of the analysis, e.g. "SEO analysis".
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:84
+msgid "The result of the %s that ran on the post when it was last saved."
+msgstr "Het resultaat van de %s die op het bericht werd uitgevoerd toen het voor het laatst werd opgeslagen."
+
+#. translators: %s expands to the name of the SEO field, e.g. "SEO title".
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:96
+msgid "The %s as output on the front end: the global default template applied when no custom value is set, with replacement variables expanded. Null when nothing is output."
+msgstr "De %s zoals uitgevoerd op de front-end: de globale standaard template toegepast wanneer geen aangepaste waarde is ingesteld, met vervangingsvariabelen uitgebreid. Null wanneer niets wordt uitgevoerd."
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:162
+msgid "inclusive language analysis"
+msgstr "inclusieve taal analyse"
+
+#: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:161
+msgid "readability analysis"
+msgstr "leesbaarheidsanalyse"
+
+#: src/abilities/user-interface/abilities/get-post-seo-data-ability.php:107
+msgid "The page of title-search results to return, 1-based and defaulting to 1. Matches are ordered most recently modified first, so request a later page to reach older matches. An empty result means there are no further pages. Only applies to a title search."
+msgstr "De pagina met titel-zoekresultaten die moet worden geretourneerd, vanaf 1 geteld en standaard ingesteld op 1. Overeenkomsten worden eerst op meest recent gewijzigd gerangschikt, dus een latere pagina aanvragen om oudere overeenkomsten te bereiken. Een leeg resultaat betekent dat er geen verdere pagina's zijn. Is alleen van toepassing op een titel-zoekopdracht."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:206
+msgid "The ID of the post to update."
+msgstr "Het ID van het bericht om te updaten."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:211
+msgid "The permalink (URL) of the post to update."
+msgstr "De permalink (URL) van het bericht om te updaten."
+
+#: src/abilities/user-interface/abilities/get-post-seo-data-ability.php:103
+msgid "Keywords to search for in post titles. Provide a comma-separated list to search for several titles at once; each value is matched as a whole phrase against the post title, and a post matching any value is returned. At most 10 phrases are used per request; any beyond the first 10 are ignored. Results are paginated to 10 entities per page; see the page parameter."
+msgstr "Keywords om in berichttitels naar te zoeken. Een door komma's gescheiden lijst opgeven om tegelijk naar meerdere titels te zoeken; elke waarde wordt als volledige zin vergeleken met de berichttitel, en een bericht dat met een waarde overeenkomt wordt geretourneerd. Per aanvraag worden maximaal 10 zinnen gebruikt; alles na de eerste 10 wordt genegeerd. Resultaten worden gepagineerd tot 10 entiteiten per pagina; zie de parameter pagina."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:102
+msgid "Update the SEO data for a single post. Identify the post by post_id or by permalink (URL). Only the fields you provide are changed; a provided empty value clears that field. Only posts the current user is allowed to edit can be updated."
+msgstr "De SEO gegevens voor een enkelvoudig bericht updaten. Het bericht identificeren met bericht_id of met permalink (URL). Alleen de velden die je opgeeft, worden gewijzigd; een opgegeven lege waarde maakt dat veld leeg. Alleen berichten die de huidige gebruiker mag bewerken, kunnen geüpdatet worden."
+
+#: src/abilities/user-interface/abilities/get-post-seo-data-ability.php:94
+msgid "The ID of the post to retrieve."
+msgstr "Het ID van het bericht om op te halen."
+
+#: src/abilities/user-interface/abilities/get-post-seo-data-ability.php:99
+msgid "The permalink (URL) of the post to retrieve."
+msgstr "De permalink (URL) van het bericht om op te halen."
+
+#: src/abilities/user-interface/abilities/get-post-seo-data-ability.php:59
+msgid "Get the SEO data for a post. Identify the post by post_id, by permalink (URL), or by title keywords; the title may be a comma-separated list and returns the SEO data for every post matching any of the values, paginated most recently modified first (use the page parameter to reach older matches). At least one identifier is required. Only posts the current user is allowed to edit are returned."
+msgstr "De SEO gegevens voor een bericht verkrijgen. Het bericht identificeren met bericht_id, met permalink (URL), of met titel keywords; de titel kan een door komma's gescheiden lijst zijn en geeft de SEO gegevens terug voor elk bericht dat overeenkomt met een van de waarden, gepagineerd met meest recent gewijzigde eerst (de parameter pagina gebruiken om oudere overeenkomsten te bereiken). Minstens één identifier is vereist. Alleen berichten die de huidige gebruiker mag bewerken, worden teruggegeven."
+
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:101
+msgid "Update Post SEO Data"
+msgstr "Bericht SEO gegevens updaten"
+
+#: src/abilities/application/post-seo-data-updater.php:119
+msgid "The post SEO data was saved but the indexable could not be rebuilt."
+msgstr "De bericht SEO gegevens zijn opgeslagen, maar de indexeerbare kon niet opnieuw opgebouwd worden."
+
+#: src/abilities/infrastructure/post-access-checker.php:44
+msgid "Sorry, you are not allowed to edit this post."
+msgstr "Helaas, je hebt geen toestemming om dit bericht te bewerken."
+
+#: src/abilities/infrastructure/post-identifier-resolver.php:59
+msgid "Provide a post_id or a permalink to identify the post."
+msgstr "Een bericht identificeren door een bericht_id of een permalink op te geven."
+
+#: src/abilities/infrastructure/post-identifier-resolver.php:95
+msgid "Provide a post_id, a permalink, or title keywords to identify the post."
+msgstr "Een bericht_id, een permalink of titel keywords invoeren om het bericht te identificeren."
+
+#: src/abilities/infrastructure/post-identifier-resolver.php:185
+msgid "No post could be found for the given identifier."
+msgstr "Geen bericht kunnen vinden voor de opgegeven identifier."
+
+#: src/abilities/user-interface/abilities/get-post-seo-data-ability.php:58
+msgid "Get Post SEO Data"
+msgstr "Verkrijg bericht SEO gegevens"
 
 #: src/myyoast-client/user-interface/myyoast-client-integration.php:76
 msgid "Every 90 days"
@@ -87,18 +268,18 @@ msgstr "Verbeter SEO"
 msgid "Improve readability"
 msgstr "Verbeter leesbaarheid"
 
+#. translators: %s expands to the post type name this task is about
+#: src/task-list/application/tasks/set-search-appearance-templates.php:134
+msgid "Generic titles and descriptions make your results unclear in search. Templates ensure every %s has a clear, click-worthy snippet automatically. Go to Search appearance, choose your post type, and set default title and meta description patterns."
+msgstr "Generieke titels en beschrijvingen maken je resultaten onduidelijk in zoekresultaten. Templates zorgen ervoor dat elke %s automatisch een duidelijke, klikwaardige snippet heeft. Ga naar zoekweergave, kies je berichttype en stel standaard titel en meta description patronen in."
+
 #. translators: %1$s expands to an opening p tag, %2$s and %4$s expand to a
 #. closing p tag, %3$s expands to an opening p tag and opening strong tag, %5$s
 #. expands to a closing strong tag, %6$s expands to an opening strong tag, %7$s
 #. expands to a closing strong tag and closing p tag
 #: src/task-list/application/tasks/improve-content-seo.php:113
 msgid "%1$sBy aligning your content with search intent and focus keyphrases, you make it easier for people and AI systems to find your website, improving your organic visibility. Use the recommendations in the SEO analysis to strengthen your technical performance and ranking potential.%2$s%3$sPro tip%5$s: Use %6$sAI Generate%7$s to quickly generate high quality meta descriptions and keyphrase-rich headers that rank well.%4$s"
-msgstr "%1$sDoor je inhoud af te stemmen op zoekintentie en focus keyphrases, maak je het makkelijker voor mensen en AI systemen om je site te vinden, wat je organische zichtbaarheid verbetert. Gebruik de aanbevelingen in de SEO analyse om je technische prestaties en ranking potentieel te versterken.%2$s%3$sPro tip%5$s: gebruik %6$sAI Generate%7$s om snel meta beschrijvingen van hoge kwaliteit en keyphrase-rijke koptekstteksten te genereren die goed scoren.%4$s"
-
-#. translators: %s expands to the post type name this task is about
-#: src/task-list/application/tasks/set-search-appearance-templates.php:134
-msgid "Generic titles and descriptions make your results unclear in search. Templates ensure every %s has a clear, click-worthy snippet automatically. Go to Search appearance, choose your post type, and set default title and meta description patterns."
-msgstr "Generieke titels en beschrijvingen maken je resultaten onduidelijk in zoekresultaten. Templates zorgen ervoor dat elke %s automatisch een duidelijke, klikwaardige snippet heeft. Ga naar zoekweergave, kies je berichttype en stel standaard titel en meta description patronen in."
+msgstr "%1$sDoor je content af te stemmen op zoekintentie en focus keyphrases maak je het voor mensen en AI-systemen makkelijker om je site te vinden, waardoor je organische zichtbaarheid verbetert. Gebruik de aanbevelingen in de SEO analyse om je technische prestaties en potentieel om hoger te scoren te versterken.%2$s%3$sPro-tip%5$s: gebruik %6$sAI Generate%7$s om snel hoogwaardige meta descriptions en headers rijk aan keyphrases te genereren die goed scoren.%4$s"
 
 #. translators: %1$s expands to an opening p tag, %2$s and %4$s expand to a
 #. closing p tag, %3$s expands to an opening p tag and opening strong tag, %5$s
@@ -288,16 +469,6 @@ msgstr "Pas AI-suggesties toe om inhoud in 1 klik te verbeteren"
 msgid "Create optimized SEO titles & meta descriptions in seconds"
 msgstr "Maak geoptimaliseerde SEO titels & meta descriptions in seconden"
 
-#: src/presenters/admin/sidebar-presenter.php:86 js/dist/ai-consent.js:2
-#: js/dist/ai-content-planner.js:237 js/dist/ai-generator.js:2
-#: js/dist/block-editor.js:237 js/dist/bulk-editor-page.js:2
-#: js/dist/classic-editor.js:2 js/dist/editor-modules.js:195
-#: js/dist/externals-components.js:105 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:58 js/dist/new-settings.js:5
-#: js/dist/redirects.js:2 js/dist/support.js:5
-msgid "Receive clear SEO and readability guidance to optimize your products"
-msgstr "Ontvang duidelijke SEO en leesbaarheidsrichtlijnen om je producten te optimaliseren"
-
 #: src/presenters/admin/sidebar-presenter.php:85 js/dist/ai-consent.js:2
 #: js/dist/ai-content-planner.js:237 js/dist/ai-generator.js:2
 #: js/dist/block-editor.js:237 js/dist/bulk-editor-page.js:2
@@ -385,13 +556,9 @@ msgid "Your recent posts are using default %1$s, which can make them easy to ove
 msgstr "Je recente berichten gebruiken de standaard %1$s, waardoor ze makkelijk over het hoofd gezien kunnen worden in zoekresultaten. Update ze voor betere zichtbaarheid of %2$sprobeer %3$sYoast AI Generate%4$s gratis om het sneller te doen.%5$s"
 
 #: src/alerts/application/default-seo-data/default-seo-data-alert.php:182
-#: js/dist/bulk-editor-page.js:8 js/dist/bulk-editor-page.js:21
+#: js/dist/bulk-editor-page.js:8 js/dist/bulk-editor-page.js:24
 msgid "SEO titles"
 msgstr "SEO titels"
-
-#: src/alerts/application/default-seo-data/default-seo-data-alert.php:185
-msgid "meta descriptions"
-msgstr "metabeschrijvingen"
 
 #. translators: %1$s expands to "SEO title" or "meta description", %2$s expands
 #. to an opening link tag, %3$s expands to an opening strong tag, %4$s expands
@@ -408,6 +575,10 @@ msgstr "SEO titels en meta descriptions"
 #: js/dist/new-settings.js:8
 msgid "Google Docs add-on (1 seat)"
 msgstr "Google Docs add-on (1 gebruiker)"
+
+#: src/alerts/application/default-seo-data/default-seo-data-alert.php:185
+msgid "meta descriptions"
+msgstr "meta descriptions"
 
 #: src/presenters/admin/sidebar-presenter.php:104
 #: js/dist/ai-content-planner.js:75 js/dist/block-editor.js:75
@@ -443,7 +614,7 @@ msgstr "Je %1$s plugin kan niet worden geüpdatet omdat je abonnement is verlope
 msgid "%1$s30%% OFF - Black Friday %2$s"
 msgstr "%1$s30%% korting - Black Friday %2$s"
 
-#: admin/class-premium-upsell-admin-block.php:213 js/dist/general-page.js:7
+#: admin/class-premium-upsell-admin-block.php:214 js/dist/general-page.js:7
 #: js/dist/new-settings.js:7
 msgid "Get 30% off now!"
 msgstr "Pak nu 30% korting!"
@@ -600,7 +771,7 @@ msgid "Not analyzed"
 msgstr "Niet geanalyseerd"
 
 #. translators: %s: Yoast SEO.
-#: wp-seo-main.php:566
+#: wp-seo-main.php:540
 msgid "%s activation failed"
 msgstr "%s activatie mislukt"
 
@@ -632,10 +803,6 @@ msgstr "De Yoast SEO versie op je site is %1$s, echter de geüploade plugin vere
 #: src/user-meta/framework/custom-meta/noindex-author.php:108
 msgid "Do not allow search engines to show this author's archives in search results."
 msgstr "Zoekmachines niet toestaan de archieven van deze auteur te tonen in zoekresultaten."
-
-#: admin/menu/class-base-menu.php:257 admin/menu/class-base-menu.php:260
-msgid "Upgrades"
-msgstr "Upgrades"
 
 #: blocks/dynamic-blocks/breadcrumbs/block.json
 msgctxt "block title"
@@ -716,13 +883,13 @@ msgctxt "block keyword"
 msgid "How to"
 msgstr "How to"
 
-#: admin/class-admin.php:315
 #: src/user-meta/framework/additional-contactmethods/x.php:28
 msgid "X username (without @)"
 msgstr "X gebruikersnaam (zonder @)"
 
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:148
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:149
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:245
 #: js/dist/externals/socialMetadataForms.js:23
 msgid "X title"
 msgstr "X titel"
@@ -736,8 +903,8 @@ msgstr "De klasse %1$s mag niet geïnstantieerd worden voordat de globale %2$s i
 #. translators: %s expands to Yoast SEO Premium
 #. translators: %s expands to product name: "Yoast WooCommerce SEO" or "Yoast
 #. SEO Premium"
-#: admin/class-premium-upsell-admin-block.php:219
-#: admin/class-premium-upsell-admin-block.php:221 js/dist/general-page.js:7
+#: admin/class-premium-upsell-admin-block.php:220
+#: admin/class-premium-upsell-admin-block.php:222 js/dist/general-page.js:7
 #: js/dist/new-settings.js:7
 msgid "Explore %s now!"
 msgstr "Verken %s nu!"
@@ -762,8 +929,7 @@ msgstr "Compatibiliteit probleem: Yoast SEO is niet compatibel met de bèta WooC
 msgid "BLACK FRIDAY"
 msgstr "BLACK FRIDAY"
 
-#: admin/class-premium-upsell-admin-block.php:90
-#: admin/menu/class-base-menu.php:260 js/dist/block-editor.js:696
+#: admin/class-premium-upsell-admin-block.php:90 js/dist/block-editor.js:696
 #: js/dist/classic-editor.js:596 js/dist/general-page.js:8
 #: js/dist/new-settings.js:8
 msgid "30% OFF"
@@ -893,7 +1059,7 @@ msgid "It looks like you've enabled media pages. We recommend that you help us t
 msgstr "Het lijkt erop dat je mediapagina's hebt ingeschakeld. Wij raden je aan ons te helpen je site opnieuw te analyseren door de SEO gegevens optimalisatie uit te voeren."
 
 #: inc/class-wpseo-rank.php:156 inc/class-wpseo-rank.php:245
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/externals-components.js:463
 #: js/dist/frontend-inspector-resources.js:1
@@ -902,7 +1068,7 @@ msgstr "Potentieel niet inclusief"
 
 #. translators: CTA to finish the first time configuration. %s: Either
 #. first-time SEO configuration or SEO configuration.
-#: admin/class-admin.php:235
+#: admin/class-admin.php:223
 msgid "Finish your %s"
 msgstr "Maak je %s af"
 
@@ -1007,7 +1173,7 @@ msgstr "We moeten enkele van je SEO gegevens opnieuw analyseren vanwege een vera
 
 #: src/presenters/admin/sidebar-presenter.php:21
 #: js/dist/ai-content-planner.js:75 js/dist/block-editor.js:75
-#: js/dist/block-editor.js:621 js/dist/classic-editor.js:311
+#: js/dist/block-editor.js:620 js/dist/classic-editor.js:310
 #: js/dist/editor-modules.js:190 js/dist/externals-components.js:159
 #: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "BLACK FRIDAY | 30% OFF"
@@ -1061,11 +1227,6 @@ msgstr "Voorkom dat zoekmachines /wp-json/ crawlen"
 msgid "Prevent search engines from crawling site search URLs"
 msgstr "Voorkom dat zoekmachines URL's van interne zoekopdrachten crawlen"
 
-#: admin/views/class-yoast-feature-toggles.php:87 js/dist/new-settings.js:28
-#: js/dist/new-settings.js:524
-msgid "Inclusive language analysis"
-msgstr "Inclusieve taal analyse"
-
 #: admin/metabox/class-metabox-section-inclusive-language.php:30
 #: js/dist/externals-components.js:465
 msgid "Inclusive language"
@@ -1087,11 +1248,16 @@ msgstr "Inclusieve taal analyse uitschakelen"
 msgid "Removes the inclusive language analysis section from the metabox and disables all inclusive language-related suggestions."
 msgstr "Verwijdert de inclusieve taalanalyse sectie uit de metabox en schakelt alle inclusieve taalgerelateerde suggesties uit."
 
+#: admin/views/class-yoast-feature-toggles.php:87 js/dist/new-settings.js:28
+#: js/dist/new-settings.js:524
+msgid "Inclusive language analysis"
+msgstr "Analyse van inclusieve taal"
+
 #: inc/class-wpseo-admin-bar-menu.php:265
 msgid "Front-end SEO inspector"
 msgstr "Front-end SEO inspecteur"
 
-#: admin/class-yoast-form.php:931
+#: admin/class-yoast-form.php:874
 msgid "Unlock with Premium!"
 msgstr "Ontgrendel met Premium!"
 
@@ -1437,7 +1603,7 @@ msgstr "Vervangen door de permalink"
 
 #: inc/class-wpseo-replace-vars.php:1498
 msgid "Post Content"
-msgstr "Berichtinhoud"
+msgstr "Bericht content"
 
 #: inc/class-wpseo-replace-vars.php:1496
 msgid "Replaced with the last name of the author"
@@ -1538,8 +1704,8 @@ msgstr "Ontdek hoe inzichten je kunnen helpen om je inhoud te verbeteren."
 msgid "Find relevant data about your content right in the Insights section in the Yoast SEO metabox. You’ll see what words you use most often and if they’re a match with your keywords! "
 msgstr "Vind relevante gegevens over je inhoud rechtstreeks in het inzichten gedeelte in de Yoast SEO metabox. Je ziet welk woord je het meest gebruikt en of dit overeen komt met je keywords! "
 
-#: admin/views/class-yoast-feature-toggles.php:112 js/dist/block-editor.js:621
-#: js/dist/block-editor.js:712 js/dist/classic-editor.js:311
+#: admin/views/class-yoast-feature-toggles.php:112 js/dist/block-editor.js:620
+#: js/dist/block-editor.js:713 js/dist/classic-editor.js:310
 #: js/dist/new-settings.js:28 js/dist/new-settings.js:524
 msgid "Insights"
 msgstr "Inzichten"
@@ -1597,7 +1763,7 @@ msgid "You are not allowed to activate plugins."
 msgstr "Je hebt geen toestemming om plugins te activeren."
 
 #. translators: %s expands to Yoast SEO Premium.
-#: admin/class-admin.php:248
+#: admin/class-admin.php:236
 msgid "Required by %s"
 msgstr "Vereist door %s"
 
@@ -1632,7 +1798,7 @@ msgstr "Het bericht kon niet gevonden worden."
 msgid "The term could not be found."
 msgstr "De term kon niet gevonden worden."
 
-#: admin/class-yoast-form.php:1066 js/dist/general-page.js:55
+#: admin/class-yoast-form.php:1009 js/dist/general-page.js:55
 msgid "This feature has been disabled since subsites never send tracking data."
 msgstr "Deze functie is uitgeschakeld omdat subsites nooit volg gegevens verzenden."
 
@@ -1697,7 +1863,7 @@ msgstr "De %s integratie biedt suggesties en inzichten voor keywords die zijn ge
 msgid "This tab allows you to selectively disable %1$s integrations with third-party products for all sites in the network. By default all integrations are enabled, which allows site admins to choose for themselves if they want to toggle an integration on or off for their site. When you disable an integration here, site admins will not be able to use that integration at all."
 msgstr "Op deze tab kan je selectief %1$s integraties met producten van derden uitschakelen voor alle sites in het netwerk. Standaard zijn alle integraties ingeschakeld, waardoor het voor site beheerders is toegestaan om voor zichzelf te kiezen of ze toggle de integratie aan of uit van hun site. Als je een integratie hier uitschakelt dan kunnen site beheerders deze integratie niet gebruiken."
 
-#: admin/class-admin.php:259
+#: admin/class-admin.php:247
 msgid "Activate your subscription"
 msgstr "Activeer je abonnement"
 
@@ -1884,16 +2050,16 @@ msgstr "De functie voor de koppeling teller werkt niet zoals verwacht"
 msgid "The text link counter is working as expected"
 msgstr "De tekst koppeling teller werkt zoals verwacht"
 
+#. translators: 1: Link to the Yoast SEO blog, 2: Link closing tag.
+#: src/services/health-check/links-table-reports.php:73
+msgid "The text link counter helps you improve your site structure. %1$sFind out how the text link counter can enhance your SEO%2$s."
+msgstr "De tekst-link teller helpt je je sitestructuur verbeteren. %1$sOntdek hoe de tekst-link teller je SEO%2$s kan verbeteren."
+
 #. translators: %1$s: Link to article about text links, %2$s: Anchor closing
 #. tag, %3$s: Emphasis open tag, %4$s: Emphasis close tag
 #: admin/class-yoast-columns.php:52
 msgid "The links columns show the number of articles on this site linking %3$sto%4$s this article and the number of URLs linked %3$sfrom%4$s this article. Learn more about %1$show to use these features to improve your internal linking%2$s, which greatly enhances your SEO."
 msgstr "De links kolommen tonen het aantal artikelen op deze site die koppelen %3$snaar%4$s dit artikel en het aantal URL's gekoppeld %3$svan%4$s dit artikel. Meer informatie over %1$shoe je deze functies kunt gebruiken om je interne koppeling%2$s te verbeteren, wat je SEO sterk verbetert."
-
-#. translators: 1: Link to the Yoast SEO blog, 2: Link closing tag.
-#: src/services/health-check/links-table-reports.php:73
-msgid "The text link counter helps you improve your site structure. %1$sFind out how the text link counter can enhance your SEO%2$s."
-msgstr "De tekst-link teller helpt je je sitestructuur verbeteren. %1$sOntdek hoe de tekst-link teller je SEO%2$s kan verbeteren."
 
 #. translators: 1: Link to the Yoast help center, 2: Link closing tag.
 #: src/services/health-check/links-table-reports.php:100
@@ -2057,10 +2223,6 @@ msgstr "%1$sDit werd gemeld door de %2$s plugin%3$s"
 msgid "The browser you are currently using is unfortunately rather dated. Since we strive to give you the best experience possible, we no longer support this browser. Instead, please use %1$sFirefox%4$s, %2$sChrome%4$s or %3$sMicrosoft Edge%4$s."
 msgstr "De browser die je momenteel gebruikt, is helaas nogal gedateerd. Omdat we ernaar streven je de best mogelijke ervaring te bieden, ondersteunen we deze browser niet meer. Gebruik in plaats daarvan %1$sFirefox%4$s, %2$sChrome%4$s or %3$sMicrosoft Edge%4$s."
 
-#: admin/metabox/class-metabox.php:191
-msgid "If you want to apply advanced <code>meta</code> robots settings for this page, please define them in the following field."
-msgstr "Als je geavanceerde <code>meta</code> robots instellingen voor deze pagina wil toepassen, definieer ze dan in het volgende veld."
-
 #. translators: %1$s expands to Yoast SEO
 #: admin/class-export.php:72
 msgid "Your %1$s settings:"
@@ -2104,7 +2266,7 @@ msgstr "Wil je SEO leren van team Yoast? Bekijk onze %1$s!"
 msgid "Import settings from another %1$s installation by pasting them here and clicking \"%2$s\"."
 msgstr "Importeer instellingen van een andere %1$s installatie door ze hier te plakken en te klikken op %2$s\"."
 
-#: admin/metabox/class-metabox.php:439 js/dist/block-editor.js:737
+#: admin/metabox/class-metabox.php:383 js/dist/block-editor.js:738
 #: js/dist/new-settings.js:21 js/dist/new-settings.js:31
 #: js/dist/new-settings.js:35 js/dist/new-settings.js:40
 #: js/dist/new-settings.js:92 js/dist/new-settings.js:410
@@ -2152,7 +2314,7 @@ msgid "Posts with the SEO score: %s"
 msgstr "Berichten met de SEO score: %s"
 
 #. translators: %s: expends to Yoast SEO
-#: admin/class-admin.php:354
+#: admin/class-admin.php:313
 msgid "%s video tutorial"
 msgstr "%s video tutorial"
 
@@ -2195,32 +2357,26 @@ msgstr "Organisatie"
 msgid "You have previously set your site to represent a person. We’ve improved our functionality around Schema and the Knowledge Graph, so you should go in and %1$scomplete those settings%2$s."
 msgstr "Je hebt eerder ingesteld dat je site een persoon vertegenwoordigt. We hebben onze mogelijkheden rond Schema en de Knowledge Graph verbeterd, dus je kan het beste inloggen en %1$s instellingen daar invullen%2$s."
 
-#: admin/class-admin.php:317
 #: src/user-meta/framework/additional-contactmethods/wikipedia.php:28
 msgid "(if one exists)"
 msgstr "(als die bestaat)"
 
-#: admin/class-admin.php:317
 #: src/user-meta/framework/additional-contactmethods/wikipedia.php:28
 msgid "Wikipedia page about you"
 msgstr "Wikipedia pagina over jou"
 
-#: admin/class-admin.php:316
 #: src/user-meta/framework/additional-contactmethods/youtube.php:28
 msgid "YouTube profile URL"
 msgstr "YouTube-profiel-URL"
 
-#: admin/class-admin.php:314
 #: src/user-meta/framework/additional-contactmethods/tumblr.php:28
 msgid "Tumblr profile URL"
 msgstr "Tumblr-profiel-URL"
 
-#: admin/class-admin.php:313
 #: src/user-meta/framework/additional-contactmethods/soundcloud.php:28
 msgid "SoundCloud profile URL"
 msgstr "SoundCloud-profiel-URL"
 
-#: admin/class-admin.php:311
 #: src/user-meta/framework/additional-contactmethods/myspace.php:28
 msgid "MySpace profile URL"
 msgstr "MySpace-profiel-URL"
@@ -2229,17 +2385,14 @@ msgstr "MySpace-profiel-URL"
 msgid "Uncategorized"
 msgstr "Niet gecategoriseerd"
 
-#: admin/class-admin.php:310
 #: src/user-meta/framework/additional-contactmethods/linkedin.php:28
 msgid "LinkedIn profile URL"
 msgstr "LinkedIn profiel URL"
 
-#: admin/class-admin.php:312
 #: src/user-meta/framework/additional-contactmethods/pinterest.php:28
 msgid "Pinterest profile URL"
 msgstr "Pinterest profiel URL"
 
-#: admin/class-admin.php:309
 #: src/user-meta/framework/additional-contactmethods/instagram.php:28
 msgid "Instagram profile URL"
 msgstr "Instagram profiel URL"
@@ -2332,8 +2485,8 @@ msgstr "Leer waarom permalinks zo belangrijk zijn voor SEO."
 #. translators: %s expands to Yoast SEO Premium
 #. translators: %s expands to product name: "Yoast WooCommerce SEO" or "Yoast
 #. SEO Premium"
-#: admin/class-premium-upsell-admin-block.php:181
-#: admin/class-premium-upsell-admin-block.php:192 js/dist/general-page.js:6
+#: admin/class-premium-upsell-admin-block.php:182
+#: admin/class-premium-upsell-admin-block.php:193 js/dist/general-page.js:6
 #: js/dist/new-settings.js:6
 msgid "Upgrade to %s"
 msgstr "Upgrade naar %s"
@@ -2367,7 +2520,7 @@ msgstr "Deze tab laat je selectief bepaalde %s functionaliteit uitzetten voor al
 msgid "%s is a required feature toggle argument."
 msgstr "%s is een vereiste functie-schakel mogelijkheid."
 
-#: admin/class-yoast-form.php:1062 js/dist/general-page.js:55
+#: admin/class-yoast-form.php:1005 js/dist/general-page.js:55
 msgid "This feature has been disabled by the network admin."
 msgstr "Deze optie is uitgeschakeld door de netwerk admin."
 
@@ -2377,10 +2530,11 @@ msgid "Focus keyphrase not set."
 msgstr "Focus keyphrase niet ingesteld."
 
 #. translators: %s expands to Yoast SEO Premium
+#. translators: %s expands to Yoast WooCommerce SEO.
 #. translators: WooCommerce SEO
 #: admin/class-premium-popup.php:81
-#: admin/watchers/class-slug-change-watcher.php:228
-#: js/dist/externals-components.js:438
+#: admin/watchers/class-slug-change-watcher.php:228 js/dist/block-editor.js:697
+#: js/dist/classic-editor.js:597 js/dist/externals-components.js:438
 msgid "Get %s"
 msgstr "Koop %s"
 
@@ -2635,10 +2789,6 @@ msgstr "(aangepaste taxonomie)"
 msgid "Search engines and other websites can still send traffic to your deleted content."
 msgstr "Zoekmachines en andere sites kunnen nog steeds verkeer sturen naar je verwijderde inhoud."
 
-#: inc/class-wpseo-replace-vars.php:1474 js/dist/externals-redux.js:1
-msgid "Site title"
-msgstr "Sitetitel"
-
 #: inc/class-wpseo-replace-vars.php:1523
 msgid "Caption"
 msgstr "Bijschrift"
@@ -2646,6 +2796,10 @@ msgstr "Bijschrift"
 #: inc/class-wpseo-replace-vars.php:1516
 msgid "Modified"
 msgstr "Aangepast"
+
+#: inc/class-wpseo-replace-vars.php:1474 js/dist/externals-redux.js:1
+msgid "Site title"
+msgstr "Site-titel"
 
 #. translators: %s is replaced with the plugin's name.
 #: admin/import/plugins/class-abstract-plugin-importer.php:132
@@ -2752,13 +2906,13 @@ msgstr "Controleer je berichten en pagina's en bekijk of de metagegevens succesv
 msgid "Step 3: Check your data"
 msgstr "Stap 3: Controleer je gegevens"
 
-#: admin/class-yoast-form.php:959 admin/class-yoast-form.php:999
+#: admin/class-yoast-form.php:902 admin/class-yoast-form.php:942
 #: admin/views/class-yoast-feature-toggles.php:156
 #: js/dist/externals/componentsNew.js:532
 msgid "Off"
 msgstr "Uit"
 
-#: admin/class-yoast-form.php:958 admin/class-yoast-form.php:998
+#: admin/class-yoast-form.php:901 admin/class-yoast-form.php:941
 #: js/dist/externals/componentsNew.js:532
 msgid "On"
 msgstr "Aan"
@@ -2788,31 +2942,16 @@ msgstr "Schakel de XML-sitemaps in die worden gegenereerd door %s."
 msgid "See who contributed to %1$s."
 msgstr "Bekijk wie heeft bijgedragen aan %1$s."
 
-#. translators: %1$s expands to the post type name.
-#: admin/metabox/class-metabox.php:186
-msgid "Should search engines follow links on this %1$s?"
-msgstr "Moeten zoekmachines links volgen op deze %1$s?"
-
 #. translators: %1$s expands to Yoast SEO.
 #: admin/class-plugin-conflict.php:82
 msgid "Toggle %1$s's XML Sitemap"
 msgstr "Schakel %1$s's XML-sitemap in of uit"
 
-#. translators: %1$s expands to Yes or No,  %2$s expands to the post type name.
-#: admin/metabox/class-metabox.php:181
-msgid "Default for %2$s, currently: %1$s"
-msgstr "Standaard voor %2$s, momenteel: %1$s"
-
 #. translators: %s expands to an indexable object's name, like a post type or
 #. taxonomy
-#: admin/class-yoast-form.php:969
+#: admin/class-yoast-form.php:912
 msgid "Show %s in search results?"
 msgstr "Toon %s in zoekresultaten?"
-
-#. translators: %s expands to the post type name.
-#: admin/metabox/class-metabox.php:176
-msgid "Allow search engines to show this %s in search results?"
-msgstr "Sta zoekmachines toe om deze %s te tonen in zoekresultaten?"
 
 #. translators: %s: 'Semrush'
 #. translators: %s: Algolia.
@@ -2929,7 +3068,7 @@ msgstr "Oude configuratiewizard"
 
 #. translators: Hidden accessibility text.
 #: admin/class-admin-utils.php:79 admin/class-premium-popup.php:83
-#: admin/class-premium-upsell-admin-block.php:76 admin/class-yoast-form.php:933
+#: admin/class-premium-upsell-admin-block.php:76 admin/class-yoast-form.php:876
 #: admin/watchers/class-slug-change-watcher.php:230
 #: src/integrations/admin/workouts-integration.php:215
 #: src/integrations/admin/workouts-integration.php:245
@@ -2943,10 +3082,11 @@ msgstr "Oude configuratiewizard"
 #: js/dist/ai-generator.js:282 js/dist/block-editor.js:85
 #: js/dist/block-editor.js:97 js/dist/block-editor.js:136
 #: js/dist/block-editor.js:244 js/dist/block-editor.js:249
-#: js/dist/block-editor.js:261 js/dist/block-editor.js:697
-#: js/dist/block-editor.js:698 js/dist/bulk-editor-page.js:2
+#: js/dist/block-editor.js:261 js/dist/block-editor.js:698
+#: js/dist/block-editor.js:699 js/dist/bulk-editor-page.js:2
 #: js/dist/bulk-editor-page.js:5 js/dist/bulk-editor-page.js:6
-#: js/dist/bulk-editor-page.js:15 js/dist/classic-editor.js:2
+#: js/dist/bulk-editor-page.js:15 js/dist/bulk-editor-page.js:22
+#: js/dist/bulk-editor-page.js:23 js/dist/classic-editor.js:2
 #: js/dist/editor-modules.js:195 js/dist/editor-modules.js:245
 #: js/dist/editor-modules.js:260 js/dist/editor-modules.js:475
 #: js/dist/externals-components.js:100 js/dist/externals-components.js:104
@@ -3051,7 +3191,7 @@ msgid "24/7 support"
 msgstr "24/7-ondersteuning"
 
 #: admin/class-yoast-form.php:149 admin/class-yoast-form.php:154
-#: js/dist/bulk-editor-page.js:20 js/dist/general-page.js:45
+#: js/dist/bulk-editor-page.js:23 js/dist/general-page.js:45
 #: js/dist/new-settings.js:9
 msgid "Save changes"
 msgstr "Wijzigingen opslaan"
@@ -3067,7 +3207,7 @@ msgstr "1 jaar gratis ondersteuning en updates inbegrepen!"
 msgid "The plugin %2$s changes your site's output and in doing that differentiates between search engines and normal users, a process that's called cloaking. We highly recommend that you disable it."
 msgstr "De plugin %2$s past de uitvoer van gegevens op je site aan waardoor een verschil ontstaat tussen wat zoekmachines en normale gebruikers zien. Dit wordt cloaking genoemd. We raden je ten zeerste aan om het uit te schakelen."
 
-#: admin/class-admin.php:355
+#: admin/class-admin.php:314
 msgid "Scroll to see the table content."
 msgstr "Scroll om de inhoud van de tabel te zien."
 
@@ -3115,7 +3255,7 @@ msgstr "Deze melding niet meer tonen"
 #. translators: %1$s: '%%term_title%%' variable used in titles and meta's
 #. template that's not compatible with the given template, %2$s: expands to
 #. 'HelpScout beacon'
-#: admin/class-admin.php:349
+#: admin/class-admin.php:308
 msgid "Warning: the variable %1$s cannot be used in this template. See the %2$s for more info."
 msgstr "Waarschuwing: de variabele %1$s kan niet gebruikt worden in deze template. Bekijk de %2$s voor meer informatie."
 
@@ -3132,20 +3272,20 @@ msgstr "(geen titel)"
 msgid "By the way, did you know we also have a %1$sPremium plugin%2$s? It offers advanced features, like a redirect manager and support for multiple keyphrases. It also comes with 24/7 personal support."
 msgstr "Wist je dat er ook een %1$sPremium plugin%2$s is? Deze biedt geavanceerde functies, zoals een redirect manager en ondersteuning voor meerdere focus keyphrases. Daarnaast krijg je ook 24/7 persoonlijke ondersteuning."
 
-#: admin/views/class-yoast-feature-toggles.php:143 js/dist/new-settings.js:28
-#: js/dist/new-settings.js:527 js/dist/new-settings.js:530
-msgid "Admin bar menu"
-msgstr "Toolbarmenu"
-
 #. translators: 1: Yoast SEO
 #: admin/views/class-yoast-feature-toggles.php:146
 msgid "The %1$s admin bar menu contains useful links to third-party tools for analyzing pages and makes it easy to see if you have new notifications."
 msgstr "Het %1$s-toolbarmenu bevat handige links naar gereedschappen van derden, waarmee je je pagina's kan analyseren. Ook kan je er eenvoudig zien of je nieuwe meldingen hebt."
 
-#: admin/metabox/class-metabox.php:172
+#: admin/views/class-yoast-feature-toggles.php:143 js/dist/new-settings.js:28
+#: js/dist/new-settings.js:527 js/dist/new-settings.js:530
+msgid "Admin bar menu"
+msgstr "Toolbar-menu"
+
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:122
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:123
-#: js/dist/bulk-editor-page.js:21
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:213
+#: js/dist/bulk-editor-page.js:24
 #: js/dist/externals/replacementVariableEditor.js:71
 #: js/dist/externals/searchMetadataPreviews.js:102 js/dist/new-settings.js:18
 #: js/dist/new-settings.js:24 js/dist/new-settings.js:28
@@ -3164,16 +3304,6 @@ msgstr "Functies"
 #: inc/options/class-wpseo-option-titles.php:960
 msgid "Asterisk"
 msgstr "Sterretje"
-
-#: admin/metabox/class-metabox.php:183 admin/metabox/class-metabox.php:188
-#: js/dist/block-editor.js:623 js/dist/classic-editor.js:313
-msgid "No"
-msgstr "Nee"
-
-#: admin/metabox/class-metabox.php:182 admin/metabox/class-metabox.php:187
-#: js/dist/block-editor.js:623 js/dist/classic-editor.js:313
-msgid "Yes"
-msgstr "Ja"
 
 #: inc/options/class-wpseo-option-titles.php:936
 msgid "Dash"
@@ -3232,7 +3362,7 @@ msgstr "Premium"
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Bewerk &#8220;%s&#8221;"
 
-#: admin/class-admin.php:266
+#: admin/class-admin.php:254
 msgid "Get Premium"
 msgstr "Verkrijg Premium"
 
@@ -3272,7 +3402,7 @@ msgstr "Leesbaarheid"
 #: inc/class-wpseo-rank.php:208 inc/class-wpseo-rank.php:240
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:52
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:52
-#: js/dist/block-editor.js:696 js/dist/bulk-editor-page.js:8
+#: js/dist/block-editor.js:697 js/dist/bulk-editor-page.js:8
 #: js/dist/editor-modules.js:194 js/dist/editor-modules.js:477
 #: js/dist/externals-components.js:163 js/dist/externals/analysis.js:410
 #: js/dist/externals/dashboardFrontend.js:4
@@ -3302,7 +3432,7 @@ msgstr "Problemen"
 
 #: inc/class-wpseo-rank.php:138
 #: src/abilities/application/score-retriever.php:140
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/frontend-inspector-resources.js:1
 msgid "Not available"
@@ -3327,14 +3457,14 @@ msgstr "Je kan dit verhelpen op de %1$sPermalink-instellingenpagina%2$s."
 msgid "Good job! We could detect no serious SEO problems."
 msgstr "Goed gedaan! We konden geen serieuze SEO-problemen vinden."
 
-#. translators: Hidden accessibility text.
-#: admin/class-meta-columns.php:181
-msgid "Meta description not set."
-msgstr "Geen metabeschrijving ingesteld."
-
 #: admin/views/partial-notifications-errors.php:21 js/dist/general-page.js:29
 msgid "We have detected the following issues that affect the SEO of your site."
 msgstr "We hebben de volgende problemen ontdekt die invloed hebben op de SEO van je site."
+
+#. translators: Hidden accessibility text.
+#: admin/class-meta-columns.php:181
+msgid "Meta description not set."
+msgstr "Meta description niet ingesteld."
 
 #: inc/class-wpseo-replace-vars.php:1480
 msgid "Replaced with the primary category of the post/page"
@@ -3446,7 +3576,7 @@ msgstr "Facebook-foutopsporing"
 #: inc/class-wpseo-rank.php:218 inc/class-wpseo-rank.php:250
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:50
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:50
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/externals/analysis.js:410 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
@@ -3475,7 +3605,7 @@ msgstr "SEO-instellingen"
 msgid "Team Yoast"
 msgstr "Team Yoast"
 
-#: wp-seo-main.php:502
+#: wp-seo-main.php:501
 msgid "The Standard PHP Library (SPL) extension seem to be unavailable. Please ask your web host to enable it."
 msgstr "De extensie Standaard-PHP-bibliotheek (SPL) lijkt niet beschikbaar. Vraag de hostingprovider deze te activeren."
 
@@ -3486,7 +3616,7 @@ msgstr "Dit moet een bestaand blog zijn. Blog %s bestaat niet of is gemarkeerd a
 
 #. Plugin Name of the plugin
 #: wp-seo.php admin/capabilities/class-capability-manager-integration.php:74
-#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:745
+#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:746
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
@@ -3495,7 +3625,7 @@ msgid "You searched for"
 msgstr "Je zocht naar"
 
 #. translators: %s expands to the name of a post type (plural).
-#: inc/class-upgrade.php:1555 inc/options/class-wpseo-option-titles.php:309
+#: inc/class-upgrade.php:1574 inc/options/class-wpseo-option-titles.php:309
 msgid "%s Archive"
 msgstr "Archief %s"
 
@@ -3522,7 +3652,7 @@ msgstr "Je hebt gezocht naar %s"
 #. translators: %1$s expands to Yoast SEO, %2$s / %3$s: links to the
 #. installation manual in the Readme for the Yoast SEO code repository on
 #. GitHub
-#: wp-seo-main.php:526
+#: wp-seo-main.php:525
 msgid "The %1$s plugin installation is incomplete. Please refer to %2$sinstallation instructions%3$s."
 msgstr "De %1$s plugininstallatie is onvolledig. Meer informatie in de %2$sinstallatiehandleiding%3$s."
 
@@ -3583,7 +3713,7 @@ msgid "Replaced with the current page number"
 msgstr "Vervangen door het huidige paginanummer"
 
 #. translators: %s expands to the variable used for term title.
-#: inc/class-upgrade.php:1558 inc/options/class-wpseo-option-titles.php:345
+#: inc/class-upgrade.php:1577 inc/options/class-wpseo-option-titles.php:345
 #: src/editors/framework/seo/terms/title-data-provider.php:27
 msgid "%s Archives"
 msgstr "%s Archieven"
@@ -3764,13 +3894,9 @@ msgstr "Vervangen door een aangepaste taxonomie-beschrijving"
 msgid "Import and Export"
 msgstr "Importeren en exporteren"
 
-#: src/user-meta/framework/custom-meta/author-metadesc.php:97
-msgid "Meta description to use for Author page"
-msgstr "Metabeschrijving voor de auteurspagina"
-
 #: admin/pages/tools.php:42
-#: src/bulk-editor/user-interface/bulk-editor-integration.php:228
-#: js/dist/bulk-editor-page.js:22
+#: src/bulk-editor/user-interface/bulk-editor-integration.php:269
+#: js/dist/bulk-editor-page.js:25
 msgid "Bulk editor"
 msgstr "Bulkeditor"
 
@@ -3794,16 +3920,20 @@ msgstr "Importeer instellingen uit andere SEO plugins en exporteer je instelling
 msgid "This tool allows you to quickly change titles and descriptions of your posts and pages without having to go into the editor for each page."
 msgstr "Dit gereedschap stelt je in staat snel titels en beschrijvingen van berichten en pagina's te veranderen zonder dat je voor elke pagina naar de editor hoeft te gaan."
 
-#. translators: %1$s expands to Yoast SEO
-#: admin/pages/tools.php:50
-msgid "%1$s comes with some very powerful built-in tools:"
-msgstr "%1$s wordt geleverd met een aantal zeer krachtig ingebouwd gereedschap:"
-
 #. translators: %1$s resolves to Yoast SEO, %2$s resolves to the Settings
 #. submenu item.
 #: src/presenters/meta-description-presenter.php:35
 msgid "Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [%1$s - %2$s] menu and set up a template."
 msgstr "Opmerking voor de beheerder: deze pagina toont geen meta description omdat het geen heeft. Dit kun je oplossen door er een voor deze pagina te schrijven of ga naar het [%1$s - %2$s] menu en stel een template in."
+
+#. translators: %1$s expands to Yoast SEO
+#: admin/pages/tools.php:50
+msgid "%1$s comes with some very powerful built-in tools:"
+msgstr "%1$s wordt geleverd met enkele zeer krachtige ingebouwde tools:"
+
+#: src/user-meta/framework/custom-meta/author-metadesc.php:97
+msgid "Meta description to use for Author page"
+msgstr "Te gebruiken meta description voor de auteurspagina"
 
 #: admin/views/tabs/network/general.php:54
 msgid "Take note:"
@@ -3882,17 +4012,6 @@ msgstr "openbaar"
 msgid "Who should have access to the %1$s settings"
 msgstr "Wie moet toegang hebben tot de %1$s-instellingen"
 
-#. Translators: %s: expands to Yoast SEO Premium
-#: admin/google_search_console/views/gsc-redirect-nopremium.php:15
-msgid "Creating redirects is a %s feature"
-msgstr "Het aanmaken van doorstuuradressen is een %s-functie"
-
-#. Translators: %1$s: expands to 'Yoast SEO Premium', %2$s: links to Yoast SEO
-#. Premium plugin page.
-#: admin/google_search_console/views/gsc-redirect-nopremium.php:22
-msgid "To be able to create a redirect and fix this issue, you need %1$s. You can buy the plugin, including one year of support and updates, on %2$s."
-msgstr "Om een doorstuuradres aan te maken en dit probleem op te lossen, heb je %1$s nodig. Je kan de plugin, inclusief een jaar ondersteuning en updates, kopen op %2$s."
-
 #: admin/views/tabs/network/general.php:54
 msgid "Privacy sensitive (FB admins and such), theme specific (title rewrite) and a few very site specific settings will not be imported to new sites."
 msgstr "Privacygevoelige (FB-beheerders e.d.), thema-specifieke (titel omleiding) en een paar erg site-specifieke instellingen zullen niet in nieuwe sites geïmporteerd worden."
@@ -3936,47 +4055,12 @@ msgstr "Alle SEO-scores"
 msgid "Deactivate %s"
 msgstr "%s deactiveren"
 
-#: admin/google_search_console/views/gsc-redirect-nopremium.php:27
-#: js/dist/ai-consent.js:6 js/dist/ai-content-planner.js:4
-#: js/dist/ai-content-planner.js:133 js/dist/ai-content-planner.js:268
-#: js/dist/ai-content-planner.js:275 js/dist/ai-content-planner.js:278
-#: js/dist/ai-content-planner.js:280 js/dist/ai-content-planner.js:288
-#: js/dist/ai-content-planner.js:292 js/dist/ai-content-planner.js:293
-#: js/dist/ai-generator.js:6 js/dist/ai-generator.js:48
-#: js/dist/ai-generator.js:53 js/dist/ai-generator.js:61
-#: js/dist/ai-generator.js:67 js/dist/ai-generator.js:278
-#: js/dist/ai-generator.js:280 js/dist/ai-generator.js:282
-#: js/dist/block-editor.js:4 js/dist/block-editor.js:133
-#: js/dist/block-editor.js:244 js/dist/block-editor.js:247
-#: js/dist/block-editor.js:249 js/dist/block-editor.js:257
-#: js/dist/block-editor.js:261 js/dist/block-editor.js:262
-#: js/dist/block-editor.js:296 js/dist/bulk-editor-page.js:3
-#: js/dist/bulk-editor-page.js:5 js/dist/editor-modules.js:195
-#: js/dist/editor-modules.js:211 js/dist/editor-modules.js:238
-#: js/dist/editor-modules.js:243 js/dist/editor-modules.js:248
-#: js/dist/editor-modules.js:254 js/dist/editor-modules.js:260
-#: js/dist/editor-modules.js:471 js/dist/editor-modules.js:473
-#: js/dist/editor-modules.js:475 js/dist/externals-components.js:104
-#: js/dist/externals-components.js:148 js/dist/externals-components.js:153
-#: js/dist/externals-components.js:158 js/dist/externals-components.js:199
-#: js/dist/externals-components.js:203 js/dist/externals-components.js:414
-#: js/dist/externals-components.js:416 js/dist/externals-components.js:418
-#: js/dist/externals/aiFrontend.js:190 js/dist/externals/aiFrontend.js:195
-#: js/dist/externals/componentsNew.js:626
-#: js/dist/externals/dashboardFrontend.js:6 js/dist/general-page.js:8
-#: js/dist/general-page.js:29 js/dist/integrations-page.js:58
-#: js/dist/introductions.js:5 js/dist/introductions.js:9
-#: js/dist/introductions.js:10 js/dist/new-settings.js:8
-#: js/dist/new-settings.js:38
-msgid "Close"
-msgstr "Sluiten"
-
 #: admin/statistics/class-statistics-service.php:222
 #: inc/class-wpseo-rank.php:141 inc/class-wpseo-rank.php:181
 #: inc/class-wpseo-rank.php:213
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:51
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:51
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/externals/analysis.js:410 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
@@ -4011,6 +4095,7 @@ msgstr "Meta beschrijving."
 
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:150
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:151
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:246
 #: js/dist/externals/socialMetadataForms.js:23
 msgid "X description"
 msgstr "X beschrijving"
@@ -4045,19 +4130,9 @@ msgstr[1] "Prullenbak <span class=\"count\">(%s)</span>"
 msgid "Action"
 msgstr "Actie"
 
-#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:628
-#: js/dist/classic-editor.js:318
-msgid "Breadcrumbs Title"
-msgstr "Kruimelpadtitel"
-
-#: admin/metabox/class-metabox.php:199 js/dist/block-editor.js:629
-#: js/dist/classic-editor.js:319
-msgid "Canonical URL"
-msgstr "Canonieke URL"
-
 #: admin/class-bulk-editor-list-table.php:849 js/dist/bulk-editor-page.js:20
-#: js/dist/externals/dashboardFrontend.js:4 js/dist/general-page.js:44
-#: js/dist/general-page.js:59
+#: js/dist/bulk-editor-page.js:22 js/dist/externals/dashboardFrontend.js:4
+#: js/dist/general-page.js:44 js/dist/general-page.js:59
 msgid "Edit"
 msgstr "Bewerken"
 
@@ -4065,11 +4140,10 @@ msgstr "Bewerken"
 msgid "Edit Files"
 msgstr "Bestanden bewerken"
 
-#: admin/class-admin.php:229 js/dist/externals-components.js:465
+#: admin/class-admin.php:217 js/dist/externals-components.js:465
 msgid "FAQ"
 msgstr "FAQ"
 
-#: admin/class-admin.php:308
 #: src/user-meta/framework/additional-contactmethods/facebook.php:28
 msgid "Facebook profile URL"
 msgstr "Facebookprofiel-URL"
@@ -4080,23 +4154,8 @@ msgstr "Facebookprofiel-URL"
 msgid "General"
 msgstr "Algemeen"
 
-#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "No Archive"
-msgstr "Geen archief"
-
-#: admin/metabox/class-metabox.php:192 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "No Image Index"
-msgstr "Geen afbeeldingsindex"
-
-#: admin/metabox/class-metabox.php:194 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "No Snippet"
-msgstr "Geen snippet"
-
 #: admin/class-yoast-network-admin.php:43 src/config/schema-types.php:163
-#: src/integrations/settings-integration.php:645 js/dist/new-settings.js:9
+#: src/integrations/settings-integration.php:647 js/dist/new-settings.js:9
 #: js/dist/new-settings.js:592
 msgid "None"
 msgstr "Geen"
@@ -4122,7 +4181,7 @@ msgstr "Bericht heeft een ongeldig berichttype: %s."
 msgid "Post is set to noindex."
 msgstr "Bericht is ingesteld op noindex."
 
-#: admin/class-admin.php:182
+#: admin/class-admin.php:170
 msgid "Posts"
 msgstr "Berichten"
 
@@ -4139,14 +4198,14 @@ msgstr "Voorbeeld &#8220;%s&#8221;"
 msgid "Publication date"
 msgstr "Publicatiedatum"
 
-#: admin/metabox/class-metabox.php:422
+#: admin/metabox/class-metabox.php:366
 #: admin/taxonomy/class-taxonomy-metabox.php:141
 #: inc/class-wpseo-admin-bar-menu.php:790
 #: src/services/health-check/report-builder.php:168
 msgid "SEO"
 msgstr "SEO"
 
-#: admin/class-admin.php:224 src/integrations/settings-integration.php:380
+#: admin/class-admin.php:212 src/integrations/settings-integration.php:382
 #: src/presenters/meta-description-presenter.php:37 js/dist/how-to-block.js:7
 msgid "Settings"
 msgstr "Instellingen"
@@ -4155,18 +4214,10 @@ msgstr "Instellingen"
 msgid "Settings could not be imported:"
 msgstr "Instellingen konden niet geïmporteerd worden:"
 
-#: admin/metabox/class-metabox.php:447
+#: admin/metabox/class-metabox.php:391
 #: admin/taxonomy/class-taxonomy-metabox.php:159 js/dist/new-settings.js:35
 msgid "Social"
 msgstr "Sociaal"
-
-#: admin/metabox/class-metabox.php:209
-msgid "The URL that this page should redirect to."
-msgstr "De URL waar deze pagina naar moet doorsturen."
-
-#: admin/metabox/class-metabox.php:197
-msgid "Title to use for this page in breadcrumb paths"
-msgstr "Titels die voor deze pagina gebruikt worden in het kruimelpad"
 
 #: admin/class-bulk-editor-list-table.php:871 js/dist/block-editor.js:378
 #: js/dist/classic-editor.js:68 js/dist/externals/dashboardFrontend.js:5
@@ -4191,23 +4242,9 @@ msgstr "Het gebruik van HTML in de waarde is niet toegestaan."
 msgid "Focus keyword"
 msgstr "Focustrefwoord"
 
-#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "Meta robots advanced"
-msgstr "Meta Robots geavanceerd"
-
-#. translators: 1: link open tag; 2: link close tag.
-#: admin/metabox/class-metabox.php:203
-msgid "The canonical URL that this page should point to. Leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
-msgstr "De canonieke URL waar deze pagina naar moet verwijzen; laat dit leeg om naar de eigen permalink te verwijzen. %1$sCross domain canonical%2$s wordt ook ondersteund."
-
 #: admin/class-meta-columns.php:128
 msgid "SEO Title"
 msgstr "SEO-titel"
-
-#: admin/metabox/class-metabox.php:178
-msgid "Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won't have an effect."
-msgstr "Waarschuwing: hoewel hier de 'metarobots'-instelling geregeld kan worden, heeft dit geen effect, aangezien de hele site op 'noindex' is ingesteld in de privacy-instellingen van de site."
 
 #: admin/import/class-import-settings.php:121
 msgid "Settings successfully imported."
@@ -4246,29 +4283,12 @@ msgstr "Je kan geen %s bewerken die niet van jou zijn."
 msgid "View &#8220;%s&#8221;"
 msgstr "Bekijk &#8220;%s&#8221;"
 
-#: admin/metabox/class-metabox.php:173 js/dist/ai-content-planner.js:276
-#: js/dist/ai-content-planner.js:277 js/dist/block-editor.js:245
-#: js/dist/block-editor.js:246 js/dist/bulk-editor-page.js:21
-#: js/dist/externals/replacementVariableEditor.js:71
-#: js/dist/externals/searchMetadataPreviews.js:102 js/dist/new-settings.js:18
-#: js/dist/new-settings.js:24 js/dist/new-settings.js:31
-#: js/dist/new-settings.js:35 js/dist/new-settings.js:88
-#: js/dist/new-settings.js:108 js/dist/new-settings.js:157
-#: js/dist/new-settings.js:204 js/dist/new-settings.js:310
-#: js/dist/new-settings.js:337 js/dist/new-settings.js:352
-#: js/dist/new-settings.js:410
-msgid "Meta description"
-msgstr "Meta description"
-
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:124
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:125
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:214
 #: js/dist/new-settings.js:28
 msgid "meta description"
 msgstr "meta description"
-
-#: admin/metabox/class-metabox.php:208
-msgid "301 Redirect"
-msgstr "301 omleiding"
 
 #: admin/class-bulk-description-editor-list-table.php:52
 msgid "Existing Yoast Meta Description"

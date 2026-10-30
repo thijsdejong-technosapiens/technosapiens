@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-29 05:47:19+0000\n"
+"PO-Revision-Date: 2026-10-27 06:36:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,32 +11,229 @@ msgstr ""
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release)\n"
 
+#: src/abilities/user-interface/abilities/update-site-representation-ability.php:128
+msgid "Only present when a requested setting could not be applied or saved, for example when Yoast Local SEO requires the site to represent an organization or when the user to represent does not exist. Meant to be relayed to the user."
+msgstr "Only present when a requested setting could not be applied or saved, for example when Yoast Local SEO requires the site to represent an organisation or when the user to represent does not exist. Meant to be relayed to the user."
+
+#. translators: %s expands to Yoast SEO.
+#: src/abilities/user-interface/abilities/update-site-representation-ability.php:111
+msgid "Update %s's site representation settings, which tell search engines whether the site represents an organization or a person, and provide its name, logo, social profiles and, depending on the active add-ons, other details for the site's organization schema. Only the settings you provide are changed; a provided empty value (an empty string, 0 or an empty array) clears that setting, and a provided list replaces the current one. These settings are public facts about who owns the site: only use values the user provided or that come from the site itself, never guessed or found elsewhere, and confirm them with the user before saving."
+msgstr "Update %s's site representation settings, which tell search engines whether the site represents an organisation or a person, and provide its name, logo, social profiles and, depending on the active add-ons, other details for the site's organisation schema. Only the settings you provide are changed; a provided empty value (an empty string, 0 or an empty array) clears that setting, and a provided list replaces the current one. These settings are public facts about who owns the site: only use values the user provided or that come from the site itself, never guessed or found elsewhere, and confirm them with the user before saving."
+
+#: src/abilities/user-interface/abilities/update-site-representation-ability.php:108
+msgid "Update Site Representation"
+msgstr "Update Site Representation"
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/abilities/set-xml-sitemap-status-ability.php:97
+msgid "Enable or disable %s's XML sitemap feature. Enabling it serves the sitemap index at /sitemap_index.xml and its sub-sitemaps, and replaces the WordPress core sitemaps; disabling it stops serving them."
+msgstr "Enable or disable %s's XML sitemap feature. Enabling it serves the sitemap index at /sitemap_index.xml and its sub-sitemaps, and replaces the WordPress core sitemaps; disabling it stops serving them."
+
+#: src/abilities/user-interface/abilities/set-xml-sitemap-status-ability.php:86
+msgid "Set XML Sitemap Status"
+msgstr "Set XML Sitemap Status"
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/abilities/set-x-card-status-ability.php:58
+msgid "Enable or disable %s's X card data feature. Enabling it outputs X card meta tags on the site's pages, so X can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags."
+msgstr "Enable or disable %s's X card data feature. Enabling it outputs X card meta tags on the site's pages, so X can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags."
+
+#: src/abilities/user-interface/abilities/set-x-card-status-ability.php:47
+msgid "Set X Card Data Status"
+msgstr "Set X Card Data Status"
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/abilities/set-schema-framework-status-ability.php:58
+msgid "Enable or disable %s's Schema Framework feature. Enabling it outputs a single structured data graph (JSON-LD) on the site's pages, so search engines and language models can consistently read every person, product, organization, and piece of content; disabling it stops outputting the graph."
+msgstr "Enable or disable %s's Schema Framework feature. Enabling it outputs a single structured data graph (JSON-LD) on the site's pages, so search engines and language models can consistently read every person, product, organisation, and piece of content; disabling it stops outputting the graph."
+
+#: src/abilities/user-interface/abilities/set-schema-framework-status-ability.php:47
+msgid "Set Schema Framework Status"
+msgstr "Set Schema Framework Status"
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/abilities/set-schema-aggregation-status-ability.php:58
+msgid "Enable or disable %s's Schema aggregation endpoint feature. Enabling it serves the site's public structured data as a schema map at /schemamap.xml and through the schema aggregator REST endpoints, so conversational interfaces like NLWeb can query the site's content; disabling it stops serving them."
+msgstr "Enable or disable %s's Schema aggregation endpoint feature. Enabling it serves the site's public structured data as a schema map at /schemamap.xml and through the schema aggregator REST endpoints, so conversational interfaces like NLWeb can query the site's content; disabling it stops serving them."
+
+#: src/abilities/user-interface/abilities/set-schema-aggregation-status-ability.php:47
+msgid "Set Schema Aggregation Endpoint Status"
+msgstr "Set Schema Aggregation Endpoint Status"
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/abilities/set-open-graph-status-ability.php:58
+msgid "Enable or disable %s's Open Graph data feature. Enabling it outputs Open Graph meta tags on the site's pages, so Facebook and other social media can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags."
+msgstr "Enable or disable %s's Open Graph data feature. Enabling it outputs Open Graph meta tags on the site's pages, so Facebook and other social media can display a preview with an image and a text excerpt when a link to the site is shared; disabling it stops outputting the tags."
+
+#: src/abilities/user-interface/abilities/set-open-graph-status-ability.php:47
+msgid "Set Open Graph Data Status"
+msgstr "Set Open Graph Data Status"
+
+#. translators: %s expands to Yoast SEO
+#: src/abilities/user-interface/abilities/set-llms-txt-status-ability.php:124
+msgid "Enable or disable %s's llms.txt feature. Enabling it generates an llms.txt file for the site and keeps it up to date; disabling it removes the generated file."
+msgstr "Enable or disable %s's llms.txt feature. Enabling it generates an llms.txt file for the site and keeps it up to date; disabling it removes the generated file."
+
+#: src/abilities/user-interface/abilities/set-llms-txt-status-ability.php:109
+msgid "Only present when the feature is enabled but the llms.txt file could not be generated. Meant to be relayed to the user."
+msgstr "Only present when the feature is enabled but the llms.txt file could not be generated. Meant to be relayed to the user."
+
+#: src/abilities/user-interface/abilities/set-llms-txt-status-ability.php:95
+msgid "Set llms.txt Status"
+msgstr "Set llms.txt Status"
+
+#. translators: %1$s expands to Yoast SEO, %2$s: the name of the feature.
+#: src/abilities/user-interface/abilities/abstract-set-feature-status-ability.php:151
+msgid "Whether %1$s's %2$s feature is enabled."
+msgstr "Whether %1$s's %2$s feature is enabled."
+
+#. translators: %1$s expands to Yoast SEO, %2$s: the name of the feature.
+#: src/abilities/user-interface/abilities/abstract-set-feature-status-ability.php:136
+msgid "Whether %1$s's %2$s feature should be enabled. true enables it; false disables it."
+msgstr "Whether %1$s's %2$s feature should be enabled. true enables it; false disables it."
+
+#. translators: %s expands to the name of a setting.
+#: src/abilities/infrastructure/site-representation-field-validators.php:158
+msgid "The %s setting was not changed, because it is not the ID of an image in the media library."
+msgstr "The %s setting was not changed, because it is not the ID of an image in the media library."
+
+#: src/abilities/infrastructure/site-representation-field-validators.php:101
+msgid "The user to represent was not changed, because no user that you can select exists with the given ID."
+msgstr "The user to represent was not changed, because no user that you can select exists with the given ID."
+
+#. translators: %s expands to Yoast Local SEO.
+#: src/abilities/infrastructure/site-representation-field-validators.php:75
+msgid "The site was not set to represent a person, because %s is active and requires the site to represent an organization."
+msgstr "The site was not set to represent a person, because %s is active and requires the site to represent an organisation."
+
+#. translators: %s expands to Yoast Local SEO.
+#: src/abilities/infrastructure/site-representation-field-map.php:219
+msgid "%s is active on this site and requires the site to represent an organization, so it always does."
+msgstr "%s is active on this site and requires the site to represent an organisation, so it always does."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:211
+msgid "Whether the site represents an organization (\"company\") or a person (\"person\")."
+msgstr "Whether the site represents an organisation (\"company\") or a person (\"person\")."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:197
+msgid "The URLs of the other social profiles of the organization, like Instagram, LinkedIn or YouTube. Only used when company_or_person is \"company\". For a person, the social profiles from the user's profile are used instead."
+msgstr "The URLs of the other social profiles of the organisation, like Instagram, LinkedIn or YouTube. Only used when company_or_person is \"company\". For a person, the social profiles from the user's profile are used instead."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:190
+msgid "The X username of the organization, without the @. Only added to the schema when company_or_person is \"company\". It is also used in the X card meta tags: as the site's X account, unless the site represents a person whose profile has an X username, and as the X account of posts whose author has no X username."
+msgstr "The X username of the organisation, without the @. Only added to the schema when company_or_person is \"company\". It is also used in the X card meta tags: as the site's X account, unless the site represents a person whose profile has an X username, and as the X account of posts whose author has no X username."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:186
+msgid "The URL of the Facebook page of the organization. Only used when company_or_person is \"company\". For a person, the Facebook URL from the user's profile is used instead."
+msgstr "The URL of the Facebook page of the organisation. Only used when company_or_person is \"company\". For a person, the Facebook URL from the user's profile is used instead."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:181
+msgid "The attachment ID of the personal logo or avatar, an image from the media library. 0 when no logo is set, in which case the site logo is used. Only used when company_or_person is \"person\"."
+msgstr "The attachment ID of the personal logo or avatar, an image from the media library. 0 when no logo is set, in which case the site logo is used. Only used when company_or_person is \"person\"."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:175
+msgid "The ID of the user the site represents, whose profile information is used in search results. The person's name is taken from the display name of this user. Unless you can list users, only users with published posts can be set. 0 when no user is set. Only used when company_or_person is \"person\"."
+msgstr "The ID of the user the site represents, whose profile information is used in search results. The person's name is taken from the display name of this user. Unless you can list users, only users with published posts can be set. 0 when no user is set. Only used when company_or_person is \"person\"."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:169
+msgid "The attachment ID of the organization logo, an image from the media library. 0 when no logo is set, in which case the site logo is used. Only used when company_or_person is \"company\"."
+msgstr "The attachment ID of the organisation logo, an image from the media library. 0 when no logo is set, in which case the site logo is used. Only used when company_or_person is \"company\"."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:164
+msgid "An alternate name of the organization the site represents, like an acronym or a shorter version of its name. Only used when company_or_person is \"company\"."
+msgstr "An alternate name of the organisation the site represents, like an acronym or a shorter version of its name. Only used when company_or_person is \"company\"."
+
+#: src/abilities/infrastructure/site-representation-field-map.php:160
+msgid "The name of the organization the site represents. When empty, the site name is used. Only used when company_or_person is \"company\"."
+msgstr "The name of the organisation the site represents. When empty, the site name is used. Only used when company_or_person is \"company\"."
+
+#. translators: %s expands to the name of a setting.
+#: src/abilities/application/site-representation-updater.php:133
+msgid "The %s setting could not be saved as provided, so its current value is returned."
+msgstr "The %s setting could not be saved as provided, so its current value is returned."
+
+#: src/abilities/application/site-representation-updater.php:107
+msgid "No other settings were saved."
+msgstr "No other settings were saved."
+
+#: src/abilities/application/site-representation-updater.php:107
+msgid "The other settings were saved."
+msgstr "The other settings were saved."
+
+#: src/abilities/application/llms-txt-status-updater.php:129
+msgid "The llms.txt feature is enabled, but the file could not be generated or updated, for unknown reasons."
+msgstr "The llms.txt feature is enabled, but the file could not be generated or updated, for unknown reasons."
+
+#: src/abilities/application/llms-txt-status-updater.php:127
+msgid "The llms.txt feature is enabled, but the file could not be generated or updated: the web server's filesystem permissions do not allow writing it."
+msgstr "The llms.txt feature is enabled, but the file could not be generated or updated: the web server's filesystem permissions do not allow writing it."
+
+#. translators: %1$s expands to Yoast SEO
+#: src/abilities/application/llms-txt-status-updater.php:123
+msgid "The llms.txt feature is enabled, but the file could not be generated or updated: an llms.txt file already exists that was not created by %1$s or has been edited manually, and it will not be overwritten. Delete it manually to let %1$s generate the file, or disable the %1$s feature."
+msgstr "The llms.txt feature is enabled, but the file could not be generated or updated: an llms.txt file already exists that was not created by %1$s or has been edited manually, and it will not be overwritten. Delete it manually to let %1$s generate the file, or disable the %1$s feature."
+
+#: src/abilities/application/feature-status-updater.php:56
+msgid "The feature status could not be saved."
+msgstr "The feature status could not be saved."
+
+#: src/abilities/application/feature-status-updater.php:46
+msgid "The enabled status is required and must be a boolean."
+msgstr "The enabled status is required and must be a boolean."
+
+#: admin/class-premium-upsell-admin-block.php:164
+#: src/presenters/admin/sidebar-presenter.php:86 js/dist/ai-consent.js:2
+#: js/dist/ai-content-planner.js:237 js/dist/ai-generator.js:2
+#: js/dist/block-editor.js:237 js/dist/block-editor.js:696
+#: js/dist/bulk-editor-page.js:2 js/dist/classic-editor.js:2
+#: js/dist/classic-editor.js:596 js/dist/editor-modules.js:195
+#: js/dist/externals-components.js:105 js/dist/general-page.js:5
+#: js/dist/integrations-page.js:58 js/dist/new-settings.js:5
+#: js/dist/redirects.js:2 js/dist/support.js:5
+msgid "Bulk AI-generated alt text for product images"
+msgstr "Bulk AI-generated alt text for product images"
+
+#. translators: %s expands to the name of the SEO field, e.g. "SEO title".
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:272
+msgid "The %s for the post."
+msgstr "The %s for the post."
+
+#. translators: %s expands to "Yoast AI Generate".
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:186
+msgid "A hint about %s to relay to the user. Only present when a title or description field was updated on a site without Yoast SEO Premium. Meant to be assisting users that seek SEO-optimised titles and descriptions."
+msgstr "A hint about %s to relay to the user. Only present when a title or description field was updated on a site without Yoast SEO Premium. Meant to be assisting users that seek SEO-optimised titles and descriptions."
+
+#. translators: %1$s expands to "Yoast AI Generate", %2$s expands to a URL.
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:141
+msgid "%1$s can write SEO-optimised titles and descriptions, more details here: %2$s"
+msgstr "%1$s can write SEO-optimised titles and descriptions, more details here: %2$s"
+
 #. translators: %s expands to Yoast SEO
 #: src/abilities/user-interface/ability-categories-integration.php:45
 msgid "Abilities for %s data and operations."
 msgstr "Abilities for %s data and operations."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:126
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:241
 msgid "Whether search engines should be told not to show a snippet of this post in the search results."
 msgstr "Whether search engines should be told not to show a snippet of this post in the search results."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:122
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:237
 msgid "Whether search engines should be told not to show a cached copy of this post."
 msgstr "Whether search engines should be told not to show a cached copy of this post."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:118
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:233
 msgid "Whether search engines should be told not to index the images on this post."
 msgstr "Whether search engines should be told not to index the images on this post."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:114
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:229
 msgid "Whether search engines should be told not to follow the links on this post."
 msgstr "Whether search engines should be told not to follow the links on this post."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:106
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:221
 msgid "Whether the post is marked as cornerstone content."
 msgstr "Whether the post is marked as cornerstone content."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:102
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:217
 msgid "The custom canonical URL for the post. Use null or an empty string to remove it and fall back to the default canonical."
 msgstr "The custom canonical URL for the post. Use null or an empty string to remove it and fall back to the default canonical."
 
@@ -81,11 +278,13 @@ msgstr "readability analysis"
 
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:146
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:147
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:244
 msgid "Open Graph description"
 msgstr "Open Graph description"
 
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:144
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:145
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:243
 msgid "Open Graph title"
 msgstr "Open Graph title"
 
@@ -103,23 +302,23 @@ msgstr "The %s as output on the front end: the global default template applied w
 msgid "The result of the %s that ran on the post when it was last saved."
 msgstr "The result of the %s that ran on the post when it was last saved."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:110
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:225
 msgid "Whether search engines should be told not to index this post. true sets noindex (the post is excluded from search results); false forces the post to be indexed; null clears the setting and falls back to the post-type default."
 msgstr "Whether search engines should be told not to index this post. true sets noindex (the post is excluded from search results); false forces the post to be indexed; null clears the setting and falls back to the post-type default."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:134
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:253
 msgid "The Schema.org article type for the post. Must be one of the supported article types. Use null or an empty string to clear it and fall back to the default."
 msgstr "The Schema.org article type for the post. Must be one of the supported article types. Use null or an empty string to clear it and fall back to the default."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:130
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:249
 msgid "The Schema.org page type for the post. Must be one of the supported page types. Use null or an empty string to clear it and fall back to the default."
 msgstr "The Schema.org page type for the post. Must be one of the supported page types. Use null or an empty string to clear it and fall back to the default."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:98
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:211
 msgid "The permalink (URL) of the post to update."
 msgstr "The permalink (URL) of the post to update."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:93
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:206
 msgid "The ID of the post to update."
 msgstr "The ID of the post to update."
 
@@ -131,7 +330,7 @@ msgstr "The page of title-search results to return, 1-based and defaulting to 1.
 msgid "Keywords to search for in post titles. Provide a comma-separated list to search for several titles at once; each value is matched as a whole phrase against the post title, and a post matching any value is returned. At most 10 phrases are used per request; any beyond the first 10 are ignored. Results are paginated to 10 entities per page; see the page parameter."
 msgstr "Keywords to search for in post titles. Provide a comma-separated list to search for several titles at once; each value is matched as a whole phrase against the post title, and a post matching any value is returned. At most 10 phrases are used per request; any beyond the first 10 are ignored. Results are paginated to 10 entities per page; see the page parameter."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:60
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:102
 msgid "Update the SEO data for a single post. Identify the post by post_id or by permalink (URL). Only the fields you provide are changed; a provided empty value clears that field. Only posts the current user is allowed to edit can be updated."
 msgstr "Update the SEO data for a single post. Identify the post by post_id or by permalink (URL). Only the fields you provide are changed; a provided empty value clears that field. Only posts the current user is allowed to edit can be updated."
 
@@ -143,7 +342,7 @@ msgstr "The permalink (URL) of the post to retrieve."
 msgid "The ID of the post to retrieve."
 msgstr "The ID of the post to retrieve."
 
-#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:59
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:101
 msgid "Update Post SEO Data"
 msgstr "Update Post SEO Data"
 
@@ -264,6 +463,11 @@ msgstr "%1$sBy aligning your content with search intent and focus keyphrases, yo
 msgid "Generic titles and descriptions make your results unclear in search. Templates ensure every %s has a clear, click-worthy snippet automatically. Go to Search appearance, choose your post type, and set default title and meta description patterns."
 msgstr "Generic titles and descriptions make your results unclear in search. Templates ensure every %s has a clear, click-worthy snippet automatically. Go to Search appearance, choose your post type, and set default title and meta description patterns."
 
+#. translators: %1$s expands to the post type label this task is about
+#: src/task-list/application/tasks/improve-content-seo.php:110
+msgid "Improve the SEO of your recent content: %1$s"
+msgstr "Improve the SEO of your recent content: %1$s"
+
 #. translators: %1$s expands to an opening p tag, %2$s and %4$s expand to a
 #. closing p tag, %3$s expands to an opening p tag and opening strong tag, %5$s
 #. expands to a closing strong tag, %6$s expands to an opening strong tag, %7$s
@@ -271,11 +475,6 @@ msgstr "Generic titles and descriptions make your results unclear in search. Tem
 #: src/task-list/application/tasks/improve-content-readability.php:112
 msgid "%1$sChecking your recent content's readability ensures it stays clear and easy to follow, improving your user experience. Follow the feedback to refine your sentence structure and word choice and maintain a high standard of engagement and comprehension.%2$s%3$sPro tip%5$s: Use %6$sAI Optimize%7$s to automatically simplify complex sentences and improve the flow of your writing.%4$s"
 msgstr "%1$sChecking your recent content's readability ensures it stays clear and easy to follow, improving your user experience. Follow the feedback to refine your sentence structure and word choice and maintain a high standard of engagement and comprehension.%2$s%3$sPro tip%5$s: Use %6$sAI Optimise%7$s to automatically simplify complex sentences and improve the flow of your writing.%4$s"
-
-#. translators: %1$s expands to the post type label this task is about
-#: src/task-list/application/tasks/improve-content-seo.php:110
-msgid "Improve the SEO of your recent content: %1$s"
-msgstr "Improve the SEO of your recent content: %1$s"
 
 #. translators: %1$s and %3$s expands to an opening p tag, %2$s and %5$s expand
 #. to a closing p tag and %4$s expands to Yoast
@@ -443,16 +642,6 @@ msgstr "Apply AI suggestions to improve content in 1 click"
 msgid "Create optimized SEO titles & meta descriptions in seconds"
 msgstr "Create optimised SEO titles & meta descriptions in seconds"
 
-#: src/presenters/admin/sidebar-presenter.php:86 js/dist/ai-consent.js:2
-#: js/dist/ai-content-planner.js:237 js/dist/ai-generator.js:2
-#: js/dist/block-editor.js:237 js/dist/bulk-editor-page.js:2
-#: js/dist/classic-editor.js:2 js/dist/editor-modules.js:195
-#: js/dist/externals-components.js:105 js/dist/general-page.js:5
-#: js/dist/integrations-page.js:58 js/dist/new-settings.js:5
-#: js/dist/redirects.js:2 js/dist/support.js:5
-msgid "Receive clear SEO and readability guidance to optimize your products"
-msgstr "Receive clear SEO and readability guidance to optimise your products"
-
 #: src/presenters/admin/sidebar-presenter.php:85 js/dist/ai-consent.js:2
 #: js/dist/ai-content-planner.js:237 js/dist/ai-generator.js:2
 #: js/dist/block-editor.js:237 js/dist/bulk-editor-page.js:2
@@ -556,7 +745,7 @@ msgid "Your recent posts are using default %1$s, which can make them easy to ove
 msgstr "Your recent posts are using default %1$s, which can make them easy to overlook in search results. Update them manually or %2$sfind out how %3$sYoast AI Generate%4$s can improve them for you.%5$s"
 
 #: src/alerts/application/default-seo-data/default-seo-data-alert.php:182
-#: js/dist/bulk-editor-page.js:8 js/dist/bulk-editor-page.js:21
+#: js/dist/bulk-editor-page.js:8 js/dist/bulk-editor-page.js:24
 msgid "SEO titles"
 msgstr "SEO titles"
 
@@ -607,7 +796,7 @@ msgstr "Your %1$s plugin cannot be updated as your subscription has expired. %2$
 msgid "%1$s30%% OFF - Black Friday %2$s"
 msgstr "%1$s30%% OFF - Black Friday %2$s"
 
-#: admin/class-premium-upsell-admin-block.php:213 js/dist/general-page.js:7
+#: admin/class-premium-upsell-admin-block.php:214 js/dist/general-page.js:7
 #: js/dist/new-settings.js:7
 msgid "Get 30% off now!"
 msgstr "Get 30% off now!"
@@ -713,16 +902,16 @@ msgstr "You have activated the Yoast llms.txt feature, but we couldn't generate 
 msgid "Plans"
 msgstr "Plans"
 
-#: src/llms-txt/application/file/file-failure-notification-presenter.php:49
-#: src/llms-txt/user-interface/health-check/file-reports.php:87
-msgid "You have activated the Yoast llms.txt feature, but we couldn't generate an llms.txt file, for unknown reasons."
-msgstr "You have activated the Yoast llms.txt feature, but we couldn't generate an llms.txt file, for unknown reasons."
-
 #. translators: 1,3,5: expand to opening paragraph tag, 2,4,6: expand to
 #. opening paragraph tag.
 #: src/llms-txt/user-interface/health-check/file-reports.php:65
 msgid "%1$sYou have activated the Yoast llms.txt feature, but we couldn't generate an llms.txt file.%2$s%3$sIt looks like there is an llms.txt file already that wasn't created by Yoast, or the llms.txt file created by Yoast has been edited manually.%4$s%5$sWe don't want to overwrite this file's content, so if you want to let Yoast keep auto-generating the llms.txt file, you can manually delete the existing one. Otherwise, consider disabling the Yoast feature.%6$s"
 msgstr "%1$sYou have activated the Yoast llms.txt feature, but we couldn't generate an llms.txt file.%2$s%3$sIt looks like there is an llms.txt file already that wasn't created by Yoast, or the llms.txt file created by Yoast has been edited manually.%4$s%5$sWe don't want to overwrite this file's content, so if you want to let Yoast keep auto-generating the llms.txt file, you can manually delete the existing one. Otherwise, consider disabling the Yoast feature.%6$s"
+
+#: src/llms-txt/application/file/file-failure-notification-presenter.php:49
+#: src/llms-txt/user-interface/health-check/file-reports.php:87
+msgid "You have activated the Yoast llms.txt feature, but we couldn't generate an llms.txt file, for unknown reasons."
+msgstr "You have activated the Yoast llms.txt feature, but we couldn't generate an llms.txt file, for unknown reasons."
 
 #. translators: 1,3: expand to opening paragraph tag, 2,4: expand to opening
 #. paragraph tag.
@@ -764,7 +953,7 @@ msgid "Not analyzed"
 msgstr "Not analysed"
 
 #. translators: %s: Yoast SEO.
-#: wp-seo-main.php:566
+#: wp-seo-main.php:540
 msgid "%s activation failed"
 msgstr "%s activation failed"
 
@@ -796,10 +985,6 @@ msgstr "The Yoast SEO version on your site is %1$s, however the uploaded plugin 
 #: src/user-meta/framework/custom-meta/noindex-author.php:108
 msgid "Do not allow search engines to show this author's archives in search results."
 msgstr "Do not allow search engines to show this author's archives in search results."
-
-#: admin/menu/class-base-menu.php:257 admin/menu/class-base-menu.php:260
-msgid "Upgrades"
-msgstr "Upgrades"
 
 #: blocks/dynamic-blocks/breadcrumbs/block.json
 msgctxt "block keyword"
@@ -880,13 +1065,13 @@ msgctxt "block description"
 msgid "List your Frequently Asked Questions in an SEO-friendly way."
 msgstr "List your Frequently Asked Questions in an SEO-friendly way."
 
-#: admin/class-admin.php:315
 #: src/user-meta/framework/additional-contactmethods/x.php:28
 msgid "X username (without @)"
 msgstr "X username (without @)"
 
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:148
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:149
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:245
 #: js/dist/externals/socialMetadataForms.js:23
 msgid "X title"
 msgstr "X title"
@@ -900,8 +1085,8 @@ msgstr "The %1$s class must not be instantiated before the %2$s global is set."
 #. translators: %s expands to Yoast SEO Premium
 #. translators: %s expands to product name: "Yoast WooCommerce SEO" or "Yoast
 #. SEO Premium"
-#: admin/class-premium-upsell-admin-block.php:219
-#: admin/class-premium-upsell-admin-block.php:221 js/dist/general-page.js:7
+#: admin/class-premium-upsell-admin-block.php:220
+#: admin/class-premium-upsell-admin-block.php:222 js/dist/general-page.js:7
 #: js/dist/new-settings.js:7
 msgid "Explore %s now!"
 msgstr "Explore %s now!"
@@ -920,8 +1105,7 @@ msgstr "The %1$s interface is currently unavailable in the beta WooCommerce prod
 msgid "Compatibility issue: Yoast SEO is incompatible with the beta WooCommerce product editor."
 msgstr "Compatibility issue: Yoast SEO is incompatible with the beta WooCommerce product editor."
 
-#: admin/class-premium-upsell-admin-block.php:90
-#: admin/menu/class-base-menu.php:260 js/dist/block-editor.js:696
+#: admin/class-premium-upsell-admin-block.php:90 js/dist/block-editor.js:696
 #: js/dist/classic-editor.js:596 js/dist/general-page.js:8
 #: js/dist/new-settings.js:8
 msgid "30% OFF"
@@ -1057,7 +1241,7 @@ msgid "It looks like you've enabled media pages. We recommend that you help us t
 msgstr "It looks like you've enabled media pages. We recommend that you help us to re-analyse your site by running the SEO data optimisation."
 
 #: inc/class-wpseo-rank.php:156 inc/class-wpseo-rank.php:245
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/externals-components.js:463
 #: js/dist/frontend-inspector-resources.js:1
@@ -1066,7 +1250,7 @@ msgstr "Potentially non-inclusive"
 
 #. translators: CTA to finish the first time configuration. %s: Either
 #. first-time SEO configuration or SEO configuration.
-#: admin/class-admin.php:235
+#: admin/class-admin.php:223
 msgid "Finish your %s"
 msgstr "Finish your %s"
 
@@ -1171,7 +1355,7 @@ msgstr "We need to re-analyse some of your SEO data because of a change in the v
 
 #: src/presenters/admin/sidebar-presenter.php:21
 #: js/dist/ai-content-planner.js:75 js/dist/block-editor.js:75
-#: js/dist/block-editor.js:621 js/dist/classic-editor.js:311
+#: js/dist/block-editor.js:620 js/dist/classic-editor.js:310
 #: js/dist/editor-modules.js:190 js/dist/externals-components.js:159
 #: js/dist/general-page.js:5 js/dist/new-settings.js:5 js/dist/support.js:5
 msgid "BLACK FRIDAY | 30% OFF"
@@ -1255,7 +1439,7 @@ msgstr "Removes the inclusive language analysis section from the meta box and di
 msgid "Front-end SEO inspector"
 msgstr "Front-end SEO inspector"
 
-#: admin/class-yoast-form.php:931
+#: admin/class-yoast-form.php:874
 msgid "Unlock with Premium!"
 msgstr "Unlock with Premium!"
 
@@ -1702,8 +1886,8 @@ msgstr "Find out how Insights can help you improve your content."
 msgid "Link suggestions"
 msgstr "Link suggestions"
 
-#: admin/views/class-yoast-feature-toggles.php:112 js/dist/block-editor.js:621
-#: js/dist/block-editor.js:712 js/dist/classic-editor.js:311
+#: admin/views/class-yoast-feature-toggles.php:112 js/dist/block-editor.js:620
+#: js/dist/block-editor.js:713 js/dist/classic-editor.js:310
 #: js/dist/new-settings.js:28 js/dist/new-settings.js:524
 msgid "Insights"
 msgstr "Insights"
@@ -1761,7 +1945,7 @@ msgid "No %1$s plugins have been installed. You don't seem to own any active sub
 msgstr "No %1$s plugins have been installed. You don't seem to own any active subscriptions."
 
 #. translators: %s expands to Yoast SEO Premium.
-#: admin/class-admin.php:248
+#: admin/class-admin.php:236
 msgid "Required by %s"
 msgstr "Required by %s"
 
@@ -1796,7 +1980,7 @@ msgstr "The post could not be found."
 msgid "The term could not be found."
 msgstr "The term could not be found."
 
-#: admin/class-yoast-form.php:1066 js/dist/general-page.js:55
+#: admin/class-yoast-form.php:1009 js/dist/general-page.js:55
 msgid "This feature has been disabled since subsites never send tracking data."
 msgstr "This feature has been disabled, since sub-sites never send tracking data."
 
@@ -1861,7 +2045,7 @@ msgstr "This tab allows you to selectively disable %1$s integrations with third-
 msgid "The %s integration offers suggestions and insights for keywords related to the entered focus keyphrase."
 msgstr "The %s integration offers suggestions and insights for keywords related to the entered focus keyphrase."
 
-#: admin/class-admin.php:259
+#: admin/class-admin.php:247
 msgid "Activate your subscription"
 msgstr "Activate your subscription"
 
@@ -2214,10 +2398,6 @@ msgstr "%1$sGo to the Discussion Settings page%2$s"
 msgid "%1$sThis was reported by the %2$s plugin%3$s"
 msgstr "%1$sThis was reported by the %2$s plugin%3$s"
 
-#: admin/metabox/class-metabox.php:191
-msgid "If you want to apply advanced <code>meta</code> robots settings for this page, please define them in the following field."
-msgstr "If you want to apply advanced <code>meta</code> robots settings for this page, please define them in the following field."
-
 #. translators: 1: Link start tag to the Firefox website, 2: Link start tag to
 #. the Chrome website, 3: Link start tag to the Edge website, 4: Link closing
 #. tag.
@@ -2268,7 +2448,7 @@ msgstr "Want to learn SEO from Team Yoast? Check out our %1$s!"
 msgid "Learn SEO"
 msgstr "Learn SEO"
 
-#: admin/metabox/class-metabox.php:439 js/dist/block-editor.js:737
+#: admin/metabox/class-metabox.php:383 js/dist/block-editor.js:738
 #: js/dist/new-settings.js:21 js/dist/new-settings.js:31
 #: js/dist/new-settings.js:35 js/dist/new-settings.js:40
 #: js/dist/new-settings.js:92 js/dist/new-settings.js:410
@@ -2331,7 +2511,7 @@ msgid "SEO: %s"
 msgstr "SEO: %s"
 
 #. translators: %s: expends to Yoast SEO
-#: admin/class-admin.php:354
+#: admin/class-admin.php:313
 msgid "%s video tutorial"
 msgstr "%s video tutorial"
 
@@ -2359,32 +2539,26 @@ msgstr "Organisation"
 msgid "You have previously set your site to represent a person. We’ve improved our functionality around Schema and the Knowledge Graph, so you should go in and %1$scomplete those settings%2$s."
 msgstr "You have previously set your site to represent a person. We’ve improved our functionality around Schema and the Knowledge Graph, so you should go in and %1$scomplete those settings%2$s."
 
-#: admin/class-admin.php:317
 #: src/user-meta/framework/additional-contactmethods/wikipedia.php:28
 msgid "(if one exists)"
 msgstr "(if one exists)"
 
-#: admin/class-admin.php:317
 #: src/user-meta/framework/additional-contactmethods/wikipedia.php:28
 msgid "Wikipedia page about you"
 msgstr "Wikipedia page about you"
 
-#: admin/class-admin.php:316
 #: src/user-meta/framework/additional-contactmethods/youtube.php:28
 msgid "YouTube profile URL"
 msgstr "YouTube profile URL"
 
-#: admin/class-admin.php:314
 #: src/user-meta/framework/additional-contactmethods/tumblr.php:28
 msgid "Tumblr profile URL"
 msgstr "Tumblr profile URL"
 
-#: admin/class-admin.php:313
 #: src/user-meta/framework/additional-contactmethods/soundcloud.php:28
 msgid "SoundCloud profile URL"
 msgstr "SoundCloud profile URL"
 
-#: admin/class-admin.php:311
 #: src/user-meta/framework/additional-contactmethods/myspace.php:28
 msgid "MySpace profile URL"
 msgstr "MySpace profile URL"
@@ -2393,17 +2567,14 @@ msgstr "MySpace profile URL"
 msgid "Uncategorized"
 msgstr "Uncategorised"
 
-#: admin/class-admin.php:312
 #: src/user-meta/framework/additional-contactmethods/pinterest.php:28
 msgid "Pinterest profile URL"
 msgstr "Pinterest profile URL"
 
-#: admin/class-admin.php:309
 #: src/user-meta/framework/additional-contactmethods/instagram.php:28
 msgid "Instagram profile URL"
 msgstr "Instagram profile URL"
 
-#: admin/class-admin.php:310
 #: src/user-meta/framework/additional-contactmethods/linkedin.php:28
 msgid "LinkedIn profile URL"
 msgstr "LinkedIn profile URL"
@@ -2502,8 +2673,8 @@ msgstr "Learn about why permalinks are important for SEO."
 #. translators: %s expands to Yoast SEO Premium
 #. translators: %s expands to product name: "Yoast WooCommerce SEO" or "Yoast
 #. SEO Premium"
-#: admin/class-premium-upsell-admin-block.php:181
-#: admin/class-premium-upsell-admin-block.php:192 js/dist/general-page.js:6
+#: admin/class-premium-upsell-admin-block.php:182
+#: admin/class-premium-upsell-admin-block.php:193 js/dist/general-page.js:6
 #: js/dist/new-settings.js:6
 msgid "Upgrade to %s"
 msgstr "Upgrade to %s"
@@ -2531,7 +2702,7 @@ msgstr "This tab allows you to selectively disable %s features for all sites in 
 msgid "%s is a required feature toggle argument."
 msgstr "%s is a required feature toggle argument."
 
-#: admin/class-yoast-form.php:1062 js/dist/general-page.js:55
+#: admin/class-yoast-form.php:1005 js/dist/general-page.js:55
 msgid "This feature has been disabled by the network admin."
 msgstr "This feature has been disabled by the network admin."
 
@@ -2541,10 +2712,11 @@ msgid "Focus keyphrase not set."
 msgstr "Focus keyphrase not set."
 
 #. translators: %s expands to Yoast SEO Premium
+#. translators: %s expands to Yoast WooCommerce SEO.
 #. translators: WooCommerce SEO
 #: admin/class-premium-popup.php:81
-#: admin/watchers/class-slug-change-watcher.php:228
-#: js/dist/externals-components.js:438
+#: admin/watchers/class-slug-change-watcher.php:228 js/dist/block-editor.js:697
+#: js/dist/classic-editor.js:597 js/dist/externals-components.js:438
 msgid "Get %s"
 msgstr "Get %s"
 
@@ -2916,7 +3088,7 @@ msgstr "This will import the post metadata, like SEO titles and descriptions, in
 msgid "%s did not detect any plugin data from plugins it can import from."
 msgstr "%s did not detect any plugin data from plugins it can import from."
 
-#: admin/class-yoast-form.php:958 admin/class-yoast-form.php:998
+#: admin/class-yoast-form.php:901 admin/class-yoast-form.php:941
 #: js/dist/externals/componentsNew.js:532
 msgid "On"
 msgstr "On"
@@ -2928,7 +3100,7 @@ msgstr "On"
 msgid "Help on: %s"
 msgstr "Help on: %s"
 
-#: admin/class-yoast-form.php:959 admin/class-yoast-form.php:999
+#: admin/class-yoast-form.php:902 admin/class-yoast-form.php:942
 #: admin/views/class-yoast-feature-toggles.php:156
 #: js/dist/externals/componentsNew.js:532
 msgid "Off"
@@ -2952,29 +3124,14 @@ msgstr "See the XML sitemap."
 msgid "See who contributed to %1$s."
 msgstr "See who contributed to %1$s."
 
-#. translators: %s expands to the post type name.
-#: admin/metabox/class-metabox.php:176
-msgid "Allow search engines to show this %s in search results?"
-msgstr "Allow search engines to show this %s in search results?"
-
-#. translators: %1$s expands to the post type name.
-#: admin/metabox/class-metabox.php:186
-msgid "Should search engines follow links on this %1$s?"
-msgstr "Should search engines follow links on this %1$s?"
-
 #. translators: %1$s expands to Yoast SEO.
 #: admin/class-plugin-conflict.php:82
 msgid "Toggle %1$s's XML Sitemap"
 msgstr "Toggle %1$s's XML Sitemap"
 
-#. translators: %1$s expands to Yes or No,  %2$s expands to the post type name.
-#: admin/metabox/class-metabox.php:181
-msgid "Default for %2$s, currently: %1$s"
-msgstr "Default for %2$s, currently: %1$s"
-
 #. translators: %s expands to an indexable object's name, like a post type or
 #. taxonomy
-#: admin/class-yoast-form.php:969
+#: admin/class-yoast-form.php:912
 msgid "Show %s in search results?"
 msgstr "Show %s in search results?"
 
@@ -3099,7 +3256,7 @@ msgstr "Mark the most important %1$s as 'cornerstone content' to improve your si
 
 #. translators: Hidden accessibility text.
 #: admin/class-admin-utils.php:79 admin/class-premium-popup.php:83
-#: admin/class-premium-upsell-admin-block.php:76 admin/class-yoast-form.php:933
+#: admin/class-premium-upsell-admin-block.php:76 admin/class-yoast-form.php:876
 #: admin/watchers/class-slug-change-watcher.php:230
 #: src/integrations/admin/workouts-integration.php:215
 #: src/integrations/admin/workouts-integration.php:245
@@ -3113,10 +3270,11 @@ msgstr "Mark the most important %1$s as 'cornerstone content' to improve your si
 #: js/dist/ai-generator.js:282 js/dist/block-editor.js:85
 #: js/dist/block-editor.js:97 js/dist/block-editor.js:136
 #: js/dist/block-editor.js:244 js/dist/block-editor.js:249
-#: js/dist/block-editor.js:261 js/dist/block-editor.js:697
-#: js/dist/block-editor.js:698 js/dist/bulk-editor-page.js:2
+#: js/dist/block-editor.js:261 js/dist/block-editor.js:698
+#: js/dist/block-editor.js:699 js/dist/bulk-editor-page.js:2
 #: js/dist/bulk-editor-page.js:5 js/dist/bulk-editor-page.js:6
-#: js/dist/bulk-editor-page.js:15 js/dist/classic-editor.js:2
+#: js/dist/bulk-editor-page.js:15 js/dist/bulk-editor-page.js:22
+#: js/dist/bulk-editor-page.js:23 js/dist/classic-editor.js:2
 #: js/dist/editor-modules.js:195 js/dist/editor-modules.js:245
 #: js/dist/editor-modules.js:260 js/dist/editor-modules.js:475
 #: js/dist/externals-components.js:100 js/dist/externals-components.js:104
@@ -3215,7 +3373,7 @@ msgid "24/7 support"
 msgstr "24/7 support"
 
 #: admin/class-yoast-form.php:149 admin/class-yoast-form.php:154
-#: js/dist/bulk-editor-page.js:20 js/dist/general-page.js:45
+#: js/dist/bulk-editor-page.js:23 js/dist/general-page.js:45
 #: js/dist/new-settings.js:9
 msgid "Save changes"
 msgstr "Save changes"
@@ -3231,7 +3389,7 @@ msgstr "The plugin %2$s changes your site's output and in doing that differentia
 msgid "1 year free support and updates included!"
 msgstr "1 year free support and updates included!"
 
-#: admin/class-admin.php:355
+#: admin/class-admin.php:314
 msgid "Scroll to see the table content."
 msgstr "Scroll to see the table content."
 
@@ -3279,7 +3437,7 @@ msgstr "Please don't show me this notification anymore"
 #. translators: %1$s: '%%term_title%%' variable used in titles and meta's
 #. template that's not compatible with the given template, %2$s: expands to
 #. 'HelpScout beacon'
-#: admin/class-admin.php:349
+#: admin/class-admin.php:308
 msgid "Warning: the variable %1$s cannot be used in this template. See the %2$s for more info."
 msgstr "Warning: the variable %1$s cannot be used in this template. See the %2$s for more info."
 
@@ -3296,24 +3454,24 @@ msgstr "(no title)"
 msgid "By the way, did you know we also have a %1$sPremium plugin%2$s? It offers advanced features, like a redirect manager and support for multiple keyphrases. It also comes with 24/7 personal support."
 msgstr "By the way, did you know we also have a %1$sPremium plugin%2$s? It offers advanced features, like a redirect manager and support for multiple keyphrases. It also comes with 24/7 personal support."
 
-#. translators: 1: Yoast SEO
-#: admin/views/class-yoast-feature-toggles.php:146
-msgid "The %1$s admin bar menu contains useful links to third-party tools for analyzing pages and makes it easy to see if you have new notifications."
-msgstr "The %1$s admin bar menu contains useful links to third-party tools for analysing pages and makes it easy to see if you have new notifications."
-
 #: admin/views/class-yoast-feature-toggles.php:143 js/dist/new-settings.js:28
 #: js/dist/new-settings.js:527 js/dist/new-settings.js:530
 msgid "Admin bar menu"
-msgstr "Admin bar menu"
+msgstr "Admin Bar menu"
+
+#. translators: 1: Yoast SEO
+#: admin/views/class-yoast-feature-toggles.php:146
+msgid "The %1$s admin bar menu contains useful links to third-party tools for analyzing pages and makes it easy to see if you have new notifications."
+msgstr "The %1$s Admin Bar menu contains useful links to third-party tools for analysing pages and makes it easy to see if you have new notifications."
 
 #: admin/pages/network.php:19 admin/views/tabs/network/features.php:22
 msgid "Features"
 msgstr "Features"
 
-#: admin/metabox/class-metabox.php:172
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:122
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:123
-#: js/dist/bulk-editor-page.js:21
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:213
+#: js/dist/bulk-editor-page.js:24
 #: js/dist/externals/replacementVariableEditor.js:71
 #: js/dist/externals/searchMetadataPreviews.js:102 js/dist/new-settings.js:18
 #: js/dist/new-settings.js:24 js/dist/new-settings.js:28
@@ -3377,16 +3535,6 @@ msgstr "En dash"
 msgid "Dash"
 msgstr "Dash"
 
-#: admin/metabox/class-metabox.php:183 admin/metabox/class-metabox.php:188
-#: js/dist/block-editor.js:623 js/dist/classic-editor.js:313
-msgid "No"
-msgstr "No"
-
-#: admin/metabox/class-metabox.php:182 admin/metabox/class-metabox.php:187
-#: js/dist/block-editor.js:623 js/dist/classic-editor.js:313
-msgid "Yes"
-msgstr "Yes"
-
 #: src/integrations/admin/menu-badge-integration.php:35 js/dist/academy.js:11
 msgid "Premium"
 msgstr "Premium"
@@ -3396,7 +3544,7 @@ msgstr "Premium"
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Edit &#8220;%s&#8221;"
 
-#: admin/class-admin.php:266
+#: admin/class-admin.php:254
 msgid "Get Premium"
 msgstr "Get Premium"
 
@@ -3411,7 +3559,7 @@ msgstr "Notifications"
 
 #: src/user-meta/framework/custom-meta/keyword-analysis-disable.php:115
 msgid "Removes the focus keyphrase section from the metabox and disables all SEO-related suggestions."
-msgstr "Removes the focus keyphrase section from the metabox and disables all SEO-related suggestions."
+msgstr "Removes the focus keyphrase section from the meta box and disables all SEO-related suggestions."
 
 #. translators: Hidden accessibility text; %s: number of notifications.
 #: admin/menu/class-admin-menu.php:118 inc/class-wpseo-admin-bar-menu.php:937
@@ -3436,7 +3584,7 @@ msgstr "Readability"
 #: inc/class-wpseo-rank.php:208 inc/class-wpseo-rank.php:240
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:52
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:52
-#: js/dist/block-editor.js:696 js/dist/bulk-editor-page.js:8
+#: js/dist/block-editor.js:697 js/dist/bulk-editor-page.js:8
 #: js/dist/editor-modules.js:194 js/dist/editor-modules.js:477
 #: js/dist/externals-components.js:163 js/dist/externals/analysis.js:410
 #: js/dist/externals/dashboardFrontend.js:4
@@ -3494,7 +3642,7 @@ msgstr "Good job! We could detect no serious SEO problems."
 
 #: inc/class-wpseo-rank.php:138
 #: src/abilities/application/score-retriever.php:140
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/frontend-inspector-resources.js:1
 msgid "Not available"
@@ -3595,7 +3743,7 @@ msgid "%1$s is not a valid choice for who should be allowed access to the %2$s s
 msgstr "%1$s is not a valid choice for who should be allowed access to the %2$s settings. Value reset to the default."
 
 #. translators: %s expands to the name of a post type (plural).
-#: inc/class-upgrade.php:1555 inc/options/class-wpseo-option-titles.php:309
+#: inc/class-upgrade.php:1574 inc/options/class-wpseo-option-titles.php:309
 msgid "%s Archive"
 msgstr "%s Archive"
 
@@ -3620,7 +3768,7 @@ msgstr "Facebook Debugger"
 #: inc/class-wpseo-rank.php:218 inc/class-wpseo-rank.php:250
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:50
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:50
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/externals/analysis.js:410 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
@@ -3662,11 +3810,11 @@ msgstr "Team Yoast"
 #. translators: %1$s expands to Yoast SEO, %2$s / %3$s: links to the
 #. installation manual in the Readme for the Yoast SEO code repository on
 #. GitHub
-#: wp-seo-main.php:526
+#: wp-seo-main.php:525
 msgid "The %1$s plugin installation is incomplete. Please refer to %2$sinstallation instructions%3$s."
 msgstr "The %1$s plugin installation is incomplete. Please refer to %2$sinstallation instructions%3$s."
 
-#: wp-seo-main.php:502
+#: wp-seo-main.php:501
 msgid "The Standard PHP Library (SPL) extension seem to be unavailable. Please ask your web host to enable it."
 msgstr "The Standard PHP Library (SPL) extension seem to be unavailable. Please ask your web host to enable it."
 
@@ -3687,7 +3835,7 @@ msgstr "This must be an existing blog. Blog %s does not exist or has been marked
 
 #. Plugin Name of the plugin
 #: wp-seo.php admin/capabilities/class-capability-manager-integration.php:74
-#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:745
+#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:746
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
@@ -3716,7 +3864,7 @@ msgid "%1$s settings"
 msgstr "%1$s settings"
 
 #. translators: %s expands to the variable used for term title.
-#: inc/class-upgrade.php:1558 inc/options/class-wpseo-option-titles.php:345
+#: inc/class-upgrade.php:1577 inc/options/class-wpseo-option-titles.php:345
 #: src/editors/framework/seo/terms/title-data-provider.php:27
 msgid "%s Archives"
 msgstr "%s Archives"
@@ -3734,8 +3882,8 @@ msgid "Attachment caption"
 msgstr "Attachment caption"
 
 #: admin/pages/tools.php:42
-#: src/bulk-editor/user-interface/bulk-editor-integration.php:228
-#: js/dist/bulk-editor-page.js:22
+#: src/bulk-editor/user-interface/bulk-editor-integration.php:269
+#: js/dist/bulk-editor-page.js:25
 msgid "Bulk editor"
 msgstr "Bulk editor"
 
@@ -3850,10 +3998,6 @@ msgstr "Replaced with the post categories (comma separated)"
 msgid "Replaced with the post/page ID"
 msgstr "Replaced with the post/page ID"
 
-#: inc/class-wpseo-replace-vars.php:1519
-msgid "Replaced with the post/page author's 'Biographical Info'"
-msgstr "Replaced with the post or page author's 'Biographical Info'"
-
 #: inc/class-wpseo-replace-vars.php:1518
 msgid "Replaced with the post/page author's 'nicename'"
 msgstr "Replaced with the post/page author's 'nicename'"
@@ -3961,19 +4105,17 @@ msgstr "Admin only notice: this page does not show a meta description because it
 msgid "Replaced with the posts focus keyphrase"
 msgstr "Replaced with the posts focus keyphrase"
 
-#: admin/pages/tools.php:31
-msgid "Import settings from other SEO plugins and export your settings for re-use on (another) site."
-msgstr "Import settings from other SEO plugins and export your settings for reuse on (another) site."
-
 #: inc/class-wpseo-replace-vars.php:1520
 msgid "Replaced with the current page number with context (i.e. page 2 of 4)"
 msgstr "Replaced with the current page number with context (i.e. page 2 of 4)"
 
-#. Translators: %1$s: expands to 'Yoast SEO Premium', %2$s: links to Yoast SEO
-#. Premium plugin page.
-#: admin/google_search_console/views/gsc-redirect-nopremium.php:22
-msgid "To be able to create a redirect and fix this issue, you need %1$s. You can buy the plugin, including one year of support and updates, on %2$s."
-msgstr "To be able to create a redirect and fix this issue, you need %1$s. You can buy the plugin, including one year of support and updates, on %2$s."
+#: inc/class-wpseo-replace-vars.php:1519
+msgid "Replaced with the post/page author's 'Biographical Info'"
+msgstr "Replaced with the post/page author's 'Biographical Info'"
+
+#: admin/pages/tools.php:31
+msgid "Import settings from other SEO plugins and export your settings for re-use on (another) site."
+msgstr "Import settings from other SEO plugins and export your settings for re-use on (another) site."
 
 #. translators: %s expands to the name of a site within a multisite network.
 #: admin/class-yoast-network-admin.php:174
@@ -3987,11 +4129,6 @@ msgstr "Are you in Google News? Increase your traffic from Google News by optimi
 #: admin/views/tabs/network/general.php:40
 msgid "Choose the site whose settings you want to use as default for all sites that are added to your network. If you choose 'None', the normal plugin defaults will be used."
 msgstr "Choose the site whose settings you want to use as default for all sites that are added to your network. If you choose 'None', the normal plugin defaults will be used."
-
-#. Translators: %s: expands to Yoast SEO Premium
-#: admin/google_search_console/views/gsc-redirect-nopremium.php:15
-msgid "Creating redirects is a %s feature"
-msgstr "Creating redirects is a %s feature"
 
 #: admin/views/tabs/network/general.php:37
 #: admin/views/tabs/network/general.php:43
@@ -4105,41 +4242,6 @@ msgstr "All SEO Scores"
 msgid "Deactivate %s"
 msgstr "Deactivate %s"
 
-#: admin/google_search_console/views/gsc-redirect-nopremium.php:27
-#: js/dist/ai-consent.js:6 js/dist/ai-content-planner.js:4
-#: js/dist/ai-content-planner.js:133 js/dist/ai-content-planner.js:268
-#: js/dist/ai-content-planner.js:275 js/dist/ai-content-planner.js:278
-#: js/dist/ai-content-planner.js:280 js/dist/ai-content-planner.js:288
-#: js/dist/ai-content-planner.js:292 js/dist/ai-content-planner.js:293
-#: js/dist/ai-generator.js:6 js/dist/ai-generator.js:48
-#: js/dist/ai-generator.js:53 js/dist/ai-generator.js:61
-#: js/dist/ai-generator.js:67 js/dist/ai-generator.js:278
-#: js/dist/ai-generator.js:280 js/dist/ai-generator.js:282
-#: js/dist/block-editor.js:4 js/dist/block-editor.js:133
-#: js/dist/block-editor.js:244 js/dist/block-editor.js:247
-#: js/dist/block-editor.js:249 js/dist/block-editor.js:257
-#: js/dist/block-editor.js:261 js/dist/block-editor.js:262
-#: js/dist/block-editor.js:296 js/dist/bulk-editor-page.js:3
-#: js/dist/bulk-editor-page.js:5 js/dist/editor-modules.js:195
-#: js/dist/editor-modules.js:211 js/dist/editor-modules.js:238
-#: js/dist/editor-modules.js:243 js/dist/editor-modules.js:248
-#: js/dist/editor-modules.js:254 js/dist/editor-modules.js:260
-#: js/dist/editor-modules.js:471 js/dist/editor-modules.js:473
-#: js/dist/editor-modules.js:475 js/dist/externals-components.js:104
-#: js/dist/externals-components.js:148 js/dist/externals-components.js:153
-#: js/dist/externals-components.js:158 js/dist/externals-components.js:199
-#: js/dist/externals-components.js:203 js/dist/externals-components.js:414
-#: js/dist/externals-components.js:416 js/dist/externals-components.js:418
-#: js/dist/externals/aiFrontend.js:190 js/dist/externals/aiFrontend.js:195
-#: js/dist/externals/componentsNew.js:626
-#: js/dist/externals/dashboardFrontend.js:6 js/dist/general-page.js:8
-#: js/dist/general-page.js:29 js/dist/integrations-page.js:58
-#: js/dist/introductions.js:5 js/dist/introductions.js:9
-#: js/dist/introductions.js:10 js/dist/new-settings.js:8
-#: js/dist/new-settings.js:38
-msgid "Close"
-msgstr "Close"
-
 #: admin/class-meta-columns.php:129
 msgid "Meta Desc."
 msgstr "Meta Desc."
@@ -4149,7 +4251,7 @@ msgstr "Meta Desc."
 #: inc/class-wpseo-rank.php:213
 #: src/task-list/application/tasks/child-tasks/improve-content-readability-child.php:51
 #: src/task-list/application/tasks/child-tasks/improve-content-seo-child.php:51
-#: js/dist/block-editor.js:696 js/dist/editor-modules.js:194
+#: js/dist/block-editor.js:697 js/dist/editor-modules.js:194
 #: js/dist/editor-modules.js:477 js/dist/externals-components.js:163
 #: js/dist/externals/analysis.js:410 js/dist/externals/dashboardFrontend.js:4
 #: js/dist/frontend-inspector-resources.js:1
@@ -4175,6 +4277,7 @@ msgstr "Both %1$s and %2$s create Open Graph output, which might make Facebook, 
 
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:150
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:151
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:246
 #: js/dist/externals/socialMetadataForms.js:23
 msgid "X description"
 msgstr "X description"
@@ -4209,11 +4312,6 @@ msgstr[1] "Bin <span class=\"count\">(%s)</span>"
 msgid "Focus keyword"
 msgstr "Focus keyword"
 
-#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "Meta robots advanced"
-msgstr "Meta robots advanced"
-
 #. translators: %1$s expands to Yoast SEO, %2$s expands to the installed
 #. version, %3$s expands to Gutenberg
 #: admin/class-admin-gutenberg-compatibility-notification.php:88
@@ -4224,19 +4322,9 @@ msgstr "%1$s detected you are using version %2$s of %3$s, please update to the l
 msgid "Action"
 msgstr "Action"
 
-#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:628
-#: js/dist/classic-editor.js:318
-msgid "Breadcrumbs Title"
-msgstr "Breadcrumbs Title"
-
-#: admin/metabox/class-metabox.php:199 js/dist/block-editor.js:629
-#: js/dist/classic-editor.js:319
-msgid "Canonical URL"
-msgstr "Canonical URL"
-
 #: admin/class-bulk-editor-list-table.php:849 js/dist/bulk-editor-page.js:20
-#: js/dist/externals/dashboardFrontend.js:4 js/dist/general-page.js:44
-#: js/dist/general-page.js:59
+#: js/dist/bulk-editor-page.js:22 js/dist/externals/dashboardFrontend.js:4
+#: js/dist/general-page.js:44 js/dist/general-page.js:59
 msgid "Edit"
 msgstr "Edit"
 
@@ -4248,11 +4336,10 @@ msgstr "Edit Files"
 msgid "Existing Yoast Meta Description"
 msgstr "Existing Yoast Meta Description"
 
-#: admin/class-admin.php:229 js/dist/externals-components.js:465
+#: admin/class-admin.php:217 js/dist/externals-components.js:465
 msgid "FAQ"
 msgstr "FAQ"
 
-#: admin/class-admin.php:308
 #: src/user-meta/framework/additional-contactmethods/facebook.php:28
 msgid "Facebook profile URL"
 msgstr "Facebook profile URL"
@@ -4271,41 +4358,12 @@ msgstr "General"
 msgid "Huge SEO Issue: You're blocking access to robots."
 msgstr "Huge SEO Issue: You're blocking access to robots."
 
-#: admin/metabox/class-metabox.php:173 js/dist/ai-content-planner.js:276
-#: js/dist/ai-content-planner.js:277 js/dist/block-editor.js:245
-#: js/dist/block-editor.js:246 js/dist/bulk-editor-page.js:21
-#: js/dist/externals/replacementVariableEditor.js:71
-#: js/dist/externals/searchMetadataPreviews.js:102 js/dist/new-settings.js:18
-#: js/dist/new-settings.js:24 js/dist/new-settings.js:31
-#: js/dist/new-settings.js:35 js/dist/new-settings.js:88
-#: js/dist/new-settings.js:108 js/dist/new-settings.js:157
-#: js/dist/new-settings.js:204 js/dist/new-settings.js:310
-#: js/dist/new-settings.js:337 js/dist/new-settings.js:352
-#: js/dist/new-settings.js:410
-msgid "Meta description"
-msgstr "Meta description"
-
 #: admin/class-bulk-description-editor-list-table.php:53
 msgid "New Yoast Meta Description"
 msgstr "New Yoast Meta Description"
 
-#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "No Archive"
-msgstr "No Archive"
-
-#: admin/metabox/class-metabox.php:192 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "No Image Index"
-msgstr "No Image Index"
-
-#: admin/metabox/class-metabox.php:194 js/dist/block-editor.js:627
-#: js/dist/classic-editor.js:317
-msgid "No Snippet"
-msgstr "No Snippet"
-
 #: admin/class-yoast-network-admin.php:43 src/config/schema-types.php:163
-#: src/integrations/settings-integration.php:645 js/dist/new-settings.js:9
+#: src/integrations/settings-integration.php:647 js/dist/new-settings.js:9
 #: js/dist/new-settings.js:592
 msgid "None"
 msgstr "None"
@@ -4326,7 +4384,7 @@ msgstr "Post doesn't exist."
 msgid "Post is set to noindex."
 msgstr "Post is set to noindex."
 
-#: admin/class-admin.php:182
+#: admin/class-admin.php:170
 msgid "Posts"
 msgstr "Posts"
 
@@ -4343,7 +4401,7 @@ msgstr "Preview &#8220;%s&#8221;"
 msgid "Publication date"
 msgstr "Publication date"
 
-#: admin/metabox/class-metabox.php:422
+#: admin/metabox/class-metabox.php:366
 #: admin/taxonomy/class-taxonomy-metabox.php:141
 #: inc/class-wpseo-admin-bar-menu.php:790
 #: src/services/health-check/report-builder.php:168
@@ -4358,7 +4416,7 @@ msgstr "SEO Title"
 msgid "Search Console"
 msgstr "Search Console"
 
-#: admin/class-admin.php:224 src/integrations/settings-integration.php:380
+#: admin/class-admin.php:212 src/integrations/settings-integration.php:382
 #: src/presenters/meta-description-presenter.php:37 js/dist/how-to-block.js:7
 msgid "Settings"
 msgstr "Settings"
@@ -4371,18 +4429,10 @@ msgstr "Settings could not be imported:"
 msgid "Settings successfully imported."
 msgstr "Settings successfully imported."
 
-#: admin/metabox/class-metabox.php:447
+#: admin/metabox/class-metabox.php:391
 #: admin/taxonomy/class-taxonomy-metabox.php:159 js/dist/new-settings.js:35
 msgid "Social"
 msgstr "Social"
-
-#: admin/metabox/class-metabox.php:209
-msgid "The URL that this page should redirect to."
-msgstr "The URL that this page should redirect to."
-
-#: admin/metabox/class-metabox.php:197
-msgid "Title to use for this page in breadcrumb paths"
-msgstr "Title to use for this page in breadcrumb paths"
 
 #: admin/menu/class-admin-menu.php:96 js/dist/new-settings.js:530
 msgid "Tools"
@@ -4403,10 +4453,6 @@ msgstr "View &#8220;%s&#8221;"
 msgid "WP Page Title"
 msgstr "WP Page Title"
 
-#: admin/metabox/class-metabox.php:178
-msgid "Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won't have an effect."
-msgstr "Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won't have an effect."
-
 #. translators: %s expands to the name of a post type (plural).
 #: admin/ajax.php:211
 msgid "You can't edit %s that aren't yours."
@@ -4421,10 +4467,6 @@ msgstr "You can't edit %s."
 msgid "You have used HTML in your value which is not allowed."
 msgstr "You have used HTML in your value which is not allowed."
 
-#: admin/metabox/class-metabox.php:208
-msgid "301 Redirect"
-msgstr "301 Redirect"
-
 #. translators: %s expands to post type.
 #: admin/ajax.php:187
 msgid "Post has an invalid Content Type: %s."
@@ -4435,13 +4477,9 @@ msgstr "Post has an invalid Content Type: %s."
 msgid "XML sitemaps"
 msgstr "XML sitemaps"
 
-#. translators: 1: link open tag; 2: link close tag.
-#: admin/metabox/class-metabox.php:203
-msgid "The canonical URL that this page should point to. Leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
-msgstr "The canonical URL that this page should point to. Leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
-
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:124
 #: src/abilities/user-interface/abilities/abstract-post-seo-data-ability.php:125
+#: src/abilities/user-interface/abilities/update-post-seo-data-ability.php:214
 #: js/dist/new-settings.js:28
 msgid "meta description"
 msgstr "meta description"

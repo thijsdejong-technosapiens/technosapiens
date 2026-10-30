@@ -5,6 +5,7 @@ namespace WPMailSMTP\Admin\SetupWizard;
 use WPMailSMTP\Options;
 use WPMailSMTP\Reports\Emails\Summary as SummaryReportEmail;
 use WPMailSMTP\Tasks\Reports\SummaryEmailTask as SummaryReportEmailTask;
+use WPMailSMTP\UsageTracking\UsageTracking;
 
 /**
  * Bridges the stored plugin options and the setup wizard client.
@@ -29,10 +30,18 @@ class Settings {
 	 */
 	public function get_payload() {
 
-		$all = Options::init()->get_all();
+		$all      = Options::init()->get_all();
+		$settings = $this->filter_allowed( $all );
+
+		// Secrets are write-only: their presence surfaces under `meta`, never their values.
+		foreach ( $this->get_secret_keys() as $group => $keys ) {
+			foreach ( $keys as $key ) {
+				unset( $settings[ $group ][ $key ] );
+			}
+		}
 
 		return [
-			'settings' => $this->filter_allowed( $all ),
+			'settings' => $settings,
 			'meta'     => $this->get_meta( $all ),
 		];
 	}
@@ -53,7 +62,7 @@ class Settings {
 	public function update( $settings ) {
 
 		// Persist only the paths the wizard is allowed to write.
-		$settings = $this->filter_allowed( wp_slash( (array) $settings ) );
+		$settings = $this->prepare_secrets_for_save( $this->filter_allowed( wp_slash( (array) $settings ) ) );
 
 		// Cancel the summary report email task if the summary report email was disabled.
 		if (
@@ -76,6 +85,154 @@ class Settings {
 		// Merged rather than replaced: each wizard step posts only the groups it owns,
 		// so a replacing write would wipe every group the step left out.
 		Options::init()->set( $settings, false, false );
+	}
+
+	/**
+	 * Drop untouched (`null` or absent) secrets so the merging save keeps the stored values.
+	 *
+	 * An untouched SMTP password is cleared instead when the host changes, so a client
+	 * cannot send the stored password to a server of its choosing.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @param array $settings Settings tree keyed by group.
+	 *
+	 * @return array
+	 */
+	public function prepare_secrets_for_save( $settings ) {
+
+		$settings = $this->prepare_constant_smtp_pass( $settings );
+
+		foreach ( $this->get_secret_keys() as $group => $keys ) {
+			if ( ! isset( $settings[ $group ] ) || ! is_array( $settings[ $group ] ) ) {
+				continue;
+			}
+
+			foreach ( $keys as $key ) {
+				if ( isset( $settings[ $group ][ $key ] ) ) {
+					continue;
+				}
+
+				unset( $settings[ $group ][ $key ] );
+
+				if ( $group === 'smtp' && ! $this->is_stored_smtp_host( $settings['smtp'] ) ) {
+					$settings[ $group ][ $key ] = '';
+				}
+			}
+		}
+
+		return $settings;
+	}
+
+	/**
+	 * Fill the untouched (`null` or absent) secrets of a probe config with the stored values.
+	 *
+	 * The stored SMTP password is only used for the stored host.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @param string $mailer Mailer slug.
+	 * @param array  $config The mailer's submitted settings group.
+	 *
+	 * @return array
+	 */
+	public function fill_stored_secrets( $mailer, $config ) {
+
+		$secret_keys = $this->get_secret_keys();
+
+		if ( empty( $secret_keys[ $mailer ] ) ) {
+			return $config;
+		}
+
+		foreach ( $secret_keys[ $mailer ] as $key ) {
+			if ( isset( $config[ $key ] ) ) {
+				continue;
+			}
+
+			$config[ $key ] = $mailer === 'smtp' && ! $this->is_stored_smtp_host( $config ) ?
+				'' :
+				Options::init()->get( $mailer, $key );
+		}
+
+		return $config;
+	}
+
+	/**
+	 * Apply a constant SMTP password: a host change needs it repeated, and the repeat is never stored.
+	 *
+	 * Clearing a constant password changes nothing, so only knowing it can authorize a new host.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @param array $settings Settings tree keyed by group.
+	 *
+	 * @return array
+	 */
+	private function prepare_constant_smtp_pass( $settings ) {
+
+		$options = Options::init();
+
+		if ( ! isset( $settings['smtp'] ) || ! $options->is_const_defined( 'smtp', 'pass' ) ) {
+			return $settings;
+		}
+
+		if ( $this->is_unconfirmed_smtp_host_change( wp_unslash( $settings['smtp'] ) ) ) {
+			unset( $settings['smtp']['host'] );
+		}
+
+		unset( $settings['smtp']['pass'] );
+
+		return $settings;
+	}
+
+	/**
+	 * Whether an SMTP group changes the host without repeating the constant password.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @param array $smtp Unslashed SMTP settings group.
+	 *
+	 * @return bool
+	 */
+	public function is_unconfirmed_smtp_host_change( $smtp ) {
+
+		return $this->is_constant_pass_smtp_host_change( $smtp ) &&
+			! hash_equals( (string) Options::init()->get( 'smtp', 'pass' ), (string) ( $smtp['pass'] ?? '' ) );
+	}
+
+	/**
+	 * Whether an SMTP group changes the host while the password is a constant, confirmed or not.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @param array $smtp Unslashed SMTP settings group.
+	 *
+	 * @return bool
+	 */
+	public function is_constant_pass_smtp_host_change( $smtp ) {
+
+		return Options::init()->is_const_defined( 'smtp', 'pass' ) && ! $this->is_stored_smtp_host( $smtp );
+	}
+
+	/**
+	 * Whether an SMTP group targets the stored host; a group without a host counts as a match.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @param array $smtp SMTP settings group.
+	 *
+	 * @return bool
+	 */
+	private function is_stored_smtp_host( $smtp ) {
+
+		if ( ! isset( $smtp['host'] ) ) {
+			return true;
+		}
+
+		$submitted = strtolower( trim( wp_unslash( (string) $smtp['host'] ) ) );
+		$stored    = strtolower( trim( (string) Options::init()->get( 'smtp', 'host' ) ) );
+
+		return $submitted === $stored;
 	}
 
 	/**
@@ -124,37 +281,42 @@ class Settings {
 	 *
 	 * @return array
 	 */
-	private function get_meta( $settings ) {
+	protected function get_meta( $settings ) {
 
 		return [
 			'connections' => $this->get_mailer_connections( $settings ),
-			'license'     => [
-				'is_valid' => $this->is_license_valid( $settings ),
-			],
+			'secrets'     => $this->get_secrets_meta(),
 		];
 	}
 
 	/**
-	 * Whether a valid, active license is stored.
+	 * Report whether each mailer secret is stored, with its length and last four characters as hints.
 	 *
-	 * The wizard gates the one-click mailers on licensing but never needs the
-	 * key itself, so the key stays server-side and only this boolean is exposed.
+	 * The SMTP password and constants get no hints; values under 12 characters get no last characters.
 	 *
-	 * @since 4.10.0
+	 * @since 4.10.3
 	 *
-	 * @param array $settings Full options tree from Options::get_all().
-	 *
-	 * @return bool
+	 * @return array
 	 */
-	private function is_license_valid( $settings ) {
+	private function get_secrets_meta() {
 
-		$license = isset( $settings['license'] ) ? $settings['license'] : [];
+		$options = Options::init();
+		$secrets = [];
 
-		return ! empty( $license['key'] ) &&
-			empty( $license['is_expired'] ) &&
-			empty( $license['is_disabled'] ) &&
-			empty( $license['is_invalid'] ) &&
-			empty( $license['is_limit_reached'] );
+		foreach ( $this->get_secret_keys() as $group => $keys ) {
+			foreach ( $keys as $key ) {
+				$value  = (string) $options->get( $group, $key );
+				$length = $group !== 'smtp' && ! $options->is_const_defined( $group, $key ) ? mb_strlen( $value ) : 0;
+
+				$secrets[ $group ][ $key ] = [
+					'is_set'     => $value !== '',
+					'last_chars' => $length >= 12 ? mb_substr( $value, -4 ) : '',
+					'length'     => $length,
+				];
+			}
+		}
+
+		return $secrets;
 	}
 
 	/**
@@ -162,8 +324,7 @@ class Settings {
 	 *
 	 * The wizard only needs to tell a connected mailer from an unconnected one,
 	 * so the raw tokens are withheld and each mode is reported as a single
-	 * `is_*_authorized` boolean. gmail/outlook expose both the custom-app and
-	 * one-click modes because the client switches between them live.
+	 * `is_*_authorized` boolean.
 	 *
 	 * @since 4.10.0
 	 *
@@ -191,18 +352,10 @@ class Settings {
 	 *
 	 * @return array[]
 	 */
-	private function get_mailer_connection_map() {
+	protected function get_mailer_connection_map() {
 
 		return [
-			'gmail'   => [
-				'is_authorized'                 => [ 'access_token', 'refresh_token' ],
-				'is_one_click_setup_authorized' => [ 'one_click_setup_credentials' ],
-			],
-			'outlook' => [
-				'is_authorized'                 => [ 'access_token', 'refresh_token' ],
-				'is_one_click_setup_authorized' => [ 'one_click_setup_credentials' ],
-			],
-			'zoho'    => [
+			'gmail' => [
 				'is_authorized' => [ 'access_token', 'refresh_token' ],
 			],
 		];
@@ -235,9 +388,9 @@ class Settings {
 	/**
 	 * Whether a stored credential value counts as present.
 	 *
-	 * Tokens are stored either as scalars or as arrays (e.g. the one-click setup
-	 * credentials); an array counts as present only when it is non-empty and none
-	 * of its parts are empty, matching the client's "all parts required" check.
+	 * Tokens are stored either as scalars or as arrays; an array counts as present only
+	 * when it is non-empty and none of its parts are empty, matching the client's
+	 * "all parts required" check.
 	 *
 	 * @since 4.10.0
 	 *
@@ -265,6 +418,34 @@ class Settings {
 	}
 
 	/**
+	 * The secret keys of each mailer group, which the wizard can write but never read back.
+	 *
+	 * @since 4.10.3
+	 *
+	 * @return array[]
+	 */
+	protected function get_secret_keys() {
+
+		return [
+			'smtp'         => [ 'pass' ],
+			'sendlayer'    => [ 'api_key' ],
+			'smtpcom'      => [ 'api_key' ],
+			'sendinblue'   => [ 'api_key' ],
+			'mailersend'   => [ 'api_key' ],
+			'mailgun'      => [ 'api_key' ],
+			'mailjet'      => [ 'api_key', 'secret_key' ],
+			'resend'       => [ 'api_key' ],
+			'sendgrid'     => [ 'api_key' ],
+			'smtp2go'      => [ 'api_key' ],
+			'sparkpost'    => [ 'api_key' ],
+			'postmark'     => [ 'server_api_token' ],
+			'mandrill'     => [ 'api_key' ],
+			'elasticemail' => [ 'api_key' ],
+			'gmail'        => [ 'client_secret' ],
+		];
+	}
+
+	/**
 	 * The option group/key paths the wizard client reads and writes.
 	 *
 	 * Mirrors the wizard store's default settings state: every key the app binds
@@ -275,7 +456,7 @@ class Settings {
 	 *
 	 * @return array[]
 	 */
-	private function get_allowed_keys() {
+	protected function get_allowed_keys() {
 
 		return [
 			'mail'         => [ 'mailer', 'from_email', 'from_name', 'return_path', 'from_email_force', 'from_name_force' ],
@@ -292,14 +473,9 @@ class Settings {
 			'sparkpost'    => [ 'api_key', 'region' ],
 			'postmark'     => [ 'server_api_token', 'message_stream' ],
 			'mandrill'     => [ 'api_key' ],
-			'amazonses'    => [ 'client_id', 'client_secret', 'region' ],
 			'elasticemail' => [ 'api_key' ],
-			'gmail'        => [ 'client_id', 'client_secret', 'user_details', 'one_click_setup_enabled', 'one_click_setup_user_details' ],
-			'outlook'      => [ 'client_id', 'client_secret', 'user_details', 'one_click_setup_enabled', 'one_click_setup_user_details' ],
-			'zoho'         => [ 'client_id', 'client_secret', 'domain', 'user_details' ],
-			'logs'         => [ 'enabled', 'log_email_content', 'save_attachments', 'open_email_tracking', 'click_link_tracking' ],
-			'general'      => [ SummaryReportEmail::SETTINGS_SLUG ],
-			'alert_email'  => [ 'enabled', 'connections' ],
+			'gmail'        => [ 'client_id', 'client_secret', 'user_details' ],
+			'general'      => [ SummaryReportEmail::SETTINGS_SLUG, UsageTracking::SETTINGS_SLUG ],
 		];
 	}
 }
