@@ -38,6 +38,13 @@ class AcfComponent extends Singleton {
 
         //register your Google API key
         add_filter('acf/fields/google_map/api', [$this, 'handleAcfApiKey'], 100);
+
+        // ACF's acf_parse_save_blocks() stripslashes block JSON before re-serializing.
+        // When post content reaches content_save_pre unslashed (wp_insert_post without
+        // wp_slash, or some editor paths), that destroys Gutenberg unicode escapes
+        // (\u003c → u003c) and HTML shows as literal "u003cstrongu003e" on the frontend.
+        // Double those backslashes first so stripslashes leaves a single \uXXXX intact.
+        add_filter('content_save_pre', [$this, 'protectAcfBlockUnicodeEscapes'], 4);
     }
 
     /**
@@ -76,5 +83,23 @@ class AcfComponent extends Singleton {
      */
     public static function handleAcfApiKey(array $api): array {
         return $api;
+    }
+
+    /**
+     * Protect block-comment JSON escapes from ACF stripslashes on save.
+     *
+     * @param mixed $content
+     * @return mixed
+     */
+    public static function protectAcfBlockUnicodeEscapes(mixed $content): mixed {
+        if (!is_string($content) || $content === '' || !has_blocks($content)) {
+            return $content;
+        }
+
+        // \uXXXX (HTML/quotes in block attrs) and \n \r \t inside JSON string values
+        $content = preg_replace('/(?<!\\\\)\\\\u([0-9a-fA-F]{4})/', '\\\\\\\\u$1', $content);
+        $content = preg_replace('/(?<!\\\\)\\\\([nrt])/', '\\\\\\\\$1', $content);
+
+        return $content;
     }
 }

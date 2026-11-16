@@ -21,6 +21,7 @@ $footerSecondaryMenuItems = Navigation::getLinksByThemeLocation($footerSecondary
 $hasFooterSecondaryMenuItems = count($footerSecondaryMenuItems);
 
 $blogName = get_bloginfo('name');
+$copyrightYear = gmdate('Y');
 $logoId = get_field('logo_image_diap', 'option') ?: '';
 $logoHtml = '';
 if ($logoId) $logoHtml = Image::render([
@@ -31,7 +32,7 @@ if ($logoId) $logoHtml = Image::render([
 ]);
 ?>
 
-<footer id="ts-footer" class="site-footer" aria-label="Main Footer">
+<footer id="ts-footer" class="site-footer" aria-label="<?php esc_attr_e('Site footer', Theme::TEXT_DOMAIN); ?>">
     <div class="container">
         <div class="row site-footer__row">
             <div class="col col--1 col--xl-1/5">
@@ -39,7 +40,7 @@ if ($logoId) $logoHtml = Image::render([
                     <a href="<?php echo Link::getHomePageUrl(); ?>"
                     target="_self"
                     class="site-footer__logo"
-                    aria-label="<?php _e("Navigate to the home page", Theme::TEXT_DOMAIN); ?>">
+                    aria-label="<?php echo esc_attr(sprintf(__('%s — go to homepage', Theme::TEXT_DOMAIN), $blogName)); ?>">
                         <?php if ($logoHtml): ?>
                             <?php echo $logoHtml; ?>
                         <?php elseif ($blogName): ?>
@@ -55,9 +56,14 @@ if ($logoId) $logoHtml = Image::render([
                 <div class="row site-footer__row">
                     <?php if ($contactData): ?>
                         <div class="col col--1 col--xl-1/4 site-footer__col site-footer__col--contact-data">
-                            <div class="site-footer__contact-data">
-                                <?php echo $contactData; ?>
-                            </div>
+                            <section class="site-footer__contact-data" aria-labelledby="footer-contact-heading">
+                                <h2 id="footer-contact-heading" class="site-footer__heading h6">
+                                    <?php _e('Contact', Theme::TEXT_DOMAIN); ?>
+                                </h2>
+                                <address class="site-footer__address">
+                                    <?php echo $contactData; ?>
+                                </address>
+                            </section>
                         </div>
                     <?php endif; ?>
                     
@@ -73,52 +79,47 @@ if ($logoId) $logoHtml = Image::render([
 
                     <?php if ($hasFooterMenuItems): ?>
                         <div class="col col--1 col--xl-1/4 order-2 order-md-1 site-footer__col site-footer__col--links">
-                            <nav class="site-footer__links-menu" aria-label="<?php _e('Footer menu', Theme::TEXT_DOMAIN); ?>">
-                                <ul class="site-footer__links-menu-list">
-                                    <?php foreach ($footerMenuItems as $footerMenuItem): ?>
-                                        <li class="site-footer__links-menu-item <?php echo $footerMenuItem->linkClass; ?>">
-                                            <a href="<?php echo $footerMenuItem->link; ?>"
-                                            class="site-footer__links-menu-item-link"
-                                            target="<?php echo $footerMenuItem->target; ?>"
-                                            
-                                            <?php if ($footerMenuItem->rel): ?>rel="<?php echo $footerMenuItem->rel; ?>"<?php endif; ?>>
-                                                <?php echo $footerMenuItem->label; ?>
-                                                <?php if ($footerMenuItem->target === '_blank'): ?>
-                                                    <?php echo WcagComponent::getSrLinkOpensInNewTabHtml(); ?>
-                                                <?php endif; ?>
-                                            </a>
-                                        </li>
-                                    <?php endforeach; ?>
-                                </ul>
+                            <nav class="site-footer__links-menu" aria-labelledby="footer-nav-heading">
+                                <h2 id="footer-nav-heading" class="site-footer__heading h6">
+                                    <?php _e('Navigation', Theme::TEXT_DOMAIN); ?>
+                                </h2>
+                                <?php Partial::render('components/component-footer-menu', [
+                                    'menuItems' => $footerMenuItems,
+                                    'listClass' => 'site-footer__links-menu-list',
+                                ]); ?>
                             </nav>
                         </div>
                     <?php endif; ?>
 
                     <?php if ($hasFooterSecondaryMenuItems): ?>
                         <div class="col col--1 col--xl-1/4 order-3 order-md-2 site-footer__col site-footer__col--links-secondary">
-                            <nav class="site-footer__links-menu site-footer__links-menu--secondary" aria-label="<?php _e('Secondary footer menu', Theme::TEXT_DOMAIN); ?>">
-                                <ul class="site-footer__links-menu-list">
-                                    <?php foreach ($footerSecondaryMenuItems as $footerSecondaryMenuItem): ?>
-                                        <li class="site-footer__links-menu-item <?php echo $footerSecondaryMenuItem->linkClass; ?>">
-                                            <a href="<?php echo $footerSecondaryMenuItem->link; ?>"
-                                            class="site-footer__links-menu-item-link"
-                                            target="<?php echo $footerSecondaryMenuItem->target; ?>"
-                                            
-                                            <?php if ($footerSecondaryMenuItem->rel): ?>rel="<?php echo $footerSecondaryMenuItem->rel; ?>"<?php endif; ?>>
-                                                <?php echo $footerSecondaryMenuItem->label; ?>
-                                                <?php if ($footerSecondaryMenuItem->target === '_blank'): ?>
-                                                    <?php echo WcagComponent::getSrLinkOpensInNewTabHtml(); ?>
-                                                <?php endif; ?>
-                                            </a>
-                                        </li>
-                                    <?php endforeach; ?>
-                                </ul>
+                            <nav class="site-footer__links-menu site-footer__links-menu--secondary" aria-labelledby="footer-legal-heading">
+                                <h2 id="footer-legal-heading" class="site-footer__heading h6">
+                                    <?php _e('Legal', Theme::TEXT_DOMAIN); ?>
+                                </h2>
+                                <?php Partial::render('components/component-footer-menu', [
+                                    'menuItems' => $footerSecondaryMenuItems,
+                                    'listClass' => 'site-footer__links-menu-list',
+                                ]); ?>
                             </nav>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
         </div>
+
+        <?php if ($blogName): ?>
+            <p class="site-footer__copyright">
+                &copy; <?php echo esc_html($copyrightYear); ?>
+                <a href="<?php echo Link::getHomePageUrl(); ?>" class="site-footer__copyright-link"><?php echo esc_html($blogName); ?></a>
+                <?php
+                $tagline = get_bloginfo('description');
+                if ($tagline):
+                    echo ' — ' . esc_html($tagline);
+                endif;
+                ?>
+            </p>
+        <?php endif; ?>
     </div>
 </footer>
 

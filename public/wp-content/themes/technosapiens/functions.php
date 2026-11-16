@@ -244,6 +244,8 @@ class Theme extends Singleton {
         SectionProcessCards::getInstance();
         Section3dfolio::getInstance();
         SectionChatForm::getInstance();
+        SectionFaq::getInstance();
+        SectionStaticSection::getInstance();
     }
 }
 

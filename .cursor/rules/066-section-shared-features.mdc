@@ -34,7 +34,8 @@ use TechnoSapiens\SectionReferencePartial;
 use TechnoSapiens\SectionTitleHeading;
 use TechnoSapiens\SectionVignet;
 
-$containerClasses = SectionReferencePartial::getContainerClasses('section-content');
+$containerClasses = SectionReferencePartial::getContainerClasses('section-content', $block ?? []);
+$anchorId = SectionReferencePartial::getAnchorId($block ?? []);
 $marginTop = SectionMargins::getMarginTop();
 $marginBottom = SectionMargins::getMarginBottom();
 $vignetTop = SectionVignet::getVignetTop();
@@ -47,10 +48,14 @@ $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 ```
 
 ```php
-<div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?>>
+<div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($anchorId) : ?> id="<?php echo esc_attr($anchorId); ?>"<?php endif; ?><?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?>>
 ```
 
-`getContainerClasses($slug)` always returns `section` + `$slug`. Optional legacy ACF `bg` adds `$slug--bg-*`. Solid backgrounds (or legacy black/darkgrey) add `ts-has-dark-background` for inverse text/controls.
+`$block` is passed by `SectionReferenceTrait::render()` into the partial. Gutenberg Advanced **Additional CSS class(es)** (`$block['className']`) and **HTML anchor** (`$block['anchor']`) must be output on the section root — ACF does not wrap custom `render_callback` markup.
+
+`getContainerClasses($slug, $block)` always returns `section` + `$slug`, merges sanitized extra classes from `$block['className']`, and may add legacy ACF `bg` (`$slug--bg-*`) plus `ts-has-dark-background` for solid/legacy dark backgrounds. `getAnchorId($block)` returns a sanitized id (or empty).
+
+Frontend already uses `html.ts-smooth-scroll` + `scroll-padding-top` (header clearance) so `/#anchor` links scroll smoothly without covering the sticky header. Do not invent a per-section scroll script.
 
 Inner content goes in `.container` or `.container.container--narrow` (plus BEM `[slug]__container` when useful).
 
@@ -119,7 +124,8 @@ Render pattern:
 
 ## Checklist for new/updated partials
 
-- [ ] `SectionReferencePartial::getContainerClasses('[slug]')`
+- [ ] `SectionReferencePartial::getContainerClasses('[slug]', $block ?? [])`
+- [ ] `SectionReferencePartial::getAnchorId($block ?? [])` → `id` on section root when set
 - [ ] `SectionMargins` → `data-pt` / `data-pb`
 - [ ] `SectionVignet` → `data-vignet-top` / `data-vignet-bottom`
 - [ ] `SectionBackground` → `data-bg` / `data-bg-color` + bands markup when needed

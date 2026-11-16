@@ -134,6 +134,26 @@ msgstr "Logo %s"
 msgid "Navigate to the home page"
 msgstr "Navigeer naar de home pagina"
 
+#: footer.php:34
+msgid "Site footer"
+msgstr "Sitefooter"
+
+#: footer.php:42
+msgid "%s — go to homepage"
+msgstr "%s — naar de homepage"
+
+#: footer.php:61
+msgid "Contact"
+msgstr "Contact"
+
+#: footer.php:84
+msgid "Navigation"
+msgstr "Navigatie"
+
+#: footer.php:98
+msgid "Legal"
+msgstr "Juridisch"
+
 #: functions.php:115
 #: inc/features/mega-menu/presets/two-columns-with-card-preset/partials/mm-two-columns-with-card.php:31
 msgid "Primary menu"

@@ -13,7 +13,10 @@ $mobileItems = Navigation::getLinksByThemeLocation(Theme::MENU_MOBILE);
 $headerButton = ThemeSettings::getHeaderButtonData();
 
 //get HTML classes
-$htmlClasses = apply_filters('ts_html_classes', ['ts-' . (is_admin_bar_showing() ? 'has-admin-bar' : 'has-no-admin-bar')]);
+$htmlClasses = apply_filters('ts_html_classes', [
+    'ts-' . (is_admin_bar_showing() ? 'has-admin-bar' : 'has-no-admin-bar'),
+    'ts-smooth-scroll',
+]);
 
 ?>
 <!doctype html>

@@ -45,7 +45,8 @@ Create a new page builder **section** in the Techno Sapiens theme. Follow [010-t
 
 6. **Partial.** Match `partials/section-content.php`:
     * `get_field('field_name')` with **no** `$post_id`
-    * Shared chrome per [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc): `getContainerClasses`, margins → `data-pt`/`data-pb`, vignettes, backgrounds (+ bands markup), section title + heading tag/size
+    * Shared chrome per [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc): `getContainerClasses($slug, $block ?? [])`, `getAnchorId($block ?? [])` → `id` on root, margins → `data-pt`/`data-pb`, vignettes, backgrounds (+ bands markup), section title + heading tag/size
+    * Output Gutenberg Advanced CSS classes + HTML anchor on the section root (trait enables `customClassName` + `anchor`; custom render must print them)
     * Inner layout in `.container` or `.container.container--narrow`
     * BEM on `[section-slug]`
     * Escape output. WYSIWYG via `Formatting::toHtml()`

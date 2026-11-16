@@ -15,7 +15,8 @@ $isEditor = is_admin();
 $popupTitleId = wp_unique_id('section-3dfolio-popup-title-');
 $closeIconHref = ICON_PATH . 'icon-close';
 
-$containerClasses = SectionReferencePartial::getContainerClasses('section-3dfolio');
+$containerClasses = SectionReferencePartial::getContainerClasses('section-3dfolio', $block ?? []);
+$anchorId = SectionReferencePartial::getAnchorId($block ?? []);
 $marginTop = SectionMargins::getMarginTop();
 $marginBottom = SectionMargins::getMarginBottom();
 $vignetTop = SectionVignet::getVignetTop();
@@ -28,7 +29,7 @@ $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 $brandMarkUrl = get_stylesheet_directory_uri() . '/images/web/beeldmerk-no-hex.svg';
 ?>
 
-<div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?> data-section-3dfolio-brand-mark="<?php echo esc_url($brandMarkUrl); ?>">
+<div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($anchorId) : ?> id="<?php echo esc_attr($anchorId); ?>"<?php endif; ?><?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?> data-section-3dfolio-brand-mark="<?php echo esc_url($brandMarkUrl); ?>">
 
     <?php if ($backgroundType === 'bands') : ?>
         <div class="section-background">

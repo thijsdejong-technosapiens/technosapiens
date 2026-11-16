@@ -34,7 +34,8 @@ trait SectionReferenceTrait {
         }
 
         $defaultSupports = [
-            'customClassName' => false,
+            'customClassName' => true,
+            'anchor' => true,
             'align' => false,
             'mode' => false,
             'reusable' => true,

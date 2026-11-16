@@ -112,10 +112,12 @@ class SectionReferencePartial {
 
     /**
      * Build container classes for a reference section.
+     * Merges Gutenberg Advanced "Additional CSS class(es)" from $block['className'].
      * @param string $sectionClass
+     * @param array $block ACF/WP block array from the render callback
      * @return array
      */
-    public static function getContainerClasses(string $sectionClass): array {
+    public static function getContainerClasses(string $sectionClass, array $block = []): array {
         $classes = ['section', $sectionClass];
         $background = get_field('bg') ?? '';
 
@@ -127,7 +129,28 @@ class SectionReferencePartial {
             $classes[] = 'ts-has-dark-background';
         }
 
+        $extra = trim((string) ($block['className'] ?? ''));
+        if ($extra !== '') {
+            foreach (preg_split('/\s+/', $extra) ?: [] as $class) {
+                $sanitized = sanitize_html_class($class);
+                if ($sanitized !== '') {
+                    $classes[] = $sanitized;
+                }
+            }
+        }
+
         return $classes;
+    }
+
+    /**
+     * Get the Gutenberg Advanced HTML anchor for a section root element.
+     * @param array $block ACF/WP block array from the render callback
+     * @return string Sanitized id, or empty string when unset
+     */
+    public static function getAnchorId(array $block = []): string {
+        $anchor = trim((string) ($block['anchor'] ?? ''));
+
+        return $anchor !== '' ? sanitize_title($anchor) : '';
     }
 
     /**

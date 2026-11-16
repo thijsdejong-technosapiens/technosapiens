@@ -1,0 +1,158 @@
+@use "../../../scss/util/util-mixins" as mixins;
+@use "../../../scss/util/util-variables" as vars;
+
+.section-faq {
+    $self: &;
+
+    &__title {
+        margin: 0 0 var(--ts-gutter-width, 2rem) 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        text-align: center;
+
+        @include mixins.mq-up(lg) {
+            margin-bottom: var(--ts-row-gap-default, 2rem);
+            text-align: left;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    &__item {
+        &--not-collapsible {
+            &:not(:last-of-type) {
+                margin-bottom: var(--ts-gutter-width, 2rem);
+            }
+        }
+    }
+
+    &__question {
+        display: block;
+        border: none;
+        appearance: none;
+        margin-top: 0;
+        box-sizing: border-box;
+        font-weight: var(--ts-font-weight-bold, 600);
+        cursor: initial;
+        padding: calc(var(--ts-gutter-width, 2rem) / 4) 0;
+        margin-bottom: calc(var(--ts-gutter-width, 2rem) / 2);
+        border-bottom: 1px solid var(--ts-color-border, lightgrey);
+        width: 100%;
+        text-align: start;
+        background-color: unset;
+        color: inherit;
+        font-family: inherit;
+    }
+
+    &--collapsible {
+        #{$self}__question {
+            cursor: pointer;
+            transition: color var(--ts-duration-fast, 0.2s) var(--ts-easing-standard, ease-in-out);
+            margin-bottom: 0;
+            padding: calc(var(--ts-gutter-width, 2rem) / 2) var(--ts-gutter-width, 2rem) calc(var(--ts-gutter-width, 2rem) / 2) calc(var(--ts-gutter-width, 2rem) / 2);
+            position: relative;
+            user-select: none;
+
+            &:before,
+            &:after {
+                content: "";
+                border: none;
+                background-color: currentColor;
+                position: absolute;
+                transition: transform var(--ts-duration-fast, 0.2s) var(--ts-easing-standard, ease-in-out),
+                    background-color var(--ts-duration-fast, 0.2s) var(--ts-easing-standard, ease-in-out);
+                top: 50%;
+                left: calc(100% - 1em);
+                transform: translate(-50%, -50%);
+            }
+
+            &:before {
+                width: 1rem;
+                height: 0.125em;
+            }
+
+            &:after {
+                width: 0.125em;
+                height: 1rem;
+            }
+
+            &:hover {
+                color: var(--ts-color-secondary, blue);
+
+                &:after,
+                &:before {
+                    background-color: var(--ts-color-secondary, blue);
+                }
+            }
+
+            &:focus-visible {
+                outline: var(--ts-focus-ring, 0.125rem solid blue);
+                outline-offset: var(--ts-focus-ring-offset, 0.125rem);
+            }
+
+            &[aria-expanded="true"] {
+                &:after {
+                    transform: translate(-50%, -50%) scale(0);
+                }
+            }
+        }
+
+        #{$self}__answer {
+            overflow: hidden;
+            height: 0;
+            border-bottom: 1px solid transparent;
+            transition:
+                height var(--ts-duration-base, 0.3s) var(--ts-easing-standard, ease-in-out),
+                border-color var(--ts-duration-base, 0.3s) var(--ts-easing-standard, ease-in-out);
+
+            &.is-open {
+                height: auto;
+                border-bottom-color: var(--ts-color-border, lightgrey);
+            }
+
+            &:not([hidden]):not(.is-open) {
+                border-bottom-color: var(--ts-color-border, lightgrey);
+            }
+
+            &[hidden] {
+                display: none;
+            }
+        }
+
+        #{$self}__answer-inner {
+            padding: calc(var(--ts-gutter-width, 2rem) / 2) calc(var(--ts-gutter-width, 2rem) * 2) calc(var(--ts-gutter-width, 2rem) / 2) calc(var(--ts-gutter-width, 2rem) / 2);
+        }
+    }
+
+    &__answer {
+        min-width: 0;
+        max-width: 100%;
+
+        p {
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--ts-color-action, blue);
+            text-decoration: underline;
+
+            .ts-has-dark-background & {
+                color: var(--ts-color-text-inverse, white);
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-faq--collapsible {
+        .section-faq__answer {
+            transition: none;
+        }
+    }
+}

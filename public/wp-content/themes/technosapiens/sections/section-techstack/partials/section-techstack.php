@@ -16,7 +16,8 @@ $titleHeadingSize = SectionTitleHeading::getSize();
 $groups = $sectionTechstack->getGroups();
 $hasContent = $sectionTitle || !empty($groups);
 
-$containerClasses = SectionReferencePartial::getContainerClasses('section-techstack');
+$containerClasses = SectionReferencePartial::getContainerClasses('section-techstack', $block ?? []);
+$anchorId = SectionReferencePartial::getAnchorId($block ?? []);
 $marginTop = SectionMargins::getMarginTop();
 $marginBottom = SectionMargins::getMarginBottom();
 $vignetTop = SectionVignet::getVignetTop();
@@ -29,7 +30,7 @@ $backgroundBandsSize = SectionBackground::getBackgroundBandsSize();
 ?>
 
 <?php if ($hasContent) : ?>
-    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?>>
+    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($anchorId) : ?> id="<?php echo esc_attr($anchorId); ?>"<?php endif; ?><?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php if ($vignetTop) : ?> data-vignet-top="<?php echo esc_attr($vignetTop); ?>"<?php endif; ?><?php if ($vignetBottom) : ?> data-vignet-bottom="<?php echo esc_attr($vignetBottom); ?>"<?php endif; ?><?php if ($backgroundType) : ?> data-bg="<?php echo esc_attr($backgroundType); ?>"<?php endif; ?><?php if ($backgroundColor) : ?> data-bg-color="<?php echo esc_attr($backgroundColor); ?>"<?php endif; ?>>
 
         <?php if ($backgroundType === 'bands') : ?>
             <div class="section-background">

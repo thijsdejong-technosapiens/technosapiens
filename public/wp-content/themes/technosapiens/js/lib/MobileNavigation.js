@@ -1,7 +1,7 @@
 /**
  * class MobileNavigation
- * Reveals the bottom mobile nav when scrolling down, hides it when scrolling up.
- * Stays visible near the document bottom and while a child has keyboard focus.
+ * Visible at page load and near the top/bottom; hides when scrolling up mid-page,
+ * shows again when scrolling down. Stays visible while a child has keyboard focus.
  */
 class MobileNavigation {
 
@@ -63,7 +63,7 @@ class MobileNavigation {
         const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight)
 
         if (scrollY <= this.EDGE_THRESHOLD) {
-            this.hide()
+            this.show()
         } else if (scrollY >= maxScroll - this.EDGE_THRESHOLD) {
             this.show()
         } else if (delta > this.SCROLL_DELTA) {

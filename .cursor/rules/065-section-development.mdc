@@ -61,7 +61,9 @@ class SectionContent extends Singleton {
 
 The trait registers an ACF **block v3** section (`api_version` / `acf_block_version` 3). Do not set `mode` to `edit`. Default mode is `preview`. Pass `$hasScript = true` only when `js/[section-slug].js` exists.
 
-Supports default: `customClassName` false, `align` false, `mode` false, `reusable` true.
+Supports default: `customClassName` true, `anchor` true, `align` false, `mode` false, `reusable` true.
+
+ACF custom `render_callback` does **not** auto-output Advanced panel values. Partials must merge `$block['className']` via `SectionReferencePartial::getContainerClasses($slug, $block ?? [])` and output `$block['anchor']` as `id` via `SectionReferencePartial::getAnchorId($block ?? [])` on the section root (see [066-section-shared-features.mdc](mdc:.cursor/rules/066-section-shared-features.mdc)).
 
 ### What the trait already does (do not duplicate)
 
@@ -86,7 +88,7 @@ Required outer chrome (margins, vignettes, backgrounds, titles) matches `section
 
 ```php
 <?php if ($hasContent) : ?>
-    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php /* + vignette + background data attrs — see 066 */ ?>>
+    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($anchorId) : ?> id="<?php echo esc_attr($anchorId); ?>"<?php endif; ?><?php if ($marginTop) : ?> data-pt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-pb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?><?php /* + vignette + background data attrs — see 066 */ ?>>
         <div class="container container--narrow section-content__container">
             <!-- BEM content -->
         </div>

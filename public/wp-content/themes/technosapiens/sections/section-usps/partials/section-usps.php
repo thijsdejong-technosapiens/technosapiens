@@ -14,13 +14,14 @@ $uspsImageId = $sectionUsps->getUspsImageId();
 $uspsItems = $sectionUsps->getUspsItems();
 $hasContent = $uspsTitle || $uspsImageId || !empty($uspsItems);
 
-$containerClasses = SectionReferencePartial::getContainerClasses('section-usps');
+$containerClasses = SectionReferencePartial::getContainerClasses('section-usps', $block ?? []);
+$anchorId = SectionReferencePartial::getAnchorId($block ?? []);
 $marginTop = SectionMargins::getMarginTop();
 $marginBottom = SectionMargins::getMarginBottom();
 ?>
 
 <?php if ($hasContent) : ?>
-    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($marginTop) : ?> data-mt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-mb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?>>
+    <div class="<?php echo esc_attr(implode(' ', $containerClasses)); ?>"<?php if ($anchorId) : ?> id="<?php echo esc_attr($anchorId); ?>"<?php endif; ?><?php if ($marginTop) : ?> data-mt="<?php echo esc_attr($marginTop); ?>"<?php endif; ?><?php if ($marginBottom) : ?> data-mb="<?php echo esc_attr($marginBottom); ?>"<?php endif; ?>>
         <div class="container">
             <div class="section-usps__row">
 

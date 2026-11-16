@@ -1,0 +1,895 @@
+
+<!doctype html>
+<html lang="nl-NL" class="ts-has-no-admin-bar">
+    <head><script>(function(){if(window.__HERD_EARLY_ERRORS__)return;var b=window.__HERD_EARLY_ERRORS__=[];function p(e){if(b.length<50)b.push(e)}window.addEventListener("error",function(e){if(window.__HERD_FRAME_AGENT__)return;p({message:e.message,filename:e.filename,lineno:e.lineno,stack:e.error&&e.error.stack})});window.addEventListener("unhandledrejection",function(e){if(window.__HERD_FRAME_AGENT__)return;var r=e.reason;p({message:"Unhandled promise rejection: "+(r&&r.message?r.message:String(r)),stack:r&&r.stack})})})();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5"/>
+
+        <title>Website of webapplicatie laten maken | TechnoSapiens</title>
+        
+        <link rel="prefetch" as="font"
+              href="https://technosapiens.test/wp-content/themes/technosapiens/fonts/plus-jakarta-sans-latin-regular/plus-jakarta-sans-latin-regular.woff2"/>
+        <link rel="prefetch" as="font"
+              href="https://technosapiens.test/wp-content/themes/technosapiens/fonts/plus-jakarta-sans-latin-500/plus-jakarta-sans-latin-500.woff2"/>
+        <link rel="prefetch" as="font"
+              href="https://technosapiens.test/wp-content/themes/technosapiens/fonts/plus-jakarta-sans-latin-700/plus-jakarta-sans-latin-700.woff2"/>
+        <meta name='robots' content='noindex, nofollow' />
+<style id="ts-css-variables">:root {--ts-font-family-sans: 'Plus Jakarta Sans', sans-serif; --ts-font-size-display: 3rem; --ts-font-size-display-md: 5rem; --ts-line-height-display: 3.5rem; --ts-line-height-display-md: 6rem; --ts-font-size-h1: 2.25rem; --ts-font-size-h1-md: 3.25rem; --ts-line-height-h1: 2.75rem; --ts-line-height-h1-md: 4rem; --ts-font-size-h2: 1.75rem; --ts-font-size-h2-md: 2.25rem; --ts-line-height-h2: 2rem; --ts-line-height-h2-md: 2.75rem; --ts-font-size-h3: 1.5rem; --ts-font-size-h3-md: 1.75rem; --ts-line-height-h3: 1.75rem; --ts-line-height-h3-md: 2rem; --ts-font-size-h4: 1.25rem; --ts-font-size-h4-md: 1.5rem; --ts-line-height-h4: 1.5rem; --ts-line-height-h4-md: 1.75rem; --ts-font-size-body-base: 1rem; --ts-font-size-body-base-md: 1.125rem; --ts-line-height-body-base: 1.5rem; --ts-line-height-body-base-md: 1.75rem; --ts-font-size-body-small: 1rem; --ts-line-height-body-small: 1.5rem; --ts-color-plum-950: #250525; --ts-color-plum-800: #4E134E; --ts-color-plum-750: #580F58; --ts-color-plum-700: #5E185E; --ts-color-plum-650: #631F63; --ts-color-plum-600: #662264; --ts-color-plum-500: #7F1E69; --ts-color-plum-400: #971A6E; --ts-color-plum-300: #B01774; --ts-color-pink-600: #C81379; --ts-color-pink-500: #E10F7E; --ts-color-yellow-500: #FDB500; --ts-color-yellow-600: #E0A200; --ts-color-yellow-700: #C48D00; --ts-color-cream-50: #FBFBF3; --ts-color-green-600: #1E7A46; --ts-color-red-700: #B3261E; --ts-color-red-800: #8F1D1D; --ts-color-blue-600: #1F5FAD; --ts-color-primary: #662264; --ts-color-primary-dark: #4E134E; --ts-color-primary-darker: #250525; --ts-color-secondary: #E10F7E; --ts-color-tertiary: #FDB500; --ts-color-white: #FBFBF3; --ts-color-black: #000000; --ts-color-light: #F3F2EB; --ts-color-body: #FFFFFF; --ts-color-accent: #00132F; --ts-color-gradient-stop-1: #5E185E; --ts-color-gradient-stop-2: #662264; --ts-color-gradient-stop-3: #7F1E69; --ts-color-gradient-stop-4: #971A6E; --ts-color-gradient-stop-5: #B01774; --ts-color-gradient-stop-6: #C81379; --ts-color-gradient-stop-7: #E10F7E; --ts-color-primary-hover: #580F58; --ts-color-on-primary: #FBFBF3; --ts-color-brand-primary: #662264; --ts-color-brand-secondary: #E10F7E; --ts-color-brand-tertiary: #FDB500; --ts-color-text-default: #FBFBF3; --ts-color-text-accent: #E10F7E; --ts-color-text-on-primary: #FBFBF3; --ts-color-text-on-tertiary: #250525; --ts-color-text-on-feedback: #FBFBF3; --ts-color-text-placeholder: #7F1E69; --ts-color-surface-page: #250525; --ts-color-surface-panel: #4E134E; --ts-color-surface-panel-alt: #5E185E; --ts-color-surface-card: #FBFBF3; --ts-color-border-accent: #C81379; --ts-color-border-strong: #E10F7E; --ts-color-border-field: #7F1E69; --ts-color-border-field-hover: #971A6E; --ts-color-action-primary: #662264; --ts-color-action-primary-hover: #580F58; --ts-color-action-primary-pressed: #4E134E; --ts-color-action-secondary: #E10F7E; --ts-color-action-secondary-hover: #C81379; --ts-color-action-secondary-pressed: #971A6E; --ts-color-action-tertiary: #FDB500; --ts-color-action-tertiary-hover: #E0A200; --ts-color-action-tertiary-pressed: #C48D00; --ts-color-action-danger: #B3261E; --ts-color-action-danger-hover: #8F1D1D; --ts-color-focus-ring: #FBFBF3; --ts-color-text: #4E134E; --ts-color-text-inverse: #FBFBF3; --ts-color-surface: #FFFFFF; --ts-color-border: #EEEEEE; --ts-font-color-primary: #4E134E; --ts-font-color-white: #FBFBF3; --ts-font-color-cream: #F6F3EB; --ts-font-color-nav: #FFFFFF; --ts-font-color-nav-hover: #662264; --ts-color-password-weak: #B3261E; --ts-color-password-strong: #4db54f; --ts-font-weight-light: 400; --ts-font-weight-regular: 400; --ts-font-weight-medium: 500; --ts-font-weight-semibold: 700; --ts-font-weight-bold: 700; --ts-elevation-1: 0 4px 4px rgba(0,0,0,.1); --ts-elevation-2: 0 8px 8px rgba(0,0,0,.15); --ts-elevation-3: 0 25px 100px 0px rgba(0,0,0,0.15); --ts-duration-fast: 0.15s; --ts-duration-base: 0.25s; --ts-duration-slow: 0.4s; --ts-easing-standard: cubic-bezier(0.2, 0, 0, 1); --ts-opacity-disabled: 0.4; --ts-z-index-base: 0; --ts-z-index-dropdown: 100; --ts-z-index-sticky: 200; --ts-z-index-overlay: 300; --ts-z-index-modal: 1000; --ts-z-index-toast: 1100; --ts-z-index-admin: 99999; --ts-radius-foundation-xs: 0.5rem; --ts-radius-foundation-sm: 1rem; --ts-radius-foundation-md: 1.5rem; --ts-radius-foundation-lg: 1.875rem; --ts-radius-foundation-xl: 2.9rem; --ts-radius-foundation-pill: 3.125rem; --ts-space-1: 0.25rem; --ts-space-2: 0.5rem; --ts-space-3: 0.75rem; --ts-space-4: 1rem; --ts-space-5: 1.25rem; --ts-space-6: 1.5rem; --ts-space-7: 1.75rem; --ts-space-8: 2rem; --ts-space-10: 2.5rem; --ts-space-12: 3rem; --ts-space-16: 4rem; --ts-space-20: 5rem; --ts-space-96: 6rem; --ts-base-width: 1410px; --ts-narrow-width: 1188px; --ts-nav-height-top: 2.5rem; --ts-nav-height-top-mobile: 0rem; --ts-nav-height: 3.75rem; --ts-nav-height-mobile: 3.75rem; --ts-color-feedback-info: #1F5FAD; --ts-color-feedback-success: #1E7A46; --ts-color-feedback-warning: #FDB500; --ts-color-feedback-error: #B3261E; --ts-size-button-sm: 2.5rem; --ts-size-button-md: 3rem; --ts-size-button-lg: 3.5rem; --ts-size-hit-area: 2.75rem; --ts-size-field-height: 3rem; --ts-stroke-thin: 2px; --ts-stroke-medium: 4px; --ts-stroke-thick: 8px; --ts-container-padding: 1rem; --ts-container-padding-md: 2rem; --ts-section-spacing: 3rem; --ts-section-spacing-md: 6rem; --ts-grid-gutter: 1rem; --ts-grid-gutter-md: 1.5rem; --ts-grid-columns: 4; --ts-grid-columns-md: 12;}</style>
+	<meta name="description" content="Wil je een website of webapplicatie laten maken met AI én menselijke regie? TechnoSapiens bouwt veilig en schaalbaar. Plan een kennismaking." />
+	<meta property="og:locale" content="nl_NL" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="TechnoSapiens | Website &amp; webapp laten maken" />
+	<meta property="og:description" content="Veilige websites en AI-webapps op maat — met een vast, persoonlijk aanspreekpunt. Plan een kennismaking met TechnoSapiens." />
+	<meta property="og:url" content="https://technosapiens.test/" />
+	<meta property="og:site_name" content="TechnoSapiens" />
+	<meta property="article:modified_time" content="2026-10-30T13:08:53+00:00" />
+	<meta property="og:image" content="https://technosapiens.test/wp-content/uploads/2026/09/login-bg.jpg" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1080" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="TechnoSapiens | Website &amp; webapp laten maken" />
+	<meta name="twitter:description" content="Veilige websites en AI-webapps op maat — met een vast, persoonlijk aanspreekpunt. Plan een kennismaking met TechnoSapiens." />
+	<meta name="twitter:image" content="https://technosapiens.test/wp-content/uploads/2026/09/login-bg.jpg" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/technosapiens.test\/","url":"https:\/\/technosapiens.test\/","name":"Website of webapplicatie laten maken | TechnoSapiens","isPartOf":{"@id":"https:\/\/technosapiens.test\/#website"},"about":{"@id":"https:\/\/technosapiens.test\/#organization"},"datePublished":"2026-09-17T17:35:10+00:00","dateModified":"2026-10-30T13:08:53+00:00","description":"Wil je een website of webapplicatie laten maken met AI én menselijke regie? TechnoSapiens bouwt veilig en schaalbaar. Plan een kennismaking.","breadcrumb":{"@id":"https:\/\/technosapiens.test\/#breadcrumb"},"inLanguage":"nl-NL","potentialAction":[{"@type":"ReadAction","target":["https:\/\/technosapiens.test\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/technosapiens.test\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/technosapiens.test\/#website","url":"https:\/\/technosapiens.test\/","name":"TechnoSapiens","description":"Websites &amp; AI-webapps met menselijke regie","publisher":{"@id":"https:\/\/technosapiens.test\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/technosapiens.test\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"nl-NL"},{"@type":"Organization","@id":"https:\/\/technosapiens.test\/#organization","name":"TechnoSapiens","alternateName":"Techno Sapiens","url":"https:\/\/technosapiens.test\/","logo":{"@type":"ImageObject","inLanguage":"nl-NL","@id":"https:\/\/technosapiens.test\/#\/schema\/logo\/image\/","url":"https:\/\/technosapiens.test\/wp-content\/uploads\/2026\/09\/logo.svg","contentUrl":"https:\/\/technosapiens.test\/wp-content\/uploads\/2026\/09\/logo.svg","width":394,"height":128,"caption":"TechnoSapiens"},"image":{"@id":"https:\/\/technosapiens.test\/#\/schema\/logo\/image\/"}}]}</script>
+
+
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://technosapiens.test/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftechnosapiens.test%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://technosapiens.test/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftechnosapiens.test%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='component-accessibility-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-component-accessibility-125a4c1ac36353748369.min.css?ver=7.1.4' media='all' />
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='section_section_content_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-content-style-b3f860c46e7403e8c286.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='section_section_heading_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-heading-style-221b85aa9673a2590c46.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='section_section_cards_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-cards-style-86b3456a5c5101f18412.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='section_section_brands_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-brands-style-4e1817daf89c43531ac8.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='section_section_process_cards_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-process-cards-style-d247fa4d5a452a34f038.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='section_section_faq_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-faq-style-83e1ddb44c6ff5e15604.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='hm_main_hero_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-hm-main-hero-7082ade100b3c205cb30.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='technosapiens_styles-css' href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-frontend-209a3bfd63673794c7fe.min.css' media='all' />
+<link rel="https://api.w.org/" href="https://technosapiens.test/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://technosapiens.test/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://technosapiens.test/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://technosapiens.test/' />
+        <script type="application/javascript">
+            window.ts = {
+                icons: 'https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-icons-43645a87980673e75ba7e181d78869e8.svg#'
+            };
+        </script>
+        <link rel="icon" href="https://technosapiens.test/wp-content/uploads/2026/09/cropped-favicon-alt.png" sizes="32x32" />
+<link rel="icon" href="https://technosapiens.test/wp-content/uploads/2026/09/cropped-favicon-alt.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://technosapiens.test/wp-content/uploads/2026/09/cropped-favicon-alt.png" />
+<meta name="msapplication-TileImage" content="https://technosapiens.test/wp-content/uploads/2026/09/cropped-favicon-alt.png" />
+    </head>
+
+<body class="home wp-singular page-template-default page page-id-2 wp-theme-technosapiens has-header-module header-module--preset-main-hero">
+
+
+    <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-skip-link.php ---><a href="#ts-main" target="_self" class="ts-button ts-button--bc ts-button--style-outlined ts-button--size-medium ts-button--color-primary ts-skip-link"><span class="ts-button__text">Overslaan naar inhoud</span></a><!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-skip-link.php --->
+    <header class="ts-header">
+
+        <div class="ts-header__container container">
+
+            <div class="ts-header__inner">
+            
+                <div class="ts-header__left">
+                    <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/header/header-logo.php --->
+<a href="https://technosapiens.test"
+target="_self"
+class="ts-header__logo"
+aria-label="Navigeer naar de home pagina">
+    <svg class="ts-header__logo-image" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 512 512">
+        <path class="ts-header__logo-image-rotating-shape" fill="#e10f7e" d="M128.29 477.449.365 256.45l17.88-31.335 60.51-104.872 48.95-85.34 36.177-.27 120.977.133 98.48-.314L511.537 255.92l-17.88 31.335-60.41 104.502-49.42 85.612-36.078-.102-120.706.337z"/>
+        <path fill="#662264" d="M189.679 502.883 9.117 322.32l9.2-34.886L49.753 170.51l25.302-95.073 34.885-9.584 116.925-31.052 95.073-25.685 180.945 180.945-9.2 34.886-31.436 116.54-25.685 95.457-34.886 9.2-116.54 31.436z"/>
+        <path fill="#e10f7e" d="m69.421 270.225 9.488-9.488 38.221 38.222-9.487 9.488zm19.439-18.786 9.488-9.488 38.221 38.222-9.487 9.488zm19.168-19.057 9.488-9.488 38.221 38.222-9.487 9.488zm18.785-19.44 9.487-9.488 38.222 38.222-9.488 9.487z"/>
+        <path fill="#e10f7e" d="m145.871 270.063 9.488-9.487 38.221 38.221-9.487 9.488zm19.439-18.786 9.488-9.487 38.221 38.221-9.487 9.488zm19.058 57.123 9.488-9.488 38.222 38.221-9.488 9.488z"/>
+        <path fill="#e10f7e" d="m203.265 289.613 9.488-9.487 38.222 38.221-9.488 9.488zm-57.285-95.728 9.488-9.488 38.222 38.222-9.488 9.487zm19.168-19.057 9.488-9.488 38.222 38.222-9.488 9.487zm47.92-47.676 9.488-9.487 38.222 38.221-9.488 9.488zm19.168-19.057 9.488-9.487 38.221 38.221-9.487 9.488zm18.784-19.057 9.488-9.487 38.222 38.221-9.488 9.488zm200.768 181.347-9.488 9.488-38.222-38.222 9.488-9.487zm-18.898 19.167-9.487 9.487-38.221-38.221 9.487-9.488zm-19.167 19.278-9.488 9.488-38.221-38.221 9.487-9.488zm-19.168 18.896-9.488 9.488-38.221-38.222 9.487-9.488zm-19.277-57.502-9.488 9.487-38.222-38.221 9.488-9.488zm-19.168 19.437-9.488 9.488-38.222-38.222 9.488-9.487z"/>
+        <path fill="#e10f7e" d="m337.216 232.159-9.488 9.487-38.222-38.221 9.488-9.488zm-19.168 18.895-9.488 9.488-38.222-38.222 9.488-9.487zm57.339 95.567-9.488 9.488-38.221-38.222 9.487-9.487zm-19.439 19.55-9.488 9.488-38.221-38.222 9.487-9.487zm-47.536 47.239-9.488 9.488-38.222-38.222 9.488-9.488zm-18.897 19.55-9.488 9.488-38.221-38.222 9.487-9.488zm-19.168 18.895-9.488 9.488-38.221-38.222 9.487-9.487z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="m103.04 275.168-9.584 9.584-38.336-38.336 9.584-9.584zm-19.168-57.504-9.584 9.584 38.336 38.336 9.584-9.584zm19.168-18.784-9.584 9.584 38.336 38.335 9.584-9.584zm19.168-19.168-9.584 9.584 38.336 38.335 9.584-9.583zm19.168 57.12-9.584 9.584 38.336 38.336 9.584-9.584zm19.168-19.168-9.584 9.584 38.336 38.336L198.88 256zm18.784 57.504-9.584 9.584 38.336 38.336 9.584-9.584zM198.496 256l-9.584 9.584 38.336 38.336 9.584-9.584zm-57.12-95.456-9.584 9.584 38.336 38.336 9.584-9.584zm19.168-19.168-9.584 9.584 38.336 38.336 9.584-9.584zm28.368-28.752-9.584 9.584 38.336 38.336 9.584-9.584zm19.168-19.168-9.584 9.584 38.336 38.336 9.584-9.584zm19.168-18.784-9.584 9.583L256 122.591l9.584-9.584zM408.96 275.168l9.584-9.584-38.336-38.336-9.584 9.584zm-19.168 19.168 9.584-9.584-38.336-38.336-9.584 9.584zm-19.168 19.168 9.584-9.584-38.336-38.336-9.584 9.584zm-19.168 19.168 9.584-9.584-38.336-38.336-9.584 9.584zm-19.168-57.504 9.584-9.584-38.336-38.336-9.584 9.584zm-19.168 19.168 9.584-9.584-38.335-38.336-9.584 9.584zm-18.784-57.504 9.584-9.584-38.336-38.336-9.584 9.584zM275.168 256l9.584-9.584-38.336-38.336-9.584 9.584zm57.12 95.456 9.584-9.584-38.336-38.336-9.584 9.584zm-19.168 19.168 9.584-9.584-38.335-38.336-9.584 9.584zm-28.368 28.752 9.584-9.584L256 351.456l-9.584 9.584zm-19.168 19.168 9.584-9.584-38.336-38.336-9.584 9.584zm-19.168 19.168 9.584-9.584-38.336-38.336-9.584 9.584z"/>
+    </svg>
+
+    <svg class="ts-header__logo-wordmark" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 265 129" overflow="visible">
+        <defs>
+            <g id="ts-header-logo-wordmark-art">
+        <path fill="#e10f7e" fill-rule="nonzero" d="M191.7 37.8h-3.1l3.1 4z"/>
+        <path fill="#e10f7e" d="M22.1 37.8H31v21.3h-8.9z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="M46 59.1h28.6v-7.7H54.8v-9.8h18.7v-3.8H46zm34-12.6c1.1 2.7 2.6 5 4.5 7s4.2 3.5 6.8 4.6 5.4 1.7 8.5 1.7 5.9-.5 8.3-1.5c2.5-1 4.5-2.4 6.3-4.1 1.7-1.7 2.9-3.6 3.7-5.7l-7.8-3.8c-.7 2.1-2 3.8-3.8 5.1-1.8 1.4-4 2-6.6 2s-4.7-.6-6.6-1.8-3.4-2.8-4.4-4.9-1.6-4.5-1.6-7.3h-8.9c0 3.2.5 6.1 1.6 8.7m43.8 12.6h8.9V42.7h16.5v16.4h8.9V37.8h-34.3z"/>
+        <path fill="#e10f7e" d="M165.6 37.8h8.9v21.3h-8.9z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="m191.7 41.8-3.1-4h-10.7l15.8 21.3h6.8V37.8h-8.8zm50.4 1.7c-.7 1.7-1.7 3.2-2.9 4.4-1.3 1.2-2.7 2.2-4.4 2.9s-3.5 1-5.4 1-3.7-.3-5.4-1-3.1-1.6-4.4-2.9c-1.3-1.2-2.2-2.7-2.9-4.4s-1-3.6-1-5.6h-8.9c0 3.1.6 6 1.7 8.7s2.7 5 4.8 7c2 2 4.4 3.6 7.2 4.7 2.7 1.1 5.7 1.7 8.9 1.7s6.2-.6 8.9-1.7 5.1-2.7 7.2-4.7c2-2 3.6-4.3 4.8-7 1.1-2.7 1.7-5.5 1.7-8.7h-8.9c0 2-.3 3.9-1 5.6M44.8 24.2v-7.7H14.5v7.7h10.8v13.6h8.8V24.2zM58 33.9v-9.7h19.8v-7.7H49.2v21.3h27.5v-3.9zm34-3.4c1-2.1 2.5-3.7 4.4-4.9q2.85-1.8 6.6-1.8c2.5 0 4.8.7 6.6 2 1.8 1.4 3.1 3.1 3.8 5.1l7.8-3.8c-.7-2.1-1.9-4-3.7-5.7s-3.8-3.1-6.3-4.1-5.2-1.5-8.3-1.5-5.9.5-8.5 1.6-4.9 2.6-6.8 4.6-3.5 4.3-4.5 7c-1.1 2.7-1.6 5.6-1.6 8.8h8.9c0-2.8.5-5.2 1.6-7.3m60.4-14v18.4h-16.6V16.5H127v21.3h34.3V16.5z"/>
+        <path fill="#e10f7e" d="M194.9 16.5h8.9v21.3h-8.9z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="M175.6 16.5h-6.8v21.3h8.9v-4.6l3.4 4.6h10.7zm77.9 12.6c-1.1-2.7-2.7-5-4.7-7s-4.4-3.5-7.2-4.6c-2.7-1.1-5.7-1.7-9-1.7s-6.2.6-9 1.7c-2.7 1.1-5.1 2.6-7.2 4.6-2 2-3.6 4.3-4.7 7s-1.7 5.6-1.7 8.7h8.9c0-2.1.3-3.9 1-5.6s1.7-3.2 2.9-4.4c1.3-1.3 2.7-2.2 4.4-2.9s3.5-1 5.4-1 3.7.3 5.4 1 3.1 1.6 4.4 2.9 2.2 2.7 2.9 4.4 1 3.6 1 5.6h8.9c0-3.1-.6-6-1.7-8.7m-64.8 56.5h2.1l-2.1-2.8zm-150.6-.8-8.2-2.6c-1.3-.4-2.3-1-2.9-1.7s-1-1.6-1-2.6.2-1.7.7-2.4 1.2-1.2 2.1-1.6 2-.6 3.1-.6c2.1 0 3.9.6 5.5 1.7s2.8 2.7 3.6 4.7l7.2-3.3c-.8-2.2-2-4.2-3.6-5.8s-3.5-2.8-5.6-3.7c-2.2-.9-4.5-1.3-7.1-1.3s-5.5.5-7.7 1.6-4 2.6-5.2 4.5-1.9 4.1-1.9 6.6.9 5.3 2.6 7.3H40c-.7-.3-1.4-.6-2.1-.8zm33.1-8.9 3.1 9.7h9.3l-6.5-19.5H65.3l-6.6 19.5H68zm33.5-2.1h7.5c1.3 0 2.3.2 3.3.7q1.35.75 2.1 2.1c.5.9.8 1.9.8 3.1s-.3 2.2-.8 3q-.75 1.35-2.1 2.1c-.9.5-2 .7-3.3.7h13.9c.8-1.7 1.1-3.6 1.1-5.8s-.6-5.5-1.9-7.5-3.1-3.5-5.3-4.6q-3.45-1.5-7.8-1.5H95.8v19.4h8.9z"/>
+        <path fill="#e10f7e" d="M133 66.1h8.9v19.4H133z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="M176.9 83.5h-18.6v-9.7H178v-7.7h-28.6v19.5h27.5zm15-.7 2 2.8h10.7l-14.7-19.5h-6.8v19.5h8.8z"/>
+        <path fill="#e10f7e" d="M209.1 66.1h8.9v19.4h-8.9z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="m246 84.8-8.2-2.6c-1.3-.4-2.3-1-2.9-1.7s-1-1.6-1-2.6.2-1.7.7-2.4 1.2-1.2 2.1-1.6 2-.6 3.1-.6c2.1 0 3.9.6 5.5 1.7s2.8 2.7 3.6 4.7l7.2-3.3c-.8-2.2-2-4.2-3.6-5.8s-3.5-2.8-5.6-3.7c-2.2-.9-4.5-1.3-7.1-1.3s-5.5.5-7.7 1.6-4 2.6-5.2 4.5-1.9 4.1-1.9 6.6.9 5.3 2.6 7.3h20.3c-.7-.3-1.4-.6-2.1-.8zM24.3 90.2l8.3 2.7c1.3.4 2.2 1 2.9 1.7.6.7.9 1.6.9 2.5s-.2 1.7-.7 2.4-1.2 1.2-2.1 1.6-1.9.6-3.1.6c-2.3 0-4.4-.7-6.3-2s-3.4-3.2-4.4-5.5l-7.3 3.3c.8 2.4 2.1 4.6 3.8 6.3 1.7 1.8 3.7 3.2 6.1 4.1 2.3 1 4.9 1.5 7.5 1.5s5.7-.5 7.9-1.6c2.3-1.1 4-2.6 5.3-4.5s1.9-4.1 1.9-6.6-.8-5.3-2.5-7.3c-1.3-1.5-3.2-2.8-5.6-3.8H16.6c1.7 2 4.2 3.5 7.6 4.6zm33 18.5 2.9-8.7h15.6l2.8 8.7h9.7l-7.8-23.1h-9.4l2.2 6.7H62.6l2.2-6.7h-9.3l-7.8 23.1zm44.3.1V93.3h7.5c2.9 0 5.5-.5 7.7-1.6 2.3-1 4.1-2.6 5.4-4.6.3-.5.6-1 .8-1.5H92.7v23.2z"/>
+        <path fill="#e10f7e" d="M129.8 85.6h8.9v23.2h-8.9z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="M174.9 108.7V101h-19.8v-9.8h18.6v-5.6h-27.5v23.1zm33 0h6.9V85.6h-8.9v5.8l-4.5-5.8h-10.6z"/>
+        <path fill="#e10f7e" d="M179.9 85.6h8.9v23.2h-8.9z"/>
+        <path fill="#e10f7e" fill-rule="nonzero" d="m232.2 90.2 8.3 2.7c1.3.4 2.2 1 2.9 1.7.6.7.9 1.6.9 2.5s-.2 1.7-.7 2.4-1.2 1.2-2.1 1.6-1.9.6-3.1.6c-2.3 0-4.4-.7-6.3-2s-3.4-3.2-4.4-5.5l-7.3 3.3c.8 2.4 2.1 4.6 3.8 6.3 1.7 1.8 3.7 3.2 6.1 4.1 2.3 1 4.9 1.5 7.5 1.5s5.7-.5 7.9-1.6c2.3-1.1 4-2.6 5.3-4.5s1.9-4.1 1.9-6.6-.8-5.3-2.5-7.3c-1.3-1.5-3.2-2.8-5.6-3.8h-20.3c1.7 2 4.2 3.5 7.6 4.6z"/>
+        <path fill="#662264" fill-rule="nonzero" d="M189.1 35.9H186l3.1 4z"/>
+        <path fill="#fbfbf3" d="M18.5 34.9h8.9v21.3h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="M42.4 56.2h28.7v-7.7H51.3v-9.8h18.6v-3.8H42.4zm34.1-12.6c1.1 2.7 2.6 5 4.5 7s4.2 3.5 6.8 4.6 5.4 1.7 8.5 1.7 5.9-.5 8.3-1.5c2.5-1 4.5-2.4 6.3-4.1 1.7-1.7 2.9-3.6 3.7-5.7l-7.8-3.8c-.7 2.1-2 3.8-3.8 5.1-1.8 1.4-4 2-6.6 2s-4.7-.6-6.6-1.8-3.4-2.8-4.4-4.9-1.6-4.5-1.6-7.3h-8.9c0 3.2.5 6.1 1.6 8.7m43.7 12.6h8.9V39.7h16.6v16.5h8.8V34.9h-34.3z"/>
+        <path fill="#fbfbf3" d="M162.1 34.9h8.9v21.3h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="m188.1 38.9-3.1-4h-10.7l15.8 21.3h6.9V34.9h-8.9zm50.4 1.6c-.7 1.7-1.7 3.2-2.9 4.4-1.3 1.2-2.7 2.2-4.4 2.9s-3.5 1-5.4 1-3.7-.3-5.4-1-3.1-1.6-4.4-2.9c-1.3-1.2-2.2-2.7-2.9-4.4s-1-3.6-1-5.6h-8.9c0 3.1.6 6 1.7 8.7s2.7 5 4.8 7c2 2 4.4 3.6 7.2 4.7 2.7 1.1 5.7 1.7 8.9 1.7s6.2-.6 8.9-1.7 5.1-2.7 7.2-4.7c2-2 3.6-4.3 4.8-7 1.1-2.7 1.7-5.5 1.7-8.7h-8.9c0 2-.3 3.9-1 5.6M41.2 21.3v-7.7H10.9v7.7h10.8v13.6h8.9V21.3zM54.5 31v-9.7h19.7v-7.7H45.6v21.3h27.5V31zm34-3.4c1-2.1 2.5-3.7 4.4-4.9q2.85-1.8 6.6-1.8c2.5 0 4.8.7 6.6 2 1.8 1.4 3.1 3.1 3.8 5.1l7.8-3.8c-.7-2.1-1.9-4-3.7-5.7s-3.8-3.1-6.3-4.1-5.2-1.5-8.3-1.5-5.9.5-8.5 1.6-4.9 2.6-6.8 4.6-3.5 4.3-4.5 7c-1.1 2.7-1.6 5.6-1.6 8.8h8.9c0-2.8.5-5.2 1.6-7.3m60.4-14V32h-16.6V13.6h-8.9v21.3h34.3V13.6z"/>
+        <path fill="#fbfbf3" d="M191.3 13.6h8.9v21.3h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="M172.1 13.6h-6.8v21.3h8.8v-4.6l3.4 4.6h10.7zm77.8 12.6c-1.1-2.7-2.7-5-4.7-7s-4.4-3.5-7.2-4.6c-2.7-1.1-5.7-1.7-9-1.7s-6.2.6-9 1.7c-2.7 1.1-5.1 2.6-7.2 4.6-2 2-3.6 4.3-4.7 7s-1.7 5.6-1.7 8.7h8.9c0-2.1.3-3.9 1-5.6s1.7-3.2 2.9-4.4c1.3-1.3 2.7-2.2 4.4-2.9s3.5-1 5.4-1 3.7.3 5.4 1 3.1 1.6 4.4 2.9 2.2 2.7 2.9 4.4 1 3.6 1 5.6h8.9c0-3.1-.6-6-1.7-8.7"/>
+        <path fill="#662264" fill-rule="nonzero" d="M186.2 83.6h2l-2-2.7z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="m34.5 81.8-8.2-2.6c-1.3-.4-2.3-1-2.9-1.7s-1-1.6-1-2.6.2-1.7.7-2.4 1.2-1.2 2.1-1.6 2-.6 3.1-.6c2.1 0 3.9.6 5.5 1.7s2.8 2.7 3.6 4.7l7.2-3.3c-.8-2.2-2-4.2-3.6-5.8s-3.5-2.8-5.6-3.7c-2.2-.9-4.5-1.3-7.1-1.3s-5.5.5-7.7 1.6-4 2.6-5.2 4.5-1.9 4.1-1.9 6.6.9 5.3 2.6 7.3h20.3c-.7-.3-1.4-.6-2.1-.8zm33.1-8.9 3.1 9.7h9.4l-6.6-19.4H61.7l-6.6 19.4h9.3zm33.6-2h7.5c1.3 0 2.3.2 3.3.7q1.35.75 2.1 2.1c.5.9.8 1.9.8 3.1s-.3 2.2-.8 3q-.75 1.35-2.1 2.1c-.9.5-2 .7-3.3.7h13.9c.8-1.7 1.1-3.6 1.1-5.8s-.6-5.5-1.9-7.5-3.1-3.5-5.3-4.6q-3.45-1.5-7.8-1.5H92.3v19.4h8.9z"/>
+        <path fill="#fbfbf3" d="M129.4 63.2h8.9v19.4h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="M173.3 80.6h-18.6v-9.7h19.8v-7.7h-28.7v19.4h27.5zm15.1-.7 2 2.7h10.7l-14.8-19.4h-6.8v19.4h8.9z"/>
+        <path fill="#fbfbf3" d="M205.5 63.2h8.9v19.4h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="m242.4 81.8-8.2-2.6c-1.3-.4-2.3-1-2.9-1.7s-1-1.6-1-2.6.2-1.7.7-2.4 1.2-1.2 2.1-1.6 2-.6 3.1-.6c2.1 0 3.9.6 5.5 1.7s2.8 2.7 3.6 4.7l7.2-3.3c-.8-2.2-2-4.2-3.6-5.8s-3.5-2.8-5.6-3.7c-2.2-.9-4.5-1.3-7.1-1.3s-5.5.5-7.7 1.6-4 2.6-5.2 4.5-1.9 4.1-1.9 6.6.9 5.3 2.6 7.3h20.3c-.7-.3-1.4-.6-2.1-.8zM20.7 87.3 29 90c1.3.4 2.2 1 2.9 1.7.6.7.9 1.6.9 2.5s-.2 1.7-.7 2.4-1.2 1.2-2.1 1.6-1.9.6-3.1.6c-2.3 0-4.4-.7-6.3-2s-3.4-3.2-4.4-5.5l-7.3 3.3c.8 2.4 2.1 4.6 3.8 6.3 1.7 1.8 3.7 3.2 6.1 4.1 2.3 1 4.9 1.5 7.5 1.5s5.7-.5 7.9-1.6c2.3-1.1 4-2.6 5.3-4.5s1.9-4.1 1.9-6.6-.8-5.3-2.5-7.3c-1.3-1.5-3.2-2.8-5.6-3.8H13c1.7 2 4.2 3.5 7.6 4.6zm33 18.5 2.9-8.7h15.6l2.9 8.7h9.6l-7.8-23.2h-9.3l2.1 6.8H59l2.3-6.8H52l-7.9 23.2zm44.3.1V90.4h7.5c2.9 0 5.5-.5 7.7-1.6 2.3-1 4.1-2.6 5.4-4.6.3-.5.6-1 .8-1.5H89.1v23.2z"/>
+        <path fill="#fbfbf3" d="M126.2 82.6h8.9v23.2h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="M171.3 105.8v-7.7h-19.8v-9.8h18.6v-5.7h-27.5v23.2zm33 0h6.9V82.6h-8.9v5.9l-4.4-5.9h-10.7z"/>
+        <path fill="#fbfbf3" d="M176.3 82.6h8.9v23.2h-8.9z"/>
+        <path fill="#fbfbf3" fill-rule="nonzero" d="m228.6 87.3 8.3 2.7c1.3.4 2.2 1 2.9 1.7.6.7.9 1.6.9 2.5s-.2 1.7-.7 2.4-1.2 1.2-2.1 1.6-1.9.6-3.1.6c-2.3 0-4.4-.7-6.3-2s-3.4-3.2-4.4-5.5l-7.3 3.3c.8 2.4 2.1 4.6 3.8 6.3 1.7 1.8 3.7 3.2 6.1 4.1 2.3 1 4.9 1.5 7.5 1.5s5.7-.5 7.9-1.6c2.3-1.1 4-2.6 5.3-4.5s1.9-4.1 1.9-6.6-.8-5.3-2.5-7.3c-1.3-1.5-3.2-2.8-5.6-3.8h-20.3c1.7 2 4.2 3.5 7.6 4.6z"/>
+            </g>
+        </defs>
+        <use class="ts-header__logo-wordmark-base" href="#ts-header-logo-wordmark-art"/>
+        <use class="ts-header__logo-wordmark-clone ts-header__logo-wordmark-clone--a" href="#ts-header-logo-wordmark-art" aria-hidden="true"/>
+        <use class="ts-header__logo-wordmark-clone ts-header__logo-wordmark-clone--b" href="#ts-header-logo-wordmark-art" aria-hidden="true"/>
+    </svg>
+    
+</a><!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/header/header-logo.php --->                </div>
+
+                <div class="ts-header__right">
+                    <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/header/main-navigation.php --->
+<nav class="main-navigation" aria-label="Hoofdnavigatie">
+
+    <ul class="main-navigation__items main-navigation__list">
+
+        
+            
+            <li class="main-navigation__item main-navigation__item--current">
+
+                <a class="main-navigation__item-link"
+                   href="https://technosapiens.test"
+                   target="_self"
+                                      >
+
+                    <span class="main-navigation__item-text">
+                        Home                                            </span>
+
+                </a>
+
+                
+            </li>
+
+        
+            
+            <li class="main-navigation__item">
+
+                <a class="main-navigation__item-link"
+                   href="https://technosapiens.test/about/"
+                   target="_self"
+                                      >
+
+                    <span class="main-navigation__item-text">
+                        About                                            </span>
+
+                </a>
+
+                
+            </li>
+
+        
+        
+            <li class="main-navigation__item main-navigation__item--header-button">
+
+                <a href="https://technosapiens.test/contact/?topic=meet" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-medium ts-button--color-tertiary main-navigation__item-button"><span class="ts-button__text">Kennismaken?</span></a>
+            </li>
+
+                </ul>
+
+    
+</nav><!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/header/main-navigation.php --->                </div>
+
+            </div>
+
+        </div>
+
+        
+    </header>
+
+    <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/header/mobile-navigation.php --->
+<nav class="mobile-navigation" aria-label="Mobile navigation">
+
+    <ul class="mobile-navigation__list">
+
+        
+            <li class="mobile-navigation__item mobile-navigation__item--current">
+
+                <a class="mobile-navigation__link"
+                   href="https://technosapiens.test"
+                   target="_self"
+                                      aria-current="page">
+                    Home                                    </a>
+
+            </li>
+
+        
+            <li class="mobile-navigation__item">
+
+                <a class="mobile-navigation__link"
+                   href="https://technosapiens.test/about/"
+                   target="_self"
+                                      >
+                    About                                    </a>
+
+            </li>
+
+        
+            <li class="mobile-navigation__item">
+
+                <a class="mobile-navigation__link"
+                   href="https://technosapiens.test/contact/"
+                   target="_self"
+                                      >
+                    Contact                                    </a>
+
+            </li>
+
+        
+    </ul>
+
+</nav>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/header/mobile-navigation.php --->
+    <main id="ts-main">
+
+        
+        <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/inc/features/header-module/presets/main-hero/partials/hm-main-hero.php --->
+    <div class="hm-main-hero">
+
+        <div class="hm-main-hero__background">
+            <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--horizontal" data-stagger-mode="start" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->        </div>
+
+        <div class="hm-main-hero__meta">
+            <div class="hm-main-hero__meta-container container">
+                
+                <div class="hm-main-hero__meta-top">
+
+                                            <h1 class="hm-main-hero__heading">                        De "human in the loop"                        </h1>                    
+                                            <span class="hm-main-hero__sub-heading">
+                            Website & webapp met menselijke regie                        </span>
+                    
+                </div>
+
+                                    <div class="hm-main-hero__content">
+                        <p>Wil je een website of webapplicatie laten maken, zonder te verdwalen in jargon en anonieme systemen? TechnoSapiens bouwt de technische oplossing en blijft jouw vaste, persoonlijke aanspreekpunt.</p>
+                    </div>
+                
+                                    <div class="hm-main-hero__buttons">
+                                                    <a href="https://technosapiens.test/contact/?topic=meet" target="_self" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-medium ts-button--color-primary hm-main-hero__button"><span class="ts-button__text hm-main-hero__button-text">Laten we kennismaken</span></a>                                                    <a href="https://technosapiens.test/cases/" target="_self" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-medium ts-button--color-secondary hm-main-hero__button"><span class="ts-button__text hm-main-hero__button-text">Bekijk cases</span></a>                                            </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/inc/features/header-module/presets/main-hero/partials/hm-main-hero.php --->
+        <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-heading/partials/section-heading.php --->
+<div class="section section-heading" data-pt="larger" data-pb="larger" data-vignet-bottom="true">
+
+    
+    <div class="container section-heading__container">
+        <h2 class="section-heading__title text-center display"> Bouwen aan <span class="text-color-tertiary">digitale oplossingen</span>, daar krijg je <span class="text-color-tertiary">energie</span>⚡️ van.</h2>
+    </div>
+</div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-heading/partials/section-heading.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-content/partials/section-content.php --->
+<div class="section section-content" data-pt="larger" data-pb="larger" data-vignet-top="true" data-vignet-bottom="true" data-bg="bands">
+    
+            <div class="section-background">
+            <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--vertical" data-stagger-mode="center" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--xlarge"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->        </div>
+    
+    <div class="container container--narrow section-content__container">
+                    <h2 class="section-content__title h2">
+                Website of webapplicatie laten maken met <span class="text-color-secondary">TechnoSapiens</span>            </h2>
+        
+        <div class="section-content__text">
+            <p><strong>De gamechanger<br />
+</strong>Wil je een website of webapplicatie laten maken en experimenteer je al met AI? Goed nieuws: zo kom je sneller tot de kern. Onderaan de streep kan een goed digitaal product daardoor veel goedkoper zijn. Bekijk de <a href="https://technosapiens.test/cases/">cases</a> of lees meer <a href="https://technosapiens.test/about/">over TechnoSapiens</a>.</p>
+<p><strong>&#8220;I am not a robot&#8221;<br />
+</strong>Alles wat je door AI laat genereren, heeft uiteindelijk wel een menselijke factor nodig. Je hebt namelijk iemand nodig die overzicht houdt en die van A tot Z betrokken is bij het hele proces. Het is cruciaal om de door AI gegenereerde content en automatiseringen zo bij te kunnen stellen dat het geen zooitje wordt, schaalbaar blijft en vooral ook op een veilige manier gebeurd.</p>
+<p><strong>Human touch<br />
+</strong>Het allerbelangrijkste in dit hele proces is dat jij je gehoord voelt. Geen kille (uren)fabriek, maar de wetenschap dat je samen met een mens iets unieks aan het creëren bent. Die fijne synergie tussen slimme technologie en de onmisbare menselijke touch&#8230; vandaar de naam: <strong>TechnoSapiens</strong>. <a href="https://technosapiens.test/contact/?topic=meet">Plan een kennismaking</a>.</p>
+        </div>
+    </div>
+</div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-content/partials/section-content.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-heading/partials/section-heading.php --->
+<div class="section section-heading ts-has-dark-background" data-bg="solid" data-bg-color="dark">
+
+    
+    <div class="container section-heading__container">
+        <h2 class="section-heading__title text-center h2">Wat <span class="text-color-secondary">TechnoSapiens</span> voor je website of webapp kan betekenen</h2>
+    </div>
+</div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-heading/partials/section-heading.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-cards/partials/section-cards.php --->
+    <div class="section section-cards" data-pt="larger" data-pb="large" data-vignet-top="true" data-vignet-bottom="true" data-bg="bands">
+
+                    <div class="section-background">
+                <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--horizontal" data-stagger-mode="start" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--large"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--large"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->            </div>
+        
+        <div class="container">
+            
+                            <div class="row section-cards__grid">
+                                            <div class="col col--1 section-cards__card-wrap col--md-1/2 col--xl-1/3">
+                            <article class="section-cards__card">
+                                <span class="section-cards__card-line section-cards__card-line--pink" aria-hidden="true"></span>    
+                                <span class="section-cards__card-line section-cards__card-line--white" aria-hidden="true"></span>
+
+                                <div class="section-cards__card-media">
+                                    <div class="section-cards__card-background">
+                                        <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--horizontal section-cards__card-bands" data-stagger-mode="center" data-wait-for=".section-background .gradient-bands" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->                                    </div>
+                                </div>
+
+                                <div class="section-cards__card-body">
+                                                                            <p class="section-cards__card-title">Nieuwe website laten maken</p>
+                                    
+                                                                            <div class="section-cards__card-content">
+                                            <p>Vergeet trage, saaie templates. TechnoSapiens bouwt een veilig en krachtig platform op maat van jouw merk. Volledig afgestemd met de nieuwste technologische trends.</p>
+                                        </div>
+                                    
+                                                                            <div class="section-cards__card-action">
+                                            <a href="https://technosapiens.test/contact/?topic=new-website" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-medium ts-button--color-tertiary section-cards__card-button section-cards__button"><span class="ts-button__text section-cards__button-text">Dat wil ik</span></a>                                        </div>
+                                                                    </div>
+                            </article>
+                        </div>
+                                            <div class="col col--1 section-cards__card-wrap col--md-1/2 col--xl-1/3">
+                            <article class="section-cards__card">
+                                <span class="section-cards__card-line section-cards__card-line--pink" aria-hidden="true"></span>    
+                                <span class="section-cards__card-line section-cards__card-line--white" aria-hidden="true"></span>
+
+                                <div class="section-cards__card-media">
+                                    <div class="section-cards__card-background">
+                                        <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--horizontal section-cards__card-bands" data-stagger-mode="center" data-delay="0.15" data-wait-for=".section-background .gradient-bands" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->                                    </div>
+                                </div>
+
+                                <div class="section-cards__card-body">
+                                                                            <p class="section-cards__card-title">Gezondheidscheck van jouw website</p>
+                                    
+                                                                            <div class="section-cards__card-content">
+                                            <p>Niet tevreden over de prestaties van jouw website? TechnoSapiens helpt je weer vooruit! Door middel van een solide technische- en security-audit adviseert TechnoSapiens hoe jouw platform veilig, schaalbaar en toekomstbestendig is.</p>
+                                        </div>
+                                    
+                                                                            <div class="section-cards__card-action">
+                                            <a href="https://technosapiens.test/contact/?topic=site-health" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-medium ts-button--color-tertiary section-cards__card-button section-cards__button"><span class="ts-button__text section-cards__button-text">Check mijn website</span></a>                                        </div>
+                                                                    </div>
+                            </article>
+                        </div>
+                                            <div class="col col--1 section-cards__card-wrap col--md-1/2 col--xl-1/3">
+                            <article class="section-cards__card">
+                                <span class="section-cards__card-line section-cards__card-line--pink" aria-hidden="true"></span>    
+                                <span class="section-cards__card-line section-cards__card-line--white" aria-hidden="true"></span>
+
+                                <div class="section-cards__card-media">
+                                    <div class="section-cards__card-background">
+                                        <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--horizontal section-cards__card-bands" data-stagger-mode="center" data-delay="0.3" data-wait-for=".section-background .gradient-bands" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--small"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--small"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->                                    </div>
+                                </div>
+
+                                <div class="section-cards__card-body">
+                                                                            <p class="section-cards__card-title">Integraties en AI</p>
+                                    
+                                                                            <div class="section-cards__card-content">
+                                            <p>Heb je een complex vraagstuk? TechnoSapiens integreert moeiteloos API&#8217;s en bouwt slimme AI-workflows. Zo versnelt jouw bedrijfsproces en groeit je organisatie direct mee.</p>
+                                        </div>
+                                    
+                                                                            <div class="section-cards__card-action">
+                                            <a href="https://technosapiens.test/contact/?topic=integration" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-medium ts-button--color-tertiary section-cards__card-button section-cards__button"><span class="ts-button__text section-cards__button-text">Hulp bij automatiseren</span></a>                                        </div>
+                                                                    </div>
+                            </article>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-cards/partials/section-cards.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-process-cards/partials/section-process-cards.php --->
+    <div class="section section-process-cards" data-pt="larger" data-pb="larger" data-vignet-top="true" data-vignet-bottom="true" data-bg="bands">
+
+                    <div class="section-background">
+                <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--vertical" data-stagger-mode="center" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--xlarge"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--xlarge"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->            </div>
+        
+        <div class="container">
+            <div class="section-process-cards__wrap">
+
+                                    <h2 class="section-process-cards__title h2">
+                        Hoe we <span class="text-color-primary">samen</span> tot het <span class="text-color-tertiary">beste resultaat</span> komen                    </h2>
+                
+
+                <div class="section-process-cards__gradient-wrap"></div>
+
+                                    <div class="row section-process-cards__grid">
+                                                    <div class="col col--1 col--md-1/2 col--xl-1/4 section-process-cards__card-wrap">
+                                <article class="section-process-cards__card">
+                                                                            <p class="section-process-cards__card-title h4">1. De kennismaking</p>
+                                    
+                                                                            <div class="section-process-cards__card-text">
+                                            <p>Aangenaam! Wat wil je bij je doelgroep bereiken? Wat is daar allemaal voor nodig?</p>
+<p>Hier wordt de fundering voor het project gelegd.</p>
+                                        </div>
+                                                                    </article>
+                            </div>
+                                                    <div class="col col--1 col--md-1/2 col--xl-1/4 section-process-cards__card-wrap">
+                                <article class="section-process-cards__card">
+                                                                            <p class="section-process-cards__card-title h4">2. Strategie en architectuur</p>
+                                    
+                                                                            <div class="section-process-cards__card-text">
+                                            <p>Jouw wensen worden omgezet in een helder, gestructureerd en schaalbaar plan.</p>
+<p>Gaat het om enkel iets technisch? Of komt daar ook UX/UI design bij kijken? En wellicht online marketing?</p>
+<p>Het kan allemaal.</p>
+                                        </div>
+                                                                    </article>
+                            </div>
+                                                    <div class="col col--1 col--md-1/2 col--xl-1/4 section-process-cards__card-wrap">
+                                <article class="section-process-cards__card">
+                                                                            <p class="section-process-cards__card-title h4">3. Bouwen en innoveren</p>
+                                    
+                                                                            <div class="section-process-cards__card-text">
+                                            <p>Hier gebeurt de magie. Ik duik in de techniek en transformeer het plan naar een snel, werkend platform.</p>
+<p>Tijdens dit proces houd ik je continu op de hoogte met belangrijke updates of tijdelijke opleveringen.</p>
+                                        </div>
+                                                                    </article>
+                            </div>
+                                                    <div class="col col--1 col--md-1/2 col--xl-1/4 section-process-cards__card-wrap">
+                                <article class="section-process-cards__card">
+                                                                            <p class="section-process-cards__card-title h4">4. Lancering en vieren</p>
+                                    
+                                                                            <div class="section-process-cards__card-text">
+                                            <p>Een feedbackronde is verwerkt en alles is uitgebreid getest. We gaan live!</p>
+<p>Na de lancering blijft TechnoSapiens uiteraard in beeld voor optimalisatie en support.</p>
+<p>Zullen we dit succes samen vieren?</p>
+                                        </div>
+                                                                    </article>
+                            </div>
+                                            </div>
+                
+                                    <div class="section-process-cards__action">
+                        <a href="https://technosapiens.test/contact/?topic=meet" class="ts-button ts-button--bc ts-button--style-filled ts-button--size-large ts-button--color-tertiary section-process-cards__button section-process-cards__button"><span class="ts-button__text section-process-cards__button-text">Zullen we kennismaken?</span></a>                    </div>
+                                
+            </div>
+        </div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-process-cards/partials/section-process-cards.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-faq/partials/section-faq.php --->
+    <div class="section section-faq section-faq--collapsible" data-pt="larger" data-pb="larger" data-vignet-top="true" data-vignet-bottom="true" data-bg="bands">
+
+                    <div class="section-background">
+                <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--vertical" data-stagger-mode="center" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--medium"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->            </div>
+        
+        <div class="container container--narrow section-faq__container">
+                            <h2 class="section-faq__title h2">
+                    Veelgestelde vragen over een website of webapp laten maken                </h2>
+            
+                            <div class="section-faq__list">
+                                                                    <article class="section-faq__item section-faq__item--collapsible">
+                                                            <button
+                                    type="button"
+                                    class="section-faq__question h6"
+                                    id="section-faq-item-1-question"
+                                    aria-expanded="false"
+                                    aria-controls="section-faq-item-1-answer"
+                                >
+                                    Wat kost een website of webapplicatie laten maken?                                </button>
+                                <div
+                                    class="section-faq__answer"
+                                    id="section-faq-item-1-answer"
+                                    role="region"
+                                    aria-labelledby="section-faq-item-1-question"
+                                    hidden
+                                >
+                                    <p>Dat hangt af van scope, complexiteit en of er design, integraties of AI-workflows bij komen. Na een korte kennismaking krijg je een helder voorstel. <a href="https://technosapiens.test/contact/?topic=meet">Plan een kennismaking</a>.</p>
+                                </div>
+                                                    </article>
+                                                                    <article class="section-faq__item section-faq__item--collapsible">
+                                                            <button
+                                    type="button"
+                                    class="section-faq__question h6"
+                                    id="section-faq-item-2-question"
+                                    aria-expanded="false"
+                                    aria-controls="section-faq-item-2-answer"
+                                >
+                                    Hoe lang duurt het traject?                                </button>
+                                <div
+                                    class="section-faq__answer"
+                                    id="section-faq-item-2-answer"
+                                    role="region"
+                                    aria-labelledby="section-faq-item-2-question"
+                                    hidden
+                                >
+                                    <p>Een gerichte website is sneller klaar dan een maatwerk-webapp. We werken in duidelijke stappen: kennismaking, strategie, bouwen en lancering. Tijdens het traject houd ik je op de hoogte met tussentijdse opleveringen.</p>
+                                </div>
+                                                    </article>
+                                                                    <article class="section-faq__item section-faq__item--collapsible">
+                                                            <button
+                                    type="button"
+                                    class="section-faq__question h6"
+                                    id="section-faq-item-3-question"
+                                    aria-expanded="false"
+                                    aria-controls="section-faq-item-3-answer"
+                                >
+                                    Werken jullie met AI?                                </button>
+                                <div
+                                    class="section-faq__answer"
+                                    id="section-faq-item-3-answer"
+                                    role="region"
+                                    aria-labelledby="section-faq-item-3-question"
+                                    hidden
+                                >
+                                    <p>Ja — AI versnelt waar het kan, met menselijke regie waar het moet. TechnoSapiens blijft jouw vaste aanspreekpunt, zodat het veilig, schaalbaar en onderhoudbaar blijft.</p>
+                                </div>
+                                                    </article>
+                                                                    <article class="section-faq__item section-faq__item--collapsible">
+                                                            <button
+                                    type="button"
+                                    class="section-faq__question h6"
+                                    id="section-faq-item-4-question"
+                                    aria-expanded="false"
+                                    aria-controls="section-faq-item-4-answer"
+                                >
+                                    Hoe starten we?                                </button>
+                                <div
+                                    class="section-faq__answer"
+                                    id="section-faq-item-4-answer"
+                                    role="region"
+                                    aria-labelledby="section-faq-item-4-question"
+                                    hidden
+                                >
+                                    <p>Met een kennismaking. We bespreken je doelgroep, wat je wilt bereiken en wat daar technisch voor nodig is. <a href="https://technosapiens.test/contact/?topic=meet">Neem contact op</a> en we plannen het in.</p>
+                                </div>
+                                                    </article>
+                                    </div>
+                    </div>
+    </div>
+
+                    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wat kost een website of webapplicatie laten maken?","acceptedAnswer":{"@type":"Answer","text":"Dat hangt af van scope, complexiteit en of er design, integraties of AI-workflows bij komen. Na een korte kennismaking krijg je een helder voorstel. Plan een kennismaking."}},{"@type":"Question","name":"Hoe lang duurt het traject?","acceptedAnswer":{"@type":"Answer","text":"Een gerichte website is sneller klaar dan een maatwerk-webapp. We werken in duidelijke stappen: kennismaking, strategie, bouwen en lancering. Tijdens het traject houd ik je op de hoogte met tussentijdse opleveringen."}},{"@type":"Question","name":"Werken jullie met AI?","acceptedAnswer":{"@type":"Answer","text":"Ja — AI versnelt waar het kan, met menselijke regie waar het moet. TechnoSapiens blijft jouw vaste aanspreekpunt, zodat het veilig, schaalbaar en onderhoudbaar blijft."}},{"@type":"Question","name":"Hoe starten we?","acceptedAnswer":{"@type":"Answer","text":"Met een kennismaking. We bespreken je doelgroep, wat je wilt bereiken en wat daar technisch voor nodig is. Neem contact op en we plannen het in."}}]}</script>
+    <!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-faq/partials/section-faq.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-heading/partials/section-heading.php --->
+<div class="section section-heading ts-has-dark-background" data-pt="large" data-bg="solid" data-bg-color="dark">
+
+    
+    <div class="container section-heading__container">
+        <h2 class="section-heading__title text-center h2">Staat <span class="text-color-tertiary">jouw logo</span> hier straks ook bij?</h2>
+    </div>
+</div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-heading/partials/section-heading.php --->
+
+<!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-brands/partials/section-brands.php --->
+    <div class="section section-brands" data-pt="larger" data-pb="larger" data-vignet-top="true" data-vignet-bottom="true" data-bg="bands">
+
+                    <div class="section-background">
+                <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php ---><div class="gradient-bands gradient-bands--horizontal" data-stagger-mode="center" aria-hidden="true">
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-7 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-6 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-5 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-4 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-3 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-2 gradient-band--medium"></div>
+                    <div class="gradient-band gradient-band--stop-1 gradient-band--medium"></div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-gradient-bands.php --->            </div>
+        
+        <div class="container">
+            
+                            <div class="row section-brands__grid">
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/academy-bartels-256x51.png" srcset="https://technosapiens.test/wp-content/uploads/2026/09/academy-bartels-256x51.png 1x, https://technosapiens.test/wp-content/uploads/2026/09/academy-bartels-512x101.png 2x" alt="Academy bartels" width="256" height="51" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/bg-hekwerk-256x163.png" srcset="https://technosapiens.test/wp-content/uploads/2026/09/bg-hekwerk-256x163.png 1x, https://technosapiens.test/wp-content/uploads/2026/09/bg-hekwerk-512x326.png 2x" alt="Bg hekwerk" width="256" height="163" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/silfo.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/silfo.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/silfo.svg 2x" alt="Silfo" width="287" height="78" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/innovatest-1.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/innovatest-1.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/innovatest-1.svg 2x" alt="Innovatest" width="389" height="51" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/halsten.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/halsten.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/halsten.svg 2x" alt="Halsten" width="275" height="119" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <a class="section-brands__link"
+                                   href="https://www.vansantvoort.nl/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    <span class="section-brands__logo">
+                                        <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/vsm.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/vsm.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/vsm.svg 2x" alt="Vsm" width="209" height="60" />                                        <span class="ts-sr-only"> (opens in new tab)</span>                                    </span>
+                                </a>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/summa.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/summa.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/summa.svg 2x" alt="Summa" width="242" height="54" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/csu.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/csu.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/csu.svg 2x" alt="Csu" width="100" height="80" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/vlijmscherp.png" srcset="https://technosapiens.test/wp-content/uploads/2026/09/vlijmscherp.png 1x, https://technosapiens.test/wp-content/uploads/2026/09/vlijmscherp.png 2x" alt="Vlijmscherp" width="256" height="59" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/kringloop-de-kempen-256x281.png" srcset="https://technosapiens.test/wp-content/uploads/2026/09/kringloop-de-kempen-256x281.png 1x, https://technosapiens.test/wp-content/uploads/2026/09/kringloop-de-kempen-512x563.png 2x" alt="Kringloop de kempen" width="256" height="281" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/quicks-256x97.png" srcset="https://technosapiens.test/wp-content/uploads/2026/09/quicks-256x97.png 1x, https://technosapiens.test/wp-content/uploads/2026/09/quicks-512x194.png 2x" alt="Quicks" width="256" height="97" />                                </div>
+                                                    </div>
+                                            <div class="col col--1/3 col--lg-1/4 col--xxl-1/6 section-brands__item-wrap">
+                                                            <div class="section-brands__logo">
+                                    <img class="section-brands__image" draggable="false" decoding="async" loading="lazy" src="https://technosapiens.test/wp-content/uploads/2026/09/questionmark.svg" srcset="https://technosapiens.test/wp-content/uploads/2026/09/questionmark.svg 1x, https://technosapiens.test/wp-content/uploads/2026/09/questionmark.svg 2x" alt="Questionmark" width="512" height="512" />                                </div>
+                                                    </div>
+                                    </div>
+                    </div>
+    </div>
+<!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/sections/section-brands/partials/section-brands.php --->    </main>
+
+
+<footer id="ts-footer" class="site-footer" aria-label="Main Footer">
+    <div class="container">
+        <div class="row site-footer__row">
+            <div class="col col--1 col--xl-1/5">
+                <div class="col col--1 col--xl-1/4 site-footer__col site-footer__col--logo">
+                    <a href="https://technosapiens.test"
+                    target="_self"
+                    class="site-footer__logo"
+                    aria-label="Navigeer naar de home pagina">
+                                                    <img class="site-footer__logo-image" draggable="false" src="https://technosapiens.test/wp-content/uploads/2026/09/TS-logo-final-RGB-white.svg" alt="Logo TechnoSapiens" width="394" height="128" />                                            </a>
+                </div>
+            </div>
+
+            <div class="col col--1 col--xl-4/5">
+                <div class="row site-footer__row">
+                                            <div class="col col--1 col--xl-1/4 site-footer__col site-footer__col--contact-data">
+                            <div class="site-footer__contact-data">
+                                <p><strong>TechnoSapiens</strong><br />
+Burgemeester Mollaan 12<br />
+5582CK Aalst-Waalre<br />
+Nederland, Aarde, Melkweg</p>
+<p><a href="tel:0031620932947">T: +31 (0)6 2093 2947</a><br />
+<a href="mailto:hallo@technosapiens.nl">E: hallo@technosapiens.nl</a></p>
+                            </div>
+                        </div>
+                                        
+                    <div class="col col--1 col--xl-1/4 order-1 order-md-3 site-footer__col site-footer__col--ctas">
+                        <div class="site-footer__ctas">
+                            
+                                                            <!--- Start partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-social-links.php --->
+<ul class="social-links">
+            <li class="social-links__item">
+            <a href="https://soundcloud.com/dawizzmusic"
+               target="_blank"
+               rel="noopener nofollow"
+               title="Bezoek onze Soundcloud pagina (opens in new tab)"
+               aria-label="Bezoek onze Soundcloud pagina (opens in new tab)"
+               class="social-links__item-link">
+                <svg class="social-links__item-icon" aria-hidden="true">
+                    <use xlink:href='https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-icons-43645a87980673e75ba7e181d78869e8.svg#icon-soundcloud'/>
+                </svg>
+            </a>
+        </li>
+    </ul><!--- End partial: /Users/thijsdejong/websites/technosapiens/public/wp-content/themes/technosapiens/partials/components/component-social-links.php --->                            
+                        </div>
+                    </div>
+
+                                            <div class="col col--1 col--xl-1/4 order-2 order-md-1 site-footer__col site-footer__col--links">
+                            <nav class="site-footer__links-menu" aria-label="Footermenu">
+                                <ul class="site-footer__links-menu-list">
+                                                                            <li class="site-footer__links-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item">
+                                            <a href="https://technosapiens.test"
+                                            class="site-footer__links-menu-item-link"
+                                            target="_self"
+                                            
+                                            >
+                                                Home                                                                                            </a>
+                                        </li>
+                                                                            <li class="site-footer__links-menu-item menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://technosapiens.test/about/"
+                                            class="site-footer__links-menu-item-link"
+                                            target="_self"
+                                            
+                                            >
+                                                About                                                                                            </a>
+                                        </li>
+                                                                            <li class="site-footer__links-menu-item menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://technosapiens.test/contact/"
+                                            class="site-footer__links-menu-item-link"
+                                            target="_self"
+                                            
+                                            >
+                                                Contact                                                                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                    
+                                            <div class="col col--1 col--xl-1/4 order-3 order-md-2 site-footer__col site-footer__col--links-secondary">
+                            <nav class="site-footer__links-menu site-footer__links-menu--secondary" aria-label="Secondary footer menu">
+                                <ul class="site-footer__links-menu-list">
+                                                                            <li class="site-footer__links-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy">
+                                            <a href="https://technosapiens.test/privacybeleid/"
+                                            class="site-footer__links-menu-item-link"
+                                            target="_self"
+                                            
+                                            >
+                                                Privacybeleid                                                                                            </a>
+                                        </li>
+                                                                            <li class="site-footer__links-menu-item menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://technosapiens.test/algemene-voorwaarden/"
+                                            class="site-footer__links-menu-item-link"
+                                            target="_self"
+                                            
+                                            >
+                                                Algemene voorwaarden                                                                                            </a>
+                                        </li>
+                                                                            <li class="site-footer__links-menu-item menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://technosapiens.test/cookieverklaring/"
+                                            class="site-footer__links-menu-item-link"
+                                            target="_self"
+                                            
+                                            >
+                                                Cookieverklaring                                                                                            </a>
+                                        </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/technosapiens/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="ts-dialog-js" src="https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-Dialog-ad9e87ab11d0ac096fbe.min.js"></script>
+<script id="ts-dialog-init-js" src="https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-initDialogs-3846c809cb43be13555a.min.js"></script>
+<script id="technosapiens_scripts-js" src="https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-frontend-2b131611d2b721baff39.min.js"></script>
+<script id="section_section_cards_scripts-js" src="https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-cards-script-463f851f650cdbd9c1e5.min.js"></script>
+<script id="section_section_process_cards_scripts-js" src="https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-process-cards-script-fffdcf05bbf95355113b.min.js"></script>
+<script id="section_section_faq_scripts-js" src="https://technosapiens.test/wp-content/themes/technosapiens/dist/technosapiens-section-faq-script-18966c2958a7ea6f2321.min.js"></script>
